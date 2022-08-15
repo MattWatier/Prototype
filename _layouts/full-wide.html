@@ -1,0 +1,39 @@
+--- 
+layout: default 
+--- 
+{% include utility-head.html %}
+
+<body class="bg_black-2">
+  <div class="m_auto flex_column flex justify_around bg_white shadow_overlap-light ">
+    <header class="p_4 flex_none flex flex_row:md flex_column br-b_3 br_0 br_acc br_solid">
+      <div class="max-w_20 flex_grow">
+      <svg class="w_100 bg_white br_1 br_solid br_white vertical-align_middle" version="1.1" id="Logo_MW" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1656 794" xml:space="preserve">
+                  <g>
+                     <rect class="shape" width="72" height="792"></rect>
+                     <rect class="shape" x="792" width="72" height="792"></rect>
+                     <rect class="shape" width="864" height="72"></rect>
+                     <rect class="shape" y="722" width="864" height="72"></rect>
+                     <rect class="shape" x="144" y="144" width="576" height="144"></rect>
+                     <rect class="shape" x="144" y="144" width="144" height="504"></rect>
+                     <rect class="shape" x="360" y="144" width="144" height="504"></rect>
+                     <rect class="shape" x="576" y="144" width="144" height="504"></rect>
+                     <rect class="shape" x="1584" y="0" width="72" height="792"></rect>
+                     <rect class="shape" x="792" y="0" width="72" height="792"></rect>
+                     <rect class="shape" x="792" y="722" width="864" height="72"></rect>
+                     <rect class="shape" x="792" width="864" height="72"></rect>
+                     <rect class="shape" x="936" y="506" width="576" height="144"></rect>
+                     <rect class="shape" x="1368" y="146" width="144" height="504"></rect>
+                     <rect class="shape" x="1152" y="146" width="144" height="504"></rect>
+                     <rect class="shape" x="936" y="146" width="144" height="504"></rect>
+                  </g>
+               </svg>
+      </div>
+      <div class="flex_auto p-l_5:lg p-l_4:md p-t_4 self_center">
+        <h1><a href="{{ " /" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+        <p>{{ site.description | default: site.github.project_tagline }}</p>
+    </header>
+    <section class="p_4 flex_auto min-h_80">
+      {{ content }}
+    </section>
+  </div>
+</body>
