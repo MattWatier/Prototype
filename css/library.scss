@@ -77,3 +77,41 @@ body{
 	color: hsl(var(--black-h), var(--black-s), 30%) !important;
    border-color: hsl(var(--black-h), var(--black-s), 40%) !important;
   }
+
+
+.button-ripple{
+
+	.button-edge{
+		width: 2em;
+		height: 2em;
+		padding:.2em;
+
+	}
+	.button{
+		width:1.6em;
+		height:1.6em;
+		padding:.2em;
+	}
+
+}
+[data-element="footer-button-bar"] {
+	height:1.1em; padding-right: 1.5em;
+}
+[data-element="footer-button-bar--button-group" ] {
+	margin-top:-1em;
+}
+
+[data-element="footer-button-bar--button-edge" ] {
+	width: 2em;
+	height: 2em;
+	padding:.2em;
+}
+[data-element="footer-button-bar--button" ] {
+	width:1.6em;
+	height:1.6em;
+	padding:.2em;
+}
+
+.bg_transparent{
+	background-color:transparent;
+}

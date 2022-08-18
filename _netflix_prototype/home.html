@@ -7,8 +7,8 @@ homeActive: true
 <!-- {% include /netflix/home-header-branding.html %} -->
 {% include /netflix/app-header-w-search.html %}
 {% include /netflix/breadcrumb.html %}
-<section class="grid-area_mainArea grid:md flex flex_column bg_white-5 br-br_radius">
-	<section class="max-w_65 reading-typography p_6">
+<section class="grid-area_mainArea grid:md flex flex_column bg_white-5 br-br_radius p_6:xxl p_5:lg p_4">
+	<section class="max-w_65 reading-typography ">
 		<h1 class="font_xbold">Basic Typography: <small>Lorem ipsum dolor sit amet, consectetuer adipiscing
 		elit.</small></h1>
 		<h2>Aenean commodo ligula eget dolor aenean massa</h2>
@@ -26,5 +26,17 @@ homeActive: true
 		montes, nascetur ridiculus mus. Donec quam felis,
 		ultricies nec, pellentesque eu, pretium quis, sem.</p>
 		<article><p>This paragraph is nested inside an article. It contains many different, sometimes useful, <a href="https://www.w3schools.com/tags/">HTML5 tags</a>. Of course there are classics like <em>emphasis</em>, <strong>strong</strong>, and <small>small</small> but there are many others as well. Hover the following text for abbreviation tag: <abbr title="abbreviation">abbr</abbr>. Similarly, you can use acronym tag like this: <acronym title="For The Win">ftw</acronym>. You can define <del>deleted text</del> which often gets replaced with <ins>inserted</ins> text.</p><p>You can also use <kbd>keyboard text</kbd>, which sometimes is styled similarly to the <code>&lt;code&gt;</code> or <samp>samp</samp> tags. Even more specifically, there is a tag just for <var>variables</var>. Not to be mistaken with blockquotes below, the quote tag lets you denote something as <q>quoted text</q>. Lastly don't forget the sub (H<sub>2</sub>O) and sup (E = MC<sup>2</sup>) tags.</p></article>
-		</section>
+	</section>
+	<div class="p-y_4">
+		<a href="" class="btn btn-primary">button</a>
+		<a href="" class="btn btn-secondary">button</a>
+	</div>
+
+		<div class="gap-4 grid grid-x_5:xxl  grid-x_4:xl   grid-x_3:lg  grid-x_2:md grid-x_1 p_5">
+			{% include /netflix/program/session.html %}
+			{% include /netflix/program/session.html %}
+			{% include /netflix/program/session.html %}
+			{% include /netflix/program/session.html %}
+			{% include /netflix/program/session.html %}
+		</div>
 </section>
