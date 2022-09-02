@@ -11,8 +11,27 @@
     --bs-success:hsl(var(--success-h), var(--success-s), var(--success-l));
 	--bs-success-n2:hsl(var(--success-h), var(--success-s), calc( var(--success-l) + var(--success-l) * -0.37));
     --bs-success_color-contrast:#fff;
+    --bs-accent:hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+	--bs-accent-n2:hsl(var(--accent-h), var(--accent-s), calc( var(--accent-l) + var(--accent-l) * -0.37));
+    --bs-accent_color-contrast:#fff;
 
 }
+.dropdown-menu-dark{
+    --bs-dropdown-color: hsl( var(--white-h),var(--white-s),calc(var(--white-l) - var(--white-l) * 0.25) );
+    --bs-dropdown-bg: var(--bs-secondary-n2);
+    --bs-dropdown-border-color: var(--bs-border-color-translucent);
+    --bs-dropdown-box-shadow: ;
+    --bs-dropdown-link-color: hsl( var(--white-h),var(--white-s),calc(var(--white-l) - var(--white-l) * 0.25) );
+    --bs-dropdown-link-hover-color: var(--bs-primary_color-contrast);
+    --bs-dropdown-divider-bg: var(--bs-border-color-translucent);
+    --bs-dropdown-link-hover-bg: rgba(255, 255, 255, 0.15);
+    --bs-dropdown-link-active-color: var(--bs-primary_color-contrast);
+    --bs-dropdown-link-active-bg: hsl(var(--secondary-h), calc( var(--secondary-s) + var(--secondary-s) * 0.37), calc( var(--secondary-l) + var(--secondary-l) * 0.37));
+    --bs-dropdown-link-disabled-color: hsl( var(--white-h),var(--white-s),calc(var(--white-l) - var(--white-l) * 0.65) );;
+    --bs-dropdown-header-color: hsl( var(--white-h),var(--white-s),calc(var(--white-l) - var(--white-l) * 0.37) );
+
+}
+
 .btn-primary {
     --bs_bg:  var(--bs-primary);
     --bs_bg-n2: var(--bs-primary-n2);

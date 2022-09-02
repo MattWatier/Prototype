@@ -5,8 +5,9 @@
 // the gradient
 body{
 	background: rgb(158,0,0);
-	background: radial-gradient(at bottom right, hsl(var(--accent-h), var(--accent-s),calc(var(--accent-l )*.75)), hsl(var(--secondary-h), var(--secondary-s),calc(var(--secondary-l )*.75)) 100%);
+	background: radial-gradient(at top left, hsl(var(--accent-h), var(--accent-s),calc(var(--accent-l )*.75)), hsl(var(--secondary-h), var(--secondary-s),calc(var(--secondary-l )*.75)) 100%);
 	padding: clamp(8px, 1vw, 16px);
+	transition: transform .5s
 }
 
 // Grid Templates
