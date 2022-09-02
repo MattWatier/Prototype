@@ -18988,11 +18988,11 @@ a, a:hover, nav a, nav a:hover {
   }
 }
 .shadow_emboss-light {
-  box-shadow: inset 1px 1px 2px 0px rgba(0,0,0,0.06), inset 2px 2px 3px 0px rgba(18, 56, 136, 0.045), inset -2px -2px 3px 0px rgba(145,112,19,0.045);
+  box-shadow: inset 2px 2px 3px 0px rgb(17 18 18 / 10%), inset -2px -2px 3px 0px rgb(255 253 248 / 12%), inset 1px 1px 2px 1px rgb(0 0 0 / 11%);
 }
 
 .shadow_emboss-bold {
-  box-shadow: inset 2px 3px 10px 0px rgba(0,0,0,0.13), inset 4px 4px 13px 0px rgba(11,20,28,0.07), inset -2px -2px 9px 0px rgba(145,112,19,0.04), inset 2px 1px 5px 4px rgba(0,0,0,0.9);
+  box-shadow: inset 2px 2px 3px 1px rgb(17 18 18 / 13%), inset -2px -3px 3px 1px rgb(255 253 248 / 22%), inset 1px 1px 2px 1px rgb(0 0 0 / 27%), inset 1px 1px 4px 2px rgb(0 0 0 / 16%);
 }
 
 .shadow_bevel-light {
