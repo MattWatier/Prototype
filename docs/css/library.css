@@ -1,0 +1,46 @@
+body { background: #9e0000; background: radial-gradient(at top left, hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l )*.75)), hsl(var(--secondary-h), var(--secondary-s), calc(var(--secondary-l )*.75)) 100%); padding: clamp(8px, 1vw, 16px); transition: transform 0.5s; }
+
+.grid-template_page { grid-template-columns: 4rem 1fr; grid-template-rows: auto auto 1fr  auto; grid-template-areas: 'menuArea headerArea'  'menuArea breadcrumbArea' 'menuArea mainArea' 'menuArea footerArea'; min-height: calc(100vh - (2 * clamp(8px, 1vw, 16px)) ); }
+
+.grid-template_page.expanded { grid-template-columns: 20rem 1fr; grid-template-rows: auto auto 1fr  auto; grid-template-areas: 'menuArea headerArea' 'menuArea breadcrumbArea'  'menuArea mainArea' 'menuArea footerArea'; }
+
+.grid-template_filterAndContent { grid-template-columns: auto 1fr; grid-template-rows: 1fr; grid-template-areas: 'filterArea contentArea'; }
+
+.grid-area_breadcrumbArea { grid-area: breadcrumbArea; }
+
+.grid-area_headerArea { grid-area: headerArea; }
+
+.grid-area_menuArea { grid-area: menuArea; }
+
+.grid-area_mainArea { grid-area: mainArea; }
+
+.grid-area_footerArea { grid-area: footerArea; }
+
+.grid-area_filterArea { grid-area: filterArea; }
+
+.grid-area_contentArea { grid-area: contentArea; }
+
+.col-start { grid-column-start: 1; }
+
+.col-end { grid-column-end: -1; }
+
+.row-start { grid-row-start: 1; }
+
+.row-end { grid-row-end: -1; }
+
+.c_inherit-all:hover, .c_inherit-all { color: inherit; }
+
+.disabled .disabled-dark { color: hsl(var(--black-h), var(--black-s), 30%) !important; border-color: hsl(var(--black-h), var(--black-s), 40%) !important; }
+
+.button-ripple .button-edge { width: 2em; height: 2em; padding: .2em; }
+.button-ripple .button { width: 1.6em; height: 1.6em; padding: .2em; }
+
+[data-element="footer-button-bar"] { height: 1.1em; padding-right: 1.5em; }
+
+[data-element="footer-button-bar--button-group"] { margin-top: -1em; }
+
+[data-element="footer-button-bar--button-edge"] { width: 2em; height: 2em; padding: .2em; }
+
+[data-element="footer-button-bar--button"] { width: 1.6em; height: 1.6em; padding: .2em; }
+
+.bg_transparent { background-color: transparent; }

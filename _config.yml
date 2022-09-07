@@ -34,7 +34,7 @@ theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed
   - jekyll-github-metadata
-destination: "/docs"
+destination: "docs"
 github: [metadata]
 port: 4001
 
