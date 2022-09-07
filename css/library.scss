@@ -13,7 +13,8 @@ body{
 // Grid Templates
 // .grid-template_page .label{ width: 0%; overflow:hidden;}
 .grid-template_page {
-	grid-template-columns: 6rem 1fr;
+	transition: grid-template-columns 1s;
+	grid-template-columns: 5.5rem 1fr;
 	grid-template-rows:  auto auto 1fr  auto;
 	grid-template-areas: 'menuArea headerArea'  'menuArea breadcrumbArea' 'menuArea mainArea' 'menuArea footerArea';
 	min-height: calc(100vh - (2 * clamp(8px, 1vw, 16px)) );
