@@ -1,29 +1,27 @@
-<div class="display_none flex:md sticky t_3  grid-area_menuArea z_4 br-r_1 br_solid br_black-3 font_ui font_2:lg font_1 ">
+<div class="display_none flex:md sticky t_3  grid-area_menuArea br-r_1 br_solid br_black-3 font_ui font_2:lg font_1 ">
 	<nav id="navigation" class="w_100 overflow-hidden filter_blur overflow_hidden br_radius flex:md flex_column:md justify_between p_3 p_4:lg transition_3 gap-y_5">
-		<div class="logo aspect_1x3 w_100 bg_white-7 p_4">&nbsp;</div>
-		<div id="mainDesktopNavTouchToggle" class="absolute flex_row justify_end r_n4 font_2:lg font_1">
-			<span class="aspect_1x1 bg_primary br_radius shadow_bevel-bold  c_white-8 grid h:bg_secondary h:c_white justify_center p_2 self_center text_center w_auto shadow_n3"><i class="block fa-caret-left fa-fw far fa-regular icon [rotate_180] self_center text-shadow_black-1 transition_2"></i></span>
-		</div>
+		<div class="logo aspect-ratio_1x1 aspect-ratio_3x1 bg_white-7 logo p_4 w_100 w_100 bg_white-7 p_4">&nbsp;</div>
+
 		<ul class="flex flex_column:md flex_row ul_none justify_around justify_start:md gap-y_3 w_100 w_auto:md">
 			<li class="nav-item flex_none br_radius c_black-8 h:bg_primary-n4 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light {% if page.homeActive %}active{% endif %}">
-				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md" href="./home"><i class="icon far fa-regular fa-fw fa-home-heart p-x_2:md p-y_3 p-y_0:md self_center"></i><span class="label self_center p-l_3:md p-l_4:lg lowercase lh_0 {% if page.homeActive %}active{% endif %}">Home</span></a>
+				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md" href="./home"><i class="icon far fa-regular fa-fw fa-home-heart m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label self_center p-l_3:md p-l_4:lg lowercase lh_0 {% if page.homeActive %}active{% endif %}">Home</span></a>
 			</li>
 			<li class="nav-item flex_none br_radius c_black-8 h:bg_primary-n4 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light  {% if page.searchActive %}active{% endif %}">
-				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md " href="./search"><i class="icon far fa-regular fa-fw fa-search p-x_2:md p-y_3 p-y_0:md self_center"></i><span class="label self_center p-l_3:md p-l_4:lg lowercase lh_0 {% if page.searchActive %}active{% endif %}">Search</span></a>
+				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md " href="./search"><i class="icon far fa-regular fa-fw fa-search m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label self_center p-l_3:md p-l_4:lg lowercase lh_0 {% if page.searchActive %}active{% endif %}">Search</span></a>
 			</li>
 			<li class="nav-item flex_none br_radius c_black-8 h:bg_primary-n4 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light  {% if page.savedActive %}active{% endif %}">
-				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md" href="./saved"><i class="icon far fa-regular fa-fw fa-heart p-x_2:md p-y_3 p-y_0:md self_center"></i><span class="label self_center p-l_3:md p-l_4:lg lowercase lh_0 {% if page.savedActive %}active{% endif %}">Saved</span></a>
+				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md" href="./saved"><i class="icon far fa-regular fa-fw fa-heart m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label self_center p-l_3:md p-l_4:lg lowercase lh_0 {% if page.savedActive %}active{% endif %}">Saved</span></a>
 			</li>
 			<li class="nav-item flex_none br_radius c_black-8 h:bg_primary-n4 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light  {% if page.creditActive %}active{% endif %}">
-				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md" href="./credits"><i class="icon far fa-regular fa-fw fa-award p-x_2:md p-y_3 p-y_0:md self_center"></i><span class="label self_center p-l_3:md p-l_4:lg lowercase lh_0 {% if page.creditActive %}active{% endif %}">Credits</span></a>
+				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md" href="./credits"><i class="icon far fa-regular fa-fw fa-award m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label self_center p-l_3:md p-l_4:lg lowercase lh_0 {% if page.creditActive %}active{% endif %}">Credits</span></a>
 			</li>
 			<li class="nav-item flex_none br_radius c_black-8 {% if page.watchingActive != null %} h:bg_primary-n4 h:c_white {% endif %} a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light {% if page.watchingActive %}active{% endif %}">
-				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md {% if page.watchingActive == null %}disabled disabled-dark {% endif %} " href="./presentation"><i class="icon far fa-regular fa-fw fa-play p-x_2:md p-y_3 p-y_0:md self_center"></i><span class="label self_center p-l_3:md p-l_4:lg lowercase lh_0 {% if page.watchingActive %}active{% endif %}">Watching</span></a>
+				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md {% if page.watchingActive == null %}disabled disabled-dark {% endif %} " href="./presentation"><i class="icon far fa-regular fa-fw fa-play m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label self_center p-l_3:md p-l_4:lg lowercase lh_0 {% if page.watchingActive %}active{% endif %}">Watching</span></a>
 			</li>
 		</ul>
 		<ul class="flex_column:md flex_row ul_none justify_center gap_3 flex m-t_auto">
 			<li class="nav-item flex_none br_radius c_black-8 h:bg_primary-n4 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light">
-				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md" href="./presentation"><i class="icon far fa-regular fa-fw fa-sign-out-alt p-x_2:md p-y_3 p-y_0:md self_center"></i><span class="label self_center p-l_3:md p-l_4:lg lowercase lh_0">Log Out</span></a>
+				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md" href="./presentation"><i class="icon far fa-regular fa-fw fa-sign-out-alt m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label self_center p-l_3:md p-l_4:lg lowercase lh_0">Log Out</span></a>
 			</li>
 		</ul>
 	</nav>

@@ -240,10 +240,10 @@ a, a:hover, nav a, nav a:hover {
 :root {
   --vertical-space: 1rem;
   --margin-top: ;
-  --font-family_headline: var(--font-family_display);
-  --font-family_headline-alt: var(--font-family_accent);
-  --font-family_content: var(--font-family_copy);
-  --font-family_code: var(--font-family_mono);
+  --font_headline: var(--font_display);
+  --font_headline-alt: var(--font_accent);
+  --font_content: var(--font_copy);
+  --font_code: var(--font_mono);
 }
 
 .reading-typography h1,
@@ -253,7 +253,7 @@ a, a:hover, nav a, nav a:hover {
 .reading-typography h5,
 .reading-typography h6 {
   color: hsla(var(--primary-h) var(--primary-s) var(--primary-l)/1);
-  font-family: var(--font-family_headline);
+  font-family: var(--font_headline);
 }
 .reading-typography h1:not(:first-child),
 .reading-typography h2:not(:first-child),
@@ -282,7 +282,7 @@ a, a:hover, nav a, nav a:hover {
   font-size: var(--font-size_up-2);
 }
 .reading-typography h4, .reading-typography h5, .reading-typography blockquote {
-  font-family: var(--font-family_headline-alt);
+  font-family: var(--font_headline-alt);
   font-size: var(--font-size_up-1);
 }
 .reading-typography h6 {
@@ -290,7 +290,7 @@ a, a:hover, nav a, nav a:hover {
 }
 .reading-typography p, .reading-typography ul, .reading-typography ol, .reading-typography dl, .reading-typography table {
   font-size: var(--font-size_0);
-  font-family: var(--font-family_content);
+  font-family: var(--font_content);
 }
 .reading-typography p + p, .reading-typography ul, .reading-typography ol, .reading-typography dl, .reading-typography table {
   margin-top: var(--vertical-space);
@@ -302,11 +302,11 @@ a, a:hover, nav a, nav a:hover {
   width: 100%;
 }
 .reading-typography thead {
-  font-family: var(--font-family_headline-alt);
+  font-family: var(--font_headline-alt);
   border-bottom: 1px solid hsla(var(--primary-h) var(--primary-s) var(--primary-l)/0.5);
 }
 .reading-typography pre, .reading-typography code {
-  font-family: var(--font-family_code);
+  font-family: var(--font_code);
   font-size: var(--font-size_up-1);
 }
 .reading-typography li::marker {
@@ -19045,11 +19045,11 @@ a, a:hover, nav a, nav a:hover {
   }
 }
 .shadow_emboss-light {
-  box-shadow: inset 1px 1px 2px 0px rgba(0,0,0,0.06), inset 2px 2px 3px 0px rgba(18, 56, 136, 0.045), inset -2px -2px 3px 0px rgba(145,112,19,0.045);
+  box-shadow: inset 2px 2px 3px 0px rgb(17 18 18 / 10%), inset -2px -2px 3px 0px rgb(255 253 248 / 12%), inset 1px 1px 2px 1px rgb(0 0 0 / 11%);
 }
 
 .shadow_emboss-bold {
-  box-shadow: inset 2px 3px 10px 0px rgba(0,0,0,0.13), inset 4px 4px 13px 0px rgba(11,20,28,0.07), inset -2px -2px 9px 0px rgba(145,112,19,0.04), inset 2px 1px 5px 4px rgba(0,0,0,0.9);
+  box-shadow: inset 2px 2px 3px 1px rgb(17 18 18 / 13%), inset -2px -3px 3px 1px rgb(255 253 248 / 22%), inset 1px 1px 2px 1px rgb(0 0 0 / 27%), inset 1px 1px 4px 2px rgb(0 0 0 / 16%);
 }
 
 .shadow_bevel-light {
@@ -20241,3 +20241,4 @@ a, a:hover, nav a, nav a:hover {
   opacity: 1;
 }
 
+/*# sourceMappingURL=UC.css.map */
