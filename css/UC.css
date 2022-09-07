@@ -42,6 +42,56 @@
   background-color: transparent;
 }
 
+.ul_inline-comma,
+.ul_inline-semicolon,
+.ul_inline-pipe {
+  padding: 0 !important;
+  margin: 0 !important;
+  display: inline-flex !important;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  justify-items: center;
+  list-style: none !important;
+}
+.ul_inline-comma > li,
+.ul_inline-semicolon > li,
+.ul_inline-pipe > li {
+  flex: 0 1 auto;
+  margin: 0 !important;
+}
+.ul_inline-comma > li:not(:last-child)::after,
+.ul_inline-semicolon > li:not(:last-child)::after,
+.ul_inline-pipe > li:not(:last-child)::after {
+  padding-inline-end: 0.5em;
+  padding-inline-start: 0;
+  opacity: 0.6;
+  margin: 0;
+}
+.ul_inline-comma li.no-after,
+.ul_inline-semicolon li.no-after,
+.ul_inline-pipe li.no-after {
+  padding-inline-end: 0.5em;
+}
+.ul_inline-comma li.no-after::after,
+.ul_inline-semicolon li.no-after::after,
+.ul_inline-pipe li.no-after::after {
+  display: none;
+}
+
+.ul_inline-comma > li:not(:last-child)::after {
+  content: ",";
+}
+
+.ul_inline-semicolon > li:not(:last-child)::after {
+  content: ";";
+}
+
+.ul_inline-pipe > li:not(:last-child)::after {
+  content: "|";
+  padding-inline-start: 0.5em;
+}
+
 *[data-bs-toggle=collapse] {
   transition: transform 0.5s;
 }
@@ -89,7 +139,7 @@ Styleguide Recipes.InteractiveExtras.Scrollbar
 /* Let's get this party started */
 .scrollbar-mini {
   --scroll-bar-radius:var( --scroll-bar-radius, --br_radius );
-  --scroll-bar-background-selected:var(--highlight-h) var(--highlight-s) var(--highlight-l);
+  --scroll-bar-background-selected:var(--accent-h) var(--accent-s) var(--accent-l);
   --scroll-bar-background-not-selected:var(--secondary-h) var(--secondary-s) var(--secondary-l);
   --scroll-bar-background:var(--black-h) var(--black-s) var(--black-l);
 }
