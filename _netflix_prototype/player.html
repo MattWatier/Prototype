@@ -1,0 +1,37 @@
+--- 
+layout: library_app_frame 
+name: "Player" 
+uri: "root/player/collection-name/video-que/presentation-name" 
+watchingActive: true 
+---
+<!-- {% include /netflix/home-header-branding.html %} -->
+{% include /netflix/app-header-w-search.html %}
+{% include /netflix/breadcrumb.html %}
+<div class="grid-area_mainArea br-br_radius overflow_visible grid grid-x_5:md">
+	<main class="bg_white-6 col-start_start col-end_4:md col-end_5:xl">
+		<section data-label="player" class="w_100" >
+			<div class="player hd full player hd full p-x_8:xxl p-x_6:xl p-x_5:lg p-x_4:md p-x_3 p-y_4 p-y_5:xl">
+				<header class="aspect-ratio_16x9 bg_cover br-solid br_1 br_black-3 br_radius relative self_start shadow_2 w_100" style="background-image:url(http://placeimg.com/640/480/sports)">
+					<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
+					<div class="absolute t_3 r_0 z_2" data-element="save-toggle">
+						<span class="fa-stack fa-2x font-size_0 c_secondary-n2 h:c_secondary-n4">
+							<i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
+							<i class="fa-solid fas fa-star fa-stack-1x c_white h:c_white"></i>
+						</span>
+					</div>
+					<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
+						<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
+					</div>
+				</header>
+            </div>
+		</section>
+		<section data-label="information" ></section>
+	</main>	
+	<nav data-label="video-que-navigation" class="col-start_4:md col-start_5:xl col-end_end grid">
+		<ul class="ul_none flex flex_column items_stretch">
+			<li class="relative bg_white-2 br-l_1 br_black-3 br_solid">something</li>
+			<li class="relative bg_white-6 br-t_1 br-b_1 br_solid br_black-3">something</li>
+			<li class="relative bg_white-2 br-l_1 br_black-3 br_solid">something</li>
+		</ul>
+	</nav>
+</div>

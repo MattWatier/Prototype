@@ -1,8 +1,8 @@
 <li class="flex flex_column items_center user-select_none relative">
-    <article class="br_radius bg_white-9 font_1 shadow_bevel-light flex flex_column br_solid br_black-3 br_1 self_stretch ">
-        <div class="flex flex_row:md flex_column p_3 gap-x_5:lg gap-x_4 relative">
+    <div class="br_radius bg_white-9 font_1 shadow_bevel-light flex flex_column br_solid br_black-3 br_1 self_stretch ">
+        <article class="flex flex_row:md flex_column p_3 gap-x_5:lg gap-x_4 relative">
             <header class="aspect-ratio_16x9 bg_cover br-solid br_1 br_black-3 br_radius m_0:md m_auto max-w_20 relative self_start shadow_2 w_100" style="background-image:url(http://placeimg.com/640/480/sports)">
-                <div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n2-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
+                <div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
                 <div class="absolute t_3 r_0 z_2" data-element="save-toggle">
                     <span class="fa-stack fa-2x font-size_0 c_secondary-n2 h:c_secondary-n4">
                         <i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
@@ -27,15 +27,19 @@
                     </li>
                 </ul>
             </main>
-            <span data-element="presentation-player" class="aspect-ratio_1x1 bg_brand-n2 br_circle inline-block  m-r_4:md m-r_5 p_2 self_center m-l_auto">
+            <nav data-element="presentation-player" class="aspect-ratio_1x1 bg_brand-n2 br_circle inline-block  m-r_4:md m-r_5 p_2 self_center m-l_auto">
                 <a href="" data-element="footer-button-bar--button" class="button bg_white-6 c_black br_circle aspect-ratio_1x1 grid items_center justify_center h:bg_primary h:c_white [expanded-click-area] z_1">
                     <i class="fa-solid fas fa-list c_inherit-all font-size_down-1"></i>
                 </a>
-            </span>
-        </div>
+            </nav>
+        </article>
+        <aside>
         <ul class="ul_none font_copy">
             <li class="br-t_1 br_solid br_black-3 p_4 flex flex_row relative h:bg_primary-5 p-b_4 relative">
-                <aside class="">
+                {% include  /netflix/program/presentation-with-keyword.html %}
+            </li>
+            <li class="br-t_1 br_solid br_black-3 p_4 flex flex_row relative h:bg_primary-5 p-b_4 relative">
+                <div class="">
                     <h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">(Presentation Title) Rhythm and Conduction Disorders</h3>
                     <h4 class="c_black-6 font-size_down-2 font_display font_medium m-y_0">(Sub Presentation Title) Rhythm and Conduction Disorders</h4>
                     <!-- Start of Keyword Found Conditional Block: This block turns on if the keywords were found within the video transcript, title, or subtitle of this presentation -->
@@ -44,7 +48,7 @@
                     </span>
                     <span class="bg_accent-n1 br_round c_white font-size_down-3 p-x_4 p-y_2 r_0 t_0"><i class="fas fa-solid fa-search m-r_3"></i><span class="font_medium font_ui">Keyword Found</span>
                         <!-- End of Keyword Found Conditional Block -->
-                </aside>
+                </div>
                 <span class="grid self_stretch items_start flex_none font-size_down-3 br-r_1 br_solid br_black-3 p-r_3 m-r_3 m-l_auto z_2">
                     <span class="fa-stack fa-2x font-size_0 c_secondary-n2 h:c_secondary-n4">
                         <i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
@@ -83,6 +87,7 @@
                 </span>
             </li>
         </ul>
+        </aside>
         <footer data-element="footer-button-bar" class="bg_brand-n2 br-br_radius br-bl_radius flex flex_row-reverse nowrap items_end  font_2 m_n1 m-t_auto">
         </footer>
     </article>

@@ -57,7 +57,7 @@
 		--link-color: hsl(var(--secondary-h), var(--secondary-s), calc(var(--secondary-l) + ((var(--secondary-l)) * -0.37)));
 		--link-hover-color: hsl(var(--secondary-h), var(--secondary-s), calc(var(--secondary-l) + ((var(--secondary-l)) * -0.50)));
 		--accent-color:  hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-		--font_display:  Helvetica Neue, Arial, sans-serif;
+		--font_display:  Arial Black, Impact, sans-serif;
 		--font_accent: Rockwell Extra Bold, Rockwell Bold, monospace;
 		--font_copy: 'Montserrat', Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
 		--font_mono: Lucida Console, Lucida Sans Typewriter, monaco, Bitstream Vera Sans Mono, monospace;
@@ -96,7 +96,7 @@
 				<a class="p_3  c_inherit-all h:undecorated undecorated flex flex_column flex_row:md" href="./credits"><i class="icon far fa-regular fa-fw fa-award m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_10 opacity_0 ">Credits</span></a>
 			</li>
 			<li class="nav-item m-r_3 flex_none br_radius c_black-8  a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light transition_2 ">
-				<a class="p_3  c_inherit-all h:undecorated undecorated flex flex_column flex_row:md disabled disabled-dark  " href="./presentation"><i class="icon far fa-regular fa-fw fa-play m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_10 opacity_0 ">Watching</span></a>
+				<a class="p_3  c_inherit-all h:undecorated undecorated flex flex_column flex_row:md disabled disabled-dark  " href="./player"><i class="icon far fa-regular fa-fw fa-play m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_10 opacity_0 ">Watching</span></a>
 			</li>
 		</ul>
 		<ul class="flex_column:md flex_row ul_none justify_center gap_3  flex m-t_auto">
@@ -145,7 +145,7 @@
 		</div>
 	</div>
 </header> -->
-<header class="bg_white-8  flex flex_row gap_3 grid-area_headerArea items_center p-l_5:md p_2 relative">
+<header class="bg_white-8  flex flex_row gap_3 grid-area_headerArea items_center p-l_5:md p_2 relative  br-b_1 br_solid br_black-3">
 	<div id="mainDesktopNavTouchToggle" class="absolute b_0 flex:md display_none flex_column font_1 font_2:lg l_n4 t_0 z_3">
 		<span class="aspect-ratio_1x1 bg_brand br_radius c_white-8 flex_none grid h:bg_primary h:c_white m-y_auto p_2 relative shadow_bevel-bold shadow_n3 text_center w_auto"><i class="block fa-caret-left fa-fw far fa-regular icon [rotate_180] self_center text-shadow_black-1 transition_2"></i></span>
 	</div>
@@ -174,34 +174,7 @@
 
 	</div>
 </header>
-<div class="grid-area_breadcrumbArea bg_white-2 p-l_5:xxl p-l_4:lg p-l_3 p-y_3 font_1 br-b_1 br_solid br_black-3 flex_row flex gap-x_4 justify_start items_center shadow_emboss-light c_primary-n2">
-	<button class="btn btn-primary shadow_overlap-light br_solid br_black-3 br_1">
-		<i class="fa-arrow-left fas font-size_down-1"></i>
-		<span class="inline-block:md display_none">back</span>
-	</button>
-	<ul class="flex_inline flex flex_row lh_0 ul_none text-shadow_white-1">
-		<li class="flex flex_row nowrap relative">
-			<div class="">
-				<i class="c_black-9 fa-light fal m-l_1 fa-fw m-r_2 flex_none self_center fa-home"></i>
-				<a class="font_regular flex_auto self_center h:underline c_inherit-all">Home</a>
-			</div>
-		</li>
-		<li class="flex flex_row nowrap relative">
-			<i class="fas fa-angle-right c_accent-n2 m-x_3 self_baseline font-size_down-1"></i>
-			<div class="">
-				<i class="c_black-9 fa-light fal m-l_1 fa-fw m-r_2 flex_none self_center fa-cube"></i>
-				<a class="font_regular flex_auto self_center h:underline c_inherit-all">EchoSap</a>
-			</div>
-		</li>
-		<li class="flex flex_row nowrap relative">
-			<i class="fas fa-angle-right c_accent-n2 m-x_3 self_baseline font-size_down-1"></i>
-			<div class="">
-				<i class="c_black-9 fa-light fal m-l_1 fa-fw m-r_2 flex_none self_center fa-kaaba"></i>
-				<a class="font_regular flex_auto self_center h:underline c_inherit-all">PopSap</a>
-			</div>
-		</li>
-	</ul>
-</div>
+
 <header class="font-size_up-1 grid-area_pageHead ">
 	<div class="introduction p-x_3 p-x_4:lg p-x_5:xxl p-y_4:xxl p-y_3:lg p-y_2 bg_white-8 br-b_1 br_solid br_black-3">
 		<h3 class="font_display font_xbold c_primary-n2">Gallery X</h3>
@@ -614,7 +587,7 @@
 		--bs-offcanvas-height:100vh;
 	}
 </style>
-<div class="offcanvas offcanvas-top bg_secondary-n2 c_white font_1:xl font_0:lg font_n1" tabindex="-1" id="offCanvasFilter" aria-labelledby="offCanvasFilterLabel">
+<div class="offcanvas offcanvas-top bg_secondary-n3 c_white font_1:xl font_0:lg font_n1" tabindex="-1" id="offCanvasFilter" aria-labelledby="offCanvasFilterLabel">
 	<div class="offcanvas-header">
 		<h3 class="offcanvas-title font_display font-size_up-2 m-t_4" id="offCanvasFilterLabel">Advanced Search</h3>
 		<button type="button" class="c_white-8  h:c_white bg_transparent br_0 br_none" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-times fa-solid fas"></i></button>
