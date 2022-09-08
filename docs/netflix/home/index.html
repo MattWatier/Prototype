@@ -26,21 +26,28 @@
 		--br_radius: 8px;
 		--br_round: 16px;
 		--br_circle: 100%;
-		--brand-h: 228.8deg;
-		--brand-s: 75%;
-		--brand-l: 39.2156862745%;
-		--primary-h: 360deg;
-		--primary-s: 16%;
-		--primary-l: 4%;
-		--secondary-h: 222deg;
-		--secondary-s: 63%;
-		--secondary-l: 46%;
-		--accent-h: 50deg;
-		--accent-s: 100%;
-		--accent-l: 47%;
-		--highlight-h: 0deg;
-		--highlight-s: 100%;
-		--highlight-l: 31%;
+		/*
+		"hsl":[207,95,8],
+		"hsl":[345,100,60],
+		"hsl":[174,62,47],
+		"hsl":[61,94,58],
+		"hsl":[202,90,54], 
+		*/
+		--brand-h: 207deg;
+		--brand-s: 95%;
+		--brand-l: 8%;
+		--primary-h:174deg;
+		--primary-s:62%; 	
+		--primary-l:47%; 	
+		--secondary-h: 345deg; 
+		--secondary-s:100%; 
+		--secondary-l:60%; 
+		--accent-h: 202deg;
+		--accent-s: 90%;
+		--accent-l: 54%;
+		--highlight-h: 61deg;
+		--highlight-s: 94%;
+		--highlight-l: 58%;
 		--black-h: 0deg;
 		--black-s: 0%;
 		--black-l: 6.2745098039%;
@@ -50,19 +57,23 @@
 		--link-color: hsl(var(--secondary-h), var(--secondary-s), calc(var(--secondary-l) + ((var(--secondary-l)) * -0.37)));
 		--link-hover-color: hsl(var(--secondary-h), var(--secondary-s), calc(var(--secondary-l) + ((var(--secondary-l)) * -0.50)));
 		--accent-color:  hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-		--font_display: 'Coda', Impact, Haettenschweiler, Franklin Gothic Bold, Charcoal, Helvetica Inserat, Bitstream Vera Sans Bold, Arial Black, sans serif;
+		--font_display:  Helvetica Neue, Arial, sans-serif;
 		--font_accent: Rockwell Extra Bold, Rockwell Bold, monospace;
 		--font_copy: 'Montserrat', Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
 		--font_mono: Lucida Console, Lucida Sans Typewriter, monaco, Bitstream Vera Sans Mono, monospace;
 	}
 </style>
+
+
+
+
 </head>
 
 <body class="BODY_TAG-stand-in bg_black-4 w_100 grid:md min-h_100">
 <div class="page-wrapper grid:md isolation_isolate br_radius bg_white-7 z_1">
 	<div id="AppFrame" class="grid:md grid-template_page flex flex_column [expanded] expanded">
 	<div class="display_none flex:md sticky t_3  grid-area_menuArea br-r_1 br_solid br_black-3 font_ui font_2:lg font_1 ">
-	<nav id="navigation" class="w_100 overflow-hidden filter_blur overflow_hidden br_radius flex:md flex_column:md justify_between p_3 transition_3 p_4:lg">
+	<nav id="navigation" class="w_100 overflow-hidden filter_blur overflow_hidden br_radius flex:md flex_column:md justify_between p_3  p_4:lg">
 		<div class="logo-wrapper p_3 m-t_n3 m-l_n3 m-b_3">
 			<div  id="logo_3x1" class="logo aspect-ratio_3x1 w_100"><img class="w_100 br_radius" src="/Prototype/assets/images/logo_3x1.jpg" alt="" ></div>
 			<div id="logo_1x1"  class="logo aspect-ratio_1x1 w_100 display_none">
@@ -72,25 +83,25 @@
 		</div>
 
 		<ul class="flex flex_column:md flex_row ul_none justify_around justify_start:md gap-y_3 w_100 w_auto:md">
-			<li class="nav-item m-r_3 flex_none br_radius c_black-8 h:bg_primary-n4 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light active">
-				<a class="p_3 transition_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md" href="./home"><i class="icon far fa-regular fa-fw fa-home-heart m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_3 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_10 opacity_0 active">Home</span></a>
+			<li class="nav-item m-r_3 flex_none br_radius c_black-8 h:bg_brand-n4 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light transition_2 active">
+				<a class="p_3  c_inherit-all h:undecorated undecorated flex flex_column flex_row:md" href="./home"><i class="icon far fa-regular fa-fw fa-home-heart m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_10 opacity_0 active">Home</span></a>
 			</li>
-			<li class="nav-item m-r_3 flex_none br_radius c_black-8 h:bg_primary-n4 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light  ">
-				<a class="p_3 transition_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md " href="./search"><i class="icon far fa-regular fa-fw fa-search m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_3 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_10 opacity_0 ">Search</span></a>
+			<li class="nav-item m-r_3 flex_none br_radius c_black-8 h:bg_brand-n4 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light transition_2  ">
+				<a class="p_3  c_inherit-all h:undecorated undecorated flex flex_column flex_row:md " href="./search"><i class="icon far fa-regular fa-fw fa-search m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_10 opacity_0 ">Search</span></a>
 			</li>
-			<li class="nav-item m-r_3 flex_none br_radius c_black-8 h:bg_primary-n4 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light  ">
-				<a class="p_3 transition_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md" href="./saved"><i class="icon far fa-regular fa-fw fa-heart m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_3 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_10 opacity_0 ">Saved</span></a>
+			<li class="nav-item m-r_3 flex_none br_radius c_black-8 h:bg_brand-n4 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light transition_2  ">
+				<a class="p_3  c_inherit-all h:undecorated undecorated flex flex_column flex_row:md" href="./saved"><i class="icon far fa-regular fa-fw fa-heart m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_10 opacity_0 ">Saved</span></a>
 			</li>
-			<li class="nav-item m-r_3 flex_none br_radius c_black-8 h:bg_primary-n4 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light  ">
-				<a class="p_3 transition_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md" href="./credits"><i class="icon far fa-regular fa-fw fa-award m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_3 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_10 opacity_0 ">Credits</span></a>
+			<li class="nav-item m-r_3 flex_none br_radius c_black-8 h:bg_brand-n4 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light transition_2  ">
+				<a class="p_3  c_inherit-all h:undecorated undecorated flex flex_column flex_row:md" href="./credits"><i class="icon far fa-regular fa-fw fa-award m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_10 opacity_0 ">Credits</span></a>
 			</li>
-			<li class="nav-item m-r_3 flex_none br_radius c_black-8  a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light ">
-				<a class="p_3 transition_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md disabled disabled-dark  " href="./presentation"><i class="icon far fa-regular fa-fw fa-play m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_3 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_10 opacity_0 ">Watching</span></a>
+			<li class="nav-item m-r_3 flex_none br_radius c_black-8  a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light transition_2 ">
+				<a class="p_3  c_inherit-all h:undecorated undecorated flex flex_column flex_row:md disabled disabled-dark  " href="./presentation"><i class="icon far fa-regular fa-fw fa-play m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_10 opacity_0 ">Watching</span></a>
 			</li>
 		</ul>
-		<ul class="flex_column:md flex_row ul_none justify_center gap_3 transition_3 flex m-t_auto">
-			<li class="nav-item m-r_3 flex_none br_radius c_black-8 h:bg_primary-n4 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light">
-				<a class="p_3 transition_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md" href="./presentation"><i class="icon far fa-regular fa-fw fa-sign-out-alt m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_3 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_10 opacity_0">Log Out</span></a>
+		<ul class="flex_column:md flex_row ul_none justify_center gap_3  flex m-t_auto">
+			<li class="nav-item m-r_3 flex_none br_radius c_black-8 h:bg_brand-n4 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light transition_2">
+				<a class="p_3  c_inherit-all h:undecorated undecorated flex flex_column flex_row:md" href="./presentation"><i class="icon far fa-regular fa-fw fa-sign-out-alt m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_10 opacity_0">Log Out</span></a>
 			</li>
 		</ul>
 	</nav>
@@ -134,23 +145,23 @@
 		</div>
 	</div>
 </header> -->
-<header class="bg_white-8 br-tr_radius flex flex_row gap_3 grid-area_headerArea items_center p-l_5:md p_2 relative">
+<header class="bg_white-8  flex flex_row gap_3 grid-area_headerArea items_center p-l_5:md p_2 relative">
 	<div id="mainDesktopNavTouchToggle" class="absolute b_0 flex:md display_none flex_column font_1 font_2:lg l_n4 t_0 z_3">
-		<span class="aspect-ratio_1x1 bg_primary br_radius c_white-8 flex_none grid h:bg_secondary h:c_white m-y_auto p_2 relative shadow_bevel-bold shadow_n3 text_center w_auto"><i class="block fa-caret-left fa-fw far fa-regular icon [rotate_180] self_center text-shadow_black-1 transition_2"></i></span>
+		<span class="aspect-ratio_1x1 bg_brand br_radius c_white-8 flex_none grid h:bg_primary h:c_white m-y_auto p_2 relative shadow_bevel-bold shadow_n3 text_center w_auto"><i class="block fa-caret-left fa-fw far fa-regular icon [rotate_180] self_center text-shadow_black-1 transition_2"></i></span>
 	</div>
-	<div class="flex flex_row input-holder m-y_2:md m-x_3 m-x_0:md max-w_40 relative w_100">
-		<input id="input_uniqueTextAndButton" name="input_uniqueTextAndButton" type="text" placeholder="Keyword Search" class="shadow_emboss-light br_1 flex_auto p-y_2 br_solid flex_auto p-l_4 lh_3 br_round bg_white c_black bg_white br_black-3 font_1 br-r_0 br-br_square br-tr_square">
-		<button class="btn btn-primary flex flex_row gap-x_3 items_center justify_center nowrap h:bg_secondary br_round br-tl_square br-bl_square">
+	<div class="flex flex_row gap_3 input-holder m-x_3 m-x_4:lg m-y_2:md max-w_60 m-x_auto:xl relative w_100">
+		<input id="input_uniqueTextAndButton" name="input_uniqueTextAndButton" type="text" placeholder="Keyword Search" class="bg_white br_1 br_black-3 br_round br_solid c_black flex_auto font_1 lh_3 p-l_4 p-y_2 shadow_emboss-light">
+		<button class="btn btn-primary flex flex_row gap-x_3 items_center justify_center nowrap br_radius">
 			<i class="fas fa-solid fa-search c_inherit-all"></i>
 			<span class="inline-block:md display_none">Search</span>
 		</button>
-	</div>
-	<button class="btn btn-secondary flex_row gap-x_3 items_center justify_center nowrap h:bg_secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvasFilter" aria-controls="offCanvasFilter">
+    <button class="btn btn-secondary flex_row gap-x_3 items_center justify_center nowrap " type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvasFilter" aria-controls="offCanvasFilter">
 		<i class="fa-cog fas fa-solid c_inherit-all"></i>
-		<span  class="display_none inline:lg">Advanced</span><span class="display_none inline:xl"> Search</span>
+		<span class="display_none inline:lg">Advanced</span><span class="display_none inline:xl"> Search</span>
 	</button>
-	<div class="m-r_n2 m-y_n2 dropdown m-l_auto relative">
-		<div class="aspect-ratio_1x1 bg_accent br-tr_radius c_black dropdown-toggle flex flex_column flex_none font-size_up-1 font_ui font_xbold items_center justify_center p-x_3:md p-x_2">
+	</div>
+	<div class="m-r_n2 m-y_n2 dropdown m-l_auto relative display_none inline-block:md">
+		<div class="aspect-ratio_1x1 bg_accent  c_black dropdown-toggle flex flex_column flex_none font-size_up-1 font_ui font_xbold items_center justify_center p-x_3:md p-x_2">
 			<button class="font_xbold font_copy br_0 bg_transparent expanded-click-area font_ui" type="button" data-bs-toggle="dropdown" aria-expanded="false">MW</button>
 			<ul class="dropdown-menu dropdown-menu-dark" style="">
 				<li><a class="dropdown-item active" href="#">Action</a></li>
@@ -163,47 +174,74 @@
 
 	</div>
 </header>
-<div class="grid-area_mainArea grid:md flex flex_column bg_white-8 br-br_radius overflow_visible">
-<section class="p-y_5:xxl p-y_4:lg p-y_3">
-	<header class="font-size_up-1 p-x_4 p-x_5:lg p-x_6:xxl reading-typography  max-w_70">
-		<h3 class="font_display">Gallery X</h3>
-		<p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt reiciendis cumque ut eum alias recusandae illum officiis debitis dolores corrupti deleniti velit maiores, dignissimos adipisci rerum odio? Rerum, reprehenderit doloremque?</p>
-	</header>
+<div class="grid-area_breadcrumbArea bg_white-2 p-l_5:xxl p-l_4:lg p-l_3 p-y_3 font_1 br-b_1 br_solid br_black-3 flex_row flex gap-x_4 justify_start items_center shadow_emboss-light c_primary-n2">
+	<button class="btn btn-primary shadow_overlap-light br_solid br_black-3 br_1">
+		<i class="fa-arrow-left fas font-size_down-1"></i>
+		<span class="inline-block:md display_none">back</span>
+	</button>
+	<ul class="flex_inline flex flex_row lh_0 ul_none text-shadow_white-1">
+		<li class="flex flex_row nowrap relative">
+			<div class="">
+				<i class="c_black-9 fa-light fal m-l_1 fa-fw m-r_2 flex_none self_center fa-home"></i>
+				<a class="font_regular flex_auto self_center h:underline c_inherit-all">Home</a>
+			</div>
+		</li>
+		<li class="flex flex_row nowrap relative">
+			<i class="fas fa-angle-right c_accent-n2 m-x_3 self_baseline font-size_down-1"></i>
+			<div class="">
+				<i class="c_black-9 fa-light fal m-l_1 fa-fw m-r_2 flex_none self_center fa-cube"></i>
+				<a class="font_regular flex_auto self_center h:underline c_inherit-all">EchoSap</a>
+			</div>
+		</li>
+		<li class="flex flex_row nowrap relative">
+			<i class="fas fa-angle-right c_accent-n2 m-x_3 self_baseline font-size_down-1"></i>
+			<div class="">
+				<i class="c_black-9 fa-light fal m-l_1 fa-fw m-r_2 flex_none self_center fa-kaaba"></i>
+				<a class="font_regular flex_auto self_center h:underline c_inherit-all">PopSap</a>
+			</div>
+		</li>
+	</ul>
+</div>
+<header class="font-size_up-1 grid-area_pageHead ">
+	<div class="introduction p-x_3 p-x_4:lg p-x_5:xxl p-y_4:xxl p-y_3:lg p-y_2 bg_white-8 br-b_1 br_solid br_black-3">
+		<h3 class="font_display font_xbold c_primary-n2">Gallery X</h3>
+	<p class="max-w_70">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt reiciendis cumque ut eum alias recusandae illum officiis debitis dolores corrupti deleniti velit maiores, dignissimos adipisci rerum odio? Rerum, reprehenderit doloremque?</p>
+	</div>
+</header>
+<div class="grid-area_mainArea bg_white-8 br-br_radius overflow_visible">
+	<section class="p-y_5:xxl p-y_4:lg p-y_3">
 <div class="gallery grid">
 	<ul class="grid-hs scrollbar-mini full ul_none gap-x_4 p-b_4 m-b_n2 grid">
 		<li class="flex flex_column items_center user-select_none relative"><article class="br_radius bg_white-9 font_1 shadow_bevel-light flex flex_column br_solid br_black-3 br_1 self_stretch">
 	<header class="aspect-ratio_16x9 bg_cover br-tl_radius br-tr_radius relative w_100" style="background-image:url(http://placeimg.com/640/480/sports)">
-		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_primary-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
+		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
 		<div class="absolute t_3 r_0 z_2" data-element="save-toggle">
-			<span class="fa-stack fa-2x font-size_0 c_accent h:c_accent-n2">
-			<i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
-			<i class="fa-solid fas fa-star fa-stack-1x c_white h:c_black"></i>
+			<span class="fa-stack fa-2x font-size_0 c_secondary-n2 h:c_secondary-n4">
+				<i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
+				<i class="fa-solid fas fa-star fa-stack-1x c_white h:c_white"></i>
 			</span>
 		</div>
 		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
 			<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
 		</div>
 	</header>
-		<main class="font_1 lh_1 flex flex_column gap-y_2 p_4 p_5:lg font_display">
-		<h1 class="font-size_down-1 font_regular c_secondary m-y_0"> (Collection Title) Yearly Conference </h1>
-		<h2 class="font-size_up-2 font_bold font_display c_primary m-y_0">(Title) Quam ut Blat Ruble Prapms</h2>
-		<h3 class="font-size_0 black-8 m-y_0">(Session Sub Title) Rhythm and Conduction Disorders</h3>
-		<ul class="ul_none p-t_4 m-t_auto flex flex_row flex_wrap justify_start font-size_down-2 c_black-7 m-t_auto lh_0 items_end gap_2">
+		<main class="font_1 lh_1 flex flex_column gap-y_2 p_4 p_5:xl font_display">
+			<h1 class="c_secondary font-size_down-2 font_display font_medium m-y_0"> (Collection Title) Yearly Conference </h1>
+			<h2 class="font-size_up-1 font_bold font_display c_primary m-y_0 lh_1">(Title) Quam ut Blat Ruble Prapms</h2>
+			<h3 class="c_black-7 font-size_down-1 font_medium font_ui m-y_0">(Session Sub Title) Rhythm and Conduction Disorders</h3>
+			<ul class="ul_none p-t_4 m-t_auto flex flex_row flex_wrap justify_start font-size_down-2 c_black-7 m-t_auto lh_0 items_end gap_3">
 				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative lh_0 z_2">
-					<span class="font-size_up-1 c_accent-n2 block"><i class="fal fa-clock"></i> 15</span>
-					minutes
+					<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-clock"></i> 15</span> minutes
 				</li>
 				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative h:bg_black-2 lh_0 z_2">
 					<a href="#" class="undecorated h:undecorated expanded-click-area">
-					<span class="font-size_up-1 c_primary-n2 block"><i class="fal fa-paperclip p-r_3"></i> <span class="p-r_3">PDF</span></span>
-						Attachments
-					</a>
+						<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-paperclip p-r_3"></i> <span class="p-r_3">PDF</span></span> Attachments </a>
 				</li>
-		</ul>
+			</ul>
 		</main>
-	<footer data-element="footer-button-bar" class="bg_primary br-br_radius br-bl_radius flex flex_row-reverse nowrap items_end  font_2  font_3:lg m_n1 m-t_auto">
+	<footer data-element="footer-button-bar" class="bg_brand br-br_radius br-bl_radius flex flex_row-reverse nowrap items_end  font_2  font_3:lg m_n1 m-t_auto">
 		<ul data-element="footer-button-bar--button-group" class="flex flex_row-reverse inline-block self_start ul_none">
-			<li data-element="footer-button-bar--button-edge" class="aspect-ratio_1x1 bg_primary br_circle inline-block m-r_n3">
+			<li data-element="footer-button-bar--button-edge" class="aspect-ratio_1x1 bg_brand br_circle inline-block m-r_n3">
 				<a href="" data-element="footer-button-bar--button" class="[expanded-click-area] aspect-ratio_1x1 bg_white-6 br_circle button c_black grid h:bg_secondary h:c_white items_center justify_center z_1">
 					<i class="c_inherit-all fa-list fa-solid fas font-size_down-2"></i>
 				</a>
@@ -214,37 +252,34 @@
 </li>
 		<li class="flex flex_column items_center user-select_none relative"><article class="br_radius bg_white-9 font_1 shadow_bevel-light flex flex_column br_solid br_black-3 br_1 self_stretch">
 	<header class="aspect-ratio_16x9 bg_cover br-tl_radius br-tr_radius relative w_100" style="background-image:url(http://placeimg.com/640/480/sports)">
-		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_primary-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
+		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
 		<div class="absolute t_3 r_0 z_2" data-element="save-toggle">
-			<span class="fa-stack fa-2x font-size_0 c_accent h:c_accent-n2">
-			<i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
-			<i class="fa-solid fas fa-star fa-stack-1x c_white h:c_black"></i>
+			<span class="fa-stack fa-2x font-size_0 c_secondary-n2 h:c_secondary-n4">
+				<i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
+				<i class="fa-solid fas fa-star fa-stack-1x c_white h:c_white"></i>
 			</span>
 		</div>
 		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
 			<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
 		</div>
 	</header>
-		<main class="font_1 lh_1 flex flex_column gap-y_2 p_4 p_5:lg font_display">
-		<h1 class="font-size_down-1 font_regular c_secondary m-y_0"> (Collection Title) Yearly Conference </h1>
-		<h2 class="font-size_up-2 font_bold font_display c_primary m-y_0">(Title) Quam ut Blat Ruble Prapms</h2>
-		<h3 class="font-size_0 black-8 m-y_0">(Session Sub Title) Rhythm and Conduction Disorders</h3>
-		<ul class="ul_none p-t_4 m-t_auto flex flex_row flex_wrap justify_start font-size_down-2 c_black-7 m-t_auto lh_0 items_end gap_2">
+		<main class="font_1 lh_1 flex flex_column gap-y_2 p_4 p_5:xl font_display">
+			<h1 class="c_secondary font-size_down-2 font_display font_medium m-y_0"> (Collection Title) Yearly Conference </h1>
+			<h2 class="font-size_up-1 font_bold font_display c_primary m-y_0 lh_1">(Title) Quam ut Blat Ruble Prapms</h2>
+			<h3 class="c_black-7 font-size_down-1 font_medium font_ui m-y_0">(Session Sub Title) Rhythm and Conduction Disorders</h3>
+			<ul class="ul_none p-t_4 m-t_auto flex flex_row flex_wrap justify_start font-size_down-2 c_black-7 m-t_auto lh_0 items_end gap_3">
 				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative lh_0 z_2">
-					<span class="font-size_up-1 c_accent-n2 block"><i class="fal fa-clock"></i> 15</span>
-					minutes
+					<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-clock"></i> 15</span> minutes
 				</li>
 				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative h:bg_black-2 lh_0 z_2">
 					<a href="#" class="undecorated h:undecorated expanded-click-area">
-					<span class="font-size_up-1 c_primary-n2 block"><i class="fal fa-paperclip p-r_3"></i> <span class="p-r_3">PDF</span></span>
-						Attachments
-					</a>
+						<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-paperclip p-r_3"></i> <span class="p-r_3">PDF</span></span> Attachments </a>
 				</li>
-		</ul>
+			</ul>
 		</main>
-	<footer data-element="footer-button-bar" class="bg_primary br-br_radius br-bl_radius flex flex_row-reverse nowrap items_end  font_2  font_3:lg m_n1 m-t_auto">
+	<footer data-element="footer-button-bar" class="bg_brand br-br_radius br-bl_radius flex flex_row-reverse nowrap items_end  font_2  font_3:lg m_n1 m-t_auto">
 		<ul data-element="footer-button-bar--button-group" class="flex flex_row-reverse inline-block self_start ul_none">
-			<li data-element="footer-button-bar--button-edge" class="aspect-ratio_1x1 bg_primary br_circle inline-block m-r_n3">
+			<li data-element="footer-button-bar--button-edge" class="aspect-ratio_1x1 bg_brand br_circle inline-block m-r_n3">
 				<a href="" data-element="footer-button-bar--button" class="[expanded-click-area] aspect-ratio_1x1 bg_white-6 br_circle button c_black grid h:bg_secondary h:c_white items_center justify_center z_1">
 					<i class="c_inherit-all fa-list fa-solid fas font-size_down-2"></i>
 				</a>
@@ -255,37 +290,34 @@
 </li>
 		<li class="flex flex_column items_center user-select_none relative"><article class="br_radius bg_white-9 font_1 shadow_bevel-light flex flex_column br_solid br_black-3 br_1 self_stretch">
 	<header class="aspect-ratio_16x9 bg_cover br-tl_radius br-tr_radius relative w_100" style="background-image:url(http://placeimg.com/640/480/sports)">
-		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_primary-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
+		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
 		<div class="absolute t_3 r_0 z_2" data-element="save-toggle">
-			<span class="fa-stack fa-2x font-size_0 c_accent h:c_accent-n2">
-			<i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
-			<i class="fa-solid fas fa-star fa-stack-1x c_white h:c_black"></i>
+			<span class="fa-stack fa-2x font-size_0 c_secondary-n2 h:c_secondary-n4">
+				<i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
+				<i class="fa-solid fas fa-star fa-stack-1x c_white h:c_white"></i>
 			</span>
 		</div>
 		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
 			<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
 		</div>
 	</header>
-		<main class="font_1 lh_1 flex flex_column gap-y_2 p_4 p_5:lg font_display">
-		<h1 class="font-size_down-1 font_regular c_secondary m-y_0"> (Collection Title) Yearly Conference </h1>
-		<h2 class="font-size_up-2 font_bold font_display c_primary m-y_0">(Title) Quam ut Blat Ruble Prapms</h2>
-		<h3 class="font-size_0 black-8 m-y_0">(Session Sub Title) Rhythm and Conduction Disorders</h3>
-		<ul class="ul_none p-t_4 m-t_auto flex flex_row flex_wrap justify_start font-size_down-2 c_black-7 m-t_auto lh_0 items_end gap_2">
+		<main class="font_1 lh_1 flex flex_column gap-y_2 p_4 p_5:xl font_display">
+			<h1 class="c_secondary font-size_down-2 font_display font_medium m-y_0"> (Collection Title) Yearly Conference </h1>
+			<h2 class="font-size_up-1 font_bold font_display c_primary m-y_0 lh_1">(Title) Quam ut Blat Ruble Prapms</h2>
+			<h3 class="c_black-7 font-size_down-1 font_medium font_ui m-y_0">(Session Sub Title) Rhythm and Conduction Disorders</h3>
+			<ul class="ul_none p-t_4 m-t_auto flex flex_row flex_wrap justify_start font-size_down-2 c_black-7 m-t_auto lh_0 items_end gap_3">
 				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative lh_0 z_2">
-					<span class="font-size_up-1 c_accent-n2 block"><i class="fal fa-clock"></i> 15</span>
-					minutes
+					<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-clock"></i> 15</span> minutes
 				</li>
 				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative h:bg_black-2 lh_0 z_2">
 					<a href="#" class="undecorated h:undecorated expanded-click-area">
-					<span class="font-size_up-1 c_primary-n2 block"><i class="fal fa-paperclip p-r_3"></i> <span class="p-r_3">PDF</span></span>
-						Attachments
-					</a>
+						<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-paperclip p-r_3"></i> <span class="p-r_3">PDF</span></span> Attachments </a>
 				</li>
-		</ul>
+			</ul>
 		</main>
-	<footer data-element="footer-button-bar" class="bg_primary br-br_radius br-bl_radius flex flex_row-reverse nowrap items_end  font_2  font_3:lg m_n1 m-t_auto">
+	<footer data-element="footer-button-bar" class="bg_brand br-br_radius br-bl_radius flex flex_row-reverse nowrap items_end  font_2  font_3:lg m_n1 m-t_auto">
 		<ul data-element="footer-button-bar--button-group" class="flex flex_row-reverse inline-block self_start ul_none">
-			<li data-element="footer-button-bar--button-edge" class="aspect-ratio_1x1 bg_primary br_circle inline-block m-r_n3">
+			<li data-element="footer-button-bar--button-edge" class="aspect-ratio_1x1 bg_brand br_circle inline-block m-r_n3">
 				<a href="" data-element="footer-button-bar--button" class="[expanded-click-area] aspect-ratio_1x1 bg_white-6 br_circle button c_black grid h:bg_secondary h:c_white items_center justify_center z_1">
 					<i class="c_inherit-all fa-list fa-solid fas font-size_down-2"></i>
 				</a>
@@ -296,37 +328,34 @@
 </li>
 		<li class="flex flex_column items_center user-select_none relative"><article class="br_radius bg_white-9 font_1 shadow_bevel-light flex flex_column br_solid br_black-3 br_1 self_stretch">
 	<header class="aspect-ratio_16x9 bg_cover br-tl_radius br-tr_radius relative w_100" style="background-image:url(http://placeimg.com/640/480/sports)">
-		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_primary-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
+		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
 		<div class="absolute t_3 r_0 z_2" data-element="save-toggle">
-			<span class="fa-stack fa-2x font-size_0 c_accent h:c_accent-n2">
-			<i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
-			<i class="fa-solid fas fa-star fa-stack-1x c_white h:c_black"></i>
+			<span class="fa-stack fa-2x font-size_0 c_secondary-n2 h:c_secondary-n4">
+				<i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
+				<i class="fa-solid fas fa-star fa-stack-1x c_white h:c_white"></i>
 			</span>
 		</div>
 		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
 			<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
 		</div>
 	</header>
-		<main class="font_1 lh_1 flex flex_column gap-y_2 p_4 p_5:lg font_display">
-		<h1 class="font-size_down-1 font_regular c_secondary m-y_0"> (Collection Title) Yearly Conference </h1>
-		<h2 class="font-size_up-2 font_bold font_display c_primary m-y_0">(Title) Quam ut Blat Ruble Prapms</h2>
-		<h3 class="font-size_0 black-8 m-y_0">(Session Sub Title) Rhythm and Conduction Disorders</h3>
-		<ul class="ul_none p-t_4 m-t_auto flex flex_row flex_wrap justify_start font-size_down-2 c_black-7 m-t_auto lh_0 items_end gap_2">
+		<main class="font_1 lh_1 flex flex_column gap-y_2 p_4 p_5:xl font_display">
+			<h1 class="c_secondary font-size_down-2 font_display font_medium m-y_0"> (Collection Title) Yearly Conference </h1>
+			<h2 class="font-size_up-1 font_bold font_display c_primary m-y_0 lh_1">(Title) Quam ut Blat Ruble Prapms</h2>
+			<h3 class="c_black-7 font-size_down-1 font_medium font_ui m-y_0">(Session Sub Title) Rhythm and Conduction Disorders</h3>
+			<ul class="ul_none p-t_4 m-t_auto flex flex_row flex_wrap justify_start font-size_down-2 c_black-7 m-t_auto lh_0 items_end gap_3">
 				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative lh_0 z_2">
-					<span class="font-size_up-1 c_accent-n2 block"><i class="fal fa-clock"></i> 15</span>
-					minutes
+					<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-clock"></i> 15</span> minutes
 				</li>
 				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative h:bg_black-2 lh_0 z_2">
 					<a href="#" class="undecorated h:undecorated expanded-click-area">
-					<span class="font-size_up-1 c_primary-n2 block"><i class="fal fa-paperclip p-r_3"></i> <span class="p-r_3">PDF</span></span>
-						Attachments
-					</a>
+						<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-paperclip p-r_3"></i> <span class="p-r_3">PDF</span></span> Attachments </a>
 				</li>
-		</ul>
+			</ul>
 		</main>
-	<footer data-element="footer-button-bar" class="bg_primary br-br_radius br-bl_radius flex flex_row-reverse nowrap items_end  font_2  font_3:lg m_n1 m-t_auto">
+	<footer data-element="footer-button-bar" class="bg_brand br-br_radius br-bl_radius flex flex_row-reverse nowrap items_end  font_2  font_3:lg m_n1 m-t_auto">
 		<ul data-element="footer-button-bar--button-group" class="flex flex_row-reverse inline-block self_start ul_none">
-			<li data-element="footer-button-bar--button-edge" class="aspect-ratio_1x1 bg_primary br_circle inline-block m-r_n3">
+			<li data-element="footer-button-bar--button-edge" class="aspect-ratio_1x1 bg_brand br_circle inline-block m-r_n3">
 				<a href="" data-element="footer-button-bar--button" class="[expanded-click-area] aspect-ratio_1x1 bg_white-6 br_circle button c_black grid h:bg_secondary h:c_white items_center justify_center z_1">
 					<i class="c_inherit-all fa-list fa-solid fas font-size_down-2"></i>
 				</a>
@@ -337,37 +366,34 @@
 </li>
 		<li class="flex flex_column items_center user-select_none relative"><article class="br_radius bg_white-9 font_1 shadow_bevel-light flex flex_column br_solid br_black-3 br_1 self_stretch">
 	<header class="aspect-ratio_16x9 bg_cover br-tl_radius br-tr_radius relative w_100" style="background-image:url(http://placeimg.com/640/480/sports)">
-		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_primary-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
+		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
 		<div class="absolute t_3 r_0 z_2" data-element="save-toggle">
-			<span class="fa-stack fa-2x font-size_0 c_accent h:c_accent-n2">
-			<i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
-			<i class="fa-solid fas fa-star fa-stack-1x c_white h:c_black"></i>
+			<span class="fa-stack fa-2x font-size_0 c_secondary-n2 h:c_secondary-n4">
+				<i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
+				<i class="fa-solid fas fa-star fa-stack-1x c_white h:c_white"></i>
 			</span>
 		</div>
 		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
 			<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
 		</div>
 	</header>
-		<main class="font_1 lh_1 flex flex_column gap-y_2 p_4 p_5:lg font_display">
-		<h1 class="font-size_down-1 font_regular c_secondary m-y_0"> (Collection Title) Yearly Conference </h1>
-		<h2 class="font-size_up-2 font_bold font_display c_primary m-y_0">(Title) Quam ut Blat Ruble Prapms</h2>
-		<h3 class="font-size_0 black-8 m-y_0">(Session Sub Title) Rhythm and Conduction Disorders</h3>
-		<ul class="ul_none p-t_4 m-t_auto flex flex_row flex_wrap justify_start font-size_down-2 c_black-7 m-t_auto lh_0 items_end gap_2">
+		<main class="font_1 lh_1 flex flex_column gap-y_2 p_4 p_5:xl font_display">
+			<h1 class="c_secondary font-size_down-2 font_display font_medium m-y_0"> (Collection Title) Yearly Conference </h1>
+			<h2 class="font-size_up-1 font_bold font_display c_primary m-y_0 lh_1">(Title) Quam ut Blat Ruble Prapms</h2>
+			<h3 class="c_black-7 font-size_down-1 font_medium font_ui m-y_0">(Session Sub Title) Rhythm and Conduction Disorders</h3>
+			<ul class="ul_none p-t_4 m-t_auto flex flex_row flex_wrap justify_start font-size_down-2 c_black-7 m-t_auto lh_0 items_end gap_3">
 				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative lh_0 z_2">
-					<span class="font-size_up-1 c_accent-n2 block"><i class="fal fa-clock"></i> 15</span>
-					minutes
+					<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-clock"></i> 15</span> minutes
 				</li>
 				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative h:bg_black-2 lh_0 z_2">
 					<a href="#" class="undecorated h:undecorated expanded-click-area">
-					<span class="font-size_up-1 c_primary-n2 block"><i class="fal fa-paperclip p-r_3"></i> <span class="p-r_3">PDF</span></span>
-						Attachments
-					</a>
+						<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-paperclip p-r_3"></i> <span class="p-r_3">PDF</span></span> Attachments </a>
 				</li>
-		</ul>
+			</ul>
 		</main>
-	<footer data-element="footer-button-bar" class="bg_primary br-br_radius br-bl_radius flex flex_row-reverse nowrap items_end  font_2  font_3:lg m_n1 m-t_auto">
+	<footer data-element="footer-button-bar" class="bg_brand br-br_radius br-bl_radius flex flex_row-reverse nowrap items_end  font_2  font_3:lg m_n1 m-t_auto">
 		<ul data-element="footer-button-bar--button-group" class="flex flex_row-reverse inline-block self_start ul_none">
-			<li data-element="footer-button-bar--button-edge" class="aspect-ratio_1x1 bg_primary br_circle inline-block m-r_n3">
+			<li data-element="footer-button-bar--button-edge" class="aspect-ratio_1x1 bg_brand br_circle inline-block m-r_n3">
 				<a href="" data-element="footer-button-bar--button" class="[expanded-click-area] aspect-ratio_1x1 bg_white-6 br_circle button c_black grid h:bg_secondary h:c_white items_center justify_center z_1">
 					<i class="c_inherit-all fa-list fa-solid fas font-size_down-2"></i>
 				</a>
@@ -378,37 +404,34 @@
 </li>
 		<li class="flex flex_column items_center user-select_none relative"><article class="br_radius bg_white-9 font_1 shadow_bevel-light flex flex_column br_solid br_black-3 br_1 self_stretch">
 	<header class="aspect-ratio_16x9 bg_cover br-tl_radius br-tr_radius relative w_100" style="background-image:url(http://placeimg.com/640/480/sports)">
-		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_primary-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
+		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
 		<div class="absolute t_3 r_0 z_2" data-element="save-toggle">
-			<span class="fa-stack fa-2x font-size_0 c_accent h:c_accent-n2">
-			<i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
-			<i class="fa-solid fas fa-star fa-stack-1x c_white h:c_black"></i>
+			<span class="fa-stack fa-2x font-size_0 c_secondary-n2 h:c_secondary-n4">
+				<i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
+				<i class="fa-solid fas fa-star fa-stack-1x c_white h:c_white"></i>
 			</span>
 		</div>
 		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
 			<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
 		</div>
 	</header>
-		<main class="font_1 lh_1 flex flex_column gap-y_2 p_4 p_5:lg font_display">
-		<h1 class="font-size_down-1 font_regular c_secondary m-y_0"> (Collection Title) Yearly Conference </h1>
-		<h2 class="font-size_up-2 font_bold font_display c_primary m-y_0">(Title) Quam ut Blat Ruble Prapms</h2>
-		<h3 class="font-size_0 black-8 m-y_0">(Session Sub Title) Rhythm and Conduction Disorders</h3>
-		<ul class="ul_none p-t_4 m-t_auto flex flex_row flex_wrap justify_start font-size_down-2 c_black-7 m-t_auto lh_0 items_end gap_2">
+		<main class="font_1 lh_1 flex flex_column gap-y_2 p_4 p_5:xl font_display">
+			<h1 class="c_secondary font-size_down-2 font_display font_medium m-y_0"> (Collection Title) Yearly Conference </h1>
+			<h2 class="font-size_up-1 font_bold font_display c_primary m-y_0 lh_1">(Title) Quam ut Blat Ruble Prapms</h2>
+			<h3 class="c_black-7 font-size_down-1 font_medium font_ui m-y_0">(Session Sub Title) Rhythm and Conduction Disorders</h3>
+			<ul class="ul_none p-t_4 m-t_auto flex flex_row flex_wrap justify_start font-size_down-2 c_black-7 m-t_auto lh_0 items_end gap_3">
 				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative lh_0 z_2">
-					<span class="font-size_up-1 c_accent-n2 block"><i class="fal fa-clock"></i> 15</span>
-					minutes
+					<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-clock"></i> 15</span> minutes
 				</li>
 				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative h:bg_black-2 lh_0 z_2">
 					<a href="#" class="undecorated h:undecorated expanded-click-area">
-					<span class="font-size_up-1 c_primary-n2 block"><i class="fal fa-paperclip p-r_3"></i> <span class="p-r_3">PDF</span></span>
-						Attachments
-					</a>
+						<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-paperclip p-r_3"></i> <span class="p-r_3">PDF</span></span> Attachments </a>
 				</li>
-		</ul>
+			</ul>
 		</main>
-	<footer data-element="footer-button-bar" class="bg_primary br-br_radius br-bl_radius flex flex_row-reverse nowrap items_end  font_2  font_3:lg m_n1 m-t_auto">
+	<footer data-element="footer-button-bar" class="bg_brand br-br_radius br-bl_radius flex flex_row-reverse nowrap items_end  font_2  font_3:lg m_n1 m-t_auto">
 		<ul data-element="footer-button-bar--button-group" class="flex flex_row-reverse inline-block self_start ul_none">
-			<li data-element="footer-button-bar--button-edge" class="aspect-ratio_1x1 bg_primary br_circle inline-block m-r_n3">
+			<li data-element="footer-button-bar--button-edge" class="aspect-ratio_1x1 bg_brand br_circle inline-block m-r_n3">
 				<a href="" data-element="footer-button-bar--button" class="[expanded-click-area] aspect-ratio_1x1 bg_white-6 br_circle button c_black grid h:bg_secondary h:c_white items_center justify_center z_1">
 					<i class="c_inherit-all fa-list fa-solid fas font-size_down-2"></i>
 				</a>
@@ -419,37 +442,34 @@
 </li>
 		<li class="flex flex_column items_center user-select_none relative"><article class="br_radius bg_white-9 font_1 shadow_bevel-light flex flex_column br_solid br_black-3 br_1 self_stretch">
 	<header class="aspect-ratio_16x9 bg_cover br-tl_radius br-tr_radius relative w_100" style="background-image:url(http://placeimg.com/640/480/sports)">
-		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_primary-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
+		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
 		<div class="absolute t_3 r_0 z_2" data-element="save-toggle">
-			<span class="fa-stack fa-2x font-size_0 c_accent h:c_accent-n2">
-			<i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
-			<i class="fa-solid fas fa-star fa-stack-1x c_white h:c_black"></i>
+			<span class="fa-stack fa-2x font-size_0 c_secondary-n2 h:c_secondary-n4">
+				<i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
+				<i class="fa-solid fas fa-star fa-stack-1x c_white h:c_white"></i>
 			</span>
 		</div>
 		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
 			<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
 		</div>
 	</header>
-		<main class="font_1 lh_1 flex flex_column gap-y_2 p_4 p_5:lg font_display">
-		<h1 class="font-size_down-1 font_regular c_secondary m-y_0"> (Collection Title) Yearly Conference </h1>
-		<h2 class="font-size_up-2 font_bold font_display c_primary m-y_0">(Title) Quam ut Blat Ruble Prapms</h2>
-		<h3 class="font-size_0 black-8 m-y_0">(Session Sub Title) Rhythm and Conduction Disorders</h3>
-		<ul class="ul_none p-t_4 m-t_auto flex flex_row flex_wrap justify_start font-size_down-2 c_black-7 m-t_auto lh_0 items_end gap_2">
+		<main class="font_1 lh_1 flex flex_column gap-y_2 p_4 p_5:xl font_display">
+			<h1 class="c_secondary font-size_down-2 font_display font_medium m-y_0"> (Collection Title) Yearly Conference </h1>
+			<h2 class="font-size_up-1 font_bold font_display c_primary m-y_0 lh_1">(Title) Quam ut Blat Ruble Prapms</h2>
+			<h3 class="c_black-7 font-size_down-1 font_medium font_ui m-y_0">(Session Sub Title) Rhythm and Conduction Disorders</h3>
+			<ul class="ul_none p-t_4 m-t_auto flex flex_row flex_wrap justify_start font-size_down-2 c_black-7 m-t_auto lh_0 items_end gap_3">
 				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative lh_0 z_2">
-					<span class="font-size_up-1 c_accent-n2 block"><i class="fal fa-clock"></i> 15</span>
-					minutes
+					<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-clock"></i> 15</span> minutes
 				</li>
 				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative h:bg_black-2 lh_0 z_2">
 					<a href="#" class="undecorated h:undecorated expanded-click-area">
-					<span class="font-size_up-1 c_primary-n2 block"><i class="fal fa-paperclip p-r_3"></i> <span class="p-r_3">PDF</span></span>
-						Attachments
-					</a>
+						<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-paperclip p-r_3"></i> <span class="p-r_3">PDF</span></span> Attachments </a>
 				</li>
-		</ul>
+			</ul>
 		</main>
-	<footer data-element="footer-button-bar" class="bg_primary br-br_radius br-bl_radius flex flex_row-reverse nowrap items_end  font_2  font_3:lg m_n1 m-t_auto">
+	<footer data-element="footer-button-bar" class="bg_brand br-br_radius br-bl_radius flex flex_row-reverse nowrap items_end  font_2  font_3:lg m_n1 m-t_auto">
 		<ul data-element="footer-button-bar--button-group" class="flex flex_row-reverse inline-block self_start ul_none">
-			<li data-element="footer-button-bar--button-edge" class="aspect-ratio_1x1 bg_primary br_circle inline-block m-r_n3">
+			<li data-element="footer-button-bar--button-edge" class="aspect-ratio_1x1 bg_brand br_circle inline-block m-r_n3">
 				<a href="" data-element="footer-button-bar--button" class="[expanded-click-area] aspect-ratio_1x1 bg_white-6 br_circle button c_black grid h:bg_secondary h:c_white items_center justify_center z_1">
 					<i class="c_inherit-all fa-list fa-solid fas font-size_down-2"></i>
 				</a>
@@ -460,37 +480,34 @@
 </li>
 		<li class="flex flex_column items_center user-select_none relative"><article class="br_radius bg_white-9 font_1 shadow_bevel-light flex flex_column br_solid br_black-3 br_1 self_stretch">
 	<header class="aspect-ratio_16x9 bg_cover br-tl_radius br-tr_radius relative w_100" style="background-image:url(http://placeimg.com/640/480/sports)">
-		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_primary-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
+		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
 		<div class="absolute t_3 r_0 z_2" data-element="save-toggle">
-			<span class="fa-stack fa-2x font-size_0 c_accent h:c_accent-n2">
-			<i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
-			<i class="fa-solid fas fa-star fa-stack-1x c_white h:c_black"></i>
+			<span class="fa-stack fa-2x font-size_0 c_secondary-n2 h:c_secondary-n4">
+				<i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
+				<i class="fa-solid fas fa-star fa-stack-1x c_white h:c_white"></i>
 			</span>
 		</div>
 		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
 			<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
 		</div>
 	</header>
-		<main class="font_1 lh_1 flex flex_column gap-y_2 p_4 p_5:lg font_display">
-		<h1 class="font-size_down-1 font_regular c_secondary m-y_0"> (Collection Title) Yearly Conference </h1>
-		<h2 class="font-size_up-2 font_bold font_display c_primary m-y_0">(Title) Quam ut Blat Ruble Prapms</h2>
-		<h3 class="font-size_0 black-8 m-y_0">(Session Sub Title) Rhythm and Conduction Disorders</h3>
-		<ul class="ul_none p-t_4 m-t_auto flex flex_row flex_wrap justify_start font-size_down-2 c_black-7 m-t_auto lh_0 items_end gap_2">
+		<main class="font_1 lh_1 flex flex_column gap-y_2 p_4 p_5:xl font_display">
+			<h1 class="c_secondary font-size_down-2 font_display font_medium m-y_0"> (Collection Title) Yearly Conference </h1>
+			<h2 class="font-size_up-1 font_bold font_display c_primary m-y_0 lh_1">(Title) Quam ut Blat Ruble Prapms</h2>
+			<h3 class="c_black-7 font-size_down-1 font_medium font_ui m-y_0">(Session Sub Title) Rhythm and Conduction Disorders</h3>
+			<ul class="ul_none p-t_4 m-t_auto flex flex_row flex_wrap justify_start font-size_down-2 c_black-7 m-t_auto lh_0 items_end gap_3">
 				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative lh_0 z_2">
-					<span class="font-size_up-1 c_accent-n2 block"><i class="fal fa-clock"></i> 15</span>
-					minutes
+					<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-clock"></i> 15</span> minutes
 				</li>
 				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative h:bg_black-2 lh_0 z_2">
 					<a href="#" class="undecorated h:undecorated expanded-click-area">
-					<span class="font-size_up-1 c_primary-n2 block"><i class="fal fa-paperclip p-r_3"></i> <span class="p-r_3">PDF</span></span>
-						Attachments
-					</a>
+						<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-paperclip p-r_3"></i> <span class="p-r_3">PDF</span></span> Attachments </a>
 				</li>
-		</ul>
+			</ul>
 		</main>
-	<footer data-element="footer-button-bar" class="bg_primary br-br_radius br-bl_radius flex flex_row-reverse nowrap items_end  font_2  font_3:lg m_n1 m-t_auto">
+	<footer data-element="footer-button-bar" class="bg_brand br-br_radius br-bl_radius flex flex_row-reverse nowrap items_end  font_2  font_3:lg m_n1 m-t_auto">
 		<ul data-element="footer-button-bar--button-group" class="flex flex_row-reverse inline-block self_start ul_none">
-			<li data-element="footer-button-bar--button-edge" class="aspect-ratio_1x1 bg_primary br_circle inline-block m-r_n3">
+			<li data-element="footer-button-bar--button-edge" class="aspect-ratio_1x1 bg_brand br_circle inline-block m-r_n3">
 				<a href="" data-element="footer-button-bar--button" class="[expanded-click-area] aspect-ratio_1x1 bg_white-6 br_circle button c_black grid h:bg_secondary h:c_white items_center justify_center z_1">
 					<i class="c_inherit-all fa-list fa-solid fas font-size_down-2"></i>
 				</a>
@@ -501,37 +518,34 @@
 </li>
 		<li class="flex flex_column items_center user-select_none relative"><article class="br_radius bg_white-9 font_1 shadow_bevel-light flex flex_column br_solid br_black-3 br_1 self_stretch">
 	<header class="aspect-ratio_16x9 bg_cover br-tl_radius br-tr_radius relative w_100" style="background-image:url(http://placeimg.com/640/480/sports)">
-		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_primary-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
+		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
 		<div class="absolute t_3 r_0 z_2" data-element="save-toggle">
-			<span class="fa-stack fa-2x font-size_0 c_accent h:c_accent-n2">
-			<i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
-			<i class="fa-solid fas fa-star fa-stack-1x c_white h:c_black"></i>
+			<span class="fa-stack fa-2x font-size_0 c_secondary-n2 h:c_secondary-n4">
+				<i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
+				<i class="fa-solid fas fa-star fa-stack-1x c_white h:c_white"></i>
 			</span>
 		</div>
 		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
 			<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
 		</div>
 	</header>
-		<main class="font_1 lh_1 flex flex_column gap-y_2 p_4 p_5:lg font_display">
-		<h1 class="font-size_down-1 font_regular c_secondary m-y_0"> (Collection Title) Yearly Conference </h1>
-		<h2 class="font-size_up-2 font_bold font_display c_primary m-y_0">(Title) Quam ut Blat Ruble Prapms</h2>
-		<h3 class="font-size_0 black-8 m-y_0">(Session Sub Title) Rhythm and Conduction Disorders</h3>
-		<ul class="ul_none p-t_4 m-t_auto flex flex_row flex_wrap justify_start font-size_down-2 c_black-7 m-t_auto lh_0 items_end gap_2">
+		<main class="font_1 lh_1 flex flex_column gap-y_2 p_4 p_5:xl font_display">
+			<h1 class="c_secondary font-size_down-2 font_display font_medium m-y_0"> (Collection Title) Yearly Conference </h1>
+			<h2 class="font-size_up-1 font_bold font_display c_primary m-y_0 lh_1">(Title) Quam ut Blat Ruble Prapms</h2>
+			<h3 class="c_black-7 font-size_down-1 font_medium font_ui m-y_0">(Session Sub Title) Rhythm and Conduction Disorders</h3>
+			<ul class="ul_none p-t_4 m-t_auto flex flex_row flex_wrap justify_start font-size_down-2 c_black-7 m-t_auto lh_0 items_end gap_3">
 				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative lh_0 z_2">
-					<span class="font-size_up-1 c_accent-n2 block"><i class="fal fa-clock"></i> 15</span>
-					minutes
+					<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-clock"></i> 15</span> minutes
 				</li>
 				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative h:bg_black-2 lh_0 z_2">
 					<a href="#" class="undecorated h:undecorated expanded-click-area">
-					<span class="font-size_up-1 c_primary-n2 block"><i class="fal fa-paperclip p-r_3"></i> <span class="p-r_3">PDF</span></span>
-						Attachments
-					</a>
+						<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-paperclip p-r_3"></i> <span class="p-r_3">PDF</span></span> Attachments </a>
 				</li>
-		</ul>
+			</ul>
 		</main>
-	<footer data-element="footer-button-bar" class="bg_primary br-br_radius br-bl_radius flex flex_row-reverse nowrap items_end  font_2  font_3:lg m_n1 m-t_auto">
+	<footer data-element="footer-button-bar" class="bg_brand br-br_radius br-bl_radius flex flex_row-reverse nowrap items_end  font_2  font_3:lg m_n1 m-t_auto">
 		<ul data-element="footer-button-bar--button-group" class="flex flex_row-reverse inline-block self_start ul_none">
-			<li data-element="footer-button-bar--button-edge" class="aspect-ratio_1x1 bg_primary br_circle inline-block m-r_n3">
+			<li data-element="footer-button-bar--button-edge" class="aspect-ratio_1x1 bg_brand br_circle inline-block m-r_n3">
 				<a href="" data-element="footer-button-bar--button" class="[expanded-click-area] aspect-ratio_1x1 bg_white-6 br_circle button c_black grid h:bg_secondary h:c_white items_center justify_center z_1">
 					<i class="c_inherit-all fa-list fa-solid fas font-size_down-2"></i>
 				</a>
@@ -542,37 +556,34 @@
 </li>
 		<li class="flex flex_column items_center user-select_none relative"><article class="br_radius bg_white-9 font_1 shadow_bevel-light flex flex_column br_solid br_black-3 br_1 self_stretch">
 	<header class="aspect-ratio_16x9 bg_cover br-tl_radius br-tr_radius relative w_100" style="background-image:url(http://placeimg.com/640/480/sports)">
-		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_primary-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
+		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
 		<div class="absolute t_3 r_0 z_2" data-element="save-toggle">
-			<span class="fa-stack fa-2x font-size_0 c_accent h:c_accent-n2">
-			<i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
-			<i class="fa-solid fas fa-star fa-stack-1x c_white h:c_black"></i>
+			<span class="fa-stack fa-2x font-size_0 c_secondary-n2 h:c_secondary-n4">
+				<i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
+				<i class="fa-solid fas fa-star fa-stack-1x c_white h:c_white"></i>
 			</span>
 		</div>
 		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
 			<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
 		</div>
 	</header>
-		<main class="font_1 lh_1 flex flex_column gap-y_2 p_4 p_5:lg font_display">
-		<h1 class="font-size_down-1 font_regular c_secondary m-y_0"> (Collection Title) Yearly Conference </h1>
-		<h2 class="font-size_up-2 font_bold font_display c_primary m-y_0">(Title) Quam ut Blat Ruble Prapms</h2>
-		<h3 class="font-size_0 black-8 m-y_0">(Session Sub Title) Rhythm and Conduction Disorders</h3>
-		<ul class="ul_none p-t_4 m-t_auto flex flex_row flex_wrap justify_start font-size_down-2 c_black-7 m-t_auto lh_0 items_end gap_2">
+		<main class="font_1 lh_1 flex flex_column gap-y_2 p_4 p_5:xl font_display">
+			<h1 class="c_secondary font-size_down-2 font_display font_medium m-y_0"> (Collection Title) Yearly Conference </h1>
+			<h2 class="font-size_up-1 font_bold font_display c_primary m-y_0 lh_1">(Title) Quam ut Blat Ruble Prapms</h2>
+			<h3 class="c_black-7 font-size_down-1 font_medium font_ui m-y_0">(Session Sub Title) Rhythm and Conduction Disorders</h3>
+			<ul class="ul_none p-t_4 m-t_auto flex flex_row flex_wrap justify_start font-size_down-2 c_black-7 m-t_auto lh_0 items_end gap_3">
 				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative lh_0 z_2">
-					<span class="font-size_up-1 c_accent-n2 block"><i class="fal fa-clock"></i> 15</span>
-					minutes
+					<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-clock"></i> 15</span> minutes
 				</li>
 				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative h:bg_black-2 lh_0 z_2">
 					<a href="#" class="undecorated h:undecorated expanded-click-area">
-					<span class="font-size_up-1 c_primary-n2 block"><i class="fal fa-paperclip p-r_3"></i> <span class="p-r_3">PDF</span></span>
-						Attachments
-					</a>
+						<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-paperclip p-r_3"></i> <span class="p-r_3">PDF</span></span> Attachments </a>
 				</li>
-		</ul>
+			</ul>
 		</main>
-	<footer data-element="footer-button-bar" class="bg_primary br-br_radius br-bl_radius flex flex_row-reverse nowrap items_end  font_2  font_3:lg m_n1 m-t_auto">
+	<footer data-element="footer-button-bar" class="bg_brand br-br_radius br-bl_radius flex flex_row-reverse nowrap items_end  font_2  font_3:lg m_n1 m-t_auto">
 		<ul data-element="footer-button-bar--button-group" class="flex flex_row-reverse inline-block self_start ul_none">
-			<li data-element="footer-button-bar--button-edge" class="aspect-ratio_1x1 bg_primary br_circle inline-block m-r_n3">
+			<li data-element="footer-button-bar--button-edge" class="aspect-ratio_1x1 bg_brand br_circle inline-block m-r_n3">
 				<a href="" data-element="footer-button-bar--button" class="[expanded-click-area] aspect-ratio_1x1 bg_white-6 br_circle button c_black grid h:bg_secondary h:c_white items_center justify_center z_1">
 					<i class="c_inherit-all fa-list fa-solid fas font-size_down-2"></i>
 				</a>
@@ -582,7 +593,7 @@
 </article>
 </li>
 		<li class="flex flex_column h_auto items_center justify_center w_50"><article class="bg_black-1 br_1 br_black-3 br_radius br_solid flex_auto font_1:lg font_0:md font_n1 grid h:bg_secondary h:c_white items_center justify_center p_4 relative self_stretch shadow_bevel-light text_center">
-			<a href="" class="c_inherit-all expanded-click-area font-size_up-2 font_display lh_1">
+			<a href="" class="c_inherit-all expanded-click-area font-size_up-1 font_display lh_1">
 				<span class="block">View All</span> <span class="block">From</span> <span class="block">Category</span>
 			<i class="block fa-arrow-alt-circle-right fa-arrow-right-circle fa-solid fas font-size_up-2 h:undecorated lh_3 undecorated"></i>
 			</a>
@@ -598,8 +609,6 @@
 	</div>
 </div>
 </div>
---- 
----
 <style lang="">
 	#offCanvasFilter{
 		--bs-offcanvas-height:100vh;

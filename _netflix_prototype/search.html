@@ -6,12 +6,15 @@ searchActive: true
 ---
 {% include /netflix/app-header-w-search.html %}
 {% include /netflix/breadcrumb-search.html %}
-<div class="grid-area_mainArea flex flex_column bg_white-8 br-br_radius overflow_visible justify_start">
+<header class="font-size_up-1 grid-area_pageHead ">
+	<div class="introduction p-x_3 p-x_4:lg p-x_5:xxl p-y_4:xxl p-y_3:lg p-y_2 bg_white-8 br-b_1 br_solid br_black-3">
+		<h3 class="font_display font_xbold c_primary-n2 m-y_2">Search</h3>
+	</div>
+	{% include /netflix/search/search-params.html %}
+</header>
+<div class="grid-area_mainArea bg_white-8 br-br_radius overflow_visible justify_start">
 	<div class="p-y_4:lg p-y_3">
-		<header class="font-size_up-1 p-x_4 p-x_5:lg reading-typography  max-w_70">
-			<h3 class="font_display">Search</h3>
-		</header>
-		{% include /netflix/search/search-params.html %}
+		
 		
 		<ul class="p_4 results ul_none flex flex_column gap-y_5 font_0">
 			{% include /netflix/program/session-search.html %}

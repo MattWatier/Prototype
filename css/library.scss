@@ -5,7 +5,7 @@
 // the gradient
 body{
 	background: rgb(158,0,0);
-	background: radial-gradient(at top left, grid-hsl(var(--accent-h), var(--accent-s),calc(var(--accent-l )*.75)), grid-hsl(var(--secondary-h), var(--secondary-s),calc(var(--secondary-l )*.75)) 100%);
+	background: radial-gradient(at top left, hsl(var(--accent-h), var(--accent-s),calc(var(--accent-l )*.75)), hsl(var(--brand-h), var(--brand-s),calc(var(--brand-l )*.75)) 100%);
 	padding: clamp(8px, 1vw, 16px);
 	transition: transform .5s
 }
@@ -15,22 +15,17 @@ body{
 .grid-template_page {
 	transition: grid-template-columns 1s;
 	grid-template-columns: 5.5rem 1fr;
-	grid-template-rows:  auto auto 1fr  auto;
-	grid-template-areas: 'menuArea headerArea'  'menuArea breadcrumbArea' 'menuArea mainArea' 'menuArea footerArea';
+	grid-template-rows:  auto auto auto  1fr  auto;
+	grid-template-areas: 'menuArea headerArea'  'menuArea breadcrumbArea' 'menuArea pageHead' 'menuArea mainArea' 'menuArea footerArea';
 	min-height: calc(100vh - (2 * clamp(8px, 1vw, 16px)) );
 }
 .grid-template_page.expanded {
 	grid-template-columns: 15rem 1fr;
-	grid-template-rows:  auto auto 1fr  auto;
-	grid-template-areas: 'menuArea headerArea' 'menuArea breadcrumbArea'  'menuArea mainArea' 'menuArea footerArea';
+	grid-template-rows:  auto auto auto  1fr  auto;
+	grid-template-areas: 'menuArea headerArea' 'menuArea breadcrumbArea'  'menuArea pageHead' 'menuArea mainArea' 'menuArea footerArea';
 	@media screen and (min-width: 64rem) {
 		grid-template-columns: 20rem 1fr;
 	}
-}
-.grid-template_filterAndContent {
-	grid-template-columns: auto 1fr;
-	grid-template-rows: 1fr;
-	grid-template-areas: 'filterArea contentArea';
 }
 
 .grid-area_breadcrumbArea{
@@ -42,17 +37,15 @@ body{
 .grid-area_menuArea{
 	grid-area: menuArea;
 }
+.grid-area_pageHead{
+	grid-area: pageHead;
+}
 .grid-area_mainArea{
 	grid-area: mainArea;
 }
+
 .grid-area_footerArea{
 	grid-area: footerArea;
-}
-.grid-area_filterArea{
-	grid-area: filterArea;
-}
-.grid-area_contentArea{
-	grid-area: contentArea;
 }
 
 
@@ -65,8 +58,8 @@ body{
 }
 
 .disabled .disabled-dark {
-	color: grid-hsl(var(--black-h), var(--black-s), 30%) !important;
-   border-color: grid-hsl(var(--black-h), var(--black-s), 40%) !important;
+	color: hsl(var(--black-h), var(--black-s), 30%) !important;
+   border-color: hsl(var(--black-h), var(--black-s), 40%) !important;
   }
 
 // Footer of the card. This is the circle button for play
@@ -145,4 +138,8 @@ body{
 	scroll-snap-align: center;
   }
   
+
+  .c_alert{
+	color:var( --bs-danger, red);
+  }
   
