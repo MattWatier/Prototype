@@ -1,18 +1,22 @@
 --- 
 layout: library_app_frame 
 name: "Search" 
-uri: "search (authenticated & access)" 
+uri: "search" 
 searchActive: true 
 ---
 {% include /netflix/app-header-w-search.html %}
 {% include /netflix/breadcrumb-search.html %}
 <div class="grid-area_mainArea flex flex_column bg_white-8 br-br_radius overflow_visible justify_start">
-	{% include /netflix/search/search-params.html %}
-	<section class="p-y_4:lg p-y_3">
-	<header class="font-size_up-1 p-x_4 p-x_5:lg reading-typography  max-w_70">
-		<h3 class="font_display">Search</h3>
-		<p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt reiciendis cumque ut eum alias recusandae illum officiis debitis dolores corrupti deleniti velit maiores, dignissimos adipisci rerum odio? Rerum, reprehenderit doloremque?</p>
-	</header>
-</section>	
-
+	<div class="p-y_4:lg p-y_3">
+		<header class="font-size_up-1 p-x_4 p-x_5:lg reading-typography  max-w_70">
+			<h3 class="font_display">Search</h3>
+		</header>
+		{% include /netflix/search/search-params.html %}
+		
+		<ul class="p_4 results ul_none flex flex_column gap-y_5 font_0">
+			{% include /netflix/program/session-search.html %}
+			{% include /netflix/program/session-search.html %}
+			{% include /netflix/program/session-search.html %}
+		</ul>
+	</div>	
 </div>
