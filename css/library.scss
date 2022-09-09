@@ -20,6 +20,7 @@ body{
 	min-height: calc(100vh - (2 * clamp(8px, 1vw, 16px)) );
 }
 .grid-template_page.expanded {
+	transition: grid-template-columns 1s;
 	grid-template-columns: 15rem 1fr;
 	grid-template-rows:  auto auto auto  1fr  auto;
 	grid-template-areas: 'menuArea headerArea' 'menuArea breadcrumbArea'  'menuArea pageHead' 'menuArea mainArea' 'menuArea footerArea';
@@ -28,8 +29,18 @@ body{
 	}
 }
 
+
 .grid-area_breadcrumbArea{
 	grid-area: breadcrumbArea;
+	grid-template-columns: 7rem 1fr;
+	grid-template-rows:  auto;
+	grid-template-areas: 'breadcrumbButtonArea breadcrumbListArea';
+}
+.grid-breadcrumb-buttonArea{
+	grid-area: breadcrumbButtonArea;
+}
+.grid-breadcrumb-listArea{
+	grid-area: breadcrumbListArea;
 }
 .grid-area_headerArea{
 	grid-area: headerArea;
@@ -48,6 +59,10 @@ body{
 	grid-area: footerArea;
 }
 
+.nowrap{white-space: nowrap;}
+.overflow_hidden{
+	text-overflow: ellipsis;
+}
 
 
 // Needs to move to the UC

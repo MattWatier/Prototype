@@ -7,10 +7,10 @@ watchingActive: true
 <!-- {% include /netflix/home-header-branding.html %} -->
 {% include /netflix/app-header-w-search.html %}
 {% include /netflix/breadcrumb.html %}
-<div class="grid-area_mainArea br-br_radius overflow_visible grid grid-x_5:md">
-	<main class="bg_white-6 col-start_start col-end_4:md col-end_5:xl">
+<div class="grid-area_mainArea br-br_radius overflow_visible grid grid-x_6:lg grid-x_5:xl">
+	<main class="bg_white-6 col-start_start col-end_4">
 		<section data-label="player" class="w_100" >
-			<div class="player hd full player hd full p-x_8:xxl p-x_6:xl p-x_5:lg p-x_4:md p-x_3 p-y_4 p-y_5:xl">
+			<div class="player hd full player hd full  p-x_6:xl p-x_5:lg p-x_4:md p-x_3 p-y_4 p-y_5:xl">
 				<header class="aspect-ratio_16x9 bg_cover br-solid br_1 br_black-3 br_radius relative self_start shadow_2 w_100" style="background-image:url(http://placeimg.com/640/480/sports)">
 					<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
 					<div class="absolute t_3 r_0 z_2" data-element="save-toggle">
@@ -27,11 +27,17 @@ watchingActive: true
 		</section>
 		<section data-label="information" ></section>
 	</main>	
-	<nav data-label="video-que-navigation" class="col-start_4:md col-start_5:xl col-end_end grid">
-		<ul class="ul_none flex flex_column items_stretch">
-			<li class="relative bg_white-2 br-l_1 br_black-3 br_solid">something</li>
-			<li class="relative bg_white-6 br-t_1 br-b_1 br_solid br_black-3">something</li>
-			<li class="relative bg_white-2 br-l_1 br_black-3 br_solid">something</li>
+	<nav data-label="video-que-navigation" class="col-start_4 col-end_end font_n1 font_0:md font_1:lg grid justify_stretch items_stretch">
+		<ul class="b_0 br-l_1 br_black-3 br_solid flex flex_column items_stretch justify_start justify_stretch t_0 ul_none">
+			<li class="relative h:bg_white-4  p_4 flex flex_row m-l_n1"> {% include  /netflix/program/presentation-with-keyword.html %}</li>
+			<li class="bg_white-6 br-l_4 br_highlight br_solid flex flex_row m-l_n1 p-t_5 p_4 p-b_5 relative">
+				{% include  /netflix/program/presentation-without-play.html %}
+				<ul class="absolute t_0 l_3 font-size_down-2 ul_none flex flex_row nowrap gap-x_1" data-element="flags">
+					<li class="p-x_3 p-y_2 bg_highlight-1 br-br_radius br-bl_radius c_black font_xbold"><i class="fas fa-solid fa-play"></i> Playing</li>
+					<li class="p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white">Watched</li>
+				</ul>
+			</li>
+			<li class="relative h:bg_white-4  p_4 flex flex_row m-l_n1"> {% include  /netflix/program/presentation-without-keyword.html %}</li>
 		</ul>
 	</nav>
 </div>
