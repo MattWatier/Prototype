@@ -1,4 +1,4 @@
-body { background: #9e0000; background: radial-gradient(at top left, hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l )*.75)), hsl(var(--brand-h), var(--brand-s), calc(var(--brand-l )*.75)) 100%); padding: clamp(8px, 1vw, 16px); transition: transform 0.5s; }
+body { background: hsl(var(--brand-h), var(--brand-s), var(--brand-l)); background: radial-gradient(at top left, hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l )*.75)), hsl(var(--brand-h), var(--brand-s), var(--brand-l)) 100%); padding: clamp(8px, 1vw, 16px); transition: transform 0.5s; }
 
 .grid-template_page { transition: grid-template-columns 1s; grid-template-columns: 5.5rem 1fr; grid-template-rows: auto auto auto  1fr  auto; grid-template-areas: 'menuArea headerArea'  'menuArea breadcrumbArea' 'menuArea pageHead' 'menuArea mainArea' 'menuArea footerArea'; min-height: calc(100vh - (2 * clamp(8px, 1vw, 16px)) ); }
 
