@@ -2,16 +2,16 @@
 ---
 
 :root{
-	--bs-primary:hsl(var(--primary-h), var(--primary-s), var(--primary-l));
+	--bs-primary:hsl(var(--primary-h), var(--primary-s), calc( var(--primary-l) + var(--primary-l) * -0.15));
 	--bs-primary-n2:hsl(var(--primary-h), var(--primary-s), calc( var(--primary-l) + var(--primary-l) * -0.37));
     --bs-primary_color-contrast:#fff;
-    --bs-secondary:hsl(var(--secondary-h), var(--secondary-s), var(--secondary-l));
+    --bs-secondary:hsl(var(--secondary-h), var(--secondary-s), calc( var(--primary-l) + var(--primary-l) * -0.15));
 	--bs-secondary-n2:hsl(var(--secondary-h), var(--secondary-s), calc( var(--secondary-l) + var(--secondary-l) * -0.37));
     --bs-secondary_color-contrast:#fff;
-    --bs-success:hsl(var(--success-h), var(--success-s), var(--success-l));
+    --bs-success:hsl(var(--success-h), var(--success-s),calc( var(--primary-l) + var(--primary-l) * -0.15));
 	--bs-success-n2:hsl(var(--success-h), var(--success-s), calc( var(--success-l) + var(--success-l) * -0.37));
     --bs-success_color-contrast:#fff;
-    --bs-accent:hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+    --bs-accent:hsl(var(--accent-h), var(--accent-s), calc( var(--primary-l) + var(--primary-l) * -0.15));
 	--bs-accent-n2:hsl(var(--accent-h), var(--accent-s), calc( var(--accent-l) + var(--accent-l) * -0.37));
     --bs-accent_color-contrast:#fff;
 

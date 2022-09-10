@@ -32,9 +32,12 @@ body{
 
 .grid-area_breadcrumbArea{
 	grid-area: breadcrumbArea;
-	grid-template-columns: 7rem 1fr;
+	grid-template-columns: 3rem 1fr;
 	grid-template-rows:  auto;
 	grid-template-areas: 'breadcrumbButtonArea breadcrumbListArea';
+	@media screen and (min-width: 64rem) {
+		grid-template-columns: 7rem 1fr;
+	}
 }
 .grid-breadcrumb-buttonArea{
 	grid-area: breadcrumbButtonArea;
@@ -64,7 +67,16 @@ body{
 	text-overflow: ellipsis;
 }
 
-
+html:not([data-scroll='0']) #navigation_mobile .label {
+	opacity:0 !important;
+	height:0;
+}
+html:not([data-scroll='0']) #navigation_mobile{
+	font-size: .8em;
+	top:0;
+	position:sticky;
+	border-radius: 0;
+}
 // Needs to move to the UC
 .c_inherit-all{
 	&:hover,&{	

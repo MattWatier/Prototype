@@ -1,11 +1,10 @@
 --- 
-layout: default
+layout: library_blank
 ---
-
-{% include netflix/html-head-tag.html %}
 <body class="BODY_TAG-stand-in bg_black-4 w_100 grid:md min-h_100">
 <div class="page-wrapper grid:md isolation_isolate br_radius bg_white-7 z_1">
 	<div id="AppFrame" class="grid:md grid-template_page flex flex_column [expanded] expanded">
+	{% include netflix/top-nav-mobile.html %}
 	{% include netflix/left-nav-desktop.html %}
 
 		{{ content }}
