@@ -35,7 +35,7 @@ body{
 	grid-template-columns: 3rem 1fr;
 	grid-template-rows:  auto;
 	grid-template-areas: 'breadcrumbButtonArea breadcrumbListArea';
-	@media screen and (min-width: 64rem) {
+	@media screen and (min-width: 45rem) {
 		grid-template-columns: 7rem 1fr;
 	}
 }

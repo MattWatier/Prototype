@@ -6,7 +6,7 @@ body { background: #9e0000; background: radial-gradient(at top left, hsl(var(--a
 @media screen and (min-width: 64rem) { .grid-template_page.expanded { grid-template-columns: 20rem 1fr; } }
 
 .grid-area_breadcrumbArea { grid-area: breadcrumbArea; grid-template-columns: 3rem 1fr; grid-template-rows: auto; grid-template-areas: 'breadcrumbButtonArea breadcrumbListArea'; }
-@media screen and (min-width: 64rem) { .grid-area_breadcrumbArea { grid-template-columns: 7rem 1fr; } }
+@media screen and (min-width: 45rem) { .grid-area_breadcrumbArea { grid-template-columns: 7rem 1fr; } }
 
 .grid-breadcrumb-buttonArea { grid-area: breadcrumbButtonArea; }
 
