@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Home - Arches@1.1</title>
+  <title>Course Player - Arches@1.1</title>
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-9ZfPnbegQSumzaE7mks2IYgHoayLtuto3AS6ieArECeaR8nCfliJVuLh/GaQ1gyM" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   <link rel="stylesheet" href="/Prototype/css/UC.css">
@@ -74,7 +74,7 @@
 	<div id="AppFrame" class="grid:md grid-template_page flex flex_column [expanded]">
 	<nav id="navigation_mobile" class="block display_none:md shadow_emboss-light filter_blur br_radius br-bl_square br-br_square bg_black-6 p_2 t_3 z_4">
 	<ul class="flex flex_row ul_none justify_between">
-		<li class="nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light active">
+		<li class="nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light ">
 			<a class="c_inherit-all flex flex_column h:undecorated p_3" href="./home"><i class="icon fas fa-fw fa-home-heart p-y_2 self_center"></i><span class="label self_center  lowercase lh_0 active font_n2 h_1h">Home</span></a>
 		</li>
 		<li class="nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light ">
@@ -89,7 +89,7 @@
 		<li class="nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light ">
 			<a class="c_inherit-all flex flex_column h:undecorated p_3" href="./credits"><i class="icon fas fa-fw fa-graduation-cap p-y_2 self_center"></i><span class="label self_center  lowercase lh_0 font_n2 h_1h ">Courses</span></a>
 		</li>
-		<li class="nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light   disabled opacity_3 cursor_not-allowed  ">
+		<li class="nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light   active">
 			<a class="c_inherit-all flex flex_column h:undecorated p_3" href="./presentation"><i class="icon fas fa-fw fa-play p-y_2 self_center"></i><span class="label self_center lowercase lh_0 font_n2 h_1h ">Watching</span></a>
 		</li>
 		<li class="nav-item flex_auto br_radius c_white-8 bg_acc-n1 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light">
@@ -114,7 +114,7 @@
 		</div>
 
 		<ul class="flex flex_column:md flex_row ul_none justify_around justify_start:md gap-y_3 w_100 w_auto:md">
-			<li class="nav-item flex_none br_radius c_black-8 h:bg_brand-n4 h:c_white a:c_white a:bg_primary-n1 h:shadow_overlap-light a:shadow_overlap-light transition_2  active">
+			<li class="nav-item flex_none br_radius c_black-8 h:bg_brand-n4 h:c_white a:c_white a:bg_primary-n1 h:shadow_overlap-light a:shadow_overlap-light transition_2  ">
 				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md justify_center" href="./home"><i class="icon far fa-regular fa-fw fa-home-heart m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_0 display_none ">Home</span></a>
 			</li>
 			<li class="nav-item flex_none br_radius c_black-8 h:bg_brand-n4 h:c_white a:c_white a:bg_primary-n1 h:shadow_overlap-light a:shadow_overlap-light transition_2  	">
@@ -127,7 +127,7 @@
 				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md justify_center" href="./saved"><i class="icon far fa-regular fa-fw fa-heart m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_0 display_none  ">Saved</span></a>
 			</li>
 
-			<li class="nav-item flex_none br_radius c_black-8 h:bg_brand-n4 h:c_white a:c_white a:bg_primary-n1 h:shadow_overlap-light a:shadow_overlap-light transition_2 ">
+			<li class="nav-item flex_none br_radius c_black-8 h:bg_brand-n4 h:c_white a:c_white a:bg_primary-n1 h:shadow_overlap-light a:shadow_overlap-light transition_2 active">
 				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md justify_center" href="./player"><i class="icon far fa-regular fa-fw fa-play m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_0 display_none">Watching</span></a>
 			</li>
 
@@ -210,408 +210,402 @@
 
 	</div> -->
 </header>
-
-<header class="font-size_up-1 grid-area_pageHead ">
-	<div data-element="introduction" class="bg_white-8 br-b_1 br_black-3 br_solid p_4 p-x_5:xl p-x_6:xxl p-y_4:lg  p-y_5:xxl">
-		<h3 class="font_display font_xbold c_primary-n2">Gallery X</h3>
-		<p class="max-w_70">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt reiciendis cumque ut eum alias recusandae illum officiis debitis dolores corrupti deleniti velit maiores, dignissimos adipisci rerum odio? Rerum, reprehenderit doloremque?</p>
+<div class="grid-area_breadcrumbArea bg_white-2 p-x_5:xxl p-x_4:lg p-x_3 p-y_3 font_1 br-b_1 br_solid br_black-3 grid gap-x_4 justify_start items_center shadow_emboss-light c_primary-n2">
+	<div class="grid-breadcrumb-buttonArea">
+		<button class="btn btn-primary shadow_overlap-light br_solid br_black-3 br_1 block w_100">
+			<i class="fa-arrow-left fas font-size_down-1"></i>
+			<span class="inline-block:md display_none">back</span>
+		</button>
 	</div>
-</header>
-<div class="grid-area_mainArea bg_white-8 br-br_radius overflow_visible">
-	<section class="p-y_5:xxl p-y_4:lg p-y_3">
-<div class="gallery grid">
-	<ul class="grid-hs scrollbar-mini full ul_none gap-x_4 p-b_4 m-b_n2 grid">
-		<li class="flex flex_column items_center user-select_none relative"><article class="br_radius bg_white-9 font_1 shadow_bevel-light flex flex_column br_solid br_black-3 br_1 self_stretch">
-	<header class="aspect-ratio_16x9 bg_cover br-tl_radius br-tr_radius relative w_100" style="background-image:url(https://placeimg.com/640/480/arch)">
-		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
-		<div class="absolute t_3 r_0 z_2" data-element="save-toggle">
-		<span class="fa-stack fa-2x font-size_0 c_secondary-n2 h:c_secondary-n4">
-	<i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
-	<i class="fa-solid fas fa-star fa-stack-1x c_white h:c_white m-t_n1 t_n1"></i>
-</span>
-		</div>
-		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
-			<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
-		</div>
-	</header>
-		<main class="font_1 lh_1 flex flex_column gap-y_2 p_4 p_5:xl font_display">
-			<h1 class="c_secondary-n1 font-size_down-2 font_display font_medium m-y_0 opacity_8"> (Collection Title) Yearly Conference </h1>
-			<h2 class="font-size_up-1 font_bold font_display c_primary-n1 m-y_0 lh_1">(Title) Quam ut Blat Ruble Prapms</h2>
-			<h3 class="c_black-7 font-size_down-1 font_medium font_ui m-y_0">(Session Sub Title) Rhythm and Conduction Disorders</h3>
-			<ul class="ul_none p-t_4 m-t_auto flex flex_row flex_wrap justify_start font-size_down-2 c_black-7 m-t_auto lh_0 items_end gap_3">
-				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative lh_0 z_2">
-					<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-clock"></i> 15</span> minutes
-				</li>
-				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative h:bg_black-2 lh_0 z_2">
-					<a href="#" class="undecorated h:undecorated expanded-click-area">
-						<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-paperclip p-r_3"></i> <span class="p-r_3">PDF</span></span> Attachments </a>
-				</li>
-			</ul>
-		</main>
-	<footer data-element="footer-button-bar" class="bg_brand br-br_radius br-bl_radius flex flex_row-reverse nowrap items_end  font_2  font_3:lg m_n1 m-t_auto">
-		<ul data-element="footer-button-bar--button-group" class="flex flex_row-reverse inline-block self_start ul_none">
-			<li data-element="footer-button-bar--button-edge" class="aspect-ratio_1x1 bg_brand br_circle inline-block m-r_n3">
-				<a href="" data-element="footer-button-bar--button" class="[expanded-click-area] aspect-ratio_1x1 bg_white-6 br_circle button c_black grid h:bg_primary h:c_white items_center justify_center z_1">
-					<i class="c_inherit-all fa-list fa-solid fas font-size_down-2"></i>
-				</a>
+	<div class="grid-breadcrumb-listArea">
+		<ul class="flex flex_inline flex_row wrap font-size_0:lg font-size_down-1:md font-size_down-2 lh_0 text-shadow_white-1 ul_none gap-y_2 overflow_hidden">
+			<li class="flex flex_row nowrap relative overflow_hidden">
+				<div class="flex flex_row nowrap overflow_hidden">
+					<i class="c_black-9 fas fa-solid m-l_1 fa-fw m-r_2 flex_none self_center fa-home"></i>
+					<a class="font_medium flex_auto self_center h:underline c_inherit-all overflow_hidden">Home</a>
+				</div>
+			</li>
+			<li class="flex flex_row nowrap relative overflow_hidden">
+				<i class="fas fa-angle-right c_accent-n2 m-x_3 self_center font-size_down-1 lh_2"></i>
+				<div class="flex flex_row nowrap overflow_hidden">
+					<i class="c_black-9 fas fa-solid m-l_1 fa-fw m-r_2 flex_none self_center fa-graduation-cap lh_2"></i>
+					<a class="font_medium flex_auto self_center h:underline c_inherit-all overflow_hidden lh_2">Course</a>
+				</div>
+			</li>
+			<li class="flex flex_row nowrap relative overflow_hidden">
+				<i class="fas fa-angle-right c_accent-n2 m-x_3 self_center font-size_down-1 lh_2"></i>
+				<div class="flex flex_row nowrap overflow_hidden">
+					<i class="c_black-9 fas fa-solid m-l_1 fa-fw m-r_2 flex_none self_center fa-list-alt lh_2"></i>
+					<a class="font_medium flex_auto self_center h:underline c_inherit-all overflow_hidden lh_2">Video Que</a>
+				</div>
+			</li>
+			<li class="flex flex_row nowrap relative overflow_hidden">
+				<i class="fas fa-angle-right c_accent-n2 m-x_3 self_center font-size_down-1 lh_2"></i>
+				<div class="flex flex_row nowrap overflow_hidden">
+					<i class="c_black-9 fas fa-solid m-l_1 fa-fw m-r_2 flex_none self_center fa-film lh_2"></i>
+					<a class="font_medium flex_auto self_center h:underline c_inherit-all overflow_hidden lh_2">Video</a>
+				</div>
 			</li>
 		</ul>
-	</footer>
-</article>
-</li>
-		<li class="flex flex_column items_center user-select_none relative"><article class="br_radius bg_white-9 font_1 shadow_bevel-light flex flex_column br_solid br_black-3 br_1 self_stretch">
-	<header class="aspect-ratio_16x9 bg_cover br-tl_radius br-tr_radius relative w_100" style="background-image:url(https://placeimg.com/640/480/arch)">
-		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
-		<div class="absolute t_3 r_0 z_2" data-element="save-toggle">
-		<span class="fa-stack fa-2x font-size_0 c_secondary-n2 h:c_secondary-n4">
-	<i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
-	<i class="fa-solid fas fa-star fa-stack-1x c_white h:c_white m-t_n1 t_n1"></i>
-</span>
-		</div>
-		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
-			<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
-		</div>
-	</header>
-		<main class="font_1 lh_1 flex flex_column gap-y_2 p_4 p_5:xl font_display">
-			<h1 class="c_secondary-n1 font-size_down-2 font_display font_medium m-y_0 opacity_8"> (Collection Title) Yearly Conference </h1>
-			<h2 class="font-size_up-1 font_bold font_display c_primary-n1 m-y_0 lh_1">(Title) Quam ut Blat Ruble Prapms</h2>
-			<h3 class="c_black-7 font-size_down-1 font_medium font_ui m-y_0">(Session Sub Title) Rhythm and Conduction Disorders</h3>
-			<ul class="ul_none p-t_4 m-t_auto flex flex_row flex_wrap justify_start font-size_down-2 c_black-7 m-t_auto lh_0 items_end gap_3">
-				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative lh_0 z_2">
-					<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-clock"></i> 15</span> minutes
-				</li>
-				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative h:bg_black-2 lh_0 z_2">
-					<a href="#" class="undecorated h:undecorated expanded-click-area">
-						<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-paperclip p-r_3"></i> <span class="p-r_3">PDF</span></span> Attachments </a>
-				</li>
-			</ul>
-		</main>
-	<footer data-element="footer-button-bar" class="bg_brand br-br_radius br-bl_radius flex flex_row-reverse nowrap items_end  font_2  font_3:lg m_n1 m-t_auto">
-		<ul data-element="footer-button-bar--button-group" class="flex flex_row-reverse inline-block self_start ul_none">
-			<li data-element="footer-button-bar--button-edge" class="aspect-ratio_1x1 bg_brand br_circle inline-block m-r_n3">
-				<a href="" data-element="footer-button-bar--button" class="[expanded-click-area] aspect-ratio_1x1 bg_white-6 br_circle button c_black grid h:bg_primary h:c_white items_center justify_center z_1">
-					<i class="c_inherit-all fa-list fa-solid fas font-size_down-2"></i>
-				</a>
-			</li>
-		</ul>
-	</footer>
-</article>
-</li>
-		<li class="flex flex_column items_center user-select_none relative"><article class="br_radius bg_white-9 font_1 shadow_bevel-light flex flex_column br_solid br_black-3 br_1 self_stretch">
-	<header class="aspect-ratio_16x9 bg_cover br-tl_radius br-tr_radius relative w_100" style="background-image:url(https://placeimg.com/640/480/arch)">
-		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
-		<div class="absolute t_3 r_0 z_2" data-element="save-toggle">
-		<span class="fa-stack fa-2x font-size_0 c_secondary-n2 h:c_secondary-n4">
-	<i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
-	<i class="fa-solid fas fa-star fa-stack-1x c_white h:c_white m-t_n1 t_n1"></i>
-</span>
-		</div>
-		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
-			<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
-		</div>
-	</header>
-		<main class="font_1 lh_1 flex flex_column gap-y_2 p_4 p_5:xl font_display">
-			<h1 class="c_secondary-n1 font-size_down-2 font_display font_medium m-y_0 opacity_8"> (Collection Title) Yearly Conference </h1>
-			<h2 class="font-size_up-1 font_bold font_display c_primary-n1 m-y_0 lh_1">(Title) Quam ut Blat Ruble Prapms</h2>
-			<h3 class="c_black-7 font-size_down-1 font_medium font_ui m-y_0">(Session Sub Title) Rhythm and Conduction Disorders</h3>
-			<ul class="ul_none p-t_4 m-t_auto flex flex_row flex_wrap justify_start font-size_down-2 c_black-7 m-t_auto lh_0 items_end gap_3">
-				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative lh_0 z_2">
-					<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-clock"></i> 15</span> minutes
-				</li>
-				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative h:bg_black-2 lh_0 z_2">
-					<a href="#" class="undecorated h:undecorated expanded-click-area">
-						<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-paperclip p-r_3"></i> <span class="p-r_3">PDF</span></span> Attachments </a>
-				</li>
-			</ul>
-		</main>
-	<footer data-element="footer-button-bar" class="bg_brand br-br_radius br-bl_radius flex flex_row-reverse nowrap items_end  font_2  font_3:lg m_n1 m-t_auto">
-		<ul data-element="footer-button-bar--button-group" class="flex flex_row-reverse inline-block self_start ul_none">
-			<li data-element="footer-button-bar--button-edge" class="aspect-ratio_1x1 bg_brand br_circle inline-block m-r_n3">
-				<a href="" data-element="footer-button-bar--button" class="[expanded-click-area] aspect-ratio_1x1 bg_white-6 br_circle button c_black grid h:bg_primary h:c_white items_center justify_center z_1">
-					<i class="c_inherit-all fa-list fa-solid fas font-size_down-2"></i>
-				</a>
-			</li>
-		</ul>
-	</footer>
-</article>
-</li>
-		<li class="flex flex_column items_center user-select_none relative"><article class="br_radius bg_white-9 font_1 shadow_bevel-light flex flex_column br_solid br_black-3 br_1 self_stretch">
-	<header class="aspect-ratio_16x9 bg_cover br-tl_radius br-tr_radius relative w_100" style="background-image:url(https://placeimg.com/640/480/arch)">
-		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
-		<div class="absolute t_3 r_0 z_2" data-element="save-toggle">
-		<span class="fa-stack fa-2x font-size_0 c_secondary-n2 h:c_secondary-n4">
-	<i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
-	<i class="fa-solid fas fa-star fa-stack-1x c_white h:c_white m-t_n1 t_n1"></i>
-</span>
-		</div>
-		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
-			<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
-		</div>
-	</header>
-		<main class="font_1 lh_1 flex flex_column gap-y_2 p_4 p_5:xl font_display">
-			<h1 class="c_secondary-n1 font-size_down-2 font_display font_medium m-y_0 opacity_8"> (Collection Title) Yearly Conference </h1>
-			<h2 class="font-size_up-1 font_bold font_display c_primary-n1 m-y_0 lh_1">(Title) Quam ut Blat Ruble Prapms</h2>
-			<h3 class="c_black-7 font-size_down-1 font_medium font_ui m-y_0">(Session Sub Title) Rhythm and Conduction Disorders</h3>
-			<ul class="ul_none p-t_4 m-t_auto flex flex_row flex_wrap justify_start font-size_down-2 c_black-7 m-t_auto lh_0 items_end gap_3">
-				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative lh_0 z_2">
-					<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-clock"></i> 15</span> minutes
-				</li>
-				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative h:bg_black-2 lh_0 z_2">
-					<a href="#" class="undecorated h:undecorated expanded-click-area">
-						<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-paperclip p-r_3"></i> <span class="p-r_3">PDF</span></span> Attachments </a>
-				</li>
-			</ul>
-		</main>
-	<footer data-element="footer-button-bar" class="bg_brand br-br_radius br-bl_radius flex flex_row-reverse nowrap items_end  font_2  font_3:lg m_n1 m-t_auto">
-		<ul data-element="footer-button-bar--button-group" class="flex flex_row-reverse inline-block self_start ul_none">
-			<li data-element="footer-button-bar--button-edge" class="aspect-ratio_1x1 bg_brand br_circle inline-block m-r_n3">
-				<a href="" data-element="footer-button-bar--button" class="[expanded-click-area] aspect-ratio_1x1 bg_white-6 br_circle button c_black grid h:bg_primary h:c_white items_center justify_center z_1">
-					<i class="c_inherit-all fa-list fa-solid fas font-size_down-2"></i>
-				</a>
-			</li>
-		</ul>
-	</footer>
-</article>
-</li>
-		<li class="flex flex_column items_center user-select_none relative"><article class="br_radius bg_white-9 font_1 shadow_bevel-light flex flex_column br_solid br_black-3 br_1 self_stretch">
-	<header class="aspect-ratio_16x9 bg_cover br-tl_radius br-tr_radius relative w_100" style="background-image:url(https://placeimg.com/640/480/arch)">
-		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
-		<div class="absolute t_3 r_0 z_2" data-element="save-toggle">
-		<span class="fa-stack fa-2x font-size_0 c_secondary-n2 h:c_secondary-n4">
-	<i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
-	<i class="fa-solid fas fa-star fa-stack-1x c_white h:c_white m-t_n1 t_n1"></i>
-</span>
-		</div>
-		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
-			<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
-		</div>
-	</header>
-		<main class="font_1 lh_1 flex flex_column gap-y_2 p_4 p_5:xl font_display">
-			<h1 class="c_secondary-n1 font-size_down-2 font_display font_medium m-y_0 opacity_8"> (Collection Title) Yearly Conference </h1>
-			<h2 class="font-size_up-1 font_bold font_display c_primary-n1 m-y_0 lh_1">(Title) Quam ut Blat Ruble Prapms</h2>
-			<h3 class="c_black-7 font-size_down-1 font_medium font_ui m-y_0">(Session Sub Title) Rhythm and Conduction Disorders</h3>
-			<ul class="ul_none p-t_4 m-t_auto flex flex_row flex_wrap justify_start font-size_down-2 c_black-7 m-t_auto lh_0 items_end gap_3">
-				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative lh_0 z_2">
-					<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-clock"></i> 15</span> minutes
-				</li>
-				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative h:bg_black-2 lh_0 z_2">
-					<a href="#" class="undecorated h:undecorated expanded-click-area">
-						<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-paperclip p-r_3"></i> <span class="p-r_3">PDF</span></span> Attachments </a>
-				</li>
-			</ul>
-		</main>
-	<footer data-element="footer-button-bar" class="bg_brand br-br_radius br-bl_radius flex flex_row-reverse nowrap items_end  font_2  font_3:lg m_n1 m-t_auto">
-		<ul data-element="footer-button-bar--button-group" class="flex flex_row-reverse inline-block self_start ul_none">
-			<li data-element="footer-button-bar--button-edge" class="aspect-ratio_1x1 bg_brand br_circle inline-block m-r_n3">
-				<a href="" data-element="footer-button-bar--button" class="[expanded-click-area] aspect-ratio_1x1 bg_white-6 br_circle button c_black grid h:bg_primary h:c_white items_center justify_center z_1">
-					<i class="c_inherit-all fa-list fa-solid fas font-size_down-2"></i>
-				</a>
-			</li>
-		</ul>
-	</footer>
-</article>
-</li>
-		<li class="flex flex_column items_center user-select_none relative"><article class="br_radius bg_white-9 font_1 shadow_bevel-light flex flex_column br_solid br_black-3 br_1 self_stretch">
-	<header class="aspect-ratio_16x9 bg_cover br-tl_radius br-tr_radius relative w_100" style="background-image:url(https://placeimg.com/640/480/arch)">
-		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
-		<div class="absolute t_3 r_0 z_2" data-element="save-toggle">
-		<span class="fa-stack fa-2x font-size_0 c_secondary-n2 h:c_secondary-n4">
-	<i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
-	<i class="fa-solid fas fa-star fa-stack-1x c_white h:c_white m-t_n1 t_n1"></i>
-</span>
-		</div>
-		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
-			<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
-		</div>
-	</header>
-		<main class="font_1 lh_1 flex flex_column gap-y_2 p_4 p_5:xl font_display">
-			<h1 class="c_secondary-n1 font-size_down-2 font_display font_medium m-y_0 opacity_8"> (Collection Title) Yearly Conference </h1>
-			<h2 class="font-size_up-1 font_bold font_display c_primary-n1 m-y_0 lh_1">(Title) Quam ut Blat Ruble Prapms</h2>
-			<h3 class="c_black-7 font-size_down-1 font_medium font_ui m-y_0">(Session Sub Title) Rhythm and Conduction Disorders</h3>
-			<ul class="ul_none p-t_4 m-t_auto flex flex_row flex_wrap justify_start font-size_down-2 c_black-7 m-t_auto lh_0 items_end gap_3">
-				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative lh_0 z_2">
-					<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-clock"></i> 15</span> minutes
-				</li>
-				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative h:bg_black-2 lh_0 z_2">
-					<a href="#" class="undecorated h:undecorated expanded-click-area">
-						<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-paperclip p-r_3"></i> <span class="p-r_3">PDF</span></span> Attachments </a>
-				</li>
-			</ul>
-		</main>
-	<footer data-element="footer-button-bar" class="bg_brand br-br_radius br-bl_radius flex flex_row-reverse nowrap items_end  font_2  font_3:lg m_n1 m-t_auto">
-		<ul data-element="footer-button-bar--button-group" class="flex flex_row-reverse inline-block self_start ul_none">
-			<li data-element="footer-button-bar--button-edge" class="aspect-ratio_1x1 bg_brand br_circle inline-block m-r_n3">
-				<a href="" data-element="footer-button-bar--button" class="[expanded-click-area] aspect-ratio_1x1 bg_white-6 br_circle button c_black grid h:bg_primary h:c_white items_center justify_center z_1">
-					<i class="c_inherit-all fa-list fa-solid fas font-size_down-2"></i>
-				</a>
-			</li>
-		</ul>
-	</footer>
-</article>
-</li>
-		<li class="flex flex_column items_center user-select_none relative"><article class="br_radius bg_white-9 font_1 shadow_bevel-light flex flex_column br_solid br_black-3 br_1 self_stretch">
-	<header class="aspect-ratio_16x9 bg_cover br-tl_radius br-tr_radius relative w_100" style="background-image:url(https://placeimg.com/640/480/arch)">
-		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
-		<div class="absolute t_3 r_0 z_2" data-element="save-toggle">
-		<span class="fa-stack fa-2x font-size_0 c_secondary-n2 h:c_secondary-n4">
-	<i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
-	<i class="fa-solid fas fa-star fa-stack-1x c_white h:c_white m-t_n1 t_n1"></i>
-</span>
-		</div>
-		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
-			<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
-		</div>
-	</header>
-		<main class="font_1 lh_1 flex flex_column gap-y_2 p_4 p_5:xl font_display">
-			<h1 class="c_secondary-n1 font-size_down-2 font_display font_medium m-y_0 opacity_8"> (Collection Title) Yearly Conference </h1>
-			<h2 class="font-size_up-1 font_bold font_display c_primary-n1 m-y_0 lh_1">(Title) Quam ut Blat Ruble Prapms</h2>
-			<h3 class="c_black-7 font-size_down-1 font_medium font_ui m-y_0">(Session Sub Title) Rhythm and Conduction Disorders</h3>
-			<ul class="ul_none p-t_4 m-t_auto flex flex_row flex_wrap justify_start font-size_down-2 c_black-7 m-t_auto lh_0 items_end gap_3">
-				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative lh_0 z_2">
-					<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-clock"></i> 15</span> minutes
-				</li>
-				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative h:bg_black-2 lh_0 z_2">
-					<a href="#" class="undecorated h:undecorated expanded-click-area">
-						<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-paperclip p-r_3"></i> <span class="p-r_3">PDF</span></span> Attachments </a>
-				</li>
-			</ul>
-		</main>
-	<footer data-element="footer-button-bar" class="bg_brand br-br_radius br-bl_radius flex flex_row-reverse nowrap items_end  font_2  font_3:lg m_n1 m-t_auto">
-		<ul data-element="footer-button-bar--button-group" class="flex flex_row-reverse inline-block self_start ul_none">
-			<li data-element="footer-button-bar--button-edge" class="aspect-ratio_1x1 bg_brand br_circle inline-block m-r_n3">
-				<a href="" data-element="footer-button-bar--button" class="[expanded-click-area] aspect-ratio_1x1 bg_white-6 br_circle button c_black grid h:bg_primary h:c_white items_center justify_center z_1">
-					<i class="c_inherit-all fa-list fa-solid fas font-size_down-2"></i>
-				</a>
-			</li>
-		</ul>
-	</footer>
-</article>
-</li>
-		<li class="flex flex_column items_center user-select_none relative"><article class="br_radius bg_white-9 font_1 shadow_bevel-light flex flex_column br_solid br_black-3 br_1 self_stretch">
-	<header class="aspect-ratio_16x9 bg_cover br-tl_radius br-tr_radius relative w_100" style="background-image:url(https://placeimg.com/640/480/arch)">
-		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
-		<div class="absolute t_3 r_0 z_2" data-element="save-toggle">
-		<span class="fa-stack fa-2x font-size_0 c_secondary-n2 h:c_secondary-n4">
-	<i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
-	<i class="fa-solid fas fa-star fa-stack-1x c_white h:c_white m-t_n1 t_n1"></i>
-</span>
-		</div>
-		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
-			<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
-		</div>
-	</header>
-		<main class="font_1 lh_1 flex flex_column gap-y_2 p_4 p_5:xl font_display">
-			<h1 class="c_secondary-n1 font-size_down-2 font_display font_medium m-y_0 opacity_8"> (Collection Title) Yearly Conference </h1>
-			<h2 class="font-size_up-1 font_bold font_display c_primary-n1 m-y_0 lh_1">(Title) Quam ut Blat Ruble Prapms</h2>
-			<h3 class="c_black-7 font-size_down-1 font_medium font_ui m-y_0">(Session Sub Title) Rhythm and Conduction Disorders</h3>
-			<ul class="ul_none p-t_4 m-t_auto flex flex_row flex_wrap justify_start font-size_down-2 c_black-7 m-t_auto lh_0 items_end gap_3">
-				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative lh_0 z_2">
-					<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-clock"></i> 15</span> minutes
-				</li>
-				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative h:bg_black-2 lh_0 z_2">
-					<a href="#" class="undecorated h:undecorated expanded-click-area">
-						<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-paperclip p-r_3"></i> <span class="p-r_3">PDF</span></span> Attachments </a>
-				</li>
-			</ul>
-		</main>
-	<footer data-element="footer-button-bar" class="bg_brand br-br_radius br-bl_radius flex flex_row-reverse nowrap items_end  font_2  font_3:lg m_n1 m-t_auto">
-		<ul data-element="footer-button-bar--button-group" class="flex flex_row-reverse inline-block self_start ul_none">
-			<li data-element="footer-button-bar--button-edge" class="aspect-ratio_1x1 bg_brand br_circle inline-block m-r_n3">
-				<a href="" data-element="footer-button-bar--button" class="[expanded-click-area] aspect-ratio_1x1 bg_white-6 br_circle button c_black grid h:bg_primary h:c_white items_center justify_center z_1">
-					<i class="c_inherit-all fa-list fa-solid fas font-size_down-2"></i>
-				</a>
-			</li>
-		</ul>
-	</footer>
-</article>
-</li>
-		<li class="flex flex_column items_center user-select_none relative"><article class="br_radius bg_white-9 font_1 shadow_bevel-light flex flex_column br_solid br_black-3 br_1 self_stretch">
-	<header class="aspect-ratio_16x9 bg_cover br-tl_radius br-tr_radius relative w_100" style="background-image:url(https://placeimg.com/640/480/arch)">
-		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
-		<div class="absolute t_3 r_0 z_2" data-element="save-toggle">
-		<span class="fa-stack fa-2x font-size_0 c_secondary-n2 h:c_secondary-n4">
-	<i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
-	<i class="fa-solid fas fa-star fa-stack-1x c_white h:c_white m-t_n1 t_n1"></i>
-</span>
-		</div>
-		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
-			<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
-		</div>
-	</header>
-		<main class="font_1 lh_1 flex flex_column gap-y_2 p_4 p_5:xl font_display">
-			<h1 class="c_secondary-n1 font-size_down-2 font_display font_medium m-y_0 opacity_8"> (Collection Title) Yearly Conference </h1>
-			<h2 class="font-size_up-1 font_bold font_display c_primary-n1 m-y_0 lh_1">(Title) Quam ut Blat Ruble Prapms</h2>
-			<h3 class="c_black-7 font-size_down-1 font_medium font_ui m-y_0">(Session Sub Title) Rhythm and Conduction Disorders</h3>
-			<ul class="ul_none p-t_4 m-t_auto flex flex_row flex_wrap justify_start font-size_down-2 c_black-7 m-t_auto lh_0 items_end gap_3">
-				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative lh_0 z_2">
-					<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-clock"></i> 15</span> minutes
-				</li>
-				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative h:bg_black-2 lh_0 z_2">
-					<a href="#" class="undecorated h:undecorated expanded-click-area">
-						<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-paperclip p-r_3"></i> <span class="p-r_3">PDF</span></span> Attachments </a>
-				</li>
-			</ul>
-		</main>
-	<footer data-element="footer-button-bar" class="bg_brand br-br_radius br-bl_radius flex flex_row-reverse nowrap items_end  font_2  font_3:lg m_n1 m-t_auto">
-		<ul data-element="footer-button-bar--button-group" class="flex flex_row-reverse inline-block self_start ul_none">
-			<li data-element="footer-button-bar--button-edge" class="aspect-ratio_1x1 bg_brand br_circle inline-block m-r_n3">
-				<a href="" data-element="footer-button-bar--button" class="[expanded-click-area] aspect-ratio_1x1 bg_white-6 br_circle button c_black grid h:bg_primary h:c_white items_center justify_center z_1">
-					<i class="c_inherit-all fa-list fa-solid fas font-size_down-2"></i>
-				</a>
-			</li>
-		</ul>
-	</footer>
-</article>
-</li>
-		<li class="flex flex_column items_center user-select_none relative"><article class="br_radius bg_white-9 font_1 shadow_bevel-light flex flex_column br_solid br_black-3 br_1 self_stretch">
-	<header class="aspect-ratio_16x9 bg_cover br-tl_radius br-tr_radius relative w_100" style="background-image:url(https://placeimg.com/640/480/arch)">
-		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
-		<div class="absolute t_3 r_0 z_2" data-element="save-toggle">
-		<span class="fa-stack fa-2x font-size_0 c_secondary-n2 h:c_secondary-n4">
-	<i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
-	<i class="fa-solid fas fa-star fa-stack-1x c_white h:c_white m-t_n1 t_n1"></i>
-</span>
-		</div>
-		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
-			<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
-		</div>
-	</header>
-		<main class="font_1 lh_1 flex flex_column gap-y_2 p_4 p_5:xl font_display">
-			<h1 class="c_secondary-n1 font-size_down-2 font_display font_medium m-y_0 opacity_8"> (Collection Title) Yearly Conference </h1>
-			<h2 class="font-size_up-1 font_bold font_display c_primary-n1 m-y_0 lh_1">(Title) Quam ut Blat Ruble Prapms</h2>
-			<h3 class="c_black-7 font-size_down-1 font_medium font_ui m-y_0">(Session Sub Title) Rhythm and Conduction Disorders</h3>
-			<ul class="ul_none p-t_4 m-t_auto flex flex_row flex_wrap justify_start font-size_down-2 c_black-7 m-t_auto lh_0 items_end gap_3">
-				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative lh_0 z_2">
-					<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-clock"></i> 15</span> minutes
-				</li>
-				<li class="inline-block br_radius p-x_3 m-l_n3 p_3 z_3 relative h:bg_black-2 lh_0 z_2">
-					<a href="#" class="undecorated h:undecorated expanded-click-area">
-						<span class="font-size_up-1 c_secondary-n2 block"><i class="fal fa-paperclip p-r_3"></i> <span class="p-r_3">PDF</span></span> Attachments </a>
-				</li>
-			</ul>
-		</main>
-	<footer data-element="footer-button-bar" class="bg_brand br-br_radius br-bl_radius flex flex_row-reverse nowrap items_end  font_2  font_3:lg m_n1 m-t_auto">
-		<ul data-element="footer-button-bar--button-group" class="flex flex_row-reverse inline-block self_start ul_none">
-			<li data-element="footer-button-bar--button-edge" class="aspect-ratio_1x1 bg_brand br_circle inline-block m-r_n3">
-				<a href="" data-element="footer-button-bar--button" class="[expanded-click-area] aspect-ratio_1x1 bg_white-6 br_circle button c_black grid h:bg_primary h:c_white items_center justify_center z_1">
-					<i class="c_inherit-all fa-list fa-solid fas font-size_down-2"></i>
-				</a>
-			</li>
-		</ul>
-	</footer>
-</article>
-</li>
-		<li class="flex flex_column h_auto items_center justify_center w_50"><article class="bg_black-1 br_1 br_black-3 br_radius br_solid flex_auto font_1:lg font_0:md font_n1 grid h:bg_secondary h:c_white items_center justify_center p_4 relative self_stretch shadow_bevel-light text_center">
-			<a href="" class="c_inherit-all expanded-click-area font-size_up-1 font_display lh_1">
-				<span class="block">View All</span> <span class="block">From</span> <span class="block">Category</span>
-			<i class="block fa-arrow-alt-circle-right fa-arrow-right-circle fa-solid fas font-size_up-2 h:undecorated lh_3 undecorated"></i>
-			</a>
-		</article>
-		</li>
-	</ul>
+	</div>
 </div>
-</section>	
+<div class="grid-area_mainArea br-br_radius overflow_visible grid  grid-x_6:lg grid-x_5:xl grid-x_4:xxl">
+	<article class="bg_white-6 col-start_start col-end_4 relative font_1 font_2:lg font_3:xxl">
+		<div class="absolute t_3 r_2 z_2 font_n1" data-element="save-toggle">
+			<span class="fa-stack fa-2x font-size_0 c_secondary-n2 h:c_secondary-n4">
+	<i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
+	<i class="fa-solid fas fa-star fa-stack-1x c_white h:c_white m-t_n1 t_n1"></i>
+</span>
+		</div>
+		<main data-label="player" class="w_100" >
+			<div class="player hd full player hd full  p-x_6:xl p-x_5:lg p-x_4:md p-x_3 p-y_4 p-y_5:xl">
+				<h3 class="font-size_down-3 c_secondary-n1 uppercase p-r_4">(Collection Name) Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque</h3>
+				<div class="aspect-ratio_16x9 bg_cover br-solid br_1 br_black-3 br_radius relative self_start shadow_2 w_100" style="background-image:url(https://placeimg.com/640/480/arch)">
+					<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
 
+					<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
+						<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
+					</div>
+				</div>
+				<header class="p-b_5 p-t_4 p-y_4:md p-y_4:xl max-w_60">
+					<h1 data-label="session-name" class="font-size_down-3 c_black-7 uppercase font_display font_medium m-y_0">(Video Que Name) Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque</h1>
+					<h2  data-label="presentation-name"class="font-size_up-1 c_primary-n1 font_display font_bold lh_0 m-y_2:lg m-y_0">Rerum omnis odio voluptate eaque est necessitatibus.</h2>
+					<h3  data-label="Presentation-subname" class="font-size_down-2 c_black-8 font_ui m-y_0 lh_1">Quibusdam quia errorco. Sectetur dolores molestiae</h3>
+					<span class="bg_accent-n2 br_radius c_white font-size_down-2 p-x_3 p-y_2 r_0 t_0 inline-block font-size_down-3">
+						<i class="fas fa-solid fa-search m-r_3"></i>
+						<strong class="font_medium font_ui">Keyword Found in Video @: </strong>
+						<ul class="ul_none ul_inline-pipe gap_1">
+							<li class=""><a href="" class="c_white h:c_white underline h:undecorated">0:59</a></li>
+							<li class=""><a href="" class="c_white h:c_white underline h:undecorated">1:10</a></li>
+						</ul>
+					</span>
+				</header>
+				<div class="font_0 font_1:lg font_2:xxl">
+					<h5 class="c_black-8 font-size_down-3">How did you like this presentation?</h5>
+					<ul class="ul_none flex flex_row   flex flex_row gap_2">
+						<li class="br_solid br_black-3 br_radius br_1 h:bg_black-3">
+							<a class="p-y_3 p-x_4 " href=""><i class="fal fa-thumbs-up"></i></a>
+						</li>
+						<li class="br_solid br_black-3 br_radius br_1 h:bg_black-3">
+							<a class="p-y_3 p-x_4 " href=""><i class="fal fa-thumbs-down"></i></a>
+						</li>
+						<li class="br_solid br_black-3 br_radius br_1 h:bg_black-3 m-l_auto">
+							<a class="p-y_3 p-x_4 " href=""><i class="fal fa-paperclip"></i> Attachments</a>
+						</li>
+					</ul>
+				</div>
+            </div>
+		</main>
+		<section data-label="information" class="p-x_3 p-x_4:md p-x_5:xl font_0 font_1:lg font_2:xxl">
+			<div class="flex_row:md flex m-y_3 m-y_0:md">
+				<div class="flex_auto grid">
+					<span class="br-t_1 br_black-6 br_dotted br_inherit self_center"></span>
+				</div>
+				<div class="flex_shrink p-x_3 p-x_4:md p-x_5:xl lh_1 text_center">
+					<strong class="c_black-8 block font_ui font-size_down-1 p-y_4 p-y_2:md">Faculty Type A</strong>
+				</div>
+				<div class="flex_auto grid">
+					<span class="br-t_1 br_black-6 br_dotted br_inherit self_center"></span>
+				</div>
+			</div>
+			<div class="grid grid-x_4:xl grid-x_2 gap-x_5:xl gap-x_4 gap-y_5 p_3 p_4:md p_5:xl justify_center items_center">
+				<section
+	class="flex flex_column gap-y_3:lg gap-y_2 max-w_15 self_center m-x_auto"
+>
+	<div
+		class=" flex_auto m-x_0:md m-x_auto w_100 shadow_overlap-light overflow_hidden self_center p_3 bg_white-8"
+	>
+    <img
+        class="aspect_1x1 w_100 br_radius"
+        src="https://i.pravatar.cc/300"
+        alt="Pepper H. Soda III, MD, FACC"
+    />	</div>
+	<div class="flex_auto flex_column justify_start">
+		<h2 class="m-b_0 speaker_name font_display font_bold font-size_0 lh_1 c_primary-n1 m-b_3"> Pepper H. Soda III, MD</h2>
+		<ul class="speaker_metadata ul_none font_copy font_medium font-size_down-2 flex gap-y_2 m-b_3 c_black-8 ">
+            <!-- This is a repeated snippet -->
+            <li class="lh_1">Powlowski - West, encoding</li>
+			<li class="lh_1">Champlin - Pagac, adapter</li>
+        </ul>
+        <span class="block c_black-6 font_copy font-size_down-2 lh_0 font_italic">New York, NY, USA</span>
+	</div>
+</section>
+				<section
+	class="flex flex_column gap-y_3:lg gap-y_2 max-w_15 self_center m-x_auto"
+>
+	<div
+		class=" flex_auto m-x_0:md m-x_auto w_100 shadow_overlap-light overflow_hidden self_center p_3 bg_white-8"
+	>
+    <img
+        class="aspect_1x1 w_100 br_radius"
+        src="https://i.pravatar.cc/300"
+        alt="Pepper H. Soda III, MD, FACC"
+    />	</div>
+	<div class="flex_auto flex_column justify_start">
+		<h2 class="m-b_0 speaker_name font_display font_bold font-size_0 lh_1 c_primary-n1 m-b_3"> Pepper H. Soda III, MD</h2>
+		<ul class="speaker_metadata ul_none font_copy font_medium font-size_down-2 flex gap-y_2 m-b_3 c_black-8 ">
+            <!-- This is a repeated snippet -->
+            <li class="lh_1">Powlowski - West, encoding</li>
+			<li class="lh_1">Champlin - Pagac, adapter</li>
+        </ul>
+        <span class="block c_black-6 font_copy font-size_down-2 lh_0 font_italic">New York, NY, USA</span>
+	</div>
+</section>
+				<section
+	class="flex flex_column gap-y_3:lg gap-y_2 max-w_15 self_center m-x_auto"
+>
+	<div
+		class=" flex_auto m-x_0:md m-x_auto w_100 shadow_overlap-light overflow_hidden self_center p_3 bg_white-8"
+	>
+    <img
+        class="aspect_1x1 w_100 br_radius"
+        src="https://i.pravatar.cc/300"
+        alt="Pepper H. Soda III, MD, FACC"
+    />	</div>
+	<div class="flex_auto flex_column justify_start">
+		<h2 class="m-b_0 speaker_name font_display font_bold font-size_0 lh_1 c_primary-n1 m-b_3"> Pepper H. Soda III, MD</h2>
+		<ul class="speaker_metadata ul_none font_copy font_medium font-size_down-2 flex gap-y_2 m-b_3 c_black-8 ">
+            <!-- This is a repeated snippet -->
+            <li class="lh_1">Powlowski - West, encoding</li>
+			<li class="lh_1">Champlin - Pagac, adapter</li>
+        </ul>
+        <span class="block c_black-6 font_copy font-size_down-2 lh_0 font_italic">New York, NY, USA</span>
+	</div>
+</section>
+				<section
+	class="flex flex_column gap-y_3:lg gap-y_2 max-w_15 self_center m-x_auto"
+>
+	<div
+		class=" flex_auto m-x_0:md m-x_auto w_100 shadow_overlap-light overflow_hidden self_center p_3 bg_white-8"
+	>
+    <img
+        class="aspect_1x1 w_100 br_radius"
+        src="https://i.pravatar.cc/300"
+        alt="Pepper H. Soda III, MD, FACC"
+    />	</div>
+	<div class="flex_auto flex_column justify_start">
+		<h2 class="m-b_0 speaker_name font_display font_bold font-size_0 lh_1 c_primary-n1 m-b_3"> Pepper H. Soda III, MD</h2>
+		<ul class="speaker_metadata ul_none font_copy font_medium font-size_down-2 flex gap-y_2 m-b_3 c_black-8 ">
+            <!-- This is a repeated snippet -->
+            <li class="lh_1">Powlowski - West, encoding</li>
+			<li class="lh_1">Champlin - Pagac, adapter</li>
+        </ul>
+        <span class="block c_black-6 font_copy font-size_down-2 lh_0 font_italic">New York, NY, USA</span>
+	</div>
+</section>
+			</div>
+		</section>
+		<section data-label="information" class="p-x_3 p-x_4:md p-x_5:xl font_0 font_1:lg font_2:xxl m-b_3">
+			<div class="flex_row:md flex m-y_3 m-y_0:md">
+				<div class="flex_auto grid">
+					<span class="br-t_1 br_black-6 br_dotted br_inherit self_center"></span>
+				</div>
+				<div class="flex_shrink p-x_3 p-x_4:md p-x_5:xl lh_1 text_center">
+					<strong class="c_black-8 block font_ui font-size_down-1 p-y_4 p-y_2:md">Meta Data</strong>
+				</div>
+				<div class="flex_auto grid">
+					<span class="br-t_1 br_black-6 br_dotted br_inherit self_center"></span>
+				</div>
+			</div>
+			<div class="grid grid-x_4:xl grid-x_3:lg grid-x_2 gap-x_5:xl gap-x_4 gap-y_5 p_3 p_4:md p_5:xl justify_center items_center font-size_down-2">
+				<div class="flex gap_y-3">
+					<strong class="font_display font_bold">Category</strong>
+					<ul class="ul_none ul_inline-comma font-medium c_black-7 font-size_down-1 gap-y_2 lh_0 uppercase">
+						<li class="">quam</li>
+						<li class="">omnis</li>
+						<li class="">consectetur</li>
+						<li class="">blanditiis</li>
+						<li class="">voluptate</li>
+						<li class="">mollitia</li>
+					</ul>
+				</div>
+				<div class="flex gap_y-3">
+					<strong class="font_display font_bold">Tags</strong>
+					<ul class="ul_none ul_inline-comma font-medium c_black-7 font-size_down-1 gap-y_2 lh_0 uppercase">
+						<li class="">quam</li>
+						<li class="">omnis</li>
+						<li class="">consectetur</li>
+						<li class="">blanditiis</li>
+						<li class="">voluptate</li>
+						<li class="">mollitia</li>
+					</ul>
+				</div>
+				<div class="flex gap_y-3">
+					<strong class="font_display font_bold">Meta Data</strong>
+					<ul class="ul_none ul_inline-comma font-medium c_black-7 font-size_down-1 gap-y_2 lh_0 uppercase">
+						<li class="">quam</li>
+						<li class="">omnis</li>
+						<li class="">consectetur</li>
+						<li class="">blanditiis</li>
+						<li class="">voluptate</li>
+						<li class="">mollitia</li>
+					</ul>
+				</div>
+				<div class="flex gap_y-3">
+					<strong class="font_display font_bold">Credits</strong>
+					<ul class="ul_none ul_inline-comma font-medium c_black-7 font-size_down-1 gap-y_2 lh_0 uppercase">
+						<li class="">quam</li>
+						<li class="">omnis</li>
+						<li class="">consectetur</li>
+						<li class="">blanditiis</li>
+						<li class="">voluptate</li>
+						<li class="">mollitia</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</article>	
+	<nav data-label="video-que-navigation" class="col-start_4 col-end_end font_0 font_1:lg grid justify_stretch items_stretch">
+		<ul class="b_0 br-l_1 br_black-3 br_solid flex flex_column items_stretch justify_start justify_stretch t_0 ul_none">
+			<li class="relative h:bg_white-4 br-b_1 br_solid br_white-6 p_4 flex flex_row m-l_n1 p-t_5 p_4 p-b_5 "> 
+                <div class="z_2">
+	<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">(Presentation Title) Rhythm and Conduction Disorders</h3>
+	<h4 class="c_black-6 font-size_down-2 font_display font_medium m-y_0">(Sub Presentation Title) Rhythm and Conduction Disorders</h4>
+	<!-- Start of Keyword Found Conditional Block: This block turns on if the keywords were found within the video transcript, title, or subtitle of this presentation -->
+	<!-- <span class="absolute bg_accent-n2 br-bl_round c_white font_n2 grid items_center justify_center p-r_0 p_3 r_0 t_0 text_center">
+		<i class="fas fa-solid fa-search m-r_3"></i>
+	</span> -->
+	<span class="bg_accent-n2 br_radius c_white font-size_down-2 p-x_3 p-y_2 r_0 t_0 inline-block">
+		<i class="fas fa-solid fa-search m-r_3"></i>
+		<strong class="font_medium font_ui">Keyword Found in Video @: </strong>
+		<ul class="ul_none ul_inline-pipe gap_1">
+			<li class=""><a href="" class="c_white h:c_white underline h:undecorated">0:59</a></li>
+			<li class=""><a href="" class="c_white h:c_white underline h:undecorated">1:10</a></li>
+		</ul>
+	</span>
+		<!-- End of Keyword Found Conditional Block -->
+</div>
+<span data-element="save-star-desktop" class="absolute t_3 r_3 font-size_down-3 m-l_auto z_2">
+	<span class="fa-stack fa-2x font-size_0 c_secondary-n2 h:c_secondary-n4">
+	<i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
+	<i class="fa-solid fas fa-star fa-stack-1x c_white h:c_white m-t_n1 t_n1"></i>
+</span>
+</span>
+<span data-element="presentation-player" class="aspect-ratio_1x1 m-l_auto bg_brand-n2 br_circle inline-block br_solid br_brand-n2 br_2 self_center z_1 font-size_down-2 m-y_4 ">
+	<a href="" data-element="footer-button-bar--button" class="button bg_white-6 c_black br_circle aspect-ratio_1x1 grid items_center justify_center h:bg_primary h:c_white expanded-click-area z_1">
+		<i class="fa-solid fas fa-play c_inherit-all font-size_down-2"></i>
+	</a>
+</span>
+            				<ul class="absolute t_0 l_3 font-size_down-2 ul_none flex flex_row nowrap gap-x_1" data-element="flags">
+					<li class="p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white">Watched</li>
+				</ul></li>
+            <li class="relative h:bg_white-4 br-b_1 br_solid br_white-6 p_4 flex flex_row m-l_n1 p-t_5 p_4 p-b_5 "> 
+                <div class="isolation_isolate">
+	<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">(Presentation Title) Rhythm and Conduction Disorders</h3>
+	<h4 class="c_black-6 font-size_down-2 font_display font_medium m-y_0">(Sub Presentation Title) Rhythm and Conduction Disorders</h4>
+</div>
+<span data-element="save-star-desktop" class="absolute t_3 r_3 font-size_down-3 m-l_auto z_2">
+	<span class="fa-stack fa-2x font-size_0 c_secondary-n2 h:c_secondary-n4">
+	<i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
+	<i class="fa-solid fas fa-star fa-stack-1x c_white h:c_white m-t_n1 t_n1"></i>
+</span>
+</span>
+<span data-element="presentation-player" class="aspect-ratio_1x1 m-l_auto bg_brand-n2 br_circle inline-block br_solid br_brand-n2 br_2 self_center m-y_4 z_1 font-size_down-2">
+	<a href="" data-element="footer-button-bar--button" class="button bg_white-6 c_black br_circle aspect-ratio_1x1 grid items_center justify_center h:bg_primary h:c_white expanded-click-area z_1">
+		<i class="fa-solid fas fa-play c_inherit-all font-size_down-2"></i>
+	</a>
+</span>
+            				<ul class="absolute t_0 l_3 font-size_down-2 ul_none flex flex_row nowrap gap-x_1" data-element="flags">
+					<li class="p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white">Watched</li>
+				</ul></li>
+            <li class="bg_white-6 br-l_4 br_highlight br_solid flex flex_row m-l_n1 p-t_5 p_4 p-b_5 relative">
+				<div class="isolation_isolate">
+	<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">(Presentation Title) Rhythm and Conduction Disorders</h3>
+	<h4 class="c_black-6 font-size_down-2 font_display font_medium m-y_0">(Sub Presentation Title) Rhythm and Conduction Disorders</h4>
+	<!-- Start of Keyword Found Conditional Block: This block turns on if the keywords were found within the video transcript, title, or subtitle of this presentation -->
+	<!-- <span class="absolute bg_accent-n1 br-bl_round c_white font_n2 grid items_center justify_center p-r_0 p_3 r_0 t_0 text_center">
+		<i class="fas fa-solid fa-search m-r_3"></i>
+	</span>
+	<span class="bg_accent-n1 br_round c_white font-size_down-3 p-x_4 p-y_2 r_0 t_0"><i class="fas fa-solid fa-search m-r_3"></i><span class="font_medium font_ui">Keyword Found</span> -->
+		<!-- End of Keyword Found Conditional Block -->
+</div>
+<span data-element="save-star-desktop" class="absolute t_3 r_3 font-size_down-3 m-l_auto z_2">
+	<span class="fa-stack fa-2x font-size_0 c_secondary-n2 h:c_secondary-n4">
+	<i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
+	<i class="fa-solid fas fa-star fa-stack-1x c_white h:c_white m-t_n1 t_n1"></i>
+</span>
+</span>
+<span data-element="presentation-player" class="aspect-ratio_1x1 bg_highlight br_2 br_circle br_solid br_white font-size_down-2 inline-block m-l_auto self_center z_1">
+	<span href="" data-element="footer-button-bar--button" class="c_black br_circle aspect-ratio_1x1 grid items_center justify_center expanded-click-area z_1">
+		<i class="fa-solid fas fa-pause c_inherit-all font-size_0"></i>
+	</span>
+</span>
+				<ul class="absolute t_0 l_3 font-size_down-2 ul_none flex flex_row nowrap gap-x_1" data-element="flags">
+					<li class="p-x_3 p-y_2 bg_highlight-1 br-br_radius br-bl_radius c_black font_xbold"><i class="fas fa-solid fa-play"></i> Playing</li>
+					<li class="p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white">Watched</li>
+				</ul>
+			</li>
+            <li class="bg_black-4 br-b_1 br-black-4 br_solid c_white flex flex_row font-size_down-1 font_bold items_center m-l_n1 p_3 p-x_4 relative text-shadow_black-1"><i class="fa-lock fa-solid fas m-r_4"></i> Watch all previous videos to unlock the next video(s) </li>
+			<li class="relative br-b_1 br_solid br_white-6 p_4 flex flex_row m-l_n1 cursor_not-allowed"> <div class="z_2 opacity_6">
+	<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">(Presentation Title) Rhythm and Conduction Disorders</h3>
+	<h4 class="c_black-6 font-size_down-2 font_display font_medium m-y_0">(Sub Presentation Title) Rhythm and Conduction Disorders</h4>
+	<!-- Start of Keyword Found Conditional Block: This block turns on if the keywords were found within the video transcript, title, or subtitle of this presentation -->
+	<!-- <span class="absolute bg_black-6 br-bl_round c_white font_n2 grid items_center justify_center p-r_0 p_3 r_0 t_0 text_center">
+		<i class="fas fa-solid fa-search m-r_3"></i>
+	</span> -->
+	<span class="bg_black-6 br_radius c_white-6 font-size_down-2 p-x_3 p-y_2 r_0 t_0 inline-block">
+		<i class="fas fa-solid fa-search m-r_3"></i>
+		<strong class="font_medium font_ui">Keyword Found in Video @: </strong>
+		<ul class="ul_none ul_inline-pipe gap_1">
+			<li class=""><span href="" class="c_white">0:59</span></li>
+			<li class=""><span href="" class="c_white">1:10</span></li>
+		</ul>
+	</span>
+		<!-- End of Keyword Found Conditional Block -->
+</div>
+<span data-element="presentation-player" class="aspect-ratio_1x1 m-l_auto  inline-block  self_center z_1 m-y_4">
+    <span class="c_black-5 br_circle aspect-ratio_1x1 grid items_center justify_center z_1 ">
+        <i class="fa-solid fas fa-lock c_inherit-all font-size_down-2"></i>
+	</span>
+</span></li>
+			<li class="relative br-b_1 br_solid br_white-6 p_4 flex flex_row m-l_n1 cursor_not-allowed">  <div class="z_2 opacity_6">
+	<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">(Presentation Title) Rhythm and Conduction Disorders</h3>
+	<h4 class="c_black-6 font-size_down-2 font_display font_medium m-y_0">(Sub Presentation Title) Rhythm and Conduction Disorders</h4>
+	<!-- Start of Keyword Found Conditional Block: This block turns on if the keywords were found within the video transcript, title, or subtitle of this presentation -->
+	<!-- <span class="absolute bg_black-6 br-bl_round c_white font_n2 grid items_center justify_center p-r_0 p_3 r_0 t_0 text_center">
+		<i class="fas fa-solid fa-search m-r_3"></i>
+	</span> -->
+	<span class="bg_black-6 br_radius c_white-6 font-size_down-2 p-x_3 p-y_2 r_0 t_0 inline-block">
+		<i class="fas fa-solid fa-search m-r_3"></i>
+		<strong class="font_medium font_ui">Keyword Found in Video @: </strong>
+		<ul class="ul_none ul_inline-pipe gap_1">
+			<li class=""><span href="" class="c_white">0:59</span></li>
+			<li class=""><span href="" class="c_white">1:10</span></li>
+		</ul>
+	</span>
+		<!-- End of Keyword Found Conditional Block -->
+</div>
+<span data-element="presentation-player" class="aspect-ratio_1x1 m-l_auto  inline-block  self_center z_1 m-y_4">
+    <span class="c_black-5 br_circle aspect-ratio_1x1 grid items_center justify_center z_1 ">
+        <i class="fa-solid fas fa-lock c_inherit-all font-size_down-2"></i>
+	</span>
+</span></li>
+            <li class="bg_black-4 br-b_1 br-black-4 br_solid c_white flex flex_row font-size_down-1 font_bold items_center m-l_n1 p_3 p-x_4 relative text-shadow_black-1"><i class="fa-lock fa-solid fas m-r_4"></i> Watch all previous videos to unlock the next video(s) </li>
+			
+            <li class="relative br-b_1 br_solid br_white-6 p_4 flex flex_row m-l_n1 cursor_not-allowed"> <div class="z_2 opacity_6">
+	<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">(Presentation Title) Rhythm and Conduction Disorders</h3>
+	<h4 class="c_black-6 font-size_down-2 font_display font_medium m-y_0">(Sub Presentation Title) Rhythm and Conduction Disorders</h4>
+	<!-- Start of Keyword Found Conditional Block: This block turns on if the keywords were found within the video transcript, title, or subtitle of this presentation -->
+	<!-- <span class="absolute bg_black-6 br-bl_round c_white font_n2 grid items_center justify_center p-r_0 p_3 r_0 t_0 text_center">
+		<i class="fas fa-solid fa-search m-r_3"></i>
+	</span> -->
+	<span class="bg_black-6 br_radius c_white-6 font-size_down-2 p-x_3 p-y_2 r_0 t_0 inline-block">
+		<i class="fas fa-solid fa-search m-r_3"></i>
+		<strong class="font_medium font_ui">Keyword Found in Video @: </strong>
+		<ul class="ul_none ul_inline-pipe gap_1">
+			<li class=""><span href="" class="c_white">0:59</span></li>
+			<li class=""><span href="" class="c_white">1:10</span></li>
+		</ul>
+	</span>
+		<!-- End of Keyword Found Conditional Block -->
+</div>
+<span data-element="presentation-player" class="aspect-ratio_1x1 m-l_auto  inline-block  self_center z_1 m-y_4">
+    <span class="c_black-5 br_circle aspect-ratio_1x1 grid items_center justify_center z_1 ">
+        <i class="fa-solid fas fa-lock c_inherit-all font-size_down-2"></i>
+	</span>
+</span></li>
+		</ul>
+	</nav>
 </div>
 		<!-- These Styles are just for the styleguide and are not to be included with the pattern. -->
 		
