@@ -1,0 +1,84 @@
+--- 
+layout: library_app_frame 
+name: "Course Overview" 
+uri: "root/player/course/" 
+coursesActive: true 
+---
+<!-- {% include_relative netflix/home-header-branding.html %} -->
+{% include_relative netflix/app-header-w-search.html %}
+{% include_relative netflix/breadcrumb-courses-grid.html %}
+<header class="font-size_up-1 grid-area_pageHead ">
+	<div data-element="introduction" class="bg_white-8 br-b_1 br_black-3 br_solid p_4 p-x_5:xl p-x_6:xxl p-y_4:lg  p-y_5:xxl">
+		<h3 class="font_display font_xbold c_primary-n2"><i class="fas fa-graduation-cap p-r_3"></i>     Courses X</h3>
+		<p class="max-w_70">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt reiciendis cumque ut eum alias recusandae illum officiis debitis dolores corrupti deleniti velit maiores, dignissimos adipisci rerum odio? Rerum, reprehenderit doloremque?</p>
+	</div>
+</header>
+<div class="grid-area_mainArea br-br_radius overflow_visible">
+    <article class="bg_white-6 relative font_1 font_2:lg font_3:xxl p_4 p_5:xl">
+        <h1 class="">Courses</h1>
+        <h2>Collection Name</h2>
+        <!-- Slider main container -->
+        <section class="splide bg_black-_05 br_1 br_black-2 br_radius br_solid m-b_4 p-y_4 shadow_emboss-light " aria-label="Splide Basic HTML Example">
+            <div class="splide__track">
+                  <ul class="splide__list">
+                      <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
+                      <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
+                      <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
+                      <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
+                      <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
+                      <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
+                      <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
+                      <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
+                      <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
+                      <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
+                      <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
+                      <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
+                      <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
+                      <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
+                  </ul>
+            </div>
+          </section>
+    </article>
+</div>
+
+<!-- // https://splidejs.com/ -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.17/dist/css/splide-core.min.css">
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.17/dist/css/sea-green.min.css"> -->
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.17/dist/js/splide.min.js"></script>
+
+
+<script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+      var splide = new Splide( '.splide' , {
+      type       : '',
+      perPage    : 5,
+      padding    : "1rem",
+      gap: '1rem',
+      breakpoints: {
+        1024:{perPage: 3,},
+        768: {
+        perPage: 3,
+      },
+      640: {
+        perPage: 2,
+      },
+      480: {
+        perPage: 1,
+        padding    : "1.5rem",
+      },
+    },
+    classes: {
+        // Add classes for arrows.
+        arrows: 'splide__arrows your-class-arrows',
+        arrow : 'splide__arrow your-class-arrow scale_50 absolute t_6 b_6 z_5 shadow_overlap-light h:bg_primary-3 br_black-5 br_radius br-tr_square br-br_square',
+        prev  : 'splide__arrow--prev your-class-prev l_n5 rotate_180 ',
+        next  : 'splide__arrow--next your-class-next r_n5',
+
+        // Add classes for pagination.
+        pagination: 'splide__pagination your-class-pagination gap_3', // container
+        page      : 'splide__pagination__page your-class-page br_round aspect-ratio_1x1 bg_black-6 a:bg_primary', // each button
+      },
+    } );
+      splide.mount();
+    } );
+  </script>

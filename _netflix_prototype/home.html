@@ -4,9 +4,11 @@ name: "Home"
 uri: "root/index (authenticated & access)" 
 homeActive: true 
 ---
-<!-- {% include /netflix/home-header-branding.html %} -->
-{% include /netflix/app-header-w-search.html %}
 
+<!-- 
+	{% include_relative netflix/home-header-branding.html %} --> 
+
+{% include_relative netflix/app-header-w-search.html %} 
 <header class="font-size_up-1 grid-area_pageHead ">
 	<div data-element="introduction" class="bg_white-8 br-b_1 br_black-3 br_solid p_4 p-x_5:xl p-x_6:xxl p-y_4:lg  p-y_5:xxl">
 		<h3 class="font_display font_xbold c_primary-n2">Gallery X</h3>
@@ -14,28 +16,61 @@ homeActive: true
 	</div>
 </header>
 <div class="grid-area_mainArea bg_white-8 br-br_radius overflow_visible">
-	<section class="p-y_5:xxl p-y_4:lg p-y_3">
-<div class="gallery grid">
-	<ul class="grid-hs scrollbar-mini full ul_none gap-x_4 p-b_4 m-b_n2 grid">
-		{% include /netflix/program/session.html %}
-		{% include /netflix/program/session.html %}
-		{% include /netflix/program/session.html %}
-		{% include /netflix/program/session.html %}
-		{% include /netflix/program/session.html %}
-		{% include /netflix/program/session.html %}
-		{% include /netflix/program/session.html %}
-		{% include /netflix/program/session.html %}
-		{% include /netflix/program/session.html %}
-		{% include /netflix/program/session.html %}
-		<li class="flex flex_column h_auto items_center justify_center w_50"><article class="bg_black-1 br_1 br_black-3 br_radius br_solid flex_auto font_1:lg font_0:md font_n1 grid h:bg_secondary h:c_white items_center justify_center p_4 relative self_stretch shadow_bevel-light text_center">
-			<a href="" class="c_inherit-all expanded-click-area font-size_up-1 font_display lh_1">
-				<span class="block">View All</span> <span class="block">From</span> <span class="block">Category</span>
-			<i class="block fa-arrow-alt-circle-right fa-arrow-right-circle fa-solid fas font-size_up-2 h:undecorated lh_3 undecorated"></i>
-			</a>
-		</article>
-		</li>
-	</ul>
+	<section class="p-y_5:xxl p-y_4:lg p-y_3 p-x_4 p-x_5:lg">
+		<!-- Slider main container -->
+		<div class="splide bg_black-_05 br_1 br_black-2 br_radius br_solid m-b_4 p-y_4 shadow_emboss-light " aria-label="Splide Basic HTML Example">
+			<div class="splide__track">
+				<ul class="splide__list"> 
+					
+					{% include_relative netflix/program/session.html content="splide__slide" %}				
+					{% include_relative netflix/program/session.html content="splide__slide" %}					
+					{% include_relative netflix/program/session-extra-content.html content="splide__slide" %}					
+					{% include_relative netflix/program/session.html content="splide__slide" %}					
+					{% include_relative netflix/program/session.html content="splide__slide" %}					
+					{% include_relative netflix/program/session.html content="splide__slide" %}					
+					{% include_relative netflix/program/session.html content="splide__slide" %}					
+					{% include_relative netflix/program/session.html content="splide__slide" %}					
+					{% include_relative netflix/program/session.html content="splide__slide" %}
+					{% include_relative netflix/program/view-all.html content="splide__slide" %}
+				</ul>
+			</div>
+		</div>
 </div>
-</section>	
+</div>
+<!-- // https://splidejs.com/ -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.17/dist/css/splide-core.min.css">
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.17/dist/css/sea-green.min.css"> -->
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.17/dist/js/splide.min.js"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		var splide = new Splide('.splide', {
+			type: '',
+			perPage: 5,
+			padding: "2rem",
+			gap: '1rem',
+			autoHeight:true,
+			breakpoints: {
+				1200: { perPage: 4, },
+				768: {
+					perPage: 3,
+				},
+				640: {
+					perPage: 1,
+					padding: "1.5rem",
+				},
+			},
+			classes: {
+				// Add classes for arrows.
+				arrows: 'splide__arrows your-class-arrows',
+				arrow: 'splide__arrow your-class-arrow scale_50 absolute t_6 b_6 z_5 shadow_overlap-light bg_white h:bg_primary-3 br_black-5 br_radius br-tr_square br-br_square p-x_2',
+				prev: 'splide__arrow--prev your-class-prev l_n5 rotate_180 ',
+				next: 'splide__arrow--next your-class-next r_n5',
 
-</div>
+				// Add classes for pagination.
+				pagination: 'splide__pagination your-class-pagination gap_3 p-t_3', // container
+				page: 'splide__pagination__page your-class-page br_round aspect-ratio_1x1 bg_black-6 a:bg_primary', // each button
+			},
+		});
+		splide.mount();
+	});
+</script>
