@@ -1,7 +1,6 @@
 ---
 ---
 
-@use 'list/slash';
 
 // the gradient
 body {
@@ -164,6 +163,10 @@ html:not([data-scroll="0"]) #navigation_mobile {
 	display: flex;
 	isolation: isolate;
 	flex-wrap: nowrap;
+  &[data-element-option="block-end"],
+  &[data-element-option="block-start"] {
+    min-width:6em;
+  }
 	&[data-element-option="block-end"] {
 		height: 0.75em;
 		padding-inline-end: 1em;
