@@ -38,6 +38,10 @@ destination: "docs"
 github: [metadata]
 port: 4001
 
+sass:
+  sass_dir: _sass
+  
+
 collections:
   netflix_prototype:
     output: true
