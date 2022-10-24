@@ -1,0 +1,37 @@
+--- 
+layout: acvo_app_frame 
+name: "Course Outline" 
+uri: "root/outline/course/course-name" 
+coursesActive: true 
+---
+
+{% include_relative netflix/app-header-w-search.html %}
+{% include_relative netflix/breadcrumb-course.html %}
+<header class="grid-area_pageHead overflow_visible relative bg_white-6 relative p_5:xl p_4:lg p_3 font_n1 font_0:lg font_1:xxl br-b_1 br_black-3 br_solid">
+{% include_relative netflix/sub/session-label.html %}
+<div class="absolute t_3 r_2 z_2 font_n1" data-element="save-toggle">
+			{% include_relative netflix/sub/save-star.html %}
+		</div>
+</header>
+<div class="grid-area_mainArea br-br_radius overflow_visible grid  grid-x_6:lg grid-x_5:xl grid-x_4:xxl">
+	<article class="bg_white-6 relative font_1 font_2:lg font_3:xxl col-start_2 col-end_end row-start_start p_5:xl p_4:lg p_3 ">
+		course chapter data
+	</article>	
+	<nav data-label="video-que-navigation" class="col-start_start col-end_1 font_0 font_1:lg grid justify_stretch items_stretch row-start_start">
+		<ul class="b_0 br-l_1 br_black-3 br_solid flex flex_column items_stretch justify_start justify_stretch t_0 ul_none">
+			<li class="relative h:bg_white-4 br-b_1 br_solid br_white-6 flex flex_row m-l_n1  "> 
+                {% include_relative  /netflix/course/chapter.html %}
+			</li>
+            <li class="relative h:bg_white-4 br-b_1 br_solid br_white-6 flex flex_row m-l_n1  "> 
+				{% include_relative  /netflix/course/chapter.html %}
+			</li>
+            <li class="bg_white-6 flex flex_row m-l_n1 relative">
+				{% include_relative  /netflix/course/chapter-current.html %}
+			</li>
+            <li class="bg_black-4 br-b_1 br-black-4 br_solid c_white flex flex_row font-size_down-1 font_bold items_center m-l_n1 p_3 p-x_4 relative text-shadow_black-1"><i class="fa-lock fa-solid fas m-r_4"></i> Complete all the previous chapter(s) to progress. </li>
+			<li class="relative br-b_1 br_solid br_white-6 flex flex_row m-l_n1 cursor_not-allowed"> {% include_relative  /netflix/course/chapter-locked.html %}</li>
+			<li class="relative br-b_1 br_solid br_white-6 flex flex_row m-l_n1 cursor_not-allowed">  {% include_relative  /netflix/course/chapter-locked.html %}</li>		
+            <li class="relative br-b_1 br_solid br_white-6 flex flex_row m-l_n1 cursor_not-allowed"> {% include_relative  /netflix/course/chapter-locked.html %}</li>
+		</ul>
+	</nav>
+</div>

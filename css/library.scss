@@ -26,7 +26,7 @@ body {
 }
 .grid-template_page.expanded {
 	transition: grid-template-columns 1s;
-	grid-template-columns: 15rem 1fr;
+	grid-template-columns: 15rem calc(100vw - 15rem);
 	grid-template-rows: auto auto auto 1fr auto;
 	grid-template-areas: "menuArea headerArea" "menuArea breadcrumbArea" "menuArea pageHead" "menuArea mainArea" "menuArea footerArea";
 	@media screen and (min-width: 64rem) {
