@@ -878,24 +878,26 @@
       padding    : "1rem",
       gap: '1rem',
       breakpoints: {
+        1200:{perPage: 4,},
         1024:{perPage: 3,},
         768: {
-        perPage: 3,
+        perPage: 2,
       },
       640: {
-        perPage: 2,
+        perPage: 1,
       },
       480: {
         perPage: 1,
-        padding    : "1.5rem",
+        padding    : "2rem",
       },
+
     },
     classes: {
         // Add classes for arrows.
         arrows: 'splide__arrows your-class-arrows',
-        arrow : 'splide__arrow your-class-arrow scale_50 absolute t_6 b_6 z_5 shadow_overlap-light h:bg_primary-3 br_black-5 br_radius br-tr_square br-br_square',
-        prev  : 'splide__arrow--prev your-class-prev l_n5 rotate_180 ',
-        next  : 'splide__arrow--next your-class-next r_n5',
+        arrow : 'splide__arrow your-class-arrow scale_50 absolute t_6 b_6 z_5 shadow_overlap-light h:bg_primary-3 br_black-2 br_solid br_1 br_radius br-tr_square br-br_square',
+        prev  : 'splide__arrow--prev your-class-prev l_n5:md l_n4 rotate_180 ',
+        next  : 'splide__arrow--next your-class-next r_n5:md r_n4 ',
 
         // Add classes for pagination.
         pagination: 'splide__pagination your-class-pagination gap_3', // container
@@ -905,6 +907,9 @@
       splide.mount();
     } );
   </script>
+  <style>
+
+  </style>
 		<!-- These Styles are just for the styleguide and are not to be included with the pattern. -->
 		
 	</div>

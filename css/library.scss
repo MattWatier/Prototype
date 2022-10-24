@@ -7,8 +7,8 @@
 body {
 	background: hsl(var(--brand-h), var(--brand-s), var(--brand-l));
 	background: radial-gradient(
-		at top left,
-		hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) * 0.75)),
+		at top right,
+		hsl(var(--secondary-h), var(--secondary-s), calc(var(--secondary-l) * 0.75)),
 		hsl(var(--brand-h), var(--brand-s), var(--brand-l)) 100%
 	);
 	// padding: clamp(8px, 1vw, 16px);
@@ -155,5 +155,13 @@ html:not([data-scroll="0"]) #navigation_mobile {
 .c_alert {
 	color: var(--bs-danger, red);
 }
+.your-class-arrow{scale:50%}
+.splide__arrow.your-class-arrow:disabled{
+	cursor: not-allowed;
+	background-color:hsl(var(--primary-h), calc( var(--primary-s) - ((var(--primary-s)) * 0.9 * .1 ) ), calc( var(--primary-l) + ((100% - var(--primary-l)) * 0.9) ));
+	fill: hsl(var(--black-h),var(--black-s),85%);
+
+	box-shadow: none;
+  }
 
 @import "components/_button-ripple.scss";
