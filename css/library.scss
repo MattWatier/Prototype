@@ -11,7 +11,7 @@ body {
 		hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) * 0.75)),
 		hsl(var(--brand-h), var(--brand-s), var(--brand-l)) 100%
 	);
-	padding: clamp(8px, 1vw, 16px);
+	// padding: clamp(8px, 1vw, 16px);
 	transition: transform 0.5s;
 }
 
@@ -19,14 +19,15 @@ body {
 // .grid-template_page .label{ width: 0%; overflow:hidden;}
 .grid-template_page {
 	transition: grid-template-columns 1s;
-	grid-template-columns: 5.5rem calc(100vw - 7.5rem);
+	grid-template-columns: 5.5rem calc(100% - 5.5rem);
 	grid-template-rows: auto auto auto 1fr auto;
 	grid-template-areas: "menuArea headerArea" "menuArea breadcrumbArea" "menuArea pageHead" "menuArea mainArea" "menuArea footerArea";
 	min-height: calc(100vh - (2 * clamp(8px, 1vw, 16px)));
+	max-width: calc(100vw - 2rem);
 }
 .grid-template_page.expanded {
 	transition: grid-template-columns 1s;
-	grid-template-columns: 15rem calc(100vw - 15rem);
+	grid-template-columns: 15rem calc(100% - 15rem);
 	grid-template-rows: auto auto auto 1fr auto;
 	grid-template-areas: "menuArea headerArea" "menuArea breadcrumbArea" "menuArea pageHead" "menuArea mainArea" "menuArea footerArea";
 	@media screen and (min-width: 64rem) {
