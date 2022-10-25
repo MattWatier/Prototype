@@ -17,13 +17,33 @@ body {
 
 // Grid Templates
 // .grid-template_page .label{ width: 0%; overflow:hidden;}
+.page-wrapper{
+	--app-spacing: .2rem;
+	@media screen and (min-width: 45rem) {
+		--app-spacing: .5rem;
+	}
+	@media screen and (min-width: 64rem) {
+		--app-spacing: .75rem;
+	}
+	@media screen and (min-width: 90rem) {
+		--app-spacing: 1rem;
+	}
+	@media screen and (min-width: 120rem) {
+		--app-spacing: 1.5rem;
+	}
+	margin:var(--app-spacing);
+}
 .grid-template_page {
 	transition: grid-template-columns 1s;
 	grid-template-columns: 5.5rem calc(100% - 5.5rem);
 	grid-template-rows: auto auto auto 1fr auto;
 	grid-template-areas: "menuArea headerArea" "menuArea breadcrumbArea" "menuArea pageHead" "menuArea mainArea" "menuArea footerArea";
 	min-height: calc(100vh - (2 * clamp(8px, 1vw, 16px)));
-	max-width: calc(100vw - 2rem);
+	max-width: 100vw;
+
+
+	max-width: calc(100vw - var(--app-spacing) * 2);
+	
 }
 .grid-template_page.expanded {
 	transition: grid-template-columns 1s;
