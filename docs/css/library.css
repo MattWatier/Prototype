@@ -6,10 +6,9 @@ body { background: hsl(var(--brand-h), var(--brand-s), var(--brand-l)); backgrou
 @media screen and (min-width: 90rem) { .page-wrapper { --app-spacing: 1rem; } }
 @media screen and (min-width: 120rem) { .page-wrapper { --app-spacing: 1.5rem; } }
 
-.grid-template_page { transition: grid-template-columns 1s; grid-template-columns: 5.5rem calc(100% - 5.5rem); grid-template-rows: auto auto auto 1fr auto; grid-template-areas: "menuArea headerArea" "menuArea breadcrumbArea" "menuArea pageHead" "menuArea mainArea" "menuArea footerArea"; min-height: calc(100vh - (2 * clamp(8px, 1vw, 16px))); max-width: 100vw; max-width: calc(100vw - var(--app-spacing) * 2); }
+.grid-template_page { transition: grid-template-columns 1s; grid-template-columns: 5.5rem calc(100% - 5.5rem); grid-template-rows: auto auto auto 1fr auto; grid-template-areas: "menuArea headerArea" "menuArea breadcrumbArea" "menuArea pageHead" "menuArea mainArea" "menuArea footerArea"; min-height: calc(100vh - (2 * clamp(8px, 1vw, 16px))); max-width: calc(100vw - var(--app-spacing) * 2); }
 
-.grid-template_page.expanded { transition: grid-template-columns 1s; grid-template-columns: 15rem calc(100% - 15rem); grid-template-rows: auto auto auto 1fr auto; grid-template-areas: "menuArea headerArea" "menuArea breadcrumbArea" "menuArea pageHead" "menuArea mainArea" "menuArea footerArea"; }
-@media screen and (min-width: 64rem) { .grid-template_page.expanded { grid-template-columns: 20rem 1fr; } }
+.grid-template_page.expanded { transition: grid-template-columns 1s; grid-template-columns: 15rem calc(100% - 15rem); grid-template-rows: auto auto auto 1fr auto; grid-template-areas: "menuArea headerArea" "menuArea breadcrumbArea" "menuArea pageHead" "menuArea mainArea" "menuArea footerArea"; max-width: calc(100vw - var(--app-spacing) * 2); }
 
 .grid-area_breadcrumbArea { grid-area: breadcrumbArea; grid-template-columns: 3rem 1fr; grid-template-rows: auto; grid-template-areas: "breadcrumbButtonArea breadcrumbListArea"; }
 @media screen and (min-width: 45rem) { .grid-area_breadcrumbArea { grid-template-columns: 7rem 1fr; } }
