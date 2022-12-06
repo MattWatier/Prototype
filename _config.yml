@@ -46,9 +46,6 @@ collections:
   netflix_prototype:
     output: true
     permalink: /netflix/:path/
-  acvo_prototype:
-    output: true
-    permalink: /acvo/:path/
 
 # Exclude from processing.
 # The following items will not be processed, by default.

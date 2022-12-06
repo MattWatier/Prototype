@@ -180,3 +180,15 @@ html:not([data-scroll="0"]) #navigation_mobile {
   }
 
 @import "components/_button-ripple.scss";
+
+.grid-template_filterAndContent {
+	grid-template-columns: auto 1fr;
+	grid-template-rows: 1fr;
+	grid-template-areas: 'filterArea contentArea';
+}
+.grid-area_filterArea{
+	grid-area: filterArea;
+}
+.grid-area_contentArea{
+	grid-area: contentArea;
+}

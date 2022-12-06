@@ -94,3 +94,9 @@ ul[data-element="button-ripple--wrapper"] { display: flex; list-style: none; mar
 [data-element-option="inline-end"] [data-element="button-ripple--button-edge"]:after { inset-block-end: -1em; box-shadow: 0.55em -0.55em hsl(var(--brand-h), var(--brand-s), calc(var( --brand-l ) + ((100% - var(--brand-l)) * 0))); }
 
 [data-element="button-ripple--button"] { border-radius: 50%; aspect-ratio: 1/1; width: 1.6em; height: 1.6em; padding: 0.2em; display: grid; justify-content: center; align-items: center; z-index: 2; }
+
+.grid-template_filterAndContent { grid-template-columns: auto 1fr; grid-template-rows: 1fr; grid-template-areas: 'filterArea contentArea'; }
+
+.grid-area_filterArea { grid-area: filterArea; }
+
+.grid-area_contentArea { grid-area: contentArea; }
