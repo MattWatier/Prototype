@@ -71,7 +71,7 @@
 
 <body class="BODY_TAG-stand-in bg_black-4 w_100 grid:md min-h_100">
 <div class="page-wrapper grid:md isolation_isolate br_radius bg_white-7 z_1 m_4:lg m_3:md  m_2">
-	<div id="AppFrame" class="grid:md grid-template_page flex flex_column [expanded]">
+	<div id="AppFrame" class="grid:md grid-template_page flex flex_column expanded">
 	<nav id="navigation_mobile" class="block display_none:md shadow_emboss-light filter_blur br_radius br-bl_square br-br_square bg_black-6 p_2 t_3 z_4">
 	<ul class="flex flex_row ul_none justify_between">
 		<li class="nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light ">
@@ -81,7 +81,7 @@
 			<a class="c_inherit-all flex flex_column h:undecorated p_3" href="./search"><i class="icon fas fa-fw fa-search p-y_2 self_center"></i><span class="label self_center  lowercase lh_0 font_n2 h_1h ">Search</span></a>
 		</li>
 		<li class="nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light ">
-			<a class="c_inherit-all flex flex_column h:undecorated p_3" href="./saved"><i class="icon fas fa-fw fa-heart p-y_2 self_center"></i><span class="label self_center  lowercase lh_0 font_n2 h_1h nowrap ">Saved</span></a>
+			<a class="c_inherit-all flex flex_column h:undecorated p_3" href="./saved"><i class="icon fas fa-fw fa-star p-y_2 self_center"></i><span class="label self_center  lowercase lh_0 font_n2 h_1h nowrap ">Saved</span></a>
 		</li>
 		<li class="nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light ">
 			<a class="c_inherit-all flex flex_column h:undecorated p_3" href="./credits"><i class="icon fas fa-fw fa-award p-y_2 self_center"></i><span class="label self_center  lowercase lh_0 font_n2 h_1h ">Credits</span></a>
@@ -101,40 +101,40 @@
     height: calc(100vh - 2rem);
 ">
 	<nav id="navigation" class="w_100 overflow-hidden filter_blur overflow_hidden br_radius flex:md flex_column:md justify_between p_3  p_4:lg">
-		<!-- <div id="mainDesktopNavTouchToggle2" class="block flex:md flex_column font_1 font_2:lg grid items_center justify_center m-b_4 m-r_3 self_center">
+		<!-- <div id="mainDesktopNavTouchToggle2" class="block flex:md flex_column font_1 font_2:lg grid items_center justify_start m-b_4 m-r_3 self_center">
 		<span class="aspect-ratio_1x1 bg_brand br_radius c_white-8 flex_none grid h:bg_primary h:c_white m-y_auto p_2 relative shadow_bevel-bold shadow_n3 text_center w_auto"><i class="block fa-caret-left fa-fw far fa-regular icon [rotate_180] self_center text-shadow_black-1 transition_2 rotate_180"></i></span>
 	</div> -->
 		<div class="logo-wrapper p_3 m-t_n3 m-l_n3 m-b_3">
 			<a href="../netflix/index/" class="img-wrap-link">
-				<div id="logo_3x1" class="logo aspect-ratio_3x1 w_100 display_none"><img class="w_100 br_radius" src="/Prototype/assets/images/logo_3x1.jpg" alt=""></div>
-				<div id="logo_1x1" class="logo aspect-ratio_1x1 w_100">
+				<div id="logo_3x1" class="logo aspect-ratio_3x1 w_100 "><img class="w_100 br_radius" src="/Prototype/assets/images/logo_3x1.jpg" alt=""></div>
+				<div id="logo_1x1" class="logo aspect-ratio_1x1 w_100 display_none">
 					<img class="w_100 br_radius" src="/Prototype/assets/images/logo_1x1.jpg" alt="">
 				</div>
 			</a>
 		</div>
 		<ul class="flex flex_column:md flex_row ul_none justify_around justify_start:md gap-y_3 w_100 w_auto:md">
-			<li class="nav-item flex_none br_radius c_black-8 h:bg_brand-n4 h:c_white a:c_white a:bg_primary-n1 h:shadow_overlap-light a:shadow_overlap-light transition_2  ">
-				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md justify_center" href="./home"><i class="icon far fa-regular fa-fw fa-home-heart m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_0 display_none ">Home</span></a>
+			<li class="nav-item m-r_3 flex_none br_radius c_black-8 h:bg_brand-n4 h:c_white a:c_white a:bg_primary-n1 h:shadow_overlap-light a:shadow_overlap-light transition_2  ">
+				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md justify_start" href="./home"><i class="icon far fa-regular fa-fw fa-home-heart m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_0 opacity_10  ">Home</span></a>
 			</li>
-			<li class="nav-item flex_none br_radius c_black-8 h:bg_brand-n4 h:c_white a:c_white a:bg_primary-n1 h:shadow_overlap-light a:shadow_overlap-light transition_2 active 	">
-				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md justify_center" href="./courses"><i class="icon far fa-regular fa-fw fa-graduation-cap m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_0  display_none">Courses</span></a>
+			<li class="nav-item m-r_3 flex_none br_radius c_black-8 h:bg_brand-n4 h:c_white a:c_white a:bg_primary-n1 h:shadow_overlap-light a:shadow_overlap-light transition_2 active 	">
+				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md justify_start" href="./courses"><i class="icon far fa-regular fa-fw fa-graduation-cap m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_0 opacity_10 ">Courses</span></a>
 			</li>
-			<li class="nav-item flex_none br_radius c_black-8 h:bg_brand-n4 h:c_white a:c_white a:bg_primary-n1 h:shadow_overlap-light a:shadow_overlap-light transition_2   ">
-				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md justify_center" href="./search"><i class="icon far fa-regular fa-fw fa-search m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_0 display_none">Search</span></a>
+			<li class="nav-item m-r_3 flex_none br_radius c_black-8 h:bg_brand-n4 h:c_white a:c_white a:bg_primary-n1 h:shadow_overlap-light a:shadow_overlap-light transition_2   ">
+				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md justify_start" href="./search"><i class="icon far fa-regular fa-fw fa-search m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_0 opacity_10 ">Search</span></a>
 			</li>
-			<li class="nav-item flex_none br_radius c_black-8 h:bg_brand-n4 h:c_white a:c_white a:bg_primary-n1 h:shadow_overlap-light a:shadow_overlap-light transition_2  ">
-				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md justify_center" href="./saved"><i class="icon far fa-regular fa-fw fa-heart m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_0 display_none  ">Saved</span></a>
+			<li class="nav-item m-r_3 flex_none br_radius c_black-8 h:bg_brand-n4 h:c_white a:c_white a:bg_primary-n1 h:shadow_overlap-light a:shadow_overlap-light transition_2  ">
+				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md justify_start" href="./saved"><i class="icon far fa-regular fa-fw fa-star m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_0 opacity_10   ">Saved</span></a>
 			</li>
-			<li class="nav-item flex_none br_radius c_black-8 h:bg_brand-n4 h:c_white a:c_white a:bg_primary-n1 h:shadow_overlap-light a:shadow_overlap-light transition_2 ">
-				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md justify_center" href="./player"><i class="icon far fa-regular fa-fw fa-play m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_0 display_none">Watching</span></a>
+			<li class="nav-item m-r_3 flex_none br_radius c_black-8 h:bg_brand-n4 h:c_white a:c_white a:bg_primary-n1 h:shadow_overlap-light a:shadow_overlap-light transition_2 ">
+				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md justify_start" href="./player"><i class="icon far fa-regular fa-fw fa-play m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_0 opacity_10 ">Watching</span></a>
 			</li>
-			<li class="nav-item flex_none br_radius c_black-8 h:bg_brand-n4 h:c_white a:c_white a:bg_primary-n1 h:shadow_overlap-light a:shadow_overlap-light transition_2   ">
-				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md justify_center" href="./credits"><i class="icon far fa-regular fa-fw fa-award m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_0 display_none">Credits</span></a>
+			<li class="nav-item m-r_3 flex_none br_radius c_black-8 h:bg_brand-n4 h:c_white a:c_white a:bg_primary-n1 h:shadow_overlap-light a:shadow_overlap-light transition_2   ">
+				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md justify_start" href="./credits"><i class="icon far fa-regular fa-fw fa-award m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_0 opacity_10 ">Credits</span></a>
 			</li>
 		</ul>
-		<ul class="flex_column:md flex_row ul_none justify_center gap_3  flex m-t_auto">
-			<li class="nav-item flex_none br_radius c_black-8 h:bg_brand-n4 h:c_white a:c_white a:bg_primary-n1 h:shadow_overlap-light a:shadow_overlap-light transition_2">
-				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md justify_center" href="./presentation"><i class="icon far fa-regular fa-fw fa-sign-out-alt m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_0 display_none">Log Out</span></a>
+		<ul class="flex_column:md flex_row ul_none justify_start gap_3  flex m-t_auto">
+			<li class="nav-item m-r_3 flex_none br_radius c_black-8 h:bg_brand-n4 h:c_white a:c_white a:bg_primary-n1 h:shadow_overlap-light a:shadow_overlap-light transition_2">
+				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md justify_start" href="./presentation"><i class="icon far fa-regular fa-fw fa-sign-out-alt m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_0 opacity_10 ">Log Out</span></a>
 			</li>
 		</ul>
 	</nav>
@@ -168,7 +168,7 @@
 						<a class="h:undecorated c_primary block h:c_secondary-n3 p_3 p_0:md"><i class="fal fa-sitemap  block inline:md"></i><span class="block p-t_2 inline:md"> Hot Topics</span></a>
 					</li>
 					<li class="text_center p-x_2 block p-x_4:md lh_1 text_center  br-l_1 br_solid br_black-4">
-						<a class="h:undecorated c_primary block h:c_secondary-n3 p_3 p_0:md"><i class="fal fa-heart block inline:md"></i><span class="block p-t_2 inline:md"> Saved</span></a>
+						<a class="h:undecorated c_primary block h:c_secondary-n3 p_3 p_0:md"><i class="fal fa-star block inline:md"></i><span class="block p-t_2 inline:md"> Saved</span></a>
 					</li>
 					<li class="text_center p-x_2 block p-x_4:md lh_1 br-l_1 br_solid br_black-4">
 						<a class="h:undecorated c_primary block h:c_secondary-n3 p_3 p_0:md"><i class="fal fa-play  block inline:md"></i><span class="block p-t_2 inline:md"> Continue Watching</span></a>
@@ -270,7 +270,7 @@
 	<nav data-element="button-ripple" data-element-option="block-end" class="m-t_5">
 		<ul  data-element="button-ripple--wrapper">
 			<li data-element="button-ripple--button-edge" >
-				<a href="" data-element="button-ripple--button" class="[expanded-click-area] bg_white-6  c_black h:bg_primary h:c_white ">
+				<a href="course" data-element="button-ripple--button" class="[expanded-click-area] bg_white-6  c_black h:bg_primary h:c_white ">
 					<i class="c_inherit-all fa-list fa-solid fas font-size_down-2"></i>
 				</a>
 			</li>
@@ -312,7 +312,7 @@
 	<nav data-element="button-ripple" data-element-option="block-end" class="m-t_5">
 		<ul  data-element="button-ripple--wrapper">
 			<li data-element="button-ripple--button-edge" >
-				<a href="" data-element="button-ripple--button" class="[expanded-click-area] bg_white-6  c_black h:bg_primary h:c_white ">
+				<a href="course" data-element="button-ripple--button" class="[expanded-click-area] bg_white-6  c_black h:bg_primary h:c_white ">
 					<i class="c_inherit-all fa-list fa-solid fas font-size_down-2"></i>
 				</a>
 			</li>
@@ -354,7 +354,7 @@
 	<nav data-element="button-ripple" data-element-option="block-end" class="m-t_5">
 		<ul  data-element="button-ripple--wrapper">
 			<li data-element="button-ripple--button-edge" >
-				<a href="" data-element="button-ripple--button" class="[expanded-click-area] bg_white-6  c_black h:bg_primary h:c_white ">
+				<a href="course" data-element="button-ripple--button" class="[expanded-click-area] bg_white-6  c_black h:bg_primary h:c_white ">
 					<i class="c_inherit-all fa-list fa-solid fas font-size_down-2"></i>
 				</a>
 			</li>
@@ -396,7 +396,7 @@
 	<nav data-element="button-ripple" data-element-option="block-end" class="m-t_5">
 		<ul  data-element="button-ripple--wrapper">
 			<li data-element="button-ripple--button-edge" >
-				<a href="" data-element="button-ripple--button" class="[expanded-click-area] bg_white-6  c_black h:bg_primary h:c_white ">
+				<a href="course" data-element="button-ripple--button" class="[expanded-click-area] bg_white-6  c_black h:bg_primary h:c_white ">
 					<i class="c_inherit-all fa-list fa-solid fas font-size_down-2"></i>
 				</a>
 			</li>
@@ -438,7 +438,7 @@
 	<nav data-element="button-ripple" data-element-option="block-end" class="m-t_5">
 		<ul  data-element="button-ripple--wrapper">
 			<li data-element="button-ripple--button-edge" >
-				<a href="" data-element="button-ripple--button" class="[expanded-click-area] bg_white-6  c_black h:bg_primary h:c_white ">
+				<a href="course" data-element="button-ripple--button" class="[expanded-click-area] bg_white-6  c_black h:bg_primary h:c_white ">
 					<i class="c_inherit-all fa-list fa-solid fas font-size_down-2"></i>
 				</a>
 			</li>
@@ -480,7 +480,7 @@
 	<nav data-element="button-ripple" data-element-option="block-end" class="m-t_5">
 		<ul  data-element="button-ripple--wrapper">
 			<li data-element="button-ripple--button-edge" >
-				<a href="" data-element="button-ripple--button" class="[expanded-click-area] bg_white-6  c_black h:bg_primary h:c_white ">
+				<a href="course" data-element="button-ripple--button" class="[expanded-click-area] bg_white-6  c_black h:bg_primary h:c_white ">
 					<i class="c_inherit-all fa-list fa-solid fas font-size_down-2"></i>
 				</a>
 			</li>
@@ -522,7 +522,7 @@
 	<nav data-element="button-ripple" data-element-option="block-end" class="m-t_5">
 		<ul  data-element="button-ripple--wrapper">
 			<li data-element="button-ripple--button-edge" >
-				<a href="" data-element="button-ripple--button" class="[expanded-click-area] bg_white-6  c_black h:bg_primary h:c_white ">
+				<a href="course" data-element="button-ripple--button" class="[expanded-click-area] bg_white-6  c_black h:bg_primary h:c_white ">
 					<i class="c_inherit-all fa-list fa-solid fas font-size_down-2"></i>
 				</a>
 			</li>
@@ -564,7 +564,7 @@
 	<nav data-element="button-ripple" data-element-option="block-end" class="m-t_5">
 		<ul  data-element="button-ripple--wrapper">
 			<li data-element="button-ripple--button-edge" >
-				<a href="" data-element="button-ripple--button" class="[expanded-click-area] bg_white-6  c_black h:bg_primary h:c_white ">
+				<a href="course" data-element="button-ripple--button" class="[expanded-click-area] bg_white-6  c_black h:bg_primary h:c_white ">
 					<i class="c_inherit-all fa-list fa-solid fas font-size_down-2"></i>
 				</a>
 			</li>
@@ -606,7 +606,7 @@
 	<nav data-element="button-ripple" data-element-option="block-end" class="m-t_5">
 		<ul  data-element="button-ripple--wrapper">
 			<li data-element="button-ripple--button-edge" >
-				<a href="" data-element="button-ripple--button" class="[expanded-click-area] bg_white-6  c_black h:bg_primary h:c_white ">
+				<a href="course" data-element="button-ripple--button" class="[expanded-click-area] bg_white-6  c_black h:bg_primary h:c_white ">
 					<i class="c_inherit-all fa-list fa-solid fas font-size_down-2"></i>
 				</a>
 			</li>
@@ -648,7 +648,7 @@
 	<nav data-element="button-ripple" data-element-option="block-end" class="m-t_5">
 		<ul  data-element="button-ripple--wrapper">
 			<li data-element="button-ripple--button-edge" >
-				<a href="" data-element="button-ripple--button" class="[expanded-click-area] bg_white-6  c_black h:bg_primary h:c_white ">
+				<a href="course" data-element="button-ripple--button" class="[expanded-click-area] bg_white-6  c_black h:bg_primary h:c_white ">
 					<i class="c_inherit-all fa-list fa-solid fas font-size_down-2"></i>
 				</a>
 			</li>
@@ -690,7 +690,7 @@
 	<nav data-element="button-ripple" data-element-option="block-end" class="m-t_5">
 		<ul  data-element="button-ripple--wrapper">
 			<li data-element="button-ripple--button-edge" >
-				<a href="" data-element="button-ripple--button" class="[expanded-click-area] bg_white-6  c_black h:bg_primary h:c_white ">
+				<a href="course" data-element="button-ripple--button" class="[expanded-click-area] bg_white-6  c_black h:bg_primary h:c_white ">
 					<i class="c_inherit-all fa-list fa-solid fas font-size_down-2"></i>
 				</a>
 			</li>
@@ -732,7 +732,7 @@
 	<nav data-element="button-ripple" data-element-option="block-end" class="m-t_5">
 		<ul  data-element="button-ripple--wrapper">
 			<li data-element="button-ripple--button-edge" >
-				<a href="" data-element="button-ripple--button" class="[expanded-click-area] bg_white-6  c_black h:bg_primary h:c_white ">
+				<a href="course" data-element="button-ripple--button" class="[expanded-click-area] bg_white-6  c_black h:bg_primary h:c_white ">
 					<i class="c_inherit-all fa-list fa-solid fas font-size_down-2"></i>
 				</a>
 			</li>
@@ -774,7 +774,7 @@
 	<nav data-element="button-ripple" data-element-option="block-end" class="m-t_5">
 		<ul  data-element="button-ripple--wrapper">
 			<li data-element="button-ripple--button-edge" >
-				<a href="" data-element="button-ripple--button" class="[expanded-click-area] bg_white-6  c_black h:bg_primary h:c_white ">
+				<a href="course" data-element="button-ripple--button" class="[expanded-click-area] bg_white-6  c_black h:bg_primary h:c_white ">
 					<i class="c_inherit-all fa-list fa-solid fas font-size_down-2"></i>
 				</a>
 			</li>
@@ -816,7 +816,7 @@
 	<nav data-element="button-ripple" data-element-option="block-end" class="m-t_5">
 		<ul  data-element="button-ripple--wrapper">
 			<li data-element="button-ripple--button-edge" >
-				<a href="" data-element="button-ripple--button" class="[expanded-click-area] bg_white-6  c_black h:bg_primary h:c_white ">
+				<a href="course" data-element="button-ripple--button" class="[expanded-click-area] bg_white-6  c_black h:bg_primary h:c_white ">
 					<i class="c_inherit-all fa-list fa-solid fas font-size_down-2"></i>
 				</a>
 			</li>

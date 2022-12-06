@@ -73,7 +73,7 @@ const NavToggle = () => {
 			logo_1x1.classList.add("display_none");
 			logo_3x1.classList.remove("display_none");
 			navItem.classList.add("m-r_3");
-			await delay(200);
+			await delay(600);
 			label.classList.add("opacity_10");
 			return;
 		});

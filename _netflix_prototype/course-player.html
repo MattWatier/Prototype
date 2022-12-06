@@ -7,6 +7,11 @@ watchingActive: true
 
 {% include_relative netflix/app-header-w-search.html %}
 {% include_relative netflix/breadcrumb-course-video.html %}
+<header class="font-size_up-1-1 grid-area_pageHead ">
+	<div class="introduction p-x_3 p-x_4:lg p-x_5:xxl p-y_4:xxl p-y_3:lg p-y_2 bg_white-8 br-b_1 br_solid br_black-3">
+		<h3 class="font_display font_xbold c_primary-n2 m-y_2">Video Player</h3>
+	</div>
+</header>
 <div class="grid-area_mainArea br-br_radius overflow_visible grid  grid-x_6:lg grid-x_5:xl grid-x_4:xxl">
 	<article class="bg_white-6 col-start_start col-end_4 relative font_1 font_2:lg font_3:xxl">
 		<div class="absolute t_3 r_2 z_2 font_n1" data-element="save-toggle">
@@ -132,17 +137,18 @@ watchingActive: true
 	</article>	
 	<nav data-label="video-que-navigation" class="col-start_4 col-end_end font_0 font_1:lg grid justify_stretch items_stretch">
 		<ul class="b_0 br-l_1 br_black-3 br_solid flex flex_column items_stretch justify_start justify_stretch t_0 ul_none">
-			<li class="relative h:bg_white-4 br-b_1 br_solid br_white-6 p_4 flex flex_row m-l_n1 p-t_5 p_4 p-b_5 "> 
+			<li class="relative h:bg_white-4 br-b_1 br_solid br_white-6 flex flex_row m-l_n1"> 
                 {% include_relative  /netflix/program/presentation-with-keyword.html %}
-            				<ul class="absolute t_0 l_3 font-size_down-2 ul_none flex flex_row nowrap gap-x_1" data-element="flags">
+            	<ul class="absolute t_0 l_3 font-size_down-2 ul_none flex flex_row nowrap gap-x_1" data-element="flags">
 					<li class="p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white">Watched</li>
 				</ul></li>
-            <li class="relative h:bg_white-4 br-b_1 br_solid br_white-6 p_4 flex flex_row m-l_n1 p-t_5 p_4 p-b_5 "> 
+            <li class="relative h:bg_white-4 br-b_1 br_solid br_white-6  flex flex_row m-l_n1"> 
                 {% include_relative  /netflix/program/presentation-without-keyword.html %}
-            				<ul class="absolute t_0 l_3 font-size_down-2 ul_none flex flex_row nowrap gap-x_1" data-element="flags">
+            	<ul class="absolute t_0 l_3 font-size_down-2 ul_none flex flex_row nowrap gap-x_1" data-element="flags">
 					<li class="p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white">Watched</li>
-				</ul></li>
-            <li class="bg_white-6 br-l_4 br_highlight br_solid flex flex_row m-l_n1 p-t_5 p_4 p-b_5 relative">
+				</ul>
+			</li>
+            <li class="bg_white-6 br-l_4 br_highlight br_solid flex flex_row m-l_n1 relative">
 				{% include_relative  /netflix/program/presentation-with-play.html %}
 				<ul class="absolute t_0 l_3 font-size_down-2 ul_none flex flex_row nowrap gap-x_1" data-element="flags">
 					<li class="p-x_3 p-y_2 bg_highlight-1 br-br_radius br-bl_radius c_black font_xbold"><i class="fas fa-solid fa-play"></i> Playing</li>
@@ -151,9 +157,7 @@ watchingActive: true
 			</li>
             <li class="bg_black-4 br-b_1 br-black-4 br_solid c_white flex flex_row font-size_down-1 font_bold items_center m-l_n1 p_3 p-x_4 relative text-shadow_black-1"><i class="fa-lock fa-solid fas m-r_4"></i> Watch all previous videos to unlock the next video(s) </li>
 			<li class="relative br-b_1 br_solid br_white-6 p_4 flex flex_row m-l_n1 cursor_not-allowed"> {% include_relative  /netflix/program/locked-presentation-with-keyword.html %}</li>
-			<li class="relative br-b_1 br_solid br_white-6 p_4 flex flex_row m-l_n1 cursor_not-allowed">  {% include_relative  /netflix/program/locked-presentation-with-keyword.html %}</li>
-            <li class="bg_black-4 br-b_1 br-black-4 br_solid c_white flex flex_row font-size_down-1 font_bold items_center m-l_n1 p_3 p-x_4 relative text-shadow_black-1"><i class="fa-lock fa-solid fas m-r_4"></i> Watch all previous videos to unlock the next video(s) </li>
-			
+			<li class="relative br-b_1 br_solid br_white-6 p_4 flex flex_row m-l_n1 cursor_not-allowed">  {% include_relative  /netflix/program/locked-presentation-with-keyword.html %}</li>			
             <li class="relative br-b_1 br_solid br_white-6 p_4 flex flex_row m-l_n1 cursor_not-allowed"> {% include_relative  /netflix/program/locked-presentation-with-keyword.html %}</li>
 		</ul>
 	</nav>
