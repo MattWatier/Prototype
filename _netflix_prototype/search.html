@@ -6,7 +6,7 @@ searchActive: true
 ---
 {% include_relative netflix/app-header-w-search.html %}
 {% include_relative netflix/breadcrumb-search.html %}
-<header class="font-size_up-1-1 grid-area_pageHead ">
+<header class="font-size_up-1-1 grid-area_pageHead " id="SearchBarTop">
 	<div class="introduction p-x_3 p-x_4:lg p-x_5:xxl p-y_4:xxl p-y_3:lg p-y_2 bg_white-8 br-b_1 br_solid br_black-3">
 		<h3 class="font_display font_xbold c_primary-n2 m-y_2">Search</h3>
 	</div>
@@ -183,14 +183,14 @@ searchActive: true
 			</li>
 		</ul>
 	</div>
-	<div class="grid-area_contentArea row-start_1 isolation_isolate" id="SearchBarTop">
+	<div class="grid-area_contentArea row-start_1 isolation_isolate" >
 		<div class=" sticky jump-buttons_top t_5 t_0:lg r_0 z_3">
 			<div class="absolute r_4 t_4 t_0:md flex flex_row flex_nowrap gap-x_3">
 				<!--  Helper Jump links -->
-				<a class="br-tl_square br-tr_square br_radius btn btn-sm btn-warning grid items_center justify_center m-l_auto m-t_n2 m-t_0:lg self_center shadow_3" href="#SearchBarTop">
+				<a class="br-tl_square br-tr_square br_radius btn btn-sm btn-warning grid items_center justify_center m-l_auto m-t_n2 m-t_0:lg self_center shadow_3" href="search/#SearchBarTop">
 					<span><i class="fas fa-arrow-up"></i><i class="m-l_2 fas fa-search"></i></span>
 				</a>
-				<a :href="#FilterNavContainer" class="br-tl_square br-tr_square br_radius btn btn-sm btn-warning display_none:lg grid items_center justify_center m-l_auto m-t_n2 m-t_0:lg self_center shadow_3">
+				<a href="search/#FilterNavContainer" class="br-tl_square br-tr_square br_radius btn btn-sm btn-warning display_none:lg grid items_center justify_center m-l_auto m-t_n2 m-t_0:lg self_center shadow_3">
 					<span><i class="fas fa-arrow-down"></i><i class="m-l_2 fas fa-filter"></i></span>
 				</a>
 				<!--  Helper Jump links -->
@@ -198,7 +198,7 @@ searchActive: true
 		</div>
 		<div class="bg_white br_radius p_4:lg p_3 shadow_overlap-light z_5 relative">
 			<h1 class="c_primary-n1 font_display m-b_3 m-t_0 flex flex_row justify_between"><span>Search</span>
-				<a :href="#FilterNavContainer" class="absolute br-tl_square br-tr_square br_radius btn btn-accent btn-sm display_none:lg flex_none grid items_center justify_center m-l_auto r_3 self_center t_0">
+				<a href="search/#FilterNavContainer" class="absolute br-tl_square br-tr_square br_radius btn btn-accent btn-sm display_none:lg flex_none grid items_center justify_center m-l_auto r_3 self_center t_0">
 					<span><i class="fas fa-arrow-down"></i><i class="fas fa-filter"></i></span>
 				</a>
 			</h1>
