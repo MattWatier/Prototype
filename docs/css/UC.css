@@ -180,31 +180,33 @@ Styleguide Recipes.InteractiveExtras.Scrollbar
 }
 
 :root {
+  --link-color-h: 19.9078341014;
+  --link-color-s: 89.3004115226%;
+  --link-color-l: 47.6470588235%;
   --link-color: hsl(
-  	var(--accent-h),
-  	var(--accent-s),
-  	calc(var(--accent-l) + ((var(--accent-l)) * -0.37))
+  	var(--link-color-h)
+  	var(--link-color-s)
+  	var(--link-color-l)
   );
+  --link-visited-color-h: 19.9078341014;
+  --link-visited-color-s: 71.4403292181%;
+  --link-visited-color-l: 42.8823529412%;
+  --link-visited-color: hsl(
+  	var(--link-visited-color-h)
+  	var(--link-visited-color-s)
+  	var(--link-visited-color-l)
+  );
+  --link-hover-color-h: 19.9078341014;
+  --link-hover-color-s: 80.3703703704%;
+  --link-hover-color-l: 33.3529411765%;
   --link-hover-color: hsl(
-  	var(--accent-h),
-  	var(--accent-s),
-  	calc(var(--accent-l) + ((var(--accent-l)) * -0.5))
+  	var(--link-hover-color-h)
+  	var(--link-hover-color-s)
+  	var(--link-hover-color-l)
   );
 }
 
-:root {
-  --link-color-h: hue($link);
-  --link-color-s: saturation($link);
-  --link-color-l: lightness($link);
-  --link-visited-color-h: hue($link-visited);
-  --link-visited-color-s: saturation($link-visited);
-  --link-visited-color-l: lightness($link-visited);
-  --link-hover-color-h: hue($link-hover);
-  --link-hover-color-s: saturation($link-hover);
-  --link-hover-color-l: lightness($link-hover);
-}
-
-.link_icons [aria-label=copyright]::after, .link_light [aria-label=copyright]::after, .link [aria-label=copyright]::after, .link_dark [aria-label=copyright]::after, .link_icons [aria-label=register]::after, .link_light [aria-label=register]::after, .link [aria-label=register]::after, .link_dark [aria-label=register]::after, .link_icons [aria-label=trademark]::after, .link_light [aria-label=trademark]::after, .link [aria-label=trademark]::after, .link_dark [aria-label=trademark]::after, .link_icons::after, .link_light::after, .link::after, .link_dark::after, .link_icons::before, .link_light::before, .link::before, .link_dark::before {
+.link_icons-only [aria-label=copyright]::after, .link_light [aria-label=copyright]::after, .link [aria-label=copyright]::after, :where(.reading-typography) a [aria-label=copyright]::after, .link_dark [aria-label=copyright]::after, .link_icons-only [aria-label=register]::after, .link_light [aria-label=register]::after, .link [aria-label=register]::after, :where(.reading-typography) a [aria-label=register]::after, .link_dark [aria-label=register]::after, .link_icons-only [aria-label=trademark]::after, .link_light [aria-label=trademark]::after, .link [aria-label=trademark]::after, :where(.reading-typography) a [aria-label=trademark]::after, .link_dark [aria-label=trademark]::after, .link_icons-only::after, .link_light::after, .link::after, :where(.reading-typography) a::after, .link_dark::after, .link_icons-only::before, .link_light::before, .link::before, :where(.reading-typography) a::before, .link_dark::before {
   -webkit-font-smoothing: antialiased;
   display: inline-block;
   font-style: normal;
@@ -215,19 +217,19 @@ Styleguide Recipes.InteractiveExtras.Scrollbar
   font-weight: 900;
 }
 
-[href$=".mp4"].link_icons::before, [href$=".mp4"].link_light::before, [href$=".mp4"].link::before, [href$=".mp4"].link_dark::before, [href$=".mov"].link_icons::before, [href$=".mov"].link_light::before, [href$=".mov"].link::before, [href$=".mov"].link_dark::before, [href$=".csv"].link_icons::before, [href$=".csv"].link_light::before, [href$=".csv"].link::before, [href$=".csv"].link_dark::before, [href$=".xls"].link_icons::before, [href$=".xls"].link_light::before, [href$=".xls"].link::before, [href$=".xls"].link_dark::before, [href$=".xlsx"].link_icons::before, [href$=".xlsx"].link_light::before, [href$=".xlsx"].link::before, [href$=".xlsx"].link_dark::before, [href*=".ppt"].link_icons::before, [href*=".ppt"].link_light::before, [href*=".ppt"].link::before, [href*=".ppt"].link_dark::before, [href*=".pptx"].link_icons::before, [href*=".pptx"].link_light::before, [href*=".pptx"].link::before, [href*=".pptx"].link_dark::before, [href$=".zip"].link_icons::before, [href$=".zip"].link_light::before, [href$=".zip"].link::before, [href$=".zip"].link_dark::before, [href$=".doc"].link_icons::before, [href$=".doc"].link_light::before, [href$=".doc"].link::before, [href$=".doc"].link_dark::before, [href$=".docx"].link_icons::before, [href$=".docx"].link_light::before, [href$=".docx"].link::before, [href$=".docx"].link_dark::before, [href$=".txt"].link_icons::before, [href$=".txt"].link_light::before, [href$=".txt"].link::before, [href$=".txt"].link_dark::before, [href$=".pdf"].link_icons::before, [href$=".pdf"].link_light::before, [href$=".pdf"].link::before, [href$=".pdf"].link_dark::before {
+[href$=".mp4"].link_icons-only::before, [href$=".mp4"].link_light::before, [href$=".mp4"].link::before, :where(.reading-typography) a[href$=".mp4"]::before, [href$=".mp4"].link_dark::before, [href$=".mov"].link_icons-only::before, [href$=".mov"].link_light::before, [href$=".mov"].link::before, :where(.reading-typography) a[href$=".mov"]::before, [href$=".mov"].link_dark::before, [href$=".csv"].link_icons-only::before, [href$=".csv"].link_light::before, [href$=".csv"].link::before, :where(.reading-typography) a[href$=".csv"]::before, [href$=".csv"].link_dark::before, [href$=".xls"].link_icons-only::before, [href$=".xls"].link_light::before, [href$=".xls"].link::before, :where(.reading-typography) a[href$=".xls"]::before, [href$=".xls"].link_dark::before, [href$=".xlsx"].link_icons-only::before, [href$=".xlsx"].link_light::before, [href$=".xlsx"].link::before, :where(.reading-typography) a[href$=".xlsx"]::before, [href$=".xlsx"].link_dark::before, [href*=".ppt"].link_icons-only::before, [href*=".ppt"].link_light::before, [href*=".ppt"].link::before, :where(.reading-typography) a[href*=".ppt"]::before, [href*=".ppt"].link_dark::before, [href*=".pptx"].link_icons-only::before, [href*=".pptx"].link_light::before, [href*=".pptx"].link::before, :where(.reading-typography) a[href*=".pptx"]::before, [href*=".pptx"].link_dark::before, [href$=".zip"].link_icons-only::before, [href$=".zip"].link_light::before, [href$=".zip"].link::before, :where(.reading-typography) a[href$=".zip"]::before, [href$=".zip"].link_dark::before, [href$=".doc"].link_icons-only::before, [href$=".doc"].link_light::before, [href$=".doc"].link::before, :where(.reading-typography) a[href$=".doc"]::before, [href$=".doc"].link_dark::before, [href$=".docx"].link_icons-only::before, [href$=".docx"].link_light::before, [href$=".docx"].link::before, :where(.reading-typography) a[href$=".docx"]::before, [href$=".docx"].link_dark::before, [href$=".txt"].link_icons-only::before, [href$=".txt"].link_light::before, [href$=".txt"].link::before, :where(.reading-typography) a[href$=".txt"]::before, [href$=".txt"].link_dark::before, [href$=".pdf"].link_icons-only::before, [href$=".pdf"].link_light::before, [href$=".pdf"].link::before, :where(.reading-typography) a[href$=".pdf"]::before, [href$=".pdf"].link_dark::before {
   margin-right: 0.25em;
   width: 1.28571429em;
   text-align: center;
 }
 
-.link_icons [aria-label=trademark]::after, .link_light [aria-label=trademark]::after, .link [aria-label=trademark]::after, .link_dark [aria-label=trademark]::after, [href^="fax:"].link_icons::after, [href^="fax:"].link_light::after, [href^="fax:"].link::after, [href^="fax:"].link_dark::after, [href^="tel:"].link_icons::after, [href^="tel:"].link_light::after, [href^="tel:"].link::after, [href^="tel:"].link_dark::after, [href^="mailto:"].link_icons::after, [href^="mailto:"].link_light::after, [href^="mailto:"].link::after, [href^="mailto:"].link_dark::after, [target=_blank].link_icons::after, [target=_blank].link_light::after, [target=_blank].link::after, [target=_blank].link_dark::after, [href^=http].link_icons::after, [href^=http].link_light::after, [href^=http].link::after, [href^=http].link_dark::after, [href^="htt%s"].link_icons::after, [href^="htt%s"].link_light::after, [href^="htt%s"].link::after, [href^="htt%s"].link_dark::after {
+.link_icons-only [aria-label=trademark]::after, .link_light [aria-label=trademark]::after, .link [aria-label=trademark]::after, :where(.reading-typography) a [aria-label=trademark]::after, .link_dark [aria-label=trademark]::after, [href^="fax:"].link_icons-only::after, [href^="fax:"].link_light::after, [href^="fax:"].link::after, :where(.reading-typography) a[href^="fax:"]::after, [href^="fax:"].link_dark::after, [href^="tel:"].link_icons-only::after, [href^="tel:"].link_light::after, [href^="tel:"].link::after, :where(.reading-typography) a[href^="tel:"]::after, [href^="tel:"].link_dark::after, [href^="mailto:"].link_icons-only::after, [href^="mailto:"].link_light::after, [href^="mailto:"].link::after, :where(.reading-typography) a[href^="mailto:"]::after, [href^="mailto:"].link_dark::after, [target=_blank].link_icons-only::after, [target=_blank].link_light::after, [target=_blank].link::after, :where(.reading-typography) a[target=_blank]::after, [target=_blank].link_dark::after, [href^=http].link_icons-only::after, [href^=http].link_light::after, [href^=http].link::after, :where(.reading-typography) a[href^=http]::after, [href^=http].link_dark::after, [href^="htt%s"].link_icons-only::after, [href^="htt%s"].link_light::after, [href^="htt%s"].link::after, :where(.reading-typography) a[href^="htt%s"]::after, [href^="htt%s"].link_dark::after {
   margin-left: 0.25em;
   width: 1.28571429em;
   text-align: center;
 }
 
-.link_icons [aria-label=copyright]::after, .link_light [aria-label=copyright]::after, .link [aria-label=copyright]::after, .link_dark [aria-label=copyright]::after, .link_icons [aria-label=register]::after, .link_light [aria-label=register]::after, .link [aria-label=register]::after, .link_dark [aria-label=register]::after, .link_icons [aria-label=trademark]::after, .link_light [aria-label=trademark]::after, .link [aria-label=trademark]::after, .link_dark [aria-label=trademark]::after {
+.link_icons-only [aria-label=copyright]::after, .link_light [aria-label=copyright]::after, .link [aria-label=copyright]::after, :where(.reading-typography) a [aria-label=copyright]::after, .link_dark [aria-label=copyright]::after, .link_icons-only [aria-label=register]::after, .link_light [aria-label=register]::after, .link [aria-label=register]::after, :where(.reading-typography) a [aria-label=register]::after, .link_dark [aria-label=register]::after, .link_icons-only [aria-label=trademark]::after, .link_light [aria-label=trademark]::after, .link [aria-label=trademark]::after, :where(.reading-typography) a [aria-label=trademark]::after, .link_dark [aria-label=trademark]::after, h1 .link_icons-only::after, h1 .link_light::after, h1 .link::after, h1 :where(.reading-typography) a::after, :where(.reading-typography) h1 a::after, h1 .link_dark::after, h2 .link_icons-only::after, h2 .link_light::after, h2 .link::after, h2 :where(.reading-typography) a::after, :where(.reading-typography) h2 a::after, h2 .link_dark::after, h3 .link_icons-only::after, h3 .link_light::after, h3 .link::after, h3 :where(.reading-typography) a::after, :where(.reading-typography) h3 a::after, h3 .link_dark::after, h4 .link_icons-only::after, h4 .link_light::after, h4 .link::after, h4 :where(.reading-typography) a::after, :where(.reading-typography) h4 a::after, h4 .link_dark::after, h5 .link_icons-only::after, h5 .link_light::after, h5 .link::after, h5 :where(.reading-typography) a::after, :where(.reading-typography) h5 a::after, h5 .link_dark::after, h6 .link_icons-only::after, h6 .link_light::after, h6 .link::after, h6 :where(.reading-typography) a::after, :where(.reading-typography) h6 a::after, h6 .link_dark::after, h1 .link_icons-only::before, h1 .link_light::before, h1 .link::before, h1 :where(.reading-typography) a::before, :where(.reading-typography) h1 a::before, h1 .link_dark::before, h2 .link_icons-only::before, h2 .link_light::before, h2 .link::before, h2 :where(.reading-typography) a::before, :where(.reading-typography) h2 a::before, h2 .link_dark::before, h3 .link_icons-only::before, h3 .link_light::before, h3 .link::before, h3 :where(.reading-typography) a::before, :where(.reading-typography) h3 a::before, h3 .link_dark::before, h4 .link_icons-only::before, h4 .link_light::before, h4 .link::before, h4 :where(.reading-typography) a::before, :where(.reading-typography) h4 a::before, h4 .link_dark::before, h5 .link_icons-only::before, h5 .link_light::before, h5 .link::before, h5 :where(.reading-typography) a::before, :where(.reading-typography) h5 a::before, h5 .link_dark::before, h6 .link_icons-only::before, h6 .link_light::before, h6 .link::before, h6 :where(.reading-typography) a::before, :where(.reading-typography) h6 a::before, h6 .link_dark::before {
   font-size: clamp(10px, 0.55em, 14px);
   vertical-align: super;
   opacity: 0.7;
@@ -239,59 +241,67 @@ a, a:hover, nav a, nav a:hover {
   color: inherit;
 }
 
-.link_icons, .link_light, .link, .link_dark {
+.link_icons-only, .link_light, .link, :where(.reading-typography) a, .link_dark {
   color: var(--link-color);
-  text-decoration: underline;
+  text-decoration-line: underline;
   text-decoration-thickness: 1px;
+  text-decoration-color: hsla(var(--link-color-h), var(--link-color-s), var(--link-color-l), 0.45);
 }
-.link_icons:visited, .link_light:visited, .link:visited, .link_dark:visited {
-  text-decoration: dotted;
+.link_icons-only:visited, .link_light:visited, .link:visited, :where(.reading-typography) a:visited, .link_dark:visited {
+  color: var(--link-visited-color);
+  text-decoration-color: hsla(var(--link-visited-color-h), var(--link-visited-color-s), var(--link-visited-color-l), 0.15);
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
 }
-.link_icons:hover, .link_light:hover, .link:hover, .link_dark:hover, .link_icons:focus-within, .link_light:focus-within, .link:focus-within, .link_dark:focus-within {
-  text-decoration: underline;
+.link_icons-only:hover, .link_light:hover, .link:hover, :where(.reading-typography) a:hover, .link_dark:hover, .link_icons-only:focus-within, .link_light:focus-within, .link:focus-within, :where(.reading-typography) a:focus-within, .link_dark:focus-within {
+  color: var(--link-hover-color);
+  text-decoration-line: underline;
   text-decoration-thickness: 2px;
   text-decoration-color: inherit;
 }
-[href$=".pdf"].link_icons::before, [href$=".pdf"].link_light::before, [href$=".pdf"].link::before, [href$=".pdf"].link_dark::before {
+h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a, :where(.reading-typography) h1 a, h1 .link_dark, h2 .link_icons-only, h2 .link_light, h2 .link, h2 :where(.reading-typography) a, :where(.reading-typography) h2 a, h2 .link_dark, h3 .link_icons-only, h3 .link_light, h3 .link, h3 :where(.reading-typography) a, :where(.reading-typography) h3 a, h3 .link_dark, h4 .link_icons-only, h4 .link_light, h4 .link, h4 :where(.reading-typography) a, :where(.reading-typography) h4 a, h4 .link_dark, h5 .link_icons-only, h5 .link_light, h5 .link, h5 :where(.reading-typography) a, :where(.reading-typography) h5 a, h5 .link_dark, h6 .link_icons-only, h6 .link_light, h6 .link, h6 :where(.reading-typography) a, :where(.reading-typography) h6 a, h6 .link_dark {
+  color: inherit;
+}
+[href$=".pdf"].link_icons-only::before, [href$=".pdf"].link_light::before, [href$=".pdf"].link::before, :where(.reading-typography) a[href$=".pdf"]::before, [href$=".pdf"].link_dark::before {
   content: "";
 }
-[href$=".doc"].link_icons::before, [href$=".doc"].link_light::before, [href$=".doc"].link::before, [href$=".doc"].link_dark::before, [href$=".docx"].link_icons::before, [href$=".docx"].link_light::before, [href$=".docx"].link::before, [href$=".docx"].link_dark::before, [href$=".txt"].link_icons::before, [href$=".txt"].link_light::before, [href$=".txt"].link::before, [href$=".txt"].link_dark::before {
+[href$=".doc"].link_icons-only::before, [href$=".doc"].link_light::before, [href$=".doc"].link::before, :where(.reading-typography) a[href$=".doc"]::before, [href$=".doc"].link_dark::before, [href$=".docx"].link_icons-only::before, [href$=".docx"].link_light::before, [href$=".docx"].link::before, :where(.reading-typography) a[href$=".docx"]::before, [href$=".docx"].link_dark::before, [href$=".txt"].link_icons-only::before, [href$=".txt"].link_light::before, [href$=".txt"].link::before, :where(.reading-typography) a[href$=".txt"]::before, [href$=".txt"].link_dark::before {
   content: "";
 }
-[href$=".zip"].link_icons::before, [href$=".zip"].link_light::before, [href$=".zip"].link::before, [href$=".zip"].link_dark::before {
+[href$=".zip"].link_icons-only::before, [href$=".zip"].link_light::before, [href$=".zip"].link::before, :where(.reading-typography) a[href$=".zip"]::before, [href$=".zip"].link_dark::before {
   content: "";
 }
-[href*=".ppt"].link_icons::before, [href*=".ppt"].link_light::before, [href*=".ppt"].link::before, [href*=".ppt"].link_dark::before, [href*=".pptx"].link_icons::before, [href*=".pptx"].link_light::before, [href*=".pptx"].link::before, [href*=".pptx"].link_dark::before {
+[href*=".ppt"].link_icons-only::before, [href*=".ppt"].link_light::before, [href*=".ppt"].link::before, :where(.reading-typography) a[href*=".ppt"]::before, [href*=".ppt"].link_dark::before, [href*=".pptx"].link_icons-only::before, [href*=".pptx"].link_light::before, [href*=".pptx"].link::before, :where(.reading-typography) a[href*=".pptx"]::before, [href*=".pptx"].link_dark::before {
   content: "";
 }
-[href$=".csv"].link_icons::before, [href$=".csv"].link_light::before, [href$=".csv"].link::before, [href$=".csv"].link_dark::before, [href$=".xls"].link_icons::before, [href$=".xls"].link_light::before, [href$=".xls"].link::before, [href$=".xls"].link_dark::before, [href$=".xlsx"].link_icons::before, [href$=".xlsx"].link_light::before, [href$=".xlsx"].link::before, [href$=".xlsx"].link_dark::before {
+[href$=".csv"].link_icons-only::before, [href$=".csv"].link_light::before, [href$=".csv"].link::before, :where(.reading-typography) a[href$=".csv"]::before, [href$=".csv"].link_dark::before, [href$=".xls"].link_icons-only::before, [href$=".xls"].link_light::before, [href$=".xls"].link::before, :where(.reading-typography) a[href$=".xls"]::before, [href$=".xls"].link_dark::before, [href$=".xlsx"].link_icons-only::before, [href$=".xlsx"].link_light::before, [href$=".xlsx"].link::before, :where(.reading-typography) a[href$=".xlsx"]::before, [href$=".xlsx"].link_dark::before {
   content: "";
 }
-[href$=".mp4"].link_icons::before, [href$=".mp4"].link_light::before, [href$=".mp4"].link::before, [href$=".mp4"].link_dark::before, [href$=".mov"].link_icons::before, [href$=".mov"].link_light::before, [href$=".mov"].link::before, [href$=".mov"].link_dark::before {
+[href$=".mp4"].link_icons-only::before, [href$=".mp4"].link_light::before, [href$=".mp4"].link::before, :where(.reading-typography) a[href$=".mp4"]::before, [href$=".mp4"].link_dark::before, [href$=".mov"].link_icons-only::before, [href$=".mov"].link_light::before, [href$=".mov"].link::before, :where(.reading-typography) a[href$=".mov"]::before, [href$=".mov"].link_dark::before {
   content: "";
 }
-[target=_blank].link_icons::after, [target=_blank].link_light::after, [target=_blank].link::after, [target=_blank].link_dark::after, [href^=http].link_icons::after, [href^=http].link_light::after, [href^=http].link::after, [href^=http].link_dark::after, [href^="htt%s"].link_icons::after, [href^="htt%s"].link_light::after, [href^="htt%s"].link::after, [href^="htt%s"].link_dark::after {
+[target=_blank].link_icons-only::after, [target=_blank].link_light::after, [target=_blank].link::after, :where(.reading-typography) a[target=_blank]::after, [target=_blank].link_dark::after, [href^=http].link_icons-only::after, [href^=http].link_light::after, [href^=http].link::after, :where(.reading-typography) a[href^=http]::after, [href^=http].link_dark::after, [href^="htt%s"].link_icons-only::after, [href^="htt%s"].link_light::after, [href^="htt%s"].link::after, :where(.reading-typography) a[href^="htt%s"]::after, [href^="htt%s"].link_dark::after {
   content: "";
 }
-[href^="mailto:"].link_icons::after, [href^="mailto:"].link_light::after, [href^="mailto:"].link::after, [href^="mailto:"].link_dark::after {
+[href^="mailto:"].link_icons-only::after, [href^="mailto:"].link_light::after, [href^="mailto:"].link::after, :where(.reading-typography) a[href^="mailto:"]::after, [href^="mailto:"].link_dark::after {
   content: "";
 }
-[href^="tel:"].link_icons::after, [href^="tel:"].link_light::after, [href^="tel:"].link::after, [href^="tel:"].link_dark::after {
+[href^="tel:"].link_icons-only::after, [href^="tel:"].link_light::after, [href^="tel:"].link::after, :where(.reading-typography) a[href^="tel:"]::after, [href^="tel:"].link_dark::after {
   content: "";
 }
-[href^="fax:"].link_icons::after, [href^="fax:"].link_light::after, [href^="fax:"].link::after, [href^="fax:"].link_dark::after {
+[href^="fax:"].link_icons-only::after, [href^="fax:"].link_light::after, [href^="fax:"].link::after, :where(.reading-typography) a[href^="fax:"]::after, [href^="fax:"].link_dark::after {
   content: "";
 }
-.website.link_icons::before, .website.link_light::before, .website.link::before, .website.link_dark::before {
+.website.link_icons-only::before, .website.link_light::before, .website.link::before, :where(.reading-typography) a.website::before, .website.link_dark::before {
   content: "";
 }
-.link_icons [aria-label=trademark]::after, .link_light [aria-label=trademark]::after, .link [aria-label=trademark]::after, .link_dark [aria-label=trademark]::after {
+.link_icons-only [aria-label=trademark]::after, .link_light [aria-label=trademark]::after, .link [aria-label=trademark]::after, :where(.reading-typography) a [aria-label=trademark]::after, .link_dark [aria-label=trademark]::after {
   content: "";
 }
-.link_icons [aria-label=register]::after, .link_light [aria-label=register]::after, .link [aria-label=register]::after, .link_dark [aria-label=register]::after {
+.link_icons-only [aria-label=register]::after, .link_light [aria-label=register]::after, .link [aria-label=register]::after, :where(.reading-typography) a [aria-label=register]::after, .link_dark [aria-label=register]::after {
   content: "";
 }
-.link_icons [aria-label=copyright]::after, .link_light [aria-label=copyright]::after, .link [aria-label=copyright]::after, .link_dark [aria-label=copyright]::after {
+.link_icons-only [aria-label=copyright]::after, .link_light [aria-label=copyright]::after, .link [aria-label=copyright]::after, :where(.reading-typography) a [aria-label=copyright]::after, .link_dark [aria-label=copyright]::after {
   content: "";
 }
 
@@ -307,29 +317,6 @@ a, a:hover, nav a, nav a:hover {
   background-color: transparent;
 }
 
-.link, .link_dark, .link_light {
-  color: hsla(var(--link-color-h), var(--link-color-s), var(--link-color-l), 1);
-  text-decoration-color: hsla(var(--link-color-h), var(--link-color-s), var(--link-color-l), 0.25);
-}
-.link:visited, .link_dark:visited, .link_light:visited {
-  color: hsl(var(--link-visited-color-h), var(--link-visited-color-s), var(--link-visited-color-h));
-}
-.link:hover, .link_dark:hover, .link_light:hover, .link:focus-within, .link_dark:focus-within, .link_light:focus-within {
-  color: hsl(var(--link-hover-color-h), var(--link-hover-color-s), var(--link-hover-color-h));
-}
-
-.link_light {
-  --link-color-h: hue($link);
-  --link-color-s: saturation($link);
-  --link-color-l: lightness($link);
-  --link-visited-color-h: hue($link-visited);
-  --link-visited-color-s: saturation($link-visited);
-  --link-visited-color-l: lightness($link-visited);
-  --link-hover-color-h: hue($link-hover);
-  --link-hover-color-s: saturation($link-hover);
-  --link-hover-color-l: lightness($link-hover);
-}
-
 :root {
   --vertical-space: 1rem;
   --margin-top: ;
@@ -340,73 +327,72 @@ a, a:hover, nav a, nav a:hover {
   --font_headline-color: var(--primary-h) var(--primary-s) calc(var(--primary-l) + var(--primary-l)*-.37);
 }
 
-.reading-typography h1,
-.reading-typography h2,
-.reading-typography h3,
-.reading-typography h4,
-.reading-typography h5,
-.reading-typography h6 {
+:where(.reading-typography) :where(h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6) {
   color: hsla(var(--font_headline-color));
   font-family: var(--font_headline);
 }
-.reading-typography h1:not(:first-child),
-.reading-typography h2:not(:first-child),
-.reading-typography h3:not(:first-child),
-.reading-typography h4:not(:first-child),
-.reading-typography h5:not(:first-child),
-.reading-typography h6:not(:first-child) {
+:where(.reading-typography) :where(h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6):not(:first-child) {
   margin: var(--vertical-space) 0 calc(var(--vertical-space) / 2);
 }
-.reading-typography h3, .reading-typography h2, .reading-typography h1 {
+:where(.reading-typography) h3, :where(.reading-typography) h2, :where(.reading-typography) h1 {
   line-height: 1.125;
 }
-.reading-typography h4, .reading-typography h5, .reading-typography blockquote {
+:where(.reading-typography) h4, :where(.reading-typography) h5, :where(.reading-typography) blockquote {
   line-height: 1.35;
 }
-.reading-typography h6 {
+:where(.reading-typography) h6 {
   line-height: 1.6;
 }
-.reading-typography h1 {
+:where(.reading-typography) h1 {
   font-size: var(--font-size_up-4);
 }
-.reading-typography h2 {
+:where(.reading-typography) h2 {
   font-size: var(--font-size_up-3);
 }
-.reading-typography h3 {
+:where(.reading-typography) h3 {
   font-size: var(--font-size_up-2);
 }
-.reading-typography h4, .reading-typography h5, .reading-typography blockquote {
+:where(.reading-typography) h4, :where(.reading-typography) h5, :where(.reading-typography) blockquote {
   font-family: var(--font_headline-alt);
   font-size: var(--font-size_up-1);
 }
-.reading-typography h6 {
+:where(.reading-typography) h6 {
   font-size: var(--font-size_0);
 }
-.reading-typography p, .reading-typography ul, .reading-typography ol, .reading-typography dl, .reading-typography table {
+:where(.reading-typography) p, :where(.reading-typography) ul, :where(.reading-typography) ol, :where(.reading-typography) dl, :where(.reading-typography) table {
   font-size: var(--font-size_0);
   font-family: var(--font_content);
 }
-.reading-typography p + p, .reading-typography ul, .reading-typography ol, .reading-typography dl, .reading-typography table {
+:where(.reading-typography) p + p, :where(.reading-typography) ul, :where(.reading-typography) ol, :where(.reading-typography) dl, :where(.reading-typography) table {
   margin-top: var(--vertical-space);
 }
-.reading-typography tfoot, .reading-typography cite {
+:where(.reading-typography) tfoot, :where(.reading-typography) cite {
   font-size: var(--font-size_down-1);
 }
-.reading-typography table {
+:where(.reading-typography) table {
   width: 100%;
 }
-.reading-typography thead {
+:where(.reading-typography) thead {
   font-family: var(--font_headline-alt);
   border-bottom: 1px solid hsla(var(--primary-h) var(--primary-s) var(--primary-l)/0.5);
 }
-.reading-typography pre, .reading-typography code {
+:where(.reading-typography) pre, :where(.reading-typography) code {
   font-family: var(--font_code);
   font-size: var(--font-size_up-1);
 }
-.reading-typography li::marker {
+:where(.reading-typography) li::marker {
   color: hsla(var(--primary-h), var(--primary-s), var(--primary-l));
 }
-
 #day,
 .day_grid {
   --hour-start-military: var(--hour-start-military,9);

@@ -80,3 +80,51 @@ const NavToggle = () => {
 	}
 };
 Toggle.addEventListener("click", NavToggle);
+
+
+
+let filterZone = document.getElementById("filterZone");
+let filterZoneNav = filterZone.querySelector("nav");
+let filterFacets = filterZone.querySelector("#filterFacets");
+let filterZoneExpanded = true;
+filterZoneNav.addEventListener("click", function () {
+	if (filterZoneExpanded) {
+		filterFacets.classList.toggle("opacity_0");
+		filterFacets.classList.toggle("opacity_none");
+		setTimeout(function () {
+			filterFacets.classList.toggle("{display_none}");
+			filterFacets.classList.toggle("display_none");
+			filterFacets.classList.toggle("min-h_0:md");
+			filterFacets.classList.toggle("min-h_30:md");
+			filterZone.classList.remove("{nav-mined}", "nav-maxed");
+			filterZone.classList.add("nav-mined", "{nav-maxed}");
+			filterZoneNav
+				.querySelector("span.label")
+				.classList.toggle("{display_none:md}");
+			filterZoneNav
+				.querySelector("span.label")
+				.classList.toggle("display_none:md");
+			filterZoneExpanded = false;
+		}, 300);
+		return;
+	} else {
+		filterZone.classList.add("{nav-mined}", "nav-maxed");
+		filterZone.classList.remove("nav-mined", "{nav-maxed}");
+		filterFacets.classList.toggle("min-h_0:md");
+		filterFacets.classList.toggle("min-h_30:md");
+		filterFacets.classList.toggle("{display_none}");
+		filterFacets.classList.toggle("display_none");
+		setTimeout(function () {
+			filterFacets.classList.toggle("opacity_0");
+			filterFacets.classList.toggle("opacity_none");
+			filterZoneNav
+				.querySelector("span.label")
+				.classList.toggle("{display_none:md}");
+			filterZoneNav
+				.querySelector("span.label")
+				.classList.toggle("display_none:md");
+			filterZoneExpanded = true;
+		}, 300);
+		return;
+	}
+});
