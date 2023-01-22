@@ -22,12 +22,36 @@
   --highlight: hsl( var(--highlight-h),var(--highlight-s),var(--highlight-l) );
   --black-h: 0deg;
   --black-s: 0%;
-  --black-l: 6.2745098039%;
+  --black-l: 2.7450980392%;
   --black: hsl( var(--black-h),var(--black-s),var(--black-l) );
   --white-h: 0deg;
   --white-s: 0%;
   --white-l: 99.2156862745%;
   --white: hsl( var(--white-h),var(--white-s),var(--white-l) );
+  --success-h: 120deg;
+  --success-s: 100%;
+  --success-l: 25.0980392157%;
+  --success: hsl( var(--success-h),var(--success-s),var(--success-l) );
+  --warning-h: 38.8235294118deg;
+  --warning-s: 100%;
+  --warning-l: 50%;
+  --warning: hsl( var(--warning-h),var(--warning-s),var(--warning-l) );
+  --alert-h: 0deg;
+  --alert-s: 100%;
+  --alert-l: 50%;
+  --alert: hsl( var(--alert-h),var(--alert-s),var(--alert-l) );
+}
+
+.expanded-click-area::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: auto;
+  content: "";
+  background-color: transparent;
 }
 
 .ul_inline-comma,
@@ -303,18 +327,6 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
 }
 .link_icons-only [aria-label=copyright]::after, .link_light [aria-label=copyright]::after, .link [aria-label=copyright]::after, :where(.reading-typography) a [aria-label=copyright]::after, .link_dark [aria-label=copyright]::after {
   content: "";
-}
-
-.expanded-click-area::after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  pointer-events: auto;
-  content: "";
-  background-color: transparent;
 }
 
 :root {
@@ -4073,6 +4085,78 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
   background-color: hsla(var(--white-h), var(--white-s), var(--white-l), 1);
 }
 
+.bg_success {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.bg_success-n1 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.15 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.15) 		));
+}
+
+.bg_success-n2 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.37 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.37) 		));
+}
+
+.bg_success-n3 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.6 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.6) 		));
+}
+
+.bg_success-n4 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.78 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.78) 		));
+}
+
+.bg_success-n5 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.9 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.9) 		));
+}
+
+.bg_warning {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.bg_warning-n1 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.15 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.15) 		));
+}
+
+.bg_warning-n2 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.37 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.37) 		));
+}
+
+.bg_warning-n3 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.6 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.6) 		));
+}
+
+.bg_warning-n4 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.78 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.78) 		));
+}
+
+.bg_warning-n5 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.9 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.9) 		));
+}
+
+.bg_alert {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.bg_alert-n1 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.15 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.15) 		));
+}
+
+.bg_alert-n2 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.37 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.37) 		));
+}
+
+.bg_alert-n3 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.6 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.6) 		));
+}
+
+.bg_alert-n4 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.78 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.78) 		));
+}
+
+.bg_alert-n5 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.9 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.9) 		));
+}
+
 .bg_brand {
   background-color: hsl(var(--brand-h), calc( 			var(--brand-s) + 				((100% - var(--brand-s)) * (0 *.1)) 		), calc( 			var(--brand-l) + 				((100% - var(--brand-l)) * 0) 		));
 }
@@ -4325,6 +4409,90 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
   background-color: hsla(var(--white-h), var(--white-s), var(--white-l), 1);
 }
 
+.bg_success {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.bg_success-0 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.bg_success-1 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.15 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.15) 		));
+}
+
+.bg_success-2 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.37 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.37) 		));
+}
+
+.bg_success-3 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.6 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.6) 		));
+}
+
+.bg_success-4 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.78 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.78) 		));
+}
+
+.bg_success-5 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.9 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.9) 		));
+}
+
+.bg_warning {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.bg_warning-0 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.bg_warning-1 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.15 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.15) 		));
+}
+
+.bg_warning-2 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.37 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.37) 		));
+}
+
+.bg_warning-3 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.6 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.6) 		));
+}
+
+.bg_warning-4 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.78 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.78) 		));
+}
+
+.bg_warning-5 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.9 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.9) 		));
+}
+
+.bg_alert {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.bg_alert-0 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.bg_alert-1 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.15 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.15) 		));
+}
+
+.bg_alert-2 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.37 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.37) 		));
+}
+
+.bg_alert-3 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.6 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.6) 		));
+}
+
+.bg_alert-4 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.78 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.78) 		));
+}
+
+.bg_alert-5 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.9 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.9) 		));
+}
+
 .active > .a\:bg_brand {
   background-color: hsl(var(--brand-h), calc( 			var(--brand-s) + 				((100% - var(--brand-s)) * (0 *.1)) 		), calc( 			var(--brand-l) + 				((100% - var(--brand-l)) * 0) 		));
 }
@@ -4555,6 +4723,78 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
 
 .active > .a\:bg_white-10 {
   background-color: hsla(var(--white-h), var(--white-s), var(--white-l), 1);
+}
+
+.active > .a\:bg_success {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.active > .a\:bg_success-n1 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.15 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.15) 		));
+}
+
+.active > .a\:bg_success-n2 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.37 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.37) 		));
+}
+
+.active > .a\:bg_success-n3 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.6 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.6) 		));
+}
+
+.active > .a\:bg_success-n4 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.78 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.78) 		));
+}
+
+.active > .a\:bg_success-n5 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.9 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.9) 		));
+}
+
+.active > .a\:bg_warning {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.active > .a\:bg_warning-n1 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.15 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.15) 		));
+}
+
+.active > .a\:bg_warning-n2 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.37 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.37) 		));
+}
+
+.active > .a\:bg_warning-n3 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.6 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.6) 		));
+}
+
+.active > .a\:bg_warning-n4 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.78 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.78) 		));
+}
+
+.active > .a\:bg_warning-n5 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.9 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.9) 		));
+}
+
+.active > .a\:bg_alert {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.active > .a\:bg_alert-n1 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.15 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.15) 		));
+}
+
+.active > .a\:bg_alert-n2 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.37 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.37) 		));
+}
+
+.active > .a\:bg_alert-n3 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.6 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.6) 		));
+}
+
+.active > .a\:bg_alert-n4 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.78 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.78) 		));
+}
+
+.active > .a\:bg_alert-n5 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.9 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.9) 		));
 }
 
 .active > .a\:bg_brand {
@@ -4809,6 +5049,90 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
   background-color: hsla(var(--white-h), var(--white-s), var(--white-l), 1);
 }
 
+.active > .a\:bg_success {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.active > .a\:bg_success-0 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.active > .a\:bg_success-1 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.15 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.15) 		));
+}
+
+.active > .a\:bg_success-2 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.37 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.37) 		));
+}
+
+.active > .a\:bg_success-3 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.6 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.6) 		));
+}
+
+.active > .a\:bg_success-4 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.78 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.78) 		));
+}
+
+.active > .a\:bg_success-5 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.9 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.9) 		));
+}
+
+.active > .a\:bg_warning {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.active > .a\:bg_warning-0 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.active > .a\:bg_warning-1 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.15 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.15) 		));
+}
+
+.active > .a\:bg_warning-2 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.37 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.37) 		));
+}
+
+.active > .a\:bg_warning-3 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.6 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.6) 		));
+}
+
+.active > .a\:bg_warning-4 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.78 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.78) 		));
+}
+
+.active > .a\:bg_warning-5 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.9 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.9) 		));
+}
+
+.active > .a\:bg_alert {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.active > .a\:bg_alert-0 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.active > .a\:bg_alert-1 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.15 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.15) 		));
+}
+
+.active > .a\:bg_alert-2 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.37 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.37) 		));
+}
+
+.active > .a\:bg_alert-3 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.6 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.6) 		));
+}
+
+.active > .a\:bg_alert-4 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.78 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.78) 		));
+}
+
+.active > .a\:bg_alert-5 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.9 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.9) 		));
+}
+
 .active.a\:bg_brand {
   background-color: hsl(var(--brand-h), calc( 			var(--brand-s) + 				((100% - var(--brand-s)) * (0 *.1)) 		), calc( 			var(--brand-l) + 				((100% - var(--brand-l)) * 0) 		));
 }
@@ -5039,6 +5363,78 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
 
 .active.a\:bg_white-10 {
   background-color: hsla(var(--white-h), var(--white-s), var(--white-l), 1);
+}
+
+.active.a\:bg_success {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.active.a\:bg_success-n1 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.15 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.15) 		));
+}
+
+.active.a\:bg_success-n2 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.37 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.37) 		));
+}
+
+.active.a\:bg_success-n3 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.6 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.6) 		));
+}
+
+.active.a\:bg_success-n4 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.78 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.78) 		));
+}
+
+.active.a\:bg_success-n5 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.9 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.9) 		));
+}
+
+.active.a\:bg_warning {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.active.a\:bg_warning-n1 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.15 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.15) 		));
+}
+
+.active.a\:bg_warning-n2 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.37 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.37) 		));
+}
+
+.active.a\:bg_warning-n3 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.6 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.6) 		));
+}
+
+.active.a\:bg_warning-n4 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.78 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.78) 		));
+}
+
+.active.a\:bg_warning-n5 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.9 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.9) 		));
+}
+
+.active.a\:bg_alert {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.active.a\:bg_alert-n1 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.15 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.15) 		));
+}
+
+.active.a\:bg_alert-n2 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.37 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.37) 		));
+}
+
+.active.a\:bg_alert-n3 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.6 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.6) 		));
+}
+
+.active.a\:bg_alert-n4 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.78 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.78) 		));
+}
+
+.active.a\:bg_alert-n5 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.9 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.9) 		));
 }
 
 .active.a\:bg_brand {
@@ -5293,6 +5689,90 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
   background-color: hsla(var(--white-h), var(--white-s), var(--white-l), 1);
 }
 
+.active.a\:bg_success {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.active.a\:bg_success-0 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.active.a\:bg_success-1 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.15 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.15) 		));
+}
+
+.active.a\:bg_success-2 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.37 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.37) 		));
+}
+
+.active.a\:bg_success-3 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.6 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.6) 		));
+}
+
+.active.a\:bg_success-4 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.78 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.78) 		));
+}
+
+.active.a\:bg_success-5 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.9 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.9) 		));
+}
+
+.active.a\:bg_warning {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.active.a\:bg_warning-0 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.active.a\:bg_warning-1 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.15 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.15) 		));
+}
+
+.active.a\:bg_warning-2 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.37 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.37) 		));
+}
+
+.active.a\:bg_warning-3 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.6 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.6) 		));
+}
+
+.active.a\:bg_warning-4 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.78 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.78) 		));
+}
+
+.active.a\:bg_warning-5 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.9 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.9) 		));
+}
+
+.active.a\:bg_alert {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.active.a\:bg_alert-0 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.active.a\:bg_alert-1 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.15 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.15) 		));
+}
+
+.active.a\:bg_alert-2 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.37 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.37) 		));
+}
+
+.active.a\:bg_alert-3 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.6 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.6) 		));
+}
+
+.active.a\:bg_alert-4 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.78 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.78) 		));
+}
+
+.active.a\:bg_alert-5 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.9 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.9) 		));
+}
+
 .is-active > .a\:bg_brand {
   background-color: hsl(var(--brand-h), calc( 			var(--brand-s) + 				((100% - var(--brand-s)) * (0 *.1)) 		), calc( 			var(--brand-l) + 				((100% - var(--brand-l)) * 0) 		));
 }
@@ -5523,6 +6003,78 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
 
 .is-active > .a\:bg_white-10 {
   background-color: hsla(var(--white-h), var(--white-s), var(--white-l), 1);
+}
+
+.is-active > .a\:bg_success {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.is-active > .a\:bg_success-n1 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.15 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.15) 		));
+}
+
+.is-active > .a\:bg_success-n2 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.37 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.37) 		));
+}
+
+.is-active > .a\:bg_success-n3 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.6 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.6) 		));
+}
+
+.is-active > .a\:bg_success-n4 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.78 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.78) 		));
+}
+
+.is-active > .a\:bg_success-n5 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.9 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.9) 		));
+}
+
+.is-active > .a\:bg_warning {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.is-active > .a\:bg_warning-n1 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.15 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.15) 		));
+}
+
+.is-active > .a\:bg_warning-n2 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.37 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.37) 		));
+}
+
+.is-active > .a\:bg_warning-n3 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.6 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.6) 		));
+}
+
+.is-active > .a\:bg_warning-n4 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.78 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.78) 		));
+}
+
+.is-active > .a\:bg_warning-n5 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.9 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.9) 		));
+}
+
+.is-active > .a\:bg_alert {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.is-active > .a\:bg_alert-n1 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.15 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.15) 		));
+}
+
+.is-active > .a\:bg_alert-n2 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.37 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.37) 		));
+}
+
+.is-active > .a\:bg_alert-n3 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.6 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.6) 		));
+}
+
+.is-active > .a\:bg_alert-n4 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.78 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.78) 		));
+}
+
+.is-active > .a\:bg_alert-n5 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.9 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.9) 		));
 }
 
 .is-active > .a\:bg_brand {
@@ -5777,6 +6329,90 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
   background-color: hsla(var(--white-h), var(--white-s), var(--white-l), 1);
 }
 
+.is-active > .a\:bg_success {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.is-active > .a\:bg_success-0 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.is-active > .a\:bg_success-1 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.15 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.15) 		));
+}
+
+.is-active > .a\:bg_success-2 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.37 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.37) 		));
+}
+
+.is-active > .a\:bg_success-3 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.6 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.6) 		));
+}
+
+.is-active > .a\:bg_success-4 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.78 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.78) 		));
+}
+
+.is-active > .a\:bg_success-5 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.9 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.9) 		));
+}
+
+.is-active > .a\:bg_warning {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.is-active > .a\:bg_warning-0 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.is-active > .a\:bg_warning-1 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.15 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.15) 		));
+}
+
+.is-active > .a\:bg_warning-2 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.37 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.37) 		));
+}
+
+.is-active > .a\:bg_warning-3 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.6 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.6) 		));
+}
+
+.is-active > .a\:bg_warning-4 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.78 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.78) 		));
+}
+
+.is-active > .a\:bg_warning-5 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.9 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.9) 		));
+}
+
+.is-active > .a\:bg_alert {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.is-active > .a\:bg_alert-0 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.is-active > .a\:bg_alert-1 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.15 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.15) 		));
+}
+
+.is-active > .a\:bg_alert-2 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.37 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.37) 		));
+}
+
+.is-active > .a\:bg_alert-3 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.6 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.6) 		));
+}
+
+.is-active > .a\:bg_alert-4 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.78 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.78) 		));
+}
+
+.is-active > .a\:bg_alert-5 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.9 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.9) 		));
+}
+
 .is-active.a\:bg_brand {
   background-color: hsl(var(--brand-h), calc( 			var(--brand-s) + 				((100% - var(--brand-s)) * (0 *.1)) 		), calc( 			var(--brand-l) + 				((100% - var(--brand-l)) * 0) 		));
 }
@@ -6007,6 +6643,78 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
 
 .is-active.a\:bg_white-10 {
   background-color: hsla(var(--white-h), var(--white-s), var(--white-l), 1);
+}
+
+.is-active.a\:bg_success {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.is-active.a\:bg_success-n1 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.15 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.15) 		));
+}
+
+.is-active.a\:bg_success-n2 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.37 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.37) 		));
+}
+
+.is-active.a\:bg_success-n3 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.6 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.6) 		));
+}
+
+.is-active.a\:bg_success-n4 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.78 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.78) 		));
+}
+
+.is-active.a\:bg_success-n5 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.9 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.9) 		));
+}
+
+.is-active.a\:bg_warning {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.is-active.a\:bg_warning-n1 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.15 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.15) 		));
+}
+
+.is-active.a\:bg_warning-n2 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.37 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.37) 		));
+}
+
+.is-active.a\:bg_warning-n3 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.6 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.6) 		));
+}
+
+.is-active.a\:bg_warning-n4 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.78 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.78) 		));
+}
+
+.is-active.a\:bg_warning-n5 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.9 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.9) 		));
+}
+
+.is-active.a\:bg_alert {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.is-active.a\:bg_alert-n1 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.15 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.15) 		));
+}
+
+.is-active.a\:bg_alert-n2 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.37 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.37) 		));
+}
+
+.is-active.a\:bg_alert-n3 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.6 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.6) 		));
+}
+
+.is-active.a\:bg_alert-n4 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.78 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.78) 		));
+}
+
+.is-active.a\:bg_alert-n5 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.9 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.9) 		));
 }
 
 .is-active.a\:bg_brand {
@@ -6261,6 +6969,90 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
   background-color: hsla(var(--white-h), var(--white-s), var(--white-l), 1);
 }
 
+.is-active.a\:bg_success {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.is-active.a\:bg_success-0 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.is-active.a\:bg_success-1 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.15 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.15) 		));
+}
+
+.is-active.a\:bg_success-2 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.37 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.37) 		));
+}
+
+.is-active.a\:bg_success-3 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.6 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.6) 		));
+}
+
+.is-active.a\:bg_success-4 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.78 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.78) 		));
+}
+
+.is-active.a\:bg_success-5 {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.9 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.9) 		));
+}
+
+.is-active.a\:bg_warning {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.is-active.a\:bg_warning-0 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.is-active.a\:bg_warning-1 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.15 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.15) 		));
+}
+
+.is-active.a\:bg_warning-2 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.37 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.37) 		));
+}
+
+.is-active.a\:bg_warning-3 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.6 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.6) 		));
+}
+
+.is-active.a\:bg_warning-4 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.78 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.78) 		));
+}
+
+.is-active.a\:bg_warning-5 {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.9 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.9) 		));
+}
+
+.is-active.a\:bg_alert {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.is-active.a\:bg_alert-0 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.is-active.a\:bg_alert-1 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.15 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.15) 		));
+}
+
+.is-active.a\:bg_alert-2 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.37 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.37) 		));
+}
+
+.is-active.a\:bg_alert-3 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.6 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.6) 		));
+}
+
+.is-active.a\:bg_alert-4 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.78 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.78) 		));
+}
+
+.is-active.a\:bg_alert-5 {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.9 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.9) 		));
+}
+
 .h\:bg_brand:hover {
   background-color: hsl(var(--brand-h), calc( 			var(--brand-s) + 				((100% - var(--brand-s)) * (0 *.1)) 		), calc( 			var(--brand-l) + 				((100% - var(--brand-l)) * 0) 		));
 }
@@ -6491,6 +7283,78 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
 
 .h\:bg_white-10:hover {
   background-color: hsla(var(--white-h), var(--white-s), var(--white-l), 1);
+}
+
+.h\:bg_success:hover {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.h\:bg_success-n1:hover {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.15 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.15) 		));
+}
+
+.h\:bg_success-n2:hover {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.37 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.37) 		));
+}
+
+.h\:bg_success-n3:hover {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.6 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.6) 		));
+}
+
+.h\:bg_success-n4:hover {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.78 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.78) 		));
+}
+
+.h\:bg_success-n5:hover {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.9 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.9) 		));
+}
+
+.h\:bg_warning:hover {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.h\:bg_warning-n1:hover {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.15 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.15) 		));
+}
+
+.h\:bg_warning-n2:hover {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.37 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.37) 		));
+}
+
+.h\:bg_warning-n3:hover {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.6 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.6) 		));
+}
+
+.h\:bg_warning-n4:hover {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.78 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.78) 		));
+}
+
+.h\:bg_warning-n5:hover {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.9 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.9) 		));
+}
+
+.h\:bg_alert:hover {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.h\:bg_alert-n1:hover {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.15 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.15) 		));
+}
+
+.h\:bg_alert-n2:hover {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.37 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.37) 		));
+}
+
+.h\:bg_alert-n3:hover {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.6 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.6) 		));
+}
+
+.h\:bg_alert-n4:hover {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.78 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.78) 		));
+}
+
+.h\:bg_alert-n5:hover {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.9 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.9) 		));
 }
 
 .h\:bg_brand:hover {
@@ -6743,6 +7607,90 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
 
 .h\:bg_white-10:hover {
   background-color: hsla(var(--white-h), var(--white-s), var(--white-l), 1);
+}
+
+.h\:bg_success:hover {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.h\:bg_success-0:hover {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.h\:bg_success-1:hover {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.15 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.15) 		));
+}
+
+.h\:bg_success-2:hover {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.37 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.37) 		));
+}
+
+.h\:bg_success-3:hover {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.6 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.6) 		));
+}
+
+.h\:bg_success-4:hover {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.78 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.78) 		));
+}
+
+.h\:bg_success-5:hover {
+  background-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.9 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.9) 		));
+}
+
+.h\:bg_warning:hover {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.h\:bg_warning-0:hover {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.h\:bg_warning-1:hover {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.15 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.15) 		));
+}
+
+.h\:bg_warning-2:hover {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.37 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.37) 		));
+}
+
+.h\:bg_warning-3:hover {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.6 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.6) 		));
+}
+
+.h\:bg_warning-4:hover {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.78 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.78) 		));
+}
+
+.h\:bg_warning-5:hover {
+  background-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.9 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.9) 		));
+}
+
+.h\:bg_alert:hover {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.h\:bg_alert-0:hover {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.h\:bg_alert-1:hover {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.15 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.15) 		));
+}
+
+.h\:bg_alert-2:hover {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.37 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.37) 		));
+}
+
+.h\:bg_alert-3:hover {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.6 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.6) 		));
+}
+
+.h\:bg_alert-4:hover {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.78 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.78) 		));
+}
+
+.h\:bg_alert-5:hover {
+  background-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.9 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.9) 		));
 }
 
 .bg_left {
@@ -7009,6 +7957,78 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
   border-color: hsla(var(--white-h), var(--white-s), var(--white-l), 1);
 }
 
+.br_success {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.br_success-n1 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.15 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.15) 		));
+}
+
+.br_success-n2 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.37 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.37) 		));
+}
+
+.br_success-n3 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.6 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.6) 		));
+}
+
+.br_success-n4 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.78 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.78) 		));
+}
+
+.br_success-n5 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.9 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.9) 		));
+}
+
+.br_warning {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.br_warning-n1 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.15 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.15) 		));
+}
+
+.br_warning-n2 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.37 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.37) 		));
+}
+
+.br_warning-n3 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.6 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.6) 		));
+}
+
+.br_warning-n4 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.78 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.78) 		));
+}
+
+.br_warning-n5 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.9 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.9) 		));
+}
+
+.br_alert {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.br_alert-n1 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.15 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.15) 		));
+}
+
+.br_alert-n2 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.37 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.37) 		));
+}
+
+.br_alert-n3 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.6 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.6) 		));
+}
+
+.br_alert-n4 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.78 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.78) 		));
+}
+
+.br_alert-n5 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.9 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.9) 		));
+}
+
 .br_brand {
   border-color: hsl(var(--brand-h), calc( 			var(--brand-s) + 				((100% - var(--brand-s)) * (0 *.1)) 		), calc( 			var(--brand-l) + 				((100% - var(--brand-l)) * 0) 		));
 }
@@ -7261,6 +8281,90 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
   border-color: hsla(var(--white-h), var(--white-s), var(--white-l), 1);
 }
 
+.br_success {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.br_success-0 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.br_success-1 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.15 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.15) 		));
+}
+
+.br_success-2 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.37 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.37) 		));
+}
+
+.br_success-3 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.6 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.6) 		));
+}
+
+.br_success-4 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.78 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.78) 		));
+}
+
+.br_success-5 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.9 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.9) 		));
+}
+
+.br_warning {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.br_warning-0 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.br_warning-1 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.15 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.15) 		));
+}
+
+.br_warning-2 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.37 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.37) 		));
+}
+
+.br_warning-3 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.6 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.6) 		));
+}
+
+.br_warning-4 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.78 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.78) 		));
+}
+
+.br_warning-5 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.9 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.9) 		));
+}
+
+.br_alert {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.br_alert-0 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.br_alert-1 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.15 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.15) 		));
+}
+
+.br_alert-2 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.37 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.37) 		));
+}
+
+.br_alert-3 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.6 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.6) 		));
+}
+
+.br_alert-4 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.78 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.78) 		));
+}
+
+.br_alert-5 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.9 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.9) 		));
+}
+
 .active > .a\:br_brand {
   border-color: hsl(var(--brand-h), calc( 			var(--brand-s) + 				((100% - var(--brand-s)) * (0 *.1)) 		), calc( 			var(--brand-l) + 				((100% - var(--brand-l)) * 0) 		));
 }
@@ -7491,6 +8595,78 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
 
 .active > .a\:br_white-10 {
   border-color: hsla(var(--white-h), var(--white-s), var(--white-l), 1);
+}
+
+.active > .a\:br_success {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.active > .a\:br_success-n1 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.15 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.15) 		));
+}
+
+.active > .a\:br_success-n2 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.37 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.37) 		));
+}
+
+.active > .a\:br_success-n3 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.6 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.6) 		));
+}
+
+.active > .a\:br_success-n4 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.78 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.78) 		));
+}
+
+.active > .a\:br_success-n5 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.9 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.9) 		));
+}
+
+.active > .a\:br_warning {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.active > .a\:br_warning-n1 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.15 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.15) 		));
+}
+
+.active > .a\:br_warning-n2 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.37 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.37) 		));
+}
+
+.active > .a\:br_warning-n3 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.6 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.6) 		));
+}
+
+.active > .a\:br_warning-n4 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.78 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.78) 		));
+}
+
+.active > .a\:br_warning-n5 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.9 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.9) 		));
+}
+
+.active > .a\:br_alert {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.active > .a\:br_alert-n1 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.15 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.15) 		));
+}
+
+.active > .a\:br_alert-n2 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.37 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.37) 		));
+}
+
+.active > .a\:br_alert-n3 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.6 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.6) 		));
+}
+
+.active > .a\:br_alert-n4 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.78 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.78) 		));
+}
+
+.active > .a\:br_alert-n5 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.9 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.9) 		));
 }
 
 .active > .a\:br_brand {
@@ -7745,6 +8921,90 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
   border-color: hsla(var(--white-h), var(--white-s), var(--white-l), 1);
 }
 
+.active > .a\:br_success {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.active > .a\:br_success-0 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.active > .a\:br_success-1 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.15 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.15) 		));
+}
+
+.active > .a\:br_success-2 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.37 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.37) 		));
+}
+
+.active > .a\:br_success-3 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.6 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.6) 		));
+}
+
+.active > .a\:br_success-4 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.78 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.78) 		));
+}
+
+.active > .a\:br_success-5 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.9 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.9) 		));
+}
+
+.active > .a\:br_warning {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.active > .a\:br_warning-0 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.active > .a\:br_warning-1 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.15 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.15) 		));
+}
+
+.active > .a\:br_warning-2 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.37 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.37) 		));
+}
+
+.active > .a\:br_warning-3 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.6 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.6) 		));
+}
+
+.active > .a\:br_warning-4 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.78 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.78) 		));
+}
+
+.active > .a\:br_warning-5 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.9 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.9) 		));
+}
+
+.active > .a\:br_alert {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.active > .a\:br_alert-0 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.active > .a\:br_alert-1 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.15 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.15) 		));
+}
+
+.active > .a\:br_alert-2 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.37 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.37) 		));
+}
+
+.active > .a\:br_alert-3 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.6 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.6) 		));
+}
+
+.active > .a\:br_alert-4 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.78 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.78) 		));
+}
+
+.active > .a\:br_alert-5 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.9 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.9) 		));
+}
+
 .active.a\:br_brand {
   border-color: hsl(var(--brand-h), calc( 			var(--brand-s) + 				((100% - var(--brand-s)) * (0 *.1)) 		), calc( 			var(--brand-l) + 				((100% - var(--brand-l)) * 0) 		));
 }
@@ -7975,6 +9235,78 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
 
 .active.a\:br_white-10 {
   border-color: hsla(var(--white-h), var(--white-s), var(--white-l), 1);
+}
+
+.active.a\:br_success {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.active.a\:br_success-n1 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.15 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.15) 		));
+}
+
+.active.a\:br_success-n2 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.37 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.37) 		));
+}
+
+.active.a\:br_success-n3 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.6 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.6) 		));
+}
+
+.active.a\:br_success-n4 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.78 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.78) 		));
+}
+
+.active.a\:br_success-n5 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.9 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.9) 		));
+}
+
+.active.a\:br_warning {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.active.a\:br_warning-n1 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.15 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.15) 		));
+}
+
+.active.a\:br_warning-n2 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.37 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.37) 		));
+}
+
+.active.a\:br_warning-n3 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.6 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.6) 		));
+}
+
+.active.a\:br_warning-n4 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.78 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.78) 		));
+}
+
+.active.a\:br_warning-n5 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.9 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.9) 		));
+}
+
+.active.a\:br_alert {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.active.a\:br_alert-n1 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.15 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.15) 		));
+}
+
+.active.a\:br_alert-n2 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.37 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.37) 		));
+}
+
+.active.a\:br_alert-n3 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.6 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.6) 		));
+}
+
+.active.a\:br_alert-n4 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.78 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.78) 		));
+}
+
+.active.a\:br_alert-n5 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.9 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.9) 		));
 }
 
 .active.a\:br_brand {
@@ -8229,6 +9561,90 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
   border-color: hsla(var(--white-h), var(--white-s), var(--white-l), 1);
 }
 
+.active.a\:br_success {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.active.a\:br_success-0 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.active.a\:br_success-1 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.15 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.15) 		));
+}
+
+.active.a\:br_success-2 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.37 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.37) 		));
+}
+
+.active.a\:br_success-3 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.6 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.6) 		));
+}
+
+.active.a\:br_success-4 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.78 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.78) 		));
+}
+
+.active.a\:br_success-5 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.9 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.9) 		));
+}
+
+.active.a\:br_warning {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.active.a\:br_warning-0 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.active.a\:br_warning-1 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.15 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.15) 		));
+}
+
+.active.a\:br_warning-2 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.37 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.37) 		));
+}
+
+.active.a\:br_warning-3 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.6 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.6) 		));
+}
+
+.active.a\:br_warning-4 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.78 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.78) 		));
+}
+
+.active.a\:br_warning-5 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.9 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.9) 		));
+}
+
+.active.a\:br_alert {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.active.a\:br_alert-0 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.active.a\:br_alert-1 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.15 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.15) 		));
+}
+
+.active.a\:br_alert-2 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.37 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.37) 		));
+}
+
+.active.a\:br_alert-3 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.6 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.6) 		));
+}
+
+.active.a\:br_alert-4 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.78 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.78) 		));
+}
+
+.active.a\:br_alert-5 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.9 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.9) 		));
+}
+
 .is-active > .a\:br_brand {
   border-color: hsl(var(--brand-h), calc( 			var(--brand-s) + 				((100% - var(--brand-s)) * (0 *.1)) 		), calc( 			var(--brand-l) + 				((100% - var(--brand-l)) * 0) 		));
 }
@@ -8459,6 +9875,78 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
 
 .is-active > .a\:br_white-10 {
   border-color: hsla(var(--white-h), var(--white-s), var(--white-l), 1);
+}
+
+.is-active > .a\:br_success {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.is-active > .a\:br_success-n1 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.15 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.15) 		));
+}
+
+.is-active > .a\:br_success-n2 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.37 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.37) 		));
+}
+
+.is-active > .a\:br_success-n3 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.6 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.6) 		));
+}
+
+.is-active > .a\:br_success-n4 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.78 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.78) 		));
+}
+
+.is-active > .a\:br_success-n5 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.9 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.9) 		));
+}
+
+.is-active > .a\:br_warning {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.is-active > .a\:br_warning-n1 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.15 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.15) 		));
+}
+
+.is-active > .a\:br_warning-n2 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.37 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.37) 		));
+}
+
+.is-active > .a\:br_warning-n3 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.6 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.6) 		));
+}
+
+.is-active > .a\:br_warning-n4 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.78 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.78) 		));
+}
+
+.is-active > .a\:br_warning-n5 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.9 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.9) 		));
+}
+
+.is-active > .a\:br_alert {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.is-active > .a\:br_alert-n1 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.15 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.15) 		));
+}
+
+.is-active > .a\:br_alert-n2 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.37 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.37) 		));
+}
+
+.is-active > .a\:br_alert-n3 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.6 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.6) 		));
+}
+
+.is-active > .a\:br_alert-n4 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.78 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.78) 		));
+}
+
+.is-active > .a\:br_alert-n5 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.9 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.9) 		));
 }
 
 .is-active > .a\:br_brand {
@@ -8713,6 +10201,90 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
   border-color: hsla(var(--white-h), var(--white-s), var(--white-l), 1);
 }
 
+.is-active > .a\:br_success {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.is-active > .a\:br_success-0 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.is-active > .a\:br_success-1 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.15 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.15) 		));
+}
+
+.is-active > .a\:br_success-2 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.37 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.37) 		));
+}
+
+.is-active > .a\:br_success-3 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.6 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.6) 		));
+}
+
+.is-active > .a\:br_success-4 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.78 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.78) 		));
+}
+
+.is-active > .a\:br_success-5 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.9 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.9) 		));
+}
+
+.is-active > .a\:br_warning {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.is-active > .a\:br_warning-0 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.is-active > .a\:br_warning-1 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.15 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.15) 		));
+}
+
+.is-active > .a\:br_warning-2 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.37 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.37) 		));
+}
+
+.is-active > .a\:br_warning-3 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.6 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.6) 		));
+}
+
+.is-active > .a\:br_warning-4 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.78 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.78) 		));
+}
+
+.is-active > .a\:br_warning-5 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.9 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.9) 		));
+}
+
+.is-active > .a\:br_alert {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.is-active > .a\:br_alert-0 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.is-active > .a\:br_alert-1 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.15 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.15) 		));
+}
+
+.is-active > .a\:br_alert-2 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.37 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.37) 		));
+}
+
+.is-active > .a\:br_alert-3 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.6 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.6) 		));
+}
+
+.is-active > .a\:br_alert-4 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.78 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.78) 		));
+}
+
+.is-active > .a\:br_alert-5 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.9 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.9) 		));
+}
+
 .is-active.a\:br_brand {
   border-color: hsl(var(--brand-h), calc( 			var(--brand-s) + 				((100% - var(--brand-s)) * (0 *.1)) 		), calc( 			var(--brand-l) + 				((100% - var(--brand-l)) * 0) 		));
 }
@@ -8943,6 +10515,78 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
 
 .is-active.a\:br_white-10 {
   border-color: hsla(var(--white-h), var(--white-s), var(--white-l), 1);
+}
+
+.is-active.a\:br_success {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.is-active.a\:br_success-n1 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.15 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.15) 		));
+}
+
+.is-active.a\:br_success-n2 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.37 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.37) 		));
+}
+
+.is-active.a\:br_success-n3 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.6 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.6) 		));
+}
+
+.is-active.a\:br_success-n4 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.78 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.78) 		));
+}
+
+.is-active.a\:br_success-n5 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.9 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.9) 		));
+}
+
+.is-active.a\:br_warning {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.is-active.a\:br_warning-n1 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.15 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.15) 		));
+}
+
+.is-active.a\:br_warning-n2 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.37 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.37) 		));
+}
+
+.is-active.a\:br_warning-n3 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.6 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.6) 		));
+}
+
+.is-active.a\:br_warning-n4 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.78 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.78) 		));
+}
+
+.is-active.a\:br_warning-n5 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.9 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.9) 		));
+}
+
+.is-active.a\:br_alert {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.is-active.a\:br_alert-n1 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.15 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.15) 		));
+}
+
+.is-active.a\:br_alert-n2 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.37 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.37) 		));
+}
+
+.is-active.a\:br_alert-n3 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.6 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.6) 		));
+}
+
+.is-active.a\:br_alert-n4 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.78 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.78) 		));
+}
+
+.is-active.a\:br_alert-n5 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.9 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.9) 		));
 }
 
 .is-active.a\:br_brand {
@@ -9197,6 +10841,90 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
   border-color: hsla(var(--white-h), var(--white-s), var(--white-l), 1);
 }
 
+.is-active.a\:br_success {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.is-active.a\:br_success-0 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.is-active.a\:br_success-1 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.15 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.15) 		));
+}
+
+.is-active.a\:br_success-2 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.37 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.37) 		));
+}
+
+.is-active.a\:br_success-3 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.6 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.6) 		));
+}
+
+.is-active.a\:br_success-4 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.78 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.78) 		));
+}
+
+.is-active.a\:br_success-5 {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.9 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.9) 		));
+}
+
+.is-active.a\:br_warning {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.is-active.a\:br_warning-0 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.is-active.a\:br_warning-1 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.15 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.15) 		));
+}
+
+.is-active.a\:br_warning-2 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.37 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.37) 		));
+}
+
+.is-active.a\:br_warning-3 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.6 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.6) 		));
+}
+
+.is-active.a\:br_warning-4 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.78 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.78) 		));
+}
+
+.is-active.a\:br_warning-5 {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.9 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.9) 		));
+}
+
+.is-active.a\:br_alert {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.is-active.a\:br_alert-0 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.is-active.a\:br_alert-1 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.15 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.15) 		));
+}
+
+.is-active.a\:br_alert-2 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.37 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.37) 		));
+}
+
+.is-active.a\:br_alert-3 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.6 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.6) 		));
+}
+
+.is-active.a\:br_alert-4 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.78 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.78) 		));
+}
+
+.is-active.a\:br_alert-5 {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.9 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.9) 		));
+}
+
 .h\:br_brand:hover {
   border-color: hsl(var(--brand-h), calc( 			var(--brand-s) + 				((100% - var(--brand-s)) * (0 *.1)) 		), calc( 			var(--brand-l) + 				((100% - var(--brand-l)) * 0) 		));
 }
@@ -9427,6 +11155,78 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
 
 .h\:br_white-10:hover {
   border-color: hsla(var(--white-h), var(--white-s), var(--white-l), 1);
+}
+
+.h\:br_success:hover {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.h\:br_success-n1:hover {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.15 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.15) 		));
+}
+
+.h\:br_success-n2:hover {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.37 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.37) 		));
+}
+
+.h\:br_success-n3:hover {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.6 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.6) 		));
+}
+
+.h\:br_success-n4:hover {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.78 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.78) 		));
+}
+
+.h\:br_success-n5:hover {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.9 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.9) 		));
+}
+
+.h\:br_warning:hover {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.h\:br_warning-n1:hover {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.15 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.15) 		));
+}
+
+.h\:br_warning-n2:hover {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.37 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.37) 		));
+}
+
+.h\:br_warning-n3:hover {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.6 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.6) 		));
+}
+
+.h\:br_warning-n4:hover {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.78 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.78) 		));
+}
+
+.h\:br_warning-n5:hover {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.9 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.9) 		));
+}
+
+.h\:br_alert:hover {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.h\:br_alert-n1:hover {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.15 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.15) 		));
+}
+
+.h\:br_alert-n2:hover {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.37 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.37) 		));
+}
+
+.h\:br_alert-n3:hover {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.6 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.6) 		));
+}
+
+.h\:br_alert-n4:hover {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.78 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.78) 		));
+}
+
+.h\:br_alert-n5:hover {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.9 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.9) 		));
 }
 
 .h\:br_brand:hover {
@@ -9679,6 +11479,90 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
 
 .h\:br_white-10:hover {
   border-color: hsla(var(--white-h), var(--white-s), var(--white-l), 1);
+}
+
+.h\:br_success:hover {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.h\:br_success-0:hover {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.h\:br_success-1:hover {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.15 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.15) 		));
+}
+
+.h\:br_success-2:hover {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.37 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.37) 		));
+}
+
+.h\:br_success-3:hover {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.6 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.6) 		));
+}
+
+.h\:br_success-4:hover {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.78 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.78) 		));
+}
+
+.h\:br_success-5:hover {
+  border-color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.9 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.9) 		));
+}
+
+.h\:br_warning:hover {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.h\:br_warning-0:hover {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.h\:br_warning-1:hover {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.15 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.15) 		));
+}
+
+.h\:br_warning-2:hover {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.37 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.37) 		));
+}
+
+.h\:br_warning-3:hover {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.6 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.6) 		));
+}
+
+.h\:br_warning-4:hover {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.78 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.78) 		));
+}
+
+.h\:br_warning-5:hover {
+  border-color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.9 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.9) 		));
+}
+
+.h\:br_alert:hover {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.h\:br_alert-0:hover {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.h\:br_alert-1:hover {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.15 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.15) 		));
+}
+
+.h\:br_alert-2:hover {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.37 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.37) 		));
+}
+
+.h\:br_alert-3:hover {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.6 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.6) 		));
+}
+
+.h\:br_alert-4:hover {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.78 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.78) 		));
+}
+
+.h\:br_alert-5:hover {
+  border-color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.9 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.9) 		));
 }
 
 .br_square {
@@ -11801,6 +13685,78 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
   color: hsla(var(--white-h), var(--white-s), var(--white-l), 1);
 }
 
+.c_success {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.c_success-n1 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.15 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.15) 		));
+}
+
+.c_success-n2 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.37 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.37) 		));
+}
+
+.c_success-n3 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.6 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.6) 		));
+}
+
+.c_success-n4 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.78 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.78) 		));
+}
+
+.c_success-n5 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.9 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.9) 		));
+}
+
+.c_warning {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.c_warning-n1 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.15 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.15) 		));
+}
+
+.c_warning-n2 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.37 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.37) 		));
+}
+
+.c_warning-n3 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.6 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.6) 		));
+}
+
+.c_warning-n4 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.78 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.78) 		));
+}
+
+.c_warning-n5 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.9 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.9) 		));
+}
+
+.c_alert {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.c_alert-n1 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.15 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.15) 		));
+}
+
+.c_alert-n2 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.37 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.37) 		));
+}
+
+.c_alert-n3 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.6 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.6) 		));
+}
+
+.c_alert-n4 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.78 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.78) 		));
+}
+
+.c_alert-n5 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.9 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.9) 		));
+}
+
 .c_brand {
   color: hsl(var(--brand-h), calc( 			var(--brand-s) + 				((100% - var(--brand-s)) * (0 *.1)) 		), calc( 			var(--brand-l) + 				((100% - var(--brand-l)) * 0) 		));
 }
@@ -12053,6 +14009,90 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
   color: hsla(var(--white-h), var(--white-s), var(--white-l), 1);
 }
 
+.c_success {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.c_success-0 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.c_success-1 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.15 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.15) 		));
+}
+
+.c_success-2 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.37 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.37) 		));
+}
+
+.c_success-3 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.6 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.6) 		));
+}
+
+.c_success-4 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.78 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.78) 		));
+}
+
+.c_success-5 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.9 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.9) 		));
+}
+
+.c_warning {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.c_warning-0 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.c_warning-1 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.15 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.15) 		));
+}
+
+.c_warning-2 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.37 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.37) 		));
+}
+
+.c_warning-3 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.6 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.6) 		));
+}
+
+.c_warning-4 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.78 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.78) 		));
+}
+
+.c_warning-5 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.9 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.9) 		));
+}
+
+.c_alert {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.c_alert-0 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.c_alert-1 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.15 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.15) 		));
+}
+
+.c_alert-2 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.37 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.37) 		));
+}
+
+.c_alert-3 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.6 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.6) 		));
+}
+
+.c_alert-4 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.78 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.78) 		));
+}
+
+.c_alert-5 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.9 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.9) 		));
+}
+
 .active > .a\:c_brand {
   color: hsl(var(--brand-h), calc( 			var(--brand-s) + 				((100% - var(--brand-s)) * (0 *.1)) 		), calc( 			var(--brand-l) + 				((100% - var(--brand-l)) * 0) 		));
 }
@@ -12283,6 +14323,78 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
 
 .active > .a\:c_white-10 {
   color: hsla(var(--white-h), var(--white-s), var(--white-l), 1);
+}
+
+.active > .a\:c_success {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.active > .a\:c_success-n1 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.15 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.15) 		));
+}
+
+.active > .a\:c_success-n2 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.37 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.37) 		));
+}
+
+.active > .a\:c_success-n3 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.6 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.6) 		));
+}
+
+.active > .a\:c_success-n4 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.78 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.78) 		));
+}
+
+.active > .a\:c_success-n5 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.9 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.9) 		));
+}
+
+.active > .a\:c_warning {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.active > .a\:c_warning-n1 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.15 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.15) 		));
+}
+
+.active > .a\:c_warning-n2 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.37 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.37) 		));
+}
+
+.active > .a\:c_warning-n3 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.6 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.6) 		));
+}
+
+.active > .a\:c_warning-n4 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.78 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.78) 		));
+}
+
+.active > .a\:c_warning-n5 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.9 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.9) 		));
+}
+
+.active > .a\:c_alert {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.active > .a\:c_alert-n1 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.15 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.15) 		));
+}
+
+.active > .a\:c_alert-n2 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.37 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.37) 		));
+}
+
+.active > .a\:c_alert-n3 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.6 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.6) 		));
+}
+
+.active > .a\:c_alert-n4 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.78 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.78) 		));
+}
+
+.active > .a\:c_alert-n5 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.9 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.9) 		));
 }
 
 .active > .a\:c_brand {
@@ -12537,6 +14649,90 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
   color: hsla(var(--white-h), var(--white-s), var(--white-l), 1);
 }
 
+.active > .a\:c_success {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.active > .a\:c_success-0 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.active > .a\:c_success-1 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.15 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.15) 		));
+}
+
+.active > .a\:c_success-2 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.37 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.37) 		));
+}
+
+.active > .a\:c_success-3 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.6 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.6) 		));
+}
+
+.active > .a\:c_success-4 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.78 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.78) 		));
+}
+
+.active > .a\:c_success-5 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.9 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.9) 		));
+}
+
+.active > .a\:c_warning {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.active > .a\:c_warning-0 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.active > .a\:c_warning-1 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.15 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.15) 		));
+}
+
+.active > .a\:c_warning-2 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.37 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.37) 		));
+}
+
+.active > .a\:c_warning-3 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.6 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.6) 		));
+}
+
+.active > .a\:c_warning-4 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.78 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.78) 		));
+}
+
+.active > .a\:c_warning-5 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.9 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.9) 		));
+}
+
+.active > .a\:c_alert {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.active > .a\:c_alert-0 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.active > .a\:c_alert-1 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.15 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.15) 		));
+}
+
+.active > .a\:c_alert-2 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.37 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.37) 		));
+}
+
+.active > .a\:c_alert-3 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.6 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.6) 		));
+}
+
+.active > .a\:c_alert-4 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.78 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.78) 		));
+}
+
+.active > .a\:c_alert-5 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.9 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.9) 		));
+}
+
 .active.a\:c_brand {
   color: hsl(var(--brand-h), calc( 			var(--brand-s) + 				((100% - var(--brand-s)) * (0 *.1)) 		), calc( 			var(--brand-l) + 				((100% - var(--brand-l)) * 0) 		));
 }
@@ -12767,6 +14963,78 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
 
 .active.a\:c_white-10 {
   color: hsla(var(--white-h), var(--white-s), var(--white-l), 1);
+}
+
+.active.a\:c_success {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.active.a\:c_success-n1 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.15 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.15) 		));
+}
+
+.active.a\:c_success-n2 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.37 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.37) 		));
+}
+
+.active.a\:c_success-n3 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.6 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.6) 		));
+}
+
+.active.a\:c_success-n4 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.78 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.78) 		));
+}
+
+.active.a\:c_success-n5 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.9 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.9) 		));
+}
+
+.active.a\:c_warning {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.active.a\:c_warning-n1 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.15 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.15) 		));
+}
+
+.active.a\:c_warning-n2 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.37 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.37) 		));
+}
+
+.active.a\:c_warning-n3 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.6 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.6) 		));
+}
+
+.active.a\:c_warning-n4 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.78 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.78) 		));
+}
+
+.active.a\:c_warning-n5 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.9 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.9) 		));
+}
+
+.active.a\:c_alert {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.active.a\:c_alert-n1 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.15 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.15) 		));
+}
+
+.active.a\:c_alert-n2 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.37 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.37) 		));
+}
+
+.active.a\:c_alert-n3 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.6 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.6) 		));
+}
+
+.active.a\:c_alert-n4 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.78 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.78) 		));
+}
+
+.active.a\:c_alert-n5 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.9 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.9) 		));
 }
 
 .active.a\:c_brand {
@@ -13021,6 +15289,90 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
   color: hsla(var(--white-h), var(--white-s), var(--white-l), 1);
 }
 
+.active.a\:c_success {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.active.a\:c_success-0 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.active.a\:c_success-1 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.15 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.15) 		));
+}
+
+.active.a\:c_success-2 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.37 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.37) 		));
+}
+
+.active.a\:c_success-3 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.6 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.6) 		));
+}
+
+.active.a\:c_success-4 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.78 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.78) 		));
+}
+
+.active.a\:c_success-5 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.9 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.9) 		));
+}
+
+.active.a\:c_warning {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.active.a\:c_warning-0 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.active.a\:c_warning-1 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.15 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.15) 		));
+}
+
+.active.a\:c_warning-2 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.37 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.37) 		));
+}
+
+.active.a\:c_warning-3 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.6 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.6) 		));
+}
+
+.active.a\:c_warning-4 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.78 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.78) 		));
+}
+
+.active.a\:c_warning-5 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.9 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.9) 		));
+}
+
+.active.a\:c_alert {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.active.a\:c_alert-0 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.active.a\:c_alert-1 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.15 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.15) 		));
+}
+
+.active.a\:c_alert-2 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.37 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.37) 		));
+}
+
+.active.a\:c_alert-3 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.6 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.6) 		));
+}
+
+.active.a\:c_alert-4 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.78 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.78) 		));
+}
+
+.active.a\:c_alert-5 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.9 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.9) 		));
+}
+
 .is-active > .a\:c_brand {
   color: hsl(var(--brand-h), calc( 			var(--brand-s) + 				((100% - var(--brand-s)) * (0 *.1)) 		), calc( 			var(--brand-l) + 				((100% - var(--brand-l)) * 0) 		));
 }
@@ -13251,6 +15603,78 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
 
 .is-active > .a\:c_white-10 {
   color: hsla(var(--white-h), var(--white-s), var(--white-l), 1);
+}
+
+.is-active > .a\:c_success {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.is-active > .a\:c_success-n1 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.15 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.15) 		));
+}
+
+.is-active > .a\:c_success-n2 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.37 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.37) 		));
+}
+
+.is-active > .a\:c_success-n3 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.6 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.6) 		));
+}
+
+.is-active > .a\:c_success-n4 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.78 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.78) 		));
+}
+
+.is-active > .a\:c_success-n5 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.9 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.9) 		));
+}
+
+.is-active > .a\:c_warning {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.is-active > .a\:c_warning-n1 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.15 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.15) 		));
+}
+
+.is-active > .a\:c_warning-n2 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.37 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.37) 		));
+}
+
+.is-active > .a\:c_warning-n3 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.6 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.6) 		));
+}
+
+.is-active > .a\:c_warning-n4 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.78 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.78) 		));
+}
+
+.is-active > .a\:c_warning-n5 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.9 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.9) 		));
+}
+
+.is-active > .a\:c_alert {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.is-active > .a\:c_alert-n1 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.15 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.15) 		));
+}
+
+.is-active > .a\:c_alert-n2 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.37 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.37) 		));
+}
+
+.is-active > .a\:c_alert-n3 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.6 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.6) 		));
+}
+
+.is-active > .a\:c_alert-n4 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.78 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.78) 		));
+}
+
+.is-active > .a\:c_alert-n5 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.9 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.9) 		));
 }
 
 .is-active > .a\:c_brand {
@@ -13505,6 +15929,90 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
   color: hsla(var(--white-h), var(--white-s), var(--white-l), 1);
 }
 
+.is-active > .a\:c_success {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.is-active > .a\:c_success-0 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.is-active > .a\:c_success-1 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.15 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.15) 		));
+}
+
+.is-active > .a\:c_success-2 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.37 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.37) 		));
+}
+
+.is-active > .a\:c_success-3 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.6 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.6) 		));
+}
+
+.is-active > .a\:c_success-4 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.78 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.78) 		));
+}
+
+.is-active > .a\:c_success-5 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.9 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.9) 		));
+}
+
+.is-active > .a\:c_warning {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.is-active > .a\:c_warning-0 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.is-active > .a\:c_warning-1 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.15 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.15) 		));
+}
+
+.is-active > .a\:c_warning-2 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.37 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.37) 		));
+}
+
+.is-active > .a\:c_warning-3 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.6 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.6) 		));
+}
+
+.is-active > .a\:c_warning-4 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.78 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.78) 		));
+}
+
+.is-active > .a\:c_warning-5 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.9 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.9) 		));
+}
+
+.is-active > .a\:c_alert {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.is-active > .a\:c_alert-0 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.is-active > .a\:c_alert-1 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.15 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.15) 		));
+}
+
+.is-active > .a\:c_alert-2 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.37 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.37) 		));
+}
+
+.is-active > .a\:c_alert-3 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.6 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.6) 		));
+}
+
+.is-active > .a\:c_alert-4 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.78 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.78) 		));
+}
+
+.is-active > .a\:c_alert-5 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.9 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.9) 		));
+}
+
 .is-active.a\:c_brand {
   color: hsl(var(--brand-h), calc( 			var(--brand-s) + 				((100% - var(--brand-s)) * (0 *.1)) 		), calc( 			var(--brand-l) + 				((100% - var(--brand-l)) * 0) 		));
 }
@@ -13735,6 +16243,78 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
 
 .is-active.a\:c_white-10 {
   color: hsla(var(--white-h), var(--white-s), var(--white-l), 1);
+}
+
+.is-active.a\:c_success {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.is-active.a\:c_success-n1 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.15 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.15) 		));
+}
+
+.is-active.a\:c_success-n2 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.37 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.37) 		));
+}
+
+.is-active.a\:c_success-n3 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.6 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.6) 		));
+}
+
+.is-active.a\:c_success-n4 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.78 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.78) 		));
+}
+
+.is-active.a\:c_success-n5 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.9 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.9) 		));
+}
+
+.is-active.a\:c_warning {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.is-active.a\:c_warning-n1 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.15 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.15) 		));
+}
+
+.is-active.a\:c_warning-n2 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.37 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.37) 		));
+}
+
+.is-active.a\:c_warning-n3 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.6 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.6) 		));
+}
+
+.is-active.a\:c_warning-n4 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.78 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.78) 		));
+}
+
+.is-active.a\:c_warning-n5 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.9 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.9) 		));
+}
+
+.is-active.a\:c_alert {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.is-active.a\:c_alert-n1 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.15 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.15) 		));
+}
+
+.is-active.a\:c_alert-n2 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.37 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.37) 		));
+}
+
+.is-active.a\:c_alert-n3 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.6 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.6) 		));
+}
+
+.is-active.a\:c_alert-n4 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.78 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.78) 		));
+}
+
+.is-active.a\:c_alert-n5 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.9 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.9) 		));
 }
 
 .is-active.a\:c_brand {
@@ -13989,6 +16569,90 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
   color: hsla(var(--white-h), var(--white-s), var(--white-l), 1);
 }
 
+.is-active.a\:c_success {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.is-active.a\:c_success-0 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.is-active.a\:c_success-1 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.15 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.15) 		));
+}
+
+.is-active.a\:c_success-2 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.37 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.37) 		));
+}
+
+.is-active.a\:c_success-3 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.6 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.6) 		));
+}
+
+.is-active.a\:c_success-4 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.78 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.78) 		));
+}
+
+.is-active.a\:c_success-5 {
+  color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.9 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.9) 		));
+}
+
+.is-active.a\:c_warning {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.is-active.a\:c_warning-0 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.is-active.a\:c_warning-1 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.15 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.15) 		));
+}
+
+.is-active.a\:c_warning-2 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.37 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.37) 		));
+}
+
+.is-active.a\:c_warning-3 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.6 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.6) 		));
+}
+
+.is-active.a\:c_warning-4 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.78 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.78) 		));
+}
+
+.is-active.a\:c_warning-5 {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.9 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.9) 		));
+}
+
+.is-active.a\:c_alert {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.is-active.a\:c_alert-0 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.is-active.a\:c_alert-1 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.15 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.15) 		));
+}
+
+.is-active.a\:c_alert-2 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.37 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.37) 		));
+}
+
+.is-active.a\:c_alert-3 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.6 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.6) 		));
+}
+
+.is-active.a\:c_alert-4 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.78 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.78) 		));
+}
+
+.is-active.a\:c_alert-5 {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.9 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.9) 		));
+}
+
 .h\:c_brand:hover {
   color: hsl(var(--brand-h), calc( 			var(--brand-s) + 				((100% - var(--brand-s)) * (0 *.1)) 		), calc( 			var(--brand-l) + 				((100% - var(--brand-l)) * 0) 		));
 }
@@ -14219,6 +16883,78 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
 
 .h\:c_white-10:hover {
   color: hsla(var(--white-h), var(--white-s), var(--white-l), 1);
+}
+
+.h\:c_success:hover {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.h\:c_success-n1:hover {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.15 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.15) 		));
+}
+
+.h\:c_success-n2:hover {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.37 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.37) 		));
+}
+
+.h\:c_success-n3:hover {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.6 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.6) 		));
+}
+
+.h\:c_success-n4:hover {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.78 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.78) 		));
+}
+
+.h\:c_success-n5:hover {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (-0.9 *.1)) 		), calc( 			var(--success-l) + 				((var(--success-l)) * -0.9) 		));
+}
+
+.h\:c_warning:hover {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.h\:c_warning-n1:hover {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.15 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.15) 		));
+}
+
+.h\:c_warning-n2:hover {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.37 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.37) 		));
+}
+
+.h\:c_warning-n3:hover {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.6 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.6) 		));
+}
+
+.h\:c_warning-n4:hover {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.78 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.78) 		));
+}
+
+.h\:c_warning-n5:hover {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (-0.9 *.1)) 		), calc( 			var(--warning-l) + 				((var(--warning-l)) * -0.9) 		));
+}
+
+.h\:c_alert:hover {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.h\:c_alert-n1:hover {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.15 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.15) 		));
+}
+
+.h\:c_alert-n2:hover {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.37 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.37) 		));
+}
+
+.h\:c_alert-n3:hover {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.6 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.6) 		));
+}
+
+.h\:c_alert-n4:hover {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.78 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.78) 		));
+}
+
+.h\:c_alert-n5:hover {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (-0.9 *.1)) 		), calc( 			var(--alert-l) + 				((var(--alert-l)) * -0.9) 		));
 }
 
 .h\:c_brand:hover {
@@ -14471,6 +17207,90 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
 
 .h\:c_white-10:hover {
   color: hsla(var(--white-h), var(--white-s), var(--white-l), 1);
+}
+
+.h\:c_success:hover {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.h\:c_success-0:hover {
+  color: hsl(var(--success-h), calc( 			var(--success-s) + 				((100% - var(--success-s)) * (0 *.1)) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0) 		));
+}
+
+.h\:c_success-1:hover {
+  color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.15 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.15) 		));
+}
+
+.h\:c_success-2:hover {
+  color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.37 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.37) 		));
+}
+
+.h\:c_success-3:hover {
+  color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.6 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.6) 		));
+}
+
+.h\:c_success-4:hover {
+  color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.78 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.78) 		));
+}
+
+.h\:c_success-5:hover {
+  color: hsl(var(--success-h), calc( 			var(--success-s) - 				((var(--success-s)) * 0.9 * .1 ) 		), calc( 			var(--success-l) + 				((100% - var(--success-l)) * 0.9) 		));
+}
+
+.h\:c_warning:hover {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.h\:c_warning-0:hover {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) + 				((100% - var(--warning-s)) * (0 *.1)) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0) 		));
+}
+
+.h\:c_warning-1:hover {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.15 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.15) 		));
+}
+
+.h\:c_warning-2:hover {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.37 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.37) 		));
+}
+
+.h\:c_warning-3:hover {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.6 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.6) 		));
+}
+
+.h\:c_warning-4:hover {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.78 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.78) 		));
+}
+
+.h\:c_warning-5:hover {
+  color: hsl(var(--warning-h), calc( 			var(--warning-s) - 				((var(--warning-s)) * 0.9 * .1 ) 		), calc( 			var(--warning-l) + 				((100% - var(--warning-l)) * 0.9) 		));
+}
+
+.h\:c_alert:hover {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.h\:c_alert-0:hover {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) + 				((100% - var(--alert-s)) * (0 *.1)) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0) 		));
+}
+
+.h\:c_alert-1:hover {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.15 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.15) 		));
+}
+
+.h\:c_alert-2:hover {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.37 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.37) 		));
+}
+
+.h\:c_alert-3:hover {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.6 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.6) 		));
+}
+
+.h\:c_alert-4:hover {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.78 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.78) 		));
+}
+
+.h\:c_alert-5:hover {
+  color: hsl(var(--alert-h), calc( 			var(--alert-s) - 				((var(--alert-s)) * 0.9 * .1 ) 		), calc( 			var(--alert-l) + 				((100% - var(--alert-l)) * 0.9) 		));
 }
 
 .font_accent {

@@ -58,6 +58,42 @@ ul[data-element="button-ripple--wrapper"] {
 	);
 	width: 2em;
 	height: 2em;
+	// position: relative;
+	aspect-ratio: 1/1;
+
+	display: grid;
+	grid-template-columns: [t] .2em  [c] 1.6em  [b] .2em;
+	grid-template-rows: [l] .2em [c] 1.6em [r].2em;
+	
+	justify-content: center;
+	align-items: center;
+	z-index:0;
+	[data-element-option="block-end"] & {
+		margin-block-start: -0.35em;
+		border-start-start-radius: 50%;
+		border-start-end-radius: 50%;
+	}
+	[data-element-option="block-start"] & {
+		margin-block-end: -0.35em;
+		border-end-end-radius: 50%;
+		border-end-start-radius: 50%;
+	}
+	[data-element-option="inline-start"] &{
+		margin-inline-end: -0.35em;
+		border-start-end-radius: 50%;
+		border-end-end-radius: 50%;
+	}
+	[data-element-option="inline-end"] & {
+		margin-inline-start: -0.35em;
+		border-start-start-radius: 50%;
+		border-end-start-radius: 50%;
+	}
+}
+[data-element="button-ripple--button-edge-corners"] {
+	grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row-end: -1;
+    grid-column-end: -1;
 	position: relative;
 	aspect-ratio: 1/1;
 	display: grid;
@@ -75,9 +111,6 @@ ul[data-element="button-ripple--wrapper"] {
 		border-radius: 50%;
 	}
 	[data-element-option="block-end"] & {
-		margin-block-start: -0.35em;
-		border-start-start-radius: 50%;
-		border-start-end-radius: 50%;
 		&:after,
 		&:before {
 			inset-block-start: 0.25em;
@@ -102,9 +135,6 @@ ul[data-element="button-ripple--wrapper"] {
 		}
 	}
 	[data-element-option="block-start"] & {
-		margin-block-end: -0.35em;
-		border-end-end-radius: 50%;
-		border-end-start-radius: 50%;
 		&:after,
 		&:before {
 			inset-block-end: 0.25em;
@@ -129,9 +159,6 @@ ul[data-element="button-ripple--wrapper"] {
 		}
 	}
 	[data-element-option="inline-start"] &{
-		margin-inline-end: -0.35em;
-		border-start-end-radius: 50%;
-		border-end-end-radius: 50%;
 		&:after,
 		&:before {
 			inset-inline-end: 0.25em;
@@ -156,9 +183,6 @@ ul[data-element="button-ripple--wrapper"] {
 		}
 	}
 	[data-element-option="inline-end"] & {
-		margin-inline-start: -0.35em;
-		border-start-start-radius: 50%;
-		border-end-start-radius: 50%;
 		&:after,
 		&:before {
 			inset-inline-start: 0.25em;
@@ -180,8 +204,8 @@ ul[data-element="button-ripple--wrapper"] {
 		}
 	}
 }
-
 [data-element="button-ripple--button"] {
+	grid-area: c;
 	border-radius: 50%;
 	aspect-ratio: 1/1;
 	width: 1.6em;
