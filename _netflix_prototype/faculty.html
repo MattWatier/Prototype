@@ -7,11 +7,11 @@ facultyActive: true
 
 {% include_relative netflix/app-header-w-search.html %}
 {% include_relative netflix/breadcrumb-course.html %}
-<header class="grid-area_pageHead overflow_visible relative bg_white-8 relative p_5:xl p_4:lg p_3 font_n1 font_0:lg font_1:xxl br-b_1 br_black-3 br_solid">
+<header id="AlphaNavTop" class="grid-area_pageHead overflow_visible relative bg_white-8 relative p_5:xl p_4:lg p_3 font_n1 font_0:lg font_1:xxl br-b_1 br_black-3 br_solid">
 	<h2 class="font-size_up-1 font_bold font_display c_primary-n1 m-y_0 lh_1">Faculty</h2>
 
 </header>
-<div class="grid-area_mainArea br-br_radius overflow_visible bg_white-7 p_6:xl p_4:md p_3" id="AlphaNavTop">
+<div class="grid-area_mainArea br-br_radius overflow_visible bg_white-7 p_6:xl p_4:md p_3">
 	{% assign alpha_array = 'A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z' | split: ',' %}
 	{% assign people = site.data.people | sort: 'sortname' %}
 	{% assign alpha_categories = people | map: 'group' %}
@@ -21,8 +21,9 @@ facultyActive: true
 	{% if contains_titles.size >= 1 and contains_titles.first != '' %}
 	  {% assign location_font_size = 'font-size_1' %}
 	{% endif %}
-	<section class="relative" >
-	  <div class="sticky t_0:md t_5 r_0 z_1">
+	<section class="relative font_1:xl font_0:md font_n1" >
+
+	  <div class="sticky t_0:md t_5 r_0 z_1 font_0">
 		<div class="absolute r_4 t_0:md t_3 flex flex_row flex_nowrap gap-x_3">
 		  <!-- Helper Jump links -->
 		  <a
@@ -38,7 +39,7 @@ facultyActive: true
 		</div>
 	  </div>
 	  <nav
-		class="bg_white br_radius grid items_center p_3 p_4:lg relative shadow_overlap-light z_2 m-t_n2"
+		class="bg_white br_radius grid items_center p_3 p_4:lg relative shadow_overlap-light z_2 m-t_n2 font_0"
 	  >
 		<ul
 		  class="c_secondary-2 flex:lg flex_row font_bold gap_4 grid grid-x_5 justify_around:lg justify_center m-x_4 m-y_3 ul_none"
@@ -66,7 +67,7 @@ facultyActive: true
 		{% if alpha_categories contains alpha %}
 		  <div
 			id="{{alpha}}"
-			class="relative br-t_1 br_dotted br_primary-3 w_100 p-y_4 font_0 flex_row flex"
+			class="relative br-t_1 br_dotted br_primary-3 w_100 p-y_4 flex_row flex"
 		  >
 			<div class="flex_none">
 			  <div

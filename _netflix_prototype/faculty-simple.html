@@ -21,12 +21,12 @@ facultyActive: true
 	{% if contains_titles.size >= 1 and contains_titles.first != '' %}
 	  {% assign location_font_size = 'font-size_down-1' %}
 	{% endif %}
-	<section class="relative" >
+	<section class="relative font_1:xl font_0:md font_n1" >
 	  {% for alpha in alpha_array %}
 		{% if alpha_categories contains alpha %}
 		  <div
 			id="{{alpha}}"
-			class="relative w_100 p-y_4 font_0 flex_row flex"
+			class="relative w_100 p-y_4 flex_row flex"
 		  >
 			<div class="flex_none">
 			  <div
@@ -40,7 +40,7 @@ facultyActive: true
 			>
 			  {% for person in people %}
 				{% if person.group == alpha %}
-				  <li class="lh_1 font_ui flex flex_column p-b_4 m-b_4 font_0 gap-x_5:lg gap-x_4 bg_white-4 br_round p_5:lg p_4:md p_3">
+				  <li class="lh_1 font_ui flex flex_column p-b_4 m-b_4 gap-x_5:lg gap-x_4 bg_white-4 br_round p_5:lg p_4:md p_3">
 
 					<div
 						class="flex_shrink m-b_4 grid items_center justify_center "
