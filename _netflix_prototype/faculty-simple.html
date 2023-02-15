@@ -1,0 +1,94 @@
+--- 
+layout: library_app_frame 
+name: "Faculty Simple" 
+uri: "root/outline/faculty" 
+facultyActive: true 
+---
+
+{% include_relative netflix/app-header-w-search.html %}
+{% include_relative netflix/breadcrumb-course.html %}
+<header class="grid-area_pageHead overflow_visible relative bg_white-8 relative p_5:xl p_4:lg p_3 font_n1 font_0:lg font_1:xxl br-b_1 br_black-3 br_solid">
+	<h2 class="font-size_up-1 font_bold font_display c_primary-n1 m-y_0 lh_1">Faculty</h2>
+
+</header>
+<div class="grid-area_mainArea br-br_radius overflow_visible bg_white-7 p_6:xl p_4:md p_3" id="AlphaNavTop">
+	{% assign alpha_array = 'A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z' | split: ',' %}
+	{% assign people = site.data.people | sort: 'sortname' %}
+	{% assign alpha_categories = people | map: 'group' %}
+	{% assign contains_titles = people | map: 'title' %}
+	{% assign contains_titles = contains_titles | uniq %}
+	{% assign location_font_size = 'font-size_0' %}
+	{% if contains_titles.size >= 1 and contains_titles.first != '' %}
+	  {% assign location_font_size = 'font-size_down-1' %}
+	{% endif %}
+	<section class="relative" >
+	  {% for alpha in alpha_array %}
+		{% if alpha_categories contains alpha %}
+		  <div
+			id="{{alpha}}"
+			class="relative w_100 p-y_4 font_0 flex_row flex"
+		  >
+			<div class="flex_none">
+			  <div
+				class="c_white font-size_up-4 font_accent font_bold inline-block uppercase shadow_overlap-light bg_primary-n2 lh_0 br_radius p_2 p-x_4 m-x_3 sticky t_4 flex_none"
+			  >
+				{{ alpha }}
+			  </div>
+			</div>
+			<ul
+			  class="flex_auto gap-x_5:lf gap-x_4 gap-y_4 grid grid-x_1 grid-x_2:md grid-x_3:lg grid-x_4:xl grid-x_5:xxl p-t_0 p_4 ul_none"
+			>
+			  {% for person in people %}
+				{% if person.group == alpha %}
+				  <li class="lh_1 font_ui flex flex_column p-b_4 m-b_4 font_0 gap-x_5:lg gap-x_4 bg_white-4 br_round p_5:lg p_4:md p_3">
+
+					<div
+						class="flex_shrink m-b_4 grid items_center justify_center "
+					>
+					<img
+						class="aspect_1x1 w_100 max-w_15 max-w_25:md shadow_overlap-light overflow_hidden br_radius br_black-3 br_1 br_solid self_center"
+						src="{{ 'https://i.pravatar.cc/300?' | append:person.fullname }}"
+						alt="{{ person.fullname }}"
+					/>	</div>
+					<div class="flex_auto flex_column justify_start">
+						<h2  data-name="newMember__name"
+						class="block font_display c_primary-n2 font-size_up-1 lh_0 m-b_2">{{ person.fullname }}</h2>
+						{% if person.title != null and person.title != '' %}
+					  <span
+						data-name="newMember__title"
+						class="block font-size_0 lh_1 m-b_2 c_black-8"
+					  >
+						{{- person.title -}}
+					  </span>
+					{% endif %}
+					{% if person.location != null and person.location != '' %}
+					  <span
+						data-name="newMember__location"
+						class="block c_secondary-n2 lh_1 m-b_2 {{location_font_size}} font_accent"
+					  >
+						{{ person.location -}}
+						{%- if person.location != null and person.country != null -%}
+						  ,
+						{% endif %}
+						{{ person.country -}}
+					  </span>
+
+						<div class="speaker_bio reading-typography max-w_50 font-size_0 lh_1 font_copy m-y_3">
+							<!-- This content can container html -->
+							<p>{{person.bio}}</p>        </div>
+						</div>				
+						<div class="grid justify_center m-t_auto">
+							<a class="btn btn-secondary bg_twitter br_radius c_white font-size_down-1 h:bg_secondary-n3 h:c_secondary-n3 h:c_white h:undecorated p-x_4 p_3" href="https://www.twitter.com/Tweat_DrSoda" target="_blank">
+								<i class="br-r_1 br-white-5 br_solid fa-twitter fab m-l_n2 m-r_3 m-y_n2 p-r_3 p-r_3:lg p-y_2"></i>
+								<i class="fa-at fas opacity_8 p-r_1"></i>
+								Tweat_DrSoda</a>        </div>
+					{% endif %}
+				  </li>
+				{% endif %}
+			  {% endfor %}
+			</ul>
+		  </div>
+		{% endif %}
+	  {% endfor %}
+	</section>
+</div>

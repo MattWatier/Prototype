@@ -1,0 +1,119 @@
+--- 
+layout: library_app_frame 
+name: "Faculty" 
+uri: "root/outline/faculty" 
+facultyActive: true 
+---
+
+{% include_relative netflix/app-header-w-search.html %}
+{% include_relative netflix/breadcrumb-course.html %}
+<header class="grid-area_pageHead overflow_visible relative bg_white-8 relative p_5:xl p_4:lg p_3 font_n1 font_0:lg font_1:xxl br-b_1 br_black-3 br_solid">
+	<h2 class="font-size_up-1 font_bold font_display c_primary-n1 m-y_0 lh_1">Faculty</h2>
+
+</header>
+<div class="grid-area_mainArea br-br_radius overflow_visible bg_white-7 p_6:xl p_4:md p_3" id="AlphaNavTop">
+	{% assign alpha_array = 'A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z' | split: ',' %}
+	{% assign people = site.data.people | sort: 'sortname' %}
+	{% assign alpha_categories = people | map: 'group' %}
+	{% assign contains_titles = people | map: 'title' %}
+	{% assign contains_titles = contains_titles | uniq %}
+	{% assign location_font_size = 'font-size_0' %}
+	{% if contains_titles.size >= 1 and contains_titles.first != '' %}
+	  {% assign location_font_size = 'font-size_1' %}
+	{% endif %}
+	<section class="relative" >
+	  <div class="sticky t_0:md t_5 r_0 z_1">
+		<div class="absolute r_4 t_0:md t_3 flex flex_row flex_nowrap gap-x_3">
+		  <!-- Helper Jump links -->
+		  <a
+			class="br-tl_square br-tr_square br_radius btn btn-accent btn-sm grid items_center justify_center m-l_auto self_center shadow_3"
+			href="{{"/netflix/faculty/#AlphaNavTop" | relative_url }}"
+		  >
+			<span>
+			  <i class="fas fa-arrow-up"></i>
+			  top</span
+			>
+		  </a>
+		  <!-- Helper Jump links -->
+		</div>
+	  </div>
+	  <nav
+		class="bg_white br_radius grid items_center p_3 p_4:lg relative shadow_overlap-light z_2 m-t_n2"
+	  >
+		<ul
+		  class="c_secondary-2 flex:lg flex_row font_bold gap_4 grid grid-x_5 justify_around:lg justify_center m-x_4 m-y_3 ul_none"
+		>
+		  <!-- Loop -->
+		  {% for alpha in alpha_array %}
+			{% if alpha_categories contains alpha %}
+			  <li class="c_black-7 text_center">
+				  
+				<a
+				  class="bg_primary-4 br_radius h:c_white h:bg_primary-n3 p-x_3 block h:undecorated"
+				  href="{{ alpha  | prepend:"/netflix/faculty/#" | relative_url }}"
+				>
+				  {{- alpha -}}
+				</a>
+			  </li>
+			{% else %}
+			  <li class="c_black-7 text_center">{{ alpha }}</li>
+			{% endif %}
+		  {% endfor %}
+		  <!-- End Loop -->
+		</ul>
+	  </nav>
+	  {% for alpha in alpha_array %}
+		{% if alpha_categories contains alpha %}
+		  <div
+			id="{{alpha}}"
+			class="relative br-t_1 br_dotted br_primary-3 w_100 p-y_4 font_0 flex_row flex"
+		  >
+			<div class="flex_none">
+			  <div
+				class="c_white font-size_up-4 font_accent font_bold inline-block uppercase shadow_overlap-light bg_primary-n2 lh_0 br_radius p_2 p-x_4 m-x_3 sticky t_4 flex_none"
+			  >
+				{{ alpha }}
+			  </div>
+			</div>
+			<ul
+			  class="flex_auto gap-x_5:lf gap-x_4 gap-y_4 grid grid-x_1 grid-x_2:md grid-x_3:lg grid-x_4:xl grid-x_5:xxl p-t_0 p_4 ul_none"
+			>
+			  {% for person in people %}
+				{% if person.group == alpha %}
+				  <li class="lh_1 font_ui">
+					<a
+					href="{{'faculty-details'| relative_url }}"
+					  data-name="newMember__name"
+					  class="block font_display c_primary-n2 font-size_up-1 lh_0 m-b_2"
+					>
+					  {{ person.fullname }}
+					</a>
+					{% if person.title != null and person.title != '' %}
+					  <span
+						data-name="newMember__title"
+						class="block font-size_0 lh_1 m-b_2 c_black-8"
+					  >
+						{{- person.title -}}
+					  </span>
+					{% endif %}
+					{% if person.location != null and person.location != '' %}
+					  <span
+						data-name="newMember__location"
+						class="block c_black-6 {{location_font_size}} font_accent"
+					  >
+						{{ person.location -}}
+						{%- if person.location != null and person.country != null -%}
+						  ,
+						{% endif %}
+						{{ person.country -}}
+					  </span>
+					{% endif %}
+				  </li>
+				{% endif %}
+			  {% endfor %}
+			</ul>
+		  </div>
+		{% endif %}
+	  {% endfor %}
+	</section>
+</div>
