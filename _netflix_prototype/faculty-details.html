@@ -1,0 +1,76 @@
+--- 
+layout: library_app_frame 
+name: "Faculty Details" 
+uri: "root/outline/faculty/person?id=xxx" 
+facultyActive: true 
+--- 
+{% include_relative netflix/app-header-w-search.html %}
+{% include_relative netflix/breadcrumb-course.html %}
+<header class="grid-area_pageHead overflow_visible relative bg_white-8 relative p_5:xl p_4:lg p_3 font_n1 font_0:lg font_1:xxl br-b_1 br_black-3 br_solid">
+	<h2 class="font-size_up-1 font_bold font_display c_primary-n1 m-y_0 lh_1">Faculty Details</h2>
+</header> {% assign people = site.data.people | sort: 'sortname' %} {% assign person = site.data.people[0] %} {% assign person_1 = site.data.people[1] %} {% assign person_2 = site.data.people[2] %} 
+<div class="grid-area_mainArea br-br_radius overflow_visible bg_white-7 p_5:xl p_4:md p_3 grid grid-x_1 grid-x_3:md grid-x_6:md gap-x_4 gap-x_5:lg">
+	<section class="font_ui gap-y_3 gap-y_4:lg lh_1 col-end_2 col-start_start">
+		<div class="flex_shrink m-b_4 flex flex_column gap-y_3:lg gap-y_2 bg_white-5 br_round p_4:xl p_3:lg p_2 shadow_bevel-light">
+			<img class="aspect_1x1 w_100 max-w_15 max-w_25:md shadow_overlap-light overflow_hidden br_radius br_black-3 br_1 br_solid self_center m-b_4:lg" src="{{ 'https://i.pravatar.cc/300?' | append:person.fullname }}" alt="{{ person.fullname }}" loading="lazy" />
+			<div class="flex_auto flex_column justify_start">
+				<h2 data-name="newMember__name" class="block font_display c_primary-n2 font-size_up-1 lh_0 m-b_2">{{ person.fullname }}</h2> {% if person.title != null and person.title != '' %} <span data-name="newMember__title" class="block font-size_0 lh_1 m-b_2 c_black-8">
+					{{- person.title -}}
+				</span> {% endif %} {% if person.location != null and person.location != '' %} <span data-name="newMember__location" class="block c_secondary-n2 lh_1 m-b_2 font_accent">
+					{{- person.location -}} {%- if person.location != null and person.country != null -%} , {% endif %} {{ person.country -}}
+				</span> {% endif %} <div class="speaker_bio reading-typography max-w_50 font-size_up-1 font-size_0:md font-size_down-1:lg lh_3 font_copy m-t_4 m-b_3">
+					<!-- This content can container html -->
+					<p>{{person.bio}}</p>
+				</div>
+			</div>
+			<div class="grid justify_center m-t_auto">
+				<a class="btn btn-secondary bg_twitter br_radius c_white font-size_down-1 h:bg_secondary-n3 h:c_secondary-n3 h:c_white h:undecorated p-x_4 p_3" href="https://www.twitter.com/Tweat_DrSoda" target="_blank">
+					<i class="br-r_1 br-white-5 br_solid fa-twitter fab m-l_n2 m-r_3 m-y_n2 p-r_3 p-r_3:lg p-y_2"></i>
+					<i class="fa-at fas opacity_8 p-r_1"></i>
+					{{person.sortname}}</a>
+			</div>
+		</div>
+		<h3 class="c_secondary-n2 font-size_up-2 p-x_5:xl p-x_4:lg p-x_3">Often Presenting with</h3>
+<ul class="contents font-size_down-1">
+	<li>		<div class="flex_shrink m-b_4 flex flex_row gap_4 bg_white-4 br_round p_a5:xl p_4:lg p_3 shadow_bevel-light">
+		<div class="flex_none"><img class="aspect_1x1 w_100 max-w_5 shadow_overlap-light overflow_hidden br_radius br_black-3 br_1 br_solid self_center" src="{{ 'https://i.pravatar.cc/300?' | append:person_1.fullname }}" alt="{{ person_1.fullname }}" loading="lazy" /></div>
+		<div><span data-name="newMember__name" class="block font_display c_primary-n2 font-size_up-1 lh_0 m-b_2">
+			{{ person_1.fullname }}
+		</span> {% if person_1.title != null and person_1.title != '' %} <span data-name="newMember__title" class="block font-size_0 lh_1 m-b_2 c_black-8">
+			{{- person_1.title -}}
+		</span> {% endif %} {% if person_1.location != null and person_1.location != '' %} <span data-name="newMember__location" class="block c_black-6 font_accent">
+			{{ person_1.location -}} {%- if person_1.location != null and person_1.country != null -%} , {% endif %} {{ person_1.country -}}
+		</span> {% endif %}</div>
+	</div>
+	</li>
+	<li><div class="flex_shrink m-b_4 flex flex_row gap_4 bg_white-4 br_round p_a5:xl p_4:lg p_3 shadow_bevel-light">
+		<div class="flex_none"><img class="aspect_1x1 w_100 max-w_5 shadow_overlap-light overflow_hidden br_radius br_black-3 br_1 br_solid self_center" src="{{ 'https://i.pravatar.cc/300?' | append:person_2.fullname }}" alt="{{ person_2.fullname }}" loading="lazy" /></div>
+		<div><span data-name="newMember__name" class="block font_display c_primary-n2 font-size_up-1 lh_0 m-b_2">
+			{{ person_2.fullname }}
+		</span> {% if person_2.title != null and person_2.title != '' %} <span data-name="newMember__title" class="block font-size_0 lh_1 m-b_2 c_black-8">
+			{{- person_2.title -}}
+		</span> {% endif %} {% if person_2.location != null and person_2.location != '' %} <span data-name="newMember__location" class="block c_black-6 font_accent">
+			{{ person_2.location -}} {%- if person_2.location != null and person_2.country != null -%} , {% endif %} {{ person_2.country -}}
+		</span> {% endif %}</div>
+	</div></li>
+</ul>
+	</section>
+	<section class="font_ui lh_1 col-start_2 col-end_end bg_white-4 shadow_bevel-light br_round grid grid-x_2:lg gap_5:lg gap_6:xl gap_4 p_5:lg p_4 items_start">
+		<div>
+			<h4 class="c_secondary-n2 font-size_up-2 ">Sessions</h4>
+			<div class="results grid gap_3 gap_4:lg">
+				{% include_relative netflix/program/session-search_short.html %}
+				{% include_relative netflix/program/session-search_short.html %}
+				{% include_relative netflix/program/session-search_short.html %}
+			</div>
+		</div>
+		<div>
+			<h4 class="c_secondary-n2 font-size_up-2 ">Courses</h4>
+			<div class="results grid gap_3 gap_4:lg">
+				{% include_relative netflix/program/session-search_short.html %}
+				{% include_relative netflix/program/session-search_short.html %}
+				{% include_relative netflix/program/session-search_short.html %}
+			</div>
+		</div>
+	</section>
+</div>
