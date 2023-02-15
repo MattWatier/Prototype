@@ -10,7 +10,7 @@ facultyActive: true
 	<h2 class="font-size_up-1 font_bold font_display c_primary-n1 m-y_0 lh_1">Faculty Details</h2>
 </header> {% assign people = site.data.people | sort: 'sortname' %} {% assign person = site.data.people[0] %} {% assign person_1 = site.data.people[1] %} {% assign person_2 = site.data.people[2] %} 
 <div class="grid-area_mainArea br-br_radius overflow_visible bg_white-7 p_5:xl p_4:md p_3 grid grid-x_1 grid-x_3:md grid-x_6:md gap-x_4 gap-x_5:lg">
-	<section class="font_ui gap-y_3 gap-y_4:lg lh_1 col-end_2 col-start_start">
+	<section class="font_ui gap-y_3 gap-y_4:lg lh_1 col-end_2:md col-start_start:md">
 		<div class="flex_shrink m-b_4 flex flex_column gap-y_3:lg gap-y_2 bg_white-5 br_round p_4:xl p_3:lg p_2 shadow_bevel-light">
 			<img class="aspect_1x1 w_100 max-w_15 max-w_25:md shadow_overlap-light overflow_hidden br_radius br_black-3 br_1 br_solid self_center m-b_4:lg" src="{{ 'https://i.pravatar.cc/300?' | append:person.fullname }}" alt="{{ person.fullname }}" loading="lazy" />
 			<div class="flex_auto flex_column justify_start">
@@ -55,7 +55,7 @@ facultyActive: true
 	</div></li>
 </ul>
 	</section>
-	<section class="font_ui lh_1 col-start_2 col-end_end bg_white-4 shadow_bevel-light br_round grid grid-x_2:lg gap_5:lg gap_6:xl gap_4 p_5:lg p_4 items_start">
+	<section class="font_ui lh_1 col-start_2:md col-end_end:md bg_white-4 shadow_bevel-light br_round grid grid-x_2:lg gap_5:lg gap_6:xl gap_4 p_5:lg p_4 items_start">
 		<div>
 			<h4 class="c_secondary-n2 font-size_up-2 ">Sessions</h4>
 			<div class="results grid gap_3 gap_4:lg">
