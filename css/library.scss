@@ -44,7 +44,7 @@ body {
 }
 .grid-template_page.expanded {
 	transition: grid-template-columns 1s;
-	grid-template-columns: 15rem calc(100% - 15rem);
+	grid-template-columns: var(--expanded_sideMenu-width, 15rem) calc(100% - var(--expanded_sideMenu-width, 15rem));
 	grid-template-rows: auto auto auto 1fr auto;
 	grid-template-areas: "menuArea headerArea" "menuArea breadcrumbArea" "menuArea pageHead" "menuArea mainArea" "menuArea footerArea";
 	max-width: calc(100vw - var(--app-spacing) * 2);
