@@ -68,9 +68,10 @@
 		--link-color: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) + ((var(--primary-l)) * -0.37)));
 		--link-hover-color: hsl(var(--secondary-h), var(--secondary-s), calc(var(--secondary-l) + ((var(--secondary-l)) * -0.50)));
 		--accent-color:  hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-		--font_display:  Arial Black, Impact, sans-serif;
-		--font_accent: Rockwell Extra Bold, Rockwell Bold, monospace;
+		--font_display:  'Montserrat', Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
+		--font_accent: 'Montserrat', Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue, Arial, sans-serif
 		--font_copy: 'Montserrat', Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
+		--font_ui: Roboto, Helvetica Neue, Arial, sans-serif;
 		--font_mono: Lucida Console, Lucida Sans Typewriter, monaco, Bitstream Vera Sans Mono, monospace;
 	}
 </style>
@@ -225,10 +226,18 @@
 	<section class="grid grid-x_6:lg grid-x_5:xxl">
 		<article class="bg_white-6 col-start_start col-end_5 relative font_1 font_2:lg font_3:xxl">
 			<div class="absolute t_3 r_2 z_2 font_n1" data-element="save-toggle">
-				<span class="fa-stack fa-2x font-size_0 c_secondary-n2 h:c_secondary-n4">
-	<i class="fa-solid fas fa-bookmark fa-stack-2x  c_inherit-all text-shadow_black-1"></i>
-	<i class="fa-solid fas fa-star fa-stack-1x c_white h:c_white m-t_n1 t_n1"></i>
+				<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
+	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
+	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
+<style lang="">
+	.font-size_up-2x{
+			font-size: 2em;
+		}
+		.font-size_up-3x{
+			font-size: 3em;
+		}
+</style>
 			</div>
 			<main data-label="player" class="w_100" >
 				<div class="player hd full player hd full p-x_6:xl p-x_5:lg p-x_4:md p-x_3 p-y_4 p-y_5:xl">
@@ -383,7 +392,7 @@
 				<div class="grid grid-x_3:xl grid-x_2:lg grid-x_1 gap-x_5:xl gap-x_4 gap-y_5 p_3 p_4:md p_5:xl justify_center items_center font-size_down-2">
 					<div class="flex gap_y-3">
 						<strong class="font_display font_bold font-size_up-1">Category</strong>
-						<ul class="ul_none ul_inline-comma font-medium c_black-7 font-size_down-1 gap-y_2 lh_0 uppercase">
+						<ul class="ul_none ul_inline-comma font_medium c_black-7 font-size_down-1 gap-y_2 lh_0 uppercase">
 							<li class="">quam</li>
 							<li class="">omnis</li>
 							<li class="">consectetur</li>
@@ -394,7 +403,7 @@
 					</div>
 					<div class="flex gap_y-3">
 						<strong class="font_display font_bold font-size_up-1">Tags</strong>
-						<ul class="ul_none ul_inline-comma font-medium c_black-7 font-size_down-1 gap-y_2 lh_0 uppercase">
+						<ul class="ul_none ul_inline-comma font_medium c_black-7 font-size_down-1 gap-y_2 lh_0 uppercase">
 							<li class="">quam</li>
 							<li class="">omnis</li>
 							<li class="">consectetur</li>
@@ -405,7 +414,7 @@
 					</div>
 					<div class="flex gap_y-3">
 						<strong class="font_display font_bold font-size_up-1">Meta Data</strong>
-						<ul class="ul_none ul_inline-comma font-medium c_black-7 font-size_down-1 gap-y_2 lh_0 uppercase">
+						<ul class="ul_none ul_inline-comma font_medium c_black-7 font-size_down-1 gap-y_2 lh_0 uppercase">
 							<li class="">quam</li>
 							<li class="">omnis</li>
 							<li class="">consectetur</li>
@@ -416,7 +425,7 @@
 					</div>
 					<div class="flex gap_y-3">
 						<strong class="font_display font_bold font-size_up-1">Credits</strong>
-						<ul class="ul_none ul_inline-comma font-medium c_black-7 font-size_down-1 gap-y_2 lh_0 uppercase">
+						<ul class="ul_none ul_inline-comma font_medium c_black-7 font-size_down-1 gap-y_2 lh_0 uppercase">
 							<li class="">quam</li>
 							<li class="">omnis</li>
 							<li class="">consectetur</li>
