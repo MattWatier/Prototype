@@ -15,71 +15,26 @@ homeActive: true
     {% include_relative netflix/home/home-branding.html %} 
 		<h3 class="font_display font_xbold c_primary-n2">Featured</h3>
 		<p class="max-w_70">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt reiciendis cumque ut eum alias recusandae illum officiis debitis dolores corrupti deleniti velit maiores, dignissimos adipisci rerum odio? Rerum, reprehenderit doloremque?</p>
+    {% include_relative netflix/home/slider.html %} 
 	</div>
 </header>
-<div class="grid-area_mainArea bg_white-8 br-br_radius overflow_visible">
-	<section class="p-y_5:xxl p-y_4:lg p-y_3 p-x_4 p-x_5:lg">
-		<!-- Slider main container -->
-		<div class="splide bg_black-_05 br_1 br_black-2 br_radius br_solid m-b_4 p-y_4 shadow_emboss-light " aria-label="Splide Basic HTML Example">
-			<div class="splide__track">
-				<ul class="splide__list"> 
-					
-					{% include_relative netflix/program/session.html content="splide__slide" %}				
-					{% include_relative netflix/program/session.html content="splide__slide" %}					
-					{% include_relative netflix/program/session-extra-content.html content="splide__slide" %}					
-					{% include_relative netflix/program/session.html content="splide__slide" %}					
-					{% include_relative netflix/program/session.html content="splide__slide" %}					
-					{% include_relative netflix/program/session.html content="splide__slide" %}					
-					{% include_relative netflix/program/session.html content="splide__slide" %}					
-					{% include_relative netflix/program/session.html content="splide__slide" %}					
-					{% include_relative netflix/program/session.html content="splide__slide" %}
-					{% include_relative netflix/program/view-all.html content="splide__slide" %}
-				</ul>
-			</div>
-		</div>
-</div>
-</div>
-<!-- // https://splidejs.com/ -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.17/dist/css/splide-core.min.css">
-<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.17/dist/css/sea-green.min.css"> -->
-<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.17/dist/js/splide.min.js"></script>
-<script>
-    document.addEventListener( 'DOMContentLoaded', function() {
-      var splide = new Splide( '.splide' , {
-      type       : '',
-      perPage    : 4,
-      padding    : "1rem",
-      gap: '1rem',
-      breakpoints: {
-        1200:{perPage: 3,},
-        1024:{perPage: 2,},
-        768: {
-        perPage: 2,
-      },
-      640: {
-        perPage: 1,
-      },
-      480: {
-        perPage: 1,
-        padding    : "2rem",
-      },
+<section class="grid-area_mainArea bg_white-8 br-br_radius overflow_visible p_4 p-x_5:xl p-x_6:xxl p-y_4:lg  p-y_5:xxl">
+  <h3 class="font_display font_xbold c_primary-n2">(Collection Title) Yearly Conference </h3>
+  <ul class="grid grid-x_5:xl grid-x_3:lg grid-x_2:md grid-x_1 gap_5 ul_none"> 
+				
+    {% include_relative netflix/program/session-small-card.html %}				
+    {% include_relative netflix/program/session-small-card.html %}				
 
-    },
-    classes: {
-        // Add classes for arrows.
-        arrows: 'splide__arrows your-class-arrows',
-        arrow : 'splide__arrow your-class-arrow scale_50 absolute t_6 b_6 z_5 shadow_overlap-light h:bg_primary-3 br_black-2 br_solid br_1 br_radius br-tr_square br-br_square',
-        prev  : 'splide__arrow--prev your-class-prev l_n5:md l_n4 rotate_180 ',
-        next  : 'splide__arrow--next your-class-next r_n5:md r_n4 ',
+    {% include_relative netflix/program/session-small-card.html %}				
 
-        // Add classes for pagination.
-        pagination: 'splide__pagination your-class-pagination gap_3', // container
-        page      : 'splide__pagination__page your-class-page br_round aspect-ratio_1x1 bg_black-6 a:bg_primary', // each button
-      },
-    } );
-      splide.mount();
-    } );
-  </script>
-  <style>
+    {% include_relative netflix/program/session-small-card.html %}				
+    {% include_relative netflix/program/session-small-card.html %}				
+    {% include_relative netflix/program/session-small-card.html %}				
+    {% include_relative netflix/program/session-small-card.html %}				
+    {% include_relative netflix/program/session-small-card.html %}				
+    {% include_relative netflix/program/session-small-card.html %}	
+    {% include_relative netflix/program/session-small-card.html %}				
 
-  </style>
+  </ul>
+  <div class="flex flex_row-reverse p-t_3 p-b_4"><a href="" class="link self_end   ">view all from "(Collection Title) Yearly Conference" <i class="fal fa-chevron-circle-right m-r_3"></i></a></div>
+</section>
