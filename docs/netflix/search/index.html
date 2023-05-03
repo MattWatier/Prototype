@@ -92,15 +92,15 @@
 		<li class="nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light active">
 			<a class="c_inherit-all flex flex_column h:undecorated p_3" href="./search"><i class="icon fas fa-fw fa-search p-y_2 self_center"></i><span class="label self_center  lowercase lh_0 font_n2 h_1h ">Search</span></a>
 		</li>
-		<li class="nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light ">
+		<!-- <li class="nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light ">
 			<a class="c_inherit-all flex flex_column h:undecorated p_3" href="./saved"><i class="icon fas fa-fw fa-star p-y_2 self_center"></i><span class="label self_center  lowercase lh_0 font_n2 h_1h nowrap ">Saved</span></a>
 		</li>
 		<li class="nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light ">
 			<a class="c_inherit-all flex flex_column h:undecorated p_3" href="./credits"><i class="icon fas fa-fw fa-award p-y_2 self_center"></i><span class="label self_center  lowercase lh_0 font_n2 h_1h ">Credits</span></a>
-		</li>
-		<li class="nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light ">
+		</li> -->
+		<!-- <li class="nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light ">
 			<a class="c_inherit-all flex flex_column h:undecorated p_3" href="./faculty"><i class="icon fas fa-fw fa-user p-y_2 self_center"></i><span class="label self_center  lowercase lh_0 font_n2 h_1h ">Faculty</span></a>
-		</li>
+		</li> -->
 		<li class="nav-item flex_auto br_radius c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary h:shadow_overlap-light a:shadow_overlap-light ">
 			<a class="c_inherit-all flex flex_column h:undecorated p_3" href="./courses"><i class="icon fas fa-fw fa-graduation-cap p-y_2 self_center"></i><span class="label self_center  lowercase lh_0 font_n2 h_1h ">Courses</span></a>
 		</li>
@@ -412,63 +412,66 @@
 				</button>
 			</div>
 		</div>
-		<section class=" flex_none p-x_3 p-x_4:md p-x_5:xl p-y_3 font_n1 font_ui flex flex_column flex_row:lg gap-y_2 gap-x_4 c_primary-n2 bg_white-4">
-	<dl class="items_start ul_none flex flex_row:md gap-x_3 items_start">
-		<dd class="font_xbold m_0 uppercase">Results:</dd>
-		<dt class="font_regular inline-block m-r_4">25</dt>
+		<section data-component="search.search-params" class="cq_parent">
+	<div class="p-x_3 p-x_4:md p-x_5:xl p-y_3 font_n1 font_ui flex flex_column flex_row:lg gap-y_2 gap-x_4 c_primary-n2 bg_white-4">
+		<dl class="items_start ul_none flex flex_row:md gap-x_3 items_start">
+			<dd class="font_xbold m_0 uppercase">Results:</dd>
+			<dt class="font_regular inline-block m-r_4">25</dt>
+			</dl>
+			<dl class="items_start ul_none flex flex_row:md gap-x_3 items_start">
+			<dd class="font_xbold m_0 uppercase">Keywords:</dd>
+			<dt class="font_regular inline-block m-r_4">
+				<ul class="ul_none ul_inline-pipe gap_1">
+					<li class="flex flex_row gap_2 nowrap relative h:underline">
+						<span class="">Label</span>
+						<a href="#" class="c_alert expanded-click-area h:c_black "><i class="fas fa-solid fa-times"></i></a>
+					</li>
+					<li class="flex flex_row gap_2 nowrap relative h:underline">
+						<span class="">Label</span>
+						<a href="#" class="c_alert expanded-click-area h:c_black "><i class="fas fa-solid fa-times"></i></a>
+					</li>
+				</ul>
+			</dt>
 		</dl>
 		<dl class="items_start ul_none flex flex_row:md gap-x_3 items_start">
-		<dd class="font_xbold m_0 uppercase">Keywords:</dd>
-		<dt class="font_regular inline-block m-r_4">
-			<ul class="ul_none ul_inline-pipe gap_1">
-				<li class="flex flex_row gap_2 nowrap relative h:underline">
-					<span class="">Label</span>
-					<a href="#" class="c_alert expanded-click-area h:c_black "><i class="fas fa-solid fa-times"></i></a>
-				</li>
-				<li class="flex flex_row gap_2 nowrap relative h:underline">
-					<span class="">Label</span>
-					<a href="#" class="c_alert expanded-click-area h:c_black "><i class="fas fa-solid fa-times"></i></a>
-				</li>
-			</ul>
-		</dt>
-	</dl>
-	<dl class="items_start ul_none flex flex_row:md gap-x_3 items_start">
-		<dd class="font_xbold m_0 uppercase">Categories:</dd>
-		<dt class="font_regular inline-block m-r_4">
-			<ul class="ul_none ul_inline-pipe gap_1">
-				<li class="flex flex_row gap_2 nowrap relative h:underline">
-					<span class="">Category A</span>
-					<a href="#" class="c_alert expanded-click-area h:c_black "><i class="fas fa-solid fa-times"></i></a>
-				</li>
-			</ul>
-		</dt>
-	</dl>
-	<dl class="items_start ul_none flex flex_row:md gap-x_3 items_start nowrap">
-		<dd class="font_xbold m_0 uppercase">Tags:</dd>
-		<dt class="font_regular inline-block m-r_4">
-			<ul class="ul_none ul_inline-pipe gap_1">
-				<li class="flex flex_row gap_2 nowrap relative h:underline">
-					<span class="">Tag</span>
-					<a href="#" class="c_alert expanded-click-area h:c_black "><i class="fas fa-solid fa-times"></i></a>
-				</li>
-				<li class="flex flex_row gap_2 nowrap relative h:underline">
-					<span class="">Tag</span>
-					<a href="#" class="c_alert expanded-click-area h:c_black "><i class="fas fa-solid fa-times"></i></a>
-				</li>
-				<li class="flex flex_row gap_2 nowrap relative h:underline">
-					<span class="">Tag</span>
-					<a href="#" class="c_alert expanded-click-area h:c_black "><i class="fas fa-solid fa-times"></i></a>
-				</li>
-			</ul>
-		</dt>
-	</dl>
+			<dd class="font_xbold m_0 uppercase">Categories:</dd>
+			<dt class="font_regular inline-block m-r_4">
+				<ul class="ul_none ul_inline-pipe gap_1">
+					<li class="flex flex_row gap_2 nowrap relative h:underline">
+						<span class="">Category A</span>
+						<a href="#" class="c_alert expanded-click-area h:c_black "><i class="fas fa-solid fa-times"></i></a>
+					</li>
+				</ul>
+			</dt>
+		</dl>
+		<dl class="items_start ul_none flex flex_row:md gap-x_3 items_start nowrap">
+			<dd class="font_xbold m_0 uppercase">Tags:</dd>
+			<dt class="font_regular inline-block m-r_4">
+				<ul class="ul_none ul_inline-pipe gap_1">
+					<li class="flex flex_row gap_2 nowrap relative h:underline">
+						<span class="">Tag</span>
+						<a href="#" class="c_alert expanded-click-area h:c_black "><i class="fas fa-solid fa-times"></i></a>
+					</li>
+					<li class="flex flex_row gap_2 nowrap relative h:underline">
+						<span class="">Tag</span>
+						<a href="#" class="c_alert expanded-click-area h:c_black "><i class="fas fa-solid fa-times"></i></a>
+					</li>
+					<li class="flex flex_row gap_2 nowrap relative h:underline">
+						<span class="">Tag</span>
+						<a href="#" class="c_alert expanded-click-area h:c_black "><i class="fas fa-solid fa-times"></i></a>
+					</li>
+				</ul>
+			</dt>
+		</dl>
+	</div>
 </section>
 		
 		<ul class="results ul_none flex flex_column gap-y_5 font_0">
 			<div data-element="session" class="cq_parent">
     <div class="flex flex_column br_radius bg_white-9 shadow_bevel-light  br_solid br_black-3 br_1 self_stretch user-select_none relative w_100">
-        <article class="flex flex_row:md flex_column gap-x_5:lg gap-x_4 relative">
-            <aside class="aspect-ratio_16x9 bg_cover br_radius m_3:md m-t_3 m_auto max-w_20 relative self_start shadow_2 w_100" style="background-image:url(https://picsum.photos/640/480/)">
+        <article class="flex flex_row:md flex_column gap-x_5:xl gap-x_4 relative">
+            <aside class="br_radius m-l_4 m-r_6 m-r_0:md m-t_4 relative self_start shadow_2 aspect-ratio_16x9 overflow_hidden">
+                <img src="https://picsum.photos/640/480/" alt="" class="w_100 aspect-ratio_16x9 max-w_20 ">
                 <div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
                 <div class="absolute t_3 r_3 z_2" data-element="save-toggle"> <span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
 	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
@@ -489,14 +492,14 @@
 <h2 class="font-size_0 font_bold font_display c_primary-n1 m-y_0 lh_2">(Title) Odio illum et nemo odit harum. Qui vel ut non fugit minima eos. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi deleniti minus officia dolores quam nostrum, corporis, possimus consequatur, ducimus similique eligendi enim labore! Blanditiis laudantium aperiam tempora? Animi, impedit ipsa!</h2>
 <h3 class="c_black-7 font-size_down-1 font_medium font_ui m-y_0 lh_1">(Session Sub Title) Rhythm and Conduction Disorders</h3> <div class="m-t_auto font_ui"> <div
 	data-element="meta"
-	class="m-t_auto lh_0  c_black-7 font_regular font_ui flex flex_column gap-y_3:md gap-y_2 m-b_4:lg m-b_3"
+	class="m-t_auto lh_0 c_black-7 font_regular font_ui flex flex_column gap-y_4:md gap-y_3 m-b_4:lg m-b_3"
 >
 	<ul
 		data-element="meta-button-list"
-		class="ul_none flex flex_row wrap justify_start items_start gap-x_3 gap-x_4:md gap-y_2 font-size_down-2"
+		class="ul_none flex flex_row wrap justify_start items_start gap-x_3 gap-y_2 font-size_down-1"
 	>
 		<li
-			class="inline-block br_radius z_3 relative h:bg_black-2 bg_black-_05 lh_0 z_2"
+			class="inline-block br_radius z_3 relative h:bg_black-3 bg_black-1 lh_0 z_2"
 		>
 			<a
 				href="#"
@@ -513,7 +516,7 @@
 			</a>
 		</li>
 		<li
-			class="inline-block br_radius z_3 relative h:bg_black-2 bg_black-_05 lh_0 z_2"
+			class="inline-block br_radius z_3 relative h:bg_black-3 bg_black-1 lh_0 z_2"
 		>
 			<a
 				href="#"
@@ -527,134 +530,215 @@
 			</a>
 		</li>
 	</ul>
-	<ul
-		data-element="meta-data-list"
-		class="ul_none flex flex_row:md flex_column wrap justify_start items_start gap-x_3 gap-x_4:md gap-y_2 br_secondary-3 br-t_1 br_dotted p-t_2 p-t_3:md p-t_4:lg font-size_down-2"
-	>
-		<li data-element="meta-data-item">
-			<ul
-				class="ul_inline-comma"
-				data-element="value"
-				class="inline-block"
-			>
-				<li
-					data-element="label"
-					class="no-after font_bold w_100 w_auto:md c_secondary-n2"
+	<ul data-component="credits.medium-list" class="flex flex_row font_n1 gap_2 ul_none">
+	<li><div
+	class="inline-block bg_shade-n2 br_radius c_white bg_black-5 [bg_black-5|bg_credit] shadow_1"
+>
+	<div class="flex flex_row flex_nowrap p-y_2 p-x_3 lh_2">
+		<span class="flex_auto">CME</span>
+		<span class="flex_shrink"
+			><i class="fa-horizontal-rule fa-rotate-90 far"></i
+		></span>
+		<span class="flex_auto font_bold">0</span>
+	</div>
+</div>
+</li>
+	<li><div
+	class="inline-block bg_shade-n2 br_radius c_white bg_black-5 [bg_black-5|bg_credit] shadow_1"
+>
+	<div class="flex flex_row flex_nowrap p-y_2 p-x_3 lh_2">
+		<span class="flex_auto">CME</span>
+		<span class="flex_shrink"
+			><i class="fa-horizontal-rule fa-rotate-90 far"></i
+		></span>
+		<span class="flex_auto font_bold">0</span>
+	</div>
+</div>
+</li>
+	<li><div
+	class="inline-block bg_shade-n2 br_radius c_white bg_black-5 [bg_black-5|bg_credit] shadow_1"
+>
+	<div class="flex flex_row flex_nowrap p-y_2 p-x_3 lh_2">
+		<span class="flex_auto">CME</span>
+		<span class="flex_shrink"
+			><i class="fa-horizontal-rule fa-rotate-90 far"></i
+		></span>
+		<span class="flex_auto font_bold">0</span>
+	</div>
+</div>
+</li>
+</ul>
+	<div data-component="meta-data-list" class="font-size_down-1 br_secondary-3 br-t_1 br_dotted m-t_3 p-t_3">
+		<ul
+			data-element="meta-data-list"
+			class="ul_none flex flex_row:md flex_column wrap justify_start items_start gap-x_3 gap-x_4:md gap-y_2 p-t_2 p-t_3:md p-t_4:lg"
+		>
+			<li data-element="meta-data-item">
+				<ul
+					class="ul_inline-comma"
+					data-element="value"
+					class="inline-block"
 				>
-					<i
-						class="fal display_none [fa-icon-class|display_none]"
-					></i>
-					<span>Presentations:</span>
-				</li>
-				<li>20</li>
-			</ul>
-		</li>
-		<li data-element="meta-data-item">
-			<ul
-				class="ul_inline-comma"
-				data-element="value"
-				class="inline-block"
-			>
-				<li
-					data-element="label"
-					class="no-after font_bold w_100 w_auto:md c_secondary-n2"
+					<li
+						data-element="label"
+						class="no-after font_bold w_100 w_auto:md c_secondary-n2"
+					>
+						<i
+							class="fal display_none [fa-icon-class|display_none]"
+						></i>
+						<span>Presentations:</span>
+					</li>
+					<li>20</li>
+				</ul>
+			</li>
+			<li data-element="meta-data-item">
+				<ul
+					class="ul_inline-comma"
+					data-element="value"
+					class="inline-block"
 				>
-					<i class="fal fa-clock [fa-icon-class|display_none]"></i>
-					<span>Duration:</span>
-				</li>
-				<li>23 hours 45 minutes</li>
-			</ul>
-		</li>
-		<li data-element="meta-data-item">
-			<ul
-				class="ul_inline-comma"
-				data-element="value"
-				class="inline-block"
-			>
-				<li
-					data-element="label"
-					class="no-after font_bold w_100 w_auto:md c_secondary-n2"
+					<li
+						data-element="label"
+						class="no-after font_bold w_100 w_auto:md c_secondary-n2"
+					>
+						<i
+							class="fal fa-clock [fa-icon-class|display_none]"
+						></i>
+						<span>Duration:</span>
+					</li>
+					<li>23 hours 45 minutes</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div data-component="meta-data-list-hidden" class="font-size_down-2">
+		<div data-element="show-hide-toggle" class="flex flex_row items_center">
+			<div
+				class="br_secondary-3 br-t_1 br_dotted flex_auto flex_100"
+			></div>
+			<div class="flex_none p-x_3">
+				<div
+					class="flex_none flex flex_row flex_nowrap items_center c_secondary-2"
+					aria-expanded="false"
+					data-bs-toggle="collapse"
+					data-bs-target="#meta-list-unique"
+					aria-controls="meta-list-unique"
+					aria-expanded="false"
 				>
-					<i
-						class="fal display_none [fa-icon-class|display_none]"
-					></i>
-					<span>Category:</span>
+					<span class="fa-stack">
+						<i class="fas fa-minus fa-stack-1x"></i>
+						<i
+							class="fas fa-minus rotate_90 a:rotation fa-stack-1x"
+						></i>
+					</span>
+					<span><span class="display_none a:inline">show</span><span class="a:display_none inline">less</span>&nbsp;details</span>
+				</div>
+			</div>
+			<div
+				class="br_secondary-3 br-t_1 br_dotted flex_auto flex_100"
+			></div>
+		</div>
+		<div
+			data-element="collapse-wrapper"
+			id="meta-list-unique"
+			class="meta-list-unique collapse"
+		>
+			<ul
+				data-element="meta-data-list"
+				class="ul_none flex flex_row:md flex_column wrap justify_start items_start gap-x_3 gap-x_4:md gap-y_2 p-t_2 p-t_3:md p-t_4:lg"
+			>
+				<li data-element="meta-data-item">
+					<ul
+						class="ul_inline-comma"
+						data-element="value"
+						class="inline-block"
+					>
+						<li
+							data-element="label"
+							class="no-after font_bold w_100 w_auto:md c_secondary-n2"
+						>
+							<i
+								class="fal display_none [fa-icon-class|display_none]"
+							></i>
+							<span>Category:</span>
+						</li>
+						<li>Events</li>
+						<li>Forms</li>
+						<li>Warm Ups &amp; Drills</li>
+						<li>Business Development</li>
+						<li>Instructor Development</li>
+					</ul>
 				</li>
-				<li>Events</li>
-				<li>Forms</li>
-				<li>Warm Ups &amp; Drills</li>
-				<li>Business Development</li>
-				<li>Instructor Development</li>
-			</ul>
-		</li>
 
-		<li data-element="meta-data-item">
-			<ul
-				class="ul_inline-comma"
-				data-element="value"
-				class="inline-block"
-			>
-				<li
-					data-element="label"
-					class="no-after font_bold w_100 w_auto:md c_secondary-n2"
-				>
-					<i
-						class="fal display_none [fa-icon-class|display_none]"
-					></i>
-					<span>Experience Level:</span>
+				<li data-element="meta-data-item">
+					<ul
+						class="ul_inline-comma"
+						data-element="value"
+						class="inline-block"
+					>
+						<li
+							data-element="label"
+							class="no-after font_bold w_100 w_auto:md c_secondary-n2"
+						>
+							<i
+								class="fal display_none [fa-icon-class|display_none]"
+							></i>
+							<span>Experience Level:</span>
+						</li>
+						<li>All Ranks</li>
+					</ul>
 				</li>
-				<li>All Ranks</li>
-			</ul>
-		</li>
 
-		<li data-element="meta-data-item">
-			<ul
-				class="ul_inline-comma"
-				data-element="value"
-				class="inline-block"
-			>
-				<li
-					data-element="label"
-					class="no-after font_bold w_100 w_auto:md c_secondary-n2"
-				>
-					<i
-						class="fal display_none [fa-icon-class|display_none]"
-					></i>
-					<span>Style:</span>
+				<li data-element="meta-data-item">
+					<ul
+						class="ul_inline-comma"
+						data-element="value"
+						class="inline-block"
+					>
+						<li
+							data-element="label"
+							class="no-after font_bold w_100 w_auto:md c_secondary-n2"
+						>
+							<i
+								class="fal display_none [fa-icon-class|display_none]"
+							></i>
+							<span>Style:</span>
+						</li>
+						<li>Kickboxing</li>
+						<li>Kali</li>
+						<li>Kyuki-Do</li>
+						<li>Judo</li>
+						<li>Jiu Jitsu</li>
+						<li>Hapkido</li>
+					</ul>
 				</li>
-				<li>Kickboxing</li>
-				<li>Kali</li>
-				<li>Kyuki-Do</li>
-				<li>Judo</li>
-				<li>Jiu Jitsu</li>
-				<li>Hapkido</li>
-			</ul>
-		</li>
-		<li data-element="meta-data-item">
-			<ul
-				class="ul_inline-comma"
-				data-element="value"
-				class="inline-block"
-			>
-				<li
-					data-element="label"
-					class="no-after font_bold w_100 w_auto:md c_secondary-n2"
-				>
-					<i
-						class="fal display_none [fa-icon-class|display_none]"
-					></i>
-					<span>Techniques:</span>
+				<li data-element="meta-data-item">
+					<ul
+						class="ul_inline-comma"
+						data-element="value"
+						class="inline-block"
+					>
+						<li
+							data-element="label"
+							class="no-after font_bold w_100 w_auto:md c_secondary-n2"
+						>
+							<i
+								class="fal display_none [fa-icon-class|display_none]"
+							></i>
+							<span>Techniques:</span>
+						</li>
+						<li>Kicking</li>
+						<li>Striking</li>
+						<li>Blocking</li>
+						<li>Judo Throws</li>
+						<li>Joint Locks</li>
+						<li>Takedowns</li>
+						<li>Footwork</li>
+					</ul>
 				</li>
-				<li>Kicking</li>
-				<li>Striking</li>
-				<li>Blocking</li>
-				<li>Judo Throws</li>
-				<li>Joint Locks</li>
-				<li>Takedowns</li>
-				<li>Footwork</li>
 			</ul>
-		</li>
-	</ul>
+		</div>
+	</div>
 </div>
  </div>
             </main> <footer class="font_1 font_2:lg m_n1 m-l_auto absolute t_0 r_0 b_0 relative:md">
@@ -798,8 +882,9 @@
 </div>
 			<div data-element="session" class="cq_parent">
     <div class="flex flex_column br_radius bg_white-9 shadow_bevel-light  br_solid br_black-3 br_1 self_stretch user-select_none relative w_100">
-        <article class="flex flex_row:md flex_column gap-x_5:lg gap-x_4 relative">
-            <aside class="aspect-ratio_16x9 bg_cover br_radius m_3:md m-t_3 m_auto max-w_20 relative self_start shadow_2 w_100" style="background-image:url(https://picsum.photos/640/480/)">
+        <article class="flex flex_row:md flex_column gap-x_5:xl gap-x_4 relative">
+            <aside class="br_radius m-l_4 m-r_6 m-r_0:md m-t_4 relative self_start shadow_2 aspect-ratio_16x9 overflow_hidden">
+                <img src="https://picsum.photos/640/480/" alt="" class="w_100 aspect-ratio_16x9 max-w_20 ">
                 <div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
                 <div class="absolute t_3 r_3 z_2" data-element="save-toggle"> <span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
 	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
@@ -820,14 +905,14 @@
 <h2 class="font-size_0 font_bold font_display c_primary-n1 m-y_0 lh_2">(Title) Odio illum et nemo odit harum. Qui vel ut non fugit minima eos. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi deleniti minus officia dolores quam nostrum, corporis, possimus consequatur, ducimus similique eligendi enim labore! Blanditiis laudantium aperiam tempora? Animi, impedit ipsa!</h2>
 <h3 class="c_black-7 font-size_down-1 font_medium font_ui m-y_0 lh_1">(Session Sub Title) Rhythm and Conduction Disorders</h3> <div class="m-t_auto font_ui"> <div
 	data-element="meta"
-	class="m-t_auto lh_0  c_black-7 font_regular font_ui flex flex_column gap-y_3:md gap-y_2 m-b_4:lg m-b_3"
+	class="m-t_auto lh_0 c_black-7 font_regular font_ui flex flex_column gap-y_4:md gap-y_3 m-b_4:lg m-b_3"
 >
 	<ul
 		data-element="meta-button-list"
-		class="ul_none flex flex_row wrap justify_start items_start gap-x_3 gap-x_4:md gap-y_2 font-size_down-2"
+		class="ul_none flex flex_row wrap justify_start items_start gap-x_3 gap-y_2 font-size_down-1"
 	>
 		<li
-			class="inline-block br_radius z_3 relative h:bg_black-2 bg_black-_05 lh_0 z_2"
+			class="inline-block br_radius z_3 relative h:bg_black-3 bg_black-1 lh_0 z_2"
 		>
 			<a
 				href="#"
@@ -844,7 +929,7 @@
 			</a>
 		</li>
 		<li
-			class="inline-block br_radius z_3 relative h:bg_black-2 bg_black-_05 lh_0 z_2"
+			class="inline-block br_radius z_3 relative h:bg_black-3 bg_black-1 lh_0 z_2"
 		>
 			<a
 				href="#"
@@ -858,134 +943,215 @@
 			</a>
 		</li>
 	</ul>
-	<ul
-		data-element="meta-data-list"
-		class="ul_none flex flex_row:md flex_column wrap justify_start items_start gap-x_3 gap-x_4:md gap-y_2 br_secondary-3 br-t_1 br_dotted p-t_2 p-t_3:md p-t_4:lg font-size_down-2"
-	>
-		<li data-element="meta-data-item">
-			<ul
-				class="ul_inline-comma"
-				data-element="value"
-				class="inline-block"
-			>
-				<li
-					data-element="label"
-					class="no-after font_bold w_100 w_auto:md c_secondary-n2"
+	<ul data-component="credits.medium-list" class="flex flex_row font_n1 gap_2 ul_none">
+	<li><div
+	class="inline-block bg_shade-n2 br_radius c_white bg_black-5 [bg_black-5|bg_credit] shadow_1"
+>
+	<div class="flex flex_row flex_nowrap p-y_2 p-x_3 lh_2">
+		<span class="flex_auto">CME</span>
+		<span class="flex_shrink"
+			><i class="fa-horizontal-rule fa-rotate-90 far"></i
+		></span>
+		<span class="flex_auto font_bold">0</span>
+	</div>
+</div>
+</li>
+	<li><div
+	class="inline-block bg_shade-n2 br_radius c_white bg_black-5 [bg_black-5|bg_credit] shadow_1"
+>
+	<div class="flex flex_row flex_nowrap p-y_2 p-x_3 lh_2">
+		<span class="flex_auto">CME</span>
+		<span class="flex_shrink"
+			><i class="fa-horizontal-rule fa-rotate-90 far"></i
+		></span>
+		<span class="flex_auto font_bold">0</span>
+	</div>
+</div>
+</li>
+	<li><div
+	class="inline-block bg_shade-n2 br_radius c_white bg_black-5 [bg_black-5|bg_credit] shadow_1"
+>
+	<div class="flex flex_row flex_nowrap p-y_2 p-x_3 lh_2">
+		<span class="flex_auto">CME</span>
+		<span class="flex_shrink"
+			><i class="fa-horizontal-rule fa-rotate-90 far"></i
+		></span>
+		<span class="flex_auto font_bold">0</span>
+	</div>
+</div>
+</li>
+</ul>
+	<div data-component="meta-data-list" class="font-size_down-1 br_secondary-3 br-t_1 br_dotted m-t_3 p-t_3">
+		<ul
+			data-element="meta-data-list"
+			class="ul_none flex flex_row:md flex_column wrap justify_start items_start gap-x_3 gap-x_4:md gap-y_2 p-t_2 p-t_3:md p-t_4:lg"
+		>
+			<li data-element="meta-data-item">
+				<ul
+					class="ul_inline-comma"
+					data-element="value"
+					class="inline-block"
 				>
-					<i
-						class="fal display_none [fa-icon-class|display_none]"
-					></i>
-					<span>Presentations:</span>
-				</li>
-				<li>20</li>
-			</ul>
-		</li>
-		<li data-element="meta-data-item">
-			<ul
-				class="ul_inline-comma"
-				data-element="value"
-				class="inline-block"
-			>
-				<li
-					data-element="label"
-					class="no-after font_bold w_100 w_auto:md c_secondary-n2"
+					<li
+						data-element="label"
+						class="no-after font_bold w_100 w_auto:md c_secondary-n2"
+					>
+						<i
+							class="fal display_none [fa-icon-class|display_none]"
+						></i>
+						<span>Presentations:</span>
+					</li>
+					<li>20</li>
+				</ul>
+			</li>
+			<li data-element="meta-data-item">
+				<ul
+					class="ul_inline-comma"
+					data-element="value"
+					class="inline-block"
 				>
-					<i class="fal fa-clock [fa-icon-class|display_none]"></i>
-					<span>Duration:</span>
-				</li>
-				<li>23 hours 45 minutes</li>
-			</ul>
-		</li>
-		<li data-element="meta-data-item">
-			<ul
-				class="ul_inline-comma"
-				data-element="value"
-				class="inline-block"
-			>
-				<li
-					data-element="label"
-					class="no-after font_bold w_100 w_auto:md c_secondary-n2"
+					<li
+						data-element="label"
+						class="no-after font_bold w_100 w_auto:md c_secondary-n2"
+					>
+						<i
+							class="fal fa-clock [fa-icon-class|display_none]"
+						></i>
+						<span>Duration:</span>
+					</li>
+					<li>23 hours 45 minutes</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div data-component="meta-data-list-hidden" class="font-size_down-2">
+		<div data-element="show-hide-toggle" class="flex flex_row items_center">
+			<div
+				class="br_secondary-3 br-t_1 br_dotted flex_auto flex_100"
+			></div>
+			<div class="flex_none p-x_3">
+				<div
+					class="flex_none flex flex_row flex_nowrap items_center c_secondary-2"
+					aria-expanded="false"
+					data-bs-toggle="collapse"
+					data-bs-target="#meta-list-unique"
+					aria-controls="meta-list-unique"
+					aria-expanded="false"
 				>
-					<i
-						class="fal display_none [fa-icon-class|display_none]"
-					></i>
-					<span>Category:</span>
+					<span class="fa-stack">
+						<i class="fas fa-minus fa-stack-1x"></i>
+						<i
+							class="fas fa-minus rotate_90 a:rotation fa-stack-1x"
+						></i>
+					</span>
+					<span><span class="display_none a:inline">show</span><span class="a:display_none inline">less</span>&nbsp;details</span>
+				</div>
+			</div>
+			<div
+				class="br_secondary-3 br-t_1 br_dotted flex_auto flex_100"
+			></div>
+		</div>
+		<div
+			data-element="collapse-wrapper"
+			id="meta-list-unique"
+			class="meta-list-unique collapse"
+		>
+			<ul
+				data-element="meta-data-list"
+				class="ul_none flex flex_row:md flex_column wrap justify_start items_start gap-x_3 gap-x_4:md gap-y_2 p-t_2 p-t_3:md p-t_4:lg"
+			>
+				<li data-element="meta-data-item">
+					<ul
+						class="ul_inline-comma"
+						data-element="value"
+						class="inline-block"
+					>
+						<li
+							data-element="label"
+							class="no-after font_bold w_100 w_auto:md c_secondary-n2"
+						>
+							<i
+								class="fal display_none [fa-icon-class|display_none]"
+							></i>
+							<span>Category:</span>
+						</li>
+						<li>Events</li>
+						<li>Forms</li>
+						<li>Warm Ups &amp; Drills</li>
+						<li>Business Development</li>
+						<li>Instructor Development</li>
+					</ul>
 				</li>
-				<li>Events</li>
-				<li>Forms</li>
-				<li>Warm Ups &amp; Drills</li>
-				<li>Business Development</li>
-				<li>Instructor Development</li>
-			</ul>
-		</li>
 
-		<li data-element="meta-data-item">
-			<ul
-				class="ul_inline-comma"
-				data-element="value"
-				class="inline-block"
-			>
-				<li
-					data-element="label"
-					class="no-after font_bold w_100 w_auto:md c_secondary-n2"
-				>
-					<i
-						class="fal display_none [fa-icon-class|display_none]"
-					></i>
-					<span>Experience Level:</span>
+				<li data-element="meta-data-item">
+					<ul
+						class="ul_inline-comma"
+						data-element="value"
+						class="inline-block"
+					>
+						<li
+							data-element="label"
+							class="no-after font_bold w_100 w_auto:md c_secondary-n2"
+						>
+							<i
+								class="fal display_none [fa-icon-class|display_none]"
+							></i>
+							<span>Experience Level:</span>
+						</li>
+						<li>All Ranks</li>
+					</ul>
 				</li>
-				<li>All Ranks</li>
-			</ul>
-		</li>
 
-		<li data-element="meta-data-item">
-			<ul
-				class="ul_inline-comma"
-				data-element="value"
-				class="inline-block"
-			>
-				<li
-					data-element="label"
-					class="no-after font_bold w_100 w_auto:md c_secondary-n2"
-				>
-					<i
-						class="fal display_none [fa-icon-class|display_none]"
-					></i>
-					<span>Style:</span>
+				<li data-element="meta-data-item">
+					<ul
+						class="ul_inline-comma"
+						data-element="value"
+						class="inline-block"
+					>
+						<li
+							data-element="label"
+							class="no-after font_bold w_100 w_auto:md c_secondary-n2"
+						>
+							<i
+								class="fal display_none [fa-icon-class|display_none]"
+							></i>
+							<span>Style:</span>
+						</li>
+						<li>Kickboxing</li>
+						<li>Kali</li>
+						<li>Kyuki-Do</li>
+						<li>Judo</li>
+						<li>Jiu Jitsu</li>
+						<li>Hapkido</li>
+					</ul>
 				</li>
-				<li>Kickboxing</li>
-				<li>Kali</li>
-				<li>Kyuki-Do</li>
-				<li>Judo</li>
-				<li>Jiu Jitsu</li>
-				<li>Hapkido</li>
-			</ul>
-		</li>
-		<li data-element="meta-data-item">
-			<ul
-				class="ul_inline-comma"
-				data-element="value"
-				class="inline-block"
-			>
-				<li
-					data-element="label"
-					class="no-after font_bold w_100 w_auto:md c_secondary-n2"
-				>
-					<i
-						class="fal display_none [fa-icon-class|display_none]"
-					></i>
-					<span>Techniques:</span>
+				<li data-element="meta-data-item">
+					<ul
+						class="ul_inline-comma"
+						data-element="value"
+						class="inline-block"
+					>
+						<li
+							data-element="label"
+							class="no-after font_bold w_100 w_auto:md c_secondary-n2"
+						>
+							<i
+								class="fal display_none [fa-icon-class|display_none]"
+							></i>
+							<span>Techniques:</span>
+						</li>
+						<li>Kicking</li>
+						<li>Striking</li>
+						<li>Blocking</li>
+						<li>Judo Throws</li>
+						<li>Joint Locks</li>
+						<li>Takedowns</li>
+						<li>Footwork</li>
+					</ul>
 				</li>
-				<li>Kicking</li>
-				<li>Striking</li>
-				<li>Blocking</li>
-				<li>Judo Throws</li>
-				<li>Joint Locks</li>
-				<li>Takedowns</li>
-				<li>Footwork</li>
 			</ul>
-		</li>
-	</ul>
+		</div>
+	</div>
 </div>
  </div>
             </main> <footer class="font_1 font_2:lg m_n1 m-l_auto absolute t_0 r_0 b_0 relative:md">
@@ -1129,8 +1295,9 @@
 </div>
 			<div data-element="session" class="cq_parent">
     <div class="flex flex_column br_radius bg_white-9 shadow_bevel-light  br_solid br_black-3 br_1 self_stretch user-select_none relative w_100">
-        <article class="flex flex_row:md flex_column gap-x_5:lg gap-x_4 relative">
-            <aside class="aspect-ratio_16x9 bg_cover br_radius m_3:md m-t_3 m_auto max-w_20 relative self_start shadow_2 w_100" style="background-image:url(https://picsum.photos/640/480/)">
+        <article class="flex flex_row:md flex_column gap-x_5:xl gap-x_4 relative">
+            <aside class="br_radius m-l_4 m-r_6 m-r_0:md m-t_4 relative self_start shadow_2 aspect-ratio_16x9 overflow_hidden">
+                <img src="https://picsum.photos/640/480/" alt="" class="w_100 aspect-ratio_16x9 max-w_20 ">
                 <div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
                 <div class="absolute t_3 r_3 z_2" data-element="save-toggle"> <span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
 	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
@@ -1151,14 +1318,14 @@
 <h2 class="font-size_0 font_bold font_display c_primary-n1 m-y_0 lh_2">(Title) Odio illum et nemo odit harum. Qui vel ut non fugit minima eos. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi deleniti minus officia dolores quam nostrum, corporis, possimus consequatur, ducimus similique eligendi enim labore! Blanditiis laudantium aperiam tempora? Animi, impedit ipsa!</h2>
 <h3 class="c_black-7 font-size_down-1 font_medium font_ui m-y_0 lh_1">(Session Sub Title) Rhythm and Conduction Disorders</h3> <div class="m-t_auto font_ui"> <div
 	data-element="meta"
-	class="m-t_auto lh_0  c_black-7 font_regular font_ui flex flex_column gap-y_3:md gap-y_2 m-b_4:lg m-b_3"
+	class="m-t_auto lh_0 c_black-7 font_regular font_ui flex flex_column gap-y_4:md gap-y_3 m-b_4:lg m-b_3"
 >
 	<ul
 		data-element="meta-button-list"
-		class="ul_none flex flex_row wrap justify_start items_start gap-x_3 gap-x_4:md gap-y_2 font-size_down-2"
+		class="ul_none flex flex_row wrap justify_start items_start gap-x_3 gap-y_2 font-size_down-1"
 	>
 		<li
-			class="inline-block br_radius z_3 relative h:bg_black-2 bg_black-_05 lh_0 z_2"
+			class="inline-block br_radius z_3 relative h:bg_black-3 bg_black-1 lh_0 z_2"
 		>
 			<a
 				href="#"
@@ -1175,7 +1342,7 @@
 			</a>
 		</li>
 		<li
-			class="inline-block br_radius z_3 relative h:bg_black-2 bg_black-_05 lh_0 z_2"
+			class="inline-block br_radius z_3 relative h:bg_black-3 bg_black-1 lh_0 z_2"
 		>
 			<a
 				href="#"
@@ -1189,134 +1356,215 @@
 			</a>
 		</li>
 	</ul>
-	<ul
-		data-element="meta-data-list"
-		class="ul_none flex flex_row:md flex_column wrap justify_start items_start gap-x_3 gap-x_4:md gap-y_2 br_secondary-3 br-t_1 br_dotted p-t_2 p-t_3:md p-t_4:lg font-size_down-2"
-	>
-		<li data-element="meta-data-item">
-			<ul
-				class="ul_inline-comma"
-				data-element="value"
-				class="inline-block"
-			>
-				<li
-					data-element="label"
-					class="no-after font_bold w_100 w_auto:md c_secondary-n2"
+	<ul data-component="credits.medium-list" class="flex flex_row font_n1 gap_2 ul_none">
+	<li><div
+	class="inline-block bg_shade-n2 br_radius c_white bg_black-5 [bg_black-5|bg_credit] shadow_1"
+>
+	<div class="flex flex_row flex_nowrap p-y_2 p-x_3 lh_2">
+		<span class="flex_auto">CME</span>
+		<span class="flex_shrink"
+			><i class="fa-horizontal-rule fa-rotate-90 far"></i
+		></span>
+		<span class="flex_auto font_bold">0</span>
+	</div>
+</div>
+</li>
+	<li><div
+	class="inline-block bg_shade-n2 br_radius c_white bg_black-5 [bg_black-5|bg_credit] shadow_1"
+>
+	<div class="flex flex_row flex_nowrap p-y_2 p-x_3 lh_2">
+		<span class="flex_auto">CME</span>
+		<span class="flex_shrink"
+			><i class="fa-horizontal-rule fa-rotate-90 far"></i
+		></span>
+		<span class="flex_auto font_bold">0</span>
+	</div>
+</div>
+</li>
+	<li><div
+	class="inline-block bg_shade-n2 br_radius c_white bg_black-5 [bg_black-5|bg_credit] shadow_1"
+>
+	<div class="flex flex_row flex_nowrap p-y_2 p-x_3 lh_2">
+		<span class="flex_auto">CME</span>
+		<span class="flex_shrink"
+			><i class="fa-horizontal-rule fa-rotate-90 far"></i
+		></span>
+		<span class="flex_auto font_bold">0</span>
+	</div>
+</div>
+</li>
+</ul>
+	<div data-component="meta-data-list" class="font-size_down-1 br_secondary-3 br-t_1 br_dotted m-t_3 p-t_3">
+		<ul
+			data-element="meta-data-list"
+			class="ul_none flex flex_row:md flex_column wrap justify_start items_start gap-x_3 gap-x_4:md gap-y_2 p-t_2 p-t_3:md p-t_4:lg"
+		>
+			<li data-element="meta-data-item">
+				<ul
+					class="ul_inline-comma"
+					data-element="value"
+					class="inline-block"
 				>
-					<i
-						class="fal display_none [fa-icon-class|display_none]"
-					></i>
-					<span>Presentations:</span>
-				</li>
-				<li>20</li>
-			</ul>
-		</li>
-		<li data-element="meta-data-item">
-			<ul
-				class="ul_inline-comma"
-				data-element="value"
-				class="inline-block"
-			>
-				<li
-					data-element="label"
-					class="no-after font_bold w_100 w_auto:md c_secondary-n2"
+					<li
+						data-element="label"
+						class="no-after font_bold w_100 w_auto:md c_secondary-n2"
+					>
+						<i
+							class="fal display_none [fa-icon-class|display_none]"
+						></i>
+						<span>Presentations:</span>
+					</li>
+					<li>20</li>
+				</ul>
+			</li>
+			<li data-element="meta-data-item">
+				<ul
+					class="ul_inline-comma"
+					data-element="value"
+					class="inline-block"
 				>
-					<i class="fal fa-clock [fa-icon-class|display_none]"></i>
-					<span>Duration:</span>
-				</li>
-				<li>23 hours 45 minutes</li>
-			</ul>
-		</li>
-		<li data-element="meta-data-item">
-			<ul
-				class="ul_inline-comma"
-				data-element="value"
-				class="inline-block"
-			>
-				<li
-					data-element="label"
-					class="no-after font_bold w_100 w_auto:md c_secondary-n2"
+					<li
+						data-element="label"
+						class="no-after font_bold w_100 w_auto:md c_secondary-n2"
+					>
+						<i
+							class="fal fa-clock [fa-icon-class|display_none]"
+						></i>
+						<span>Duration:</span>
+					</li>
+					<li>23 hours 45 minutes</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div data-component="meta-data-list-hidden" class="font-size_down-2">
+		<div data-element="show-hide-toggle" class="flex flex_row items_center">
+			<div
+				class="br_secondary-3 br-t_1 br_dotted flex_auto flex_100"
+			></div>
+			<div class="flex_none p-x_3">
+				<div
+					class="flex_none flex flex_row flex_nowrap items_center c_secondary-2"
+					aria-expanded="false"
+					data-bs-toggle="collapse"
+					data-bs-target="#meta-list-unique"
+					aria-controls="meta-list-unique"
+					aria-expanded="false"
 				>
-					<i
-						class="fal display_none [fa-icon-class|display_none]"
-					></i>
-					<span>Category:</span>
+					<span class="fa-stack">
+						<i class="fas fa-minus fa-stack-1x"></i>
+						<i
+							class="fas fa-minus rotate_90 a:rotation fa-stack-1x"
+						></i>
+					</span>
+					<span><span class="display_none a:inline">show</span><span class="a:display_none inline">less</span>&nbsp;details</span>
+				</div>
+			</div>
+			<div
+				class="br_secondary-3 br-t_1 br_dotted flex_auto flex_100"
+			></div>
+		</div>
+		<div
+			data-element="collapse-wrapper"
+			id="meta-list-unique"
+			class="meta-list-unique collapse"
+		>
+			<ul
+				data-element="meta-data-list"
+				class="ul_none flex flex_row:md flex_column wrap justify_start items_start gap-x_3 gap-x_4:md gap-y_2 p-t_2 p-t_3:md p-t_4:lg"
+			>
+				<li data-element="meta-data-item">
+					<ul
+						class="ul_inline-comma"
+						data-element="value"
+						class="inline-block"
+					>
+						<li
+							data-element="label"
+							class="no-after font_bold w_100 w_auto:md c_secondary-n2"
+						>
+							<i
+								class="fal display_none [fa-icon-class|display_none]"
+							></i>
+							<span>Category:</span>
+						</li>
+						<li>Events</li>
+						<li>Forms</li>
+						<li>Warm Ups &amp; Drills</li>
+						<li>Business Development</li>
+						<li>Instructor Development</li>
+					</ul>
 				</li>
-				<li>Events</li>
-				<li>Forms</li>
-				<li>Warm Ups &amp; Drills</li>
-				<li>Business Development</li>
-				<li>Instructor Development</li>
-			</ul>
-		</li>
 
-		<li data-element="meta-data-item">
-			<ul
-				class="ul_inline-comma"
-				data-element="value"
-				class="inline-block"
-			>
-				<li
-					data-element="label"
-					class="no-after font_bold w_100 w_auto:md c_secondary-n2"
-				>
-					<i
-						class="fal display_none [fa-icon-class|display_none]"
-					></i>
-					<span>Experience Level:</span>
+				<li data-element="meta-data-item">
+					<ul
+						class="ul_inline-comma"
+						data-element="value"
+						class="inline-block"
+					>
+						<li
+							data-element="label"
+							class="no-after font_bold w_100 w_auto:md c_secondary-n2"
+						>
+							<i
+								class="fal display_none [fa-icon-class|display_none]"
+							></i>
+							<span>Experience Level:</span>
+						</li>
+						<li>All Ranks</li>
+					</ul>
 				</li>
-				<li>All Ranks</li>
-			</ul>
-		</li>
 
-		<li data-element="meta-data-item">
-			<ul
-				class="ul_inline-comma"
-				data-element="value"
-				class="inline-block"
-			>
-				<li
-					data-element="label"
-					class="no-after font_bold w_100 w_auto:md c_secondary-n2"
-				>
-					<i
-						class="fal display_none [fa-icon-class|display_none]"
-					></i>
-					<span>Style:</span>
+				<li data-element="meta-data-item">
+					<ul
+						class="ul_inline-comma"
+						data-element="value"
+						class="inline-block"
+					>
+						<li
+							data-element="label"
+							class="no-after font_bold w_100 w_auto:md c_secondary-n2"
+						>
+							<i
+								class="fal display_none [fa-icon-class|display_none]"
+							></i>
+							<span>Style:</span>
+						</li>
+						<li>Kickboxing</li>
+						<li>Kali</li>
+						<li>Kyuki-Do</li>
+						<li>Judo</li>
+						<li>Jiu Jitsu</li>
+						<li>Hapkido</li>
+					</ul>
 				</li>
-				<li>Kickboxing</li>
-				<li>Kali</li>
-				<li>Kyuki-Do</li>
-				<li>Judo</li>
-				<li>Jiu Jitsu</li>
-				<li>Hapkido</li>
-			</ul>
-		</li>
-		<li data-element="meta-data-item">
-			<ul
-				class="ul_inline-comma"
-				data-element="value"
-				class="inline-block"
-			>
-				<li
-					data-element="label"
-					class="no-after font_bold w_100 w_auto:md c_secondary-n2"
-				>
-					<i
-						class="fal display_none [fa-icon-class|display_none]"
-					></i>
-					<span>Techniques:</span>
+				<li data-element="meta-data-item">
+					<ul
+						class="ul_inline-comma"
+						data-element="value"
+						class="inline-block"
+					>
+						<li
+							data-element="label"
+							class="no-after font_bold w_100 w_auto:md c_secondary-n2"
+						>
+							<i
+								class="fal display_none [fa-icon-class|display_none]"
+							></i>
+							<span>Techniques:</span>
+						</li>
+						<li>Kicking</li>
+						<li>Striking</li>
+						<li>Blocking</li>
+						<li>Judo Throws</li>
+						<li>Joint Locks</li>
+						<li>Takedowns</li>
+						<li>Footwork</li>
+					</ul>
 				</li>
-				<li>Kicking</li>
-				<li>Striking</li>
-				<li>Blocking</li>
-				<li>Judo Throws</li>
-				<li>Joint Locks</li>
-				<li>Takedowns</li>
-				<li>Footwork</li>
 			</ul>
-		</li>
-	</ul>
+		</div>
+	</div>
 </div>
  </div>
             </main> <footer class="font_1 font_2:lg m_n1 m-l_auto absolute t_0 r_0 b_0 relative:md">
