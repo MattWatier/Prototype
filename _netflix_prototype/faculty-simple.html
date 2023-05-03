@@ -1,6 +1,6 @@
 --- 
 layout: library_app_frame 
-name: "Faculty Simple" 
+name: "6.1 | Faculty Simple" 
 uri: "root/outline/faculty" 
 facultyActive: true 
 ---
@@ -21,7 +21,47 @@ facultyActive: true
 	{% if contains_titles.size >= 1 and contains_titles.first != '' %}
 	  {% assign location_font_size = 'font-size_down-1' %}
 	{% endif %}
-	<section class="relative font_1:xl font_0:md font_n1" >
+	<section class="relative font_0:lg font_n1:md font_n2 cq_parent" >
+		<div class="sticky t_0:md t_5 r_0 z_1 font_0">
+			<div class="absolute r_4 t_0:md t_3 flex flex_row flex_nowrap gap-x_3">
+			  <!-- Helper Jump links -->
+			  <a
+				class="br-tl_square br-tr_square br_radius btn btn-warning btn-sm grid items_center justify_center m-l_auto self_center shadow_3"
+				href="{{"/netflix/faculty/#AlphaNavTop" | relative_url }}"
+			  >
+				<span>
+				  <i class="fas fa-arrow-up"></i>
+				  top</span
+				>
+			  </a>
+			  <!-- Helper Jump links -->
+			</div>
+		  </div>
+		  <nav
+			class="bg_white br_radius grid items_center p_3 p_4:lg relative shadow_overlap-light z_2 m-t_n2 font_0"
+		  >
+			<ul
+			  class="c_secondary-2 flex:lg flex_row font_bold gap_4 grid grid-x_5 justify_around:lg justify_center m-x_4 m-y_3 ul_none"
+			>
+			  <!-- Loop -->
+			  {% for alpha in alpha_array %}
+				{% if alpha_categories contains alpha %}
+				  <li class="c_black-7 text_center">
+					  
+					<a
+					  class="bg_primary-4 br_radius h:c_white h:bg_primary-n3 p-x_3 block h:undecorated"
+					  href="{{ alpha  | prepend:"/netflix/faculty/#" | relative_url }}"
+					>
+					  {{- alpha -}}
+					</a>
+				  </li>
+				{% else %}
+				  <li class="c_black-7 text_center">{{ alpha }}</li>
+				{% endif %}
+			  {% endfor %}
+			  <!-- End Loop -->
+			</ul>
+		  </nav>
 	  {% for alpha in alpha_array %}
 		{% if alpha_categories contains alpha %}
 		  <div

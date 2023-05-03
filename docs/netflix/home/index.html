@@ -145,7 +145,7 @@
 				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md justify_start" href="./player"><i class="icon far fa-regular fa-fw fa-play m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_0 opacity_10 ">Watching</span></a>
 			</li>
 			<li class="nav-item m-r_3 flex_none br_radius c_black-8 h:bg_brand-n4 h:c_white a:c_white a:bg_primary-n1 h:shadow_overlap-light a:shadow_overlap-light transition_2 ">
-				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md justify_start" href="./faculty"><i class="icon far fa-regular fa-fw fa-user m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_0 opacity_10 ">faculty</span></a>
+				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md justify_start" href="./faculty-simple"><i class="icon far fa-regular fa-fw fa-user m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_0 opacity_10 ">faculty</span></a>
 			</li>
 			<li class="nav-item m-r_3 flex_none br_radius c_black-8 h:bg_brand-n4 h:c_white a:c_white a:bg_primary-n1 h:shadow_overlap-light a:shadow_overlap-light transition_2   ">
 				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md justify_start" href="./credits"><i class="icon far fa-regular fa-fw fa-award m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_0 opacity_10 ">Credits</span></a>
@@ -290,18 +290,11 @@
 	<aside class="aspect-ratio_16x9 bg_cover br-tl_radius br-tr_radius relative w_100" style="background-image:url(https://picsum.photos/640/480/)">
 		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
 		<div class="absolute t_3 r_3 z_2" data-element="save-toggle">
-		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
+		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
 	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
 	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
-<style lang="">
-	.font-size_up-2x{
-			font-size: 2em;
-		}
-		.font-size_up-3x{
-			font-size: 3em;
-		}
-</style>
+
 		</div>
 		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
 	<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
@@ -354,7 +347,7 @@
 			</a>
 		</li>
 	</ul>
-	<ul data-component="credits.medium-list" class="flex flex_row font_n1 gap_2 ul_none">
+	<ul data-component="credits.medium-list" class="flex flex_row font_n1 gap_2 ul_none wrap">
 	<li><div
 	class="inline-block bg_shade-n2 br_radius c_white bg_black-5 [bg_black-5|bg_credit] shadow_1"
 >
@@ -442,7 +435,7 @@
 			></div>
 			<div class="flex_none p-x_3">
 				<div
-					class="flex_none flex flex_row flex_nowrap items_center c_secondary-2"
+					class="flex_none flex flex_row flex_nowrap items_center c_secondary-2 pointer"
 					aria-expanded="false"
 					data-bs-toggle="collapse"
 					data-bs-target="#meta-list-unique"
@@ -584,18 +577,11 @@
 	<aside class="aspect-ratio_16x9 bg_cover br-tl_radius br-tr_radius relative w_100" style="background-image:url(https://picsum.photos/640/480/)">
 		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
 		<div class="absolute t_3 r_3 z_2" data-element="save-toggle">
-		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
+		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
 	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
 	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
-<style lang="">
-	.font-size_up-2x{
-			font-size: 2em;
-		}
-		.font-size_up-3x{
-			font-size: 3em;
-		}
-</style>
+
 		</div>
 		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
 	<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
@@ -648,7 +634,7 @@
 			</a>
 		</li>
 	</ul>
-	<ul data-component="credits.medium-list" class="flex flex_row font_n1 gap_2 ul_none">
+	<ul data-component="credits.medium-list" class="flex flex_row font_n1 gap_2 ul_none wrap">
 	<li><div
 	class="inline-block bg_shade-n2 br_radius c_white bg_black-5 [bg_black-5|bg_credit] shadow_1"
 >
@@ -736,7 +722,7 @@
 			></div>
 			<div class="flex_none p-x_3">
 				<div
-					class="flex_none flex flex_row flex_nowrap items_center c_secondary-2"
+					class="flex_none flex flex_row flex_nowrap items_center c_secondary-2 pointer"
 					aria-expanded="false"
 					data-bs-toggle="collapse"
 					data-bs-target="#meta-list-unique"
@@ -878,18 +864,11 @@
 	<aside class="aspect-ratio_16x9 bg_cover br-tl_radius br-tr_radius relative w_100" style="background-image:url(https://picsum.photos/640/480/)">
 		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
 		<div class="absolute t_3 r_3 z_2" data-element="save-toggle">
-		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
+		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
 	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
 	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
-<style lang="">
-	.font-size_up-2x{
-			font-size: 2em;
-		}
-		.font-size_up-3x{
-			font-size: 3em;
-		}
-</style>
+
 		</div>
 		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
 	<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
@@ -942,7 +921,7 @@
 			</a>
 		</li>
 	</ul>
-	<ul data-component="credits.medium-list" class="flex flex_row font_n1 gap_2 ul_none">
+	<ul data-component="credits.medium-list" class="flex flex_row font_n1 gap_2 ul_none wrap">
 	<li><div
 	class="inline-block bg_shade-n2 br_radius c_white bg_black-5 [bg_black-5|bg_credit] shadow_1"
 >
@@ -1030,7 +1009,7 @@
 			></div>
 			<div class="flex_none p-x_3">
 				<div
-					class="flex_none flex flex_row flex_nowrap items_center c_secondary-2"
+					class="flex_none flex flex_row flex_nowrap items_center c_secondary-2 pointer"
 					aria-expanded="false"
 					data-bs-toggle="collapse"
 					data-bs-target="#meta-list-unique"
@@ -1172,18 +1151,11 @@
 	<aside class="aspect-ratio_16x9 bg_cover br-tl_radius br-tr_radius relative w_100" style="background-image:url(https://picsum.photos/640/480/)">
 		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
 		<div class="absolute t_3 r_3 z_2" data-element="save-toggle">
-		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
+		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
 	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
 	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
-<style lang="">
-	.font-size_up-2x{
-			font-size: 2em;
-		}
-		.font-size_up-3x{
-			font-size: 3em;
-		}
-</style>
+
 		</div>
 		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
 	<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
@@ -1236,7 +1208,7 @@
 			</a>
 		</li>
 	</ul>
-	<ul data-component="credits.medium-list" class="flex flex_row font_n1 gap_2 ul_none">
+	<ul data-component="credits.medium-list" class="flex flex_row font_n1 gap_2 ul_none wrap">
 	<li><div
 	class="inline-block bg_shade-n2 br_radius c_white bg_black-5 [bg_black-5|bg_credit] shadow_1"
 >
@@ -1324,7 +1296,7 @@
 			></div>
 			<div class="flex_none p-x_3">
 				<div
-					class="flex_none flex flex_row flex_nowrap items_center c_secondary-2"
+					class="flex_none flex flex_row flex_nowrap items_center c_secondary-2 pointer"
 					aria-expanded="false"
 					data-bs-toggle="collapse"
 					data-bs-target="#meta-list-unique"
@@ -1466,18 +1438,11 @@
 	<aside class="aspect-ratio_16x9 bg_cover br-tl_radius br-tr_radius relative w_100" style="background-image:url(https://picsum.photos/640/480/)">
 		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
 		<div class="absolute t_3 r_3 z_2" data-element="save-toggle">
-		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
+		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
 	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
 	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
-<style lang="">
-	.font-size_up-2x{
-			font-size: 2em;
-		}
-		.font-size_up-3x{
-			font-size: 3em;
-		}
-</style>
+
 		</div>
 		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
 	<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
@@ -1530,7 +1495,7 @@
 			</a>
 		</li>
 	</ul>
-	<ul data-component="credits.medium-list" class="flex flex_row font_n1 gap_2 ul_none">
+	<ul data-component="credits.medium-list" class="flex flex_row font_n1 gap_2 ul_none wrap">
 	<li><div
 	class="inline-block bg_shade-n2 br_radius c_white bg_black-5 [bg_black-5|bg_credit] shadow_1"
 >
@@ -1618,7 +1583,7 @@
 			></div>
 			<div class="flex_none p-x_3">
 				<div
-					class="flex_none flex flex_row flex_nowrap items_center c_secondary-2"
+					class="flex_none flex flex_row flex_nowrap items_center c_secondary-2 pointer"
 					aria-expanded="false"
 					data-bs-toggle="collapse"
 					data-bs-target="#meta-list-unique"
@@ -1760,18 +1725,11 @@
 	<aside class="aspect-ratio_16x9 bg_cover br-tl_radius br-tr_radius relative w_100" style="background-image:url(https://picsum.photos/640/480/)">
 		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
 		<div class="absolute t_3 r_3 z_2" data-element="save-toggle">
-		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
+		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
 	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
 	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
-<style lang="">
-	.font-size_up-2x{
-			font-size: 2em;
-		}
-		.font-size_up-3x{
-			font-size: 3em;
-		}
-</style>
+
 		</div>
 		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
 	<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
@@ -1824,7 +1782,7 @@
 			</a>
 		</li>
 	</ul>
-	<ul data-component="credits.medium-list" class="flex flex_row font_n1 gap_2 ul_none">
+	<ul data-component="credits.medium-list" class="flex flex_row font_n1 gap_2 ul_none wrap">
 	<li><div
 	class="inline-block bg_shade-n2 br_radius c_white bg_black-5 [bg_black-5|bg_credit] shadow_1"
 >
@@ -1912,7 +1870,7 @@
 			></div>
 			<div class="flex_none p-x_3">
 				<div
-					class="flex_none flex flex_row flex_nowrap items_center c_secondary-2"
+					class="flex_none flex flex_row flex_nowrap items_center c_secondary-2 pointer"
 					aria-expanded="false"
 					data-bs-toggle="collapse"
 					data-bs-target="#meta-list-unique"
@@ -2054,18 +2012,11 @@
 	<aside class="aspect-ratio_16x9 bg_cover br-tl_radius br-tr_radius relative w_100" style="background-image:url(https://picsum.photos/640/480/)">
 		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
 		<div class="absolute t_3 r_3 z_2" data-element="save-toggle">
-		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
+		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
 	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
 	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
-<style lang="">
-	.font-size_up-2x{
-			font-size: 2em;
-		}
-		.font-size_up-3x{
-			font-size: 3em;
-		}
-</style>
+
 		</div>
 		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
 	<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
@@ -2118,7 +2069,7 @@
 			</a>
 		</li>
 	</ul>
-	<ul data-component="credits.medium-list" class="flex flex_row font_n1 gap_2 ul_none">
+	<ul data-component="credits.medium-list" class="flex flex_row font_n1 gap_2 ul_none wrap">
 	<li><div
 	class="inline-block bg_shade-n2 br_radius c_white bg_black-5 [bg_black-5|bg_credit] shadow_1"
 >
@@ -2206,7 +2157,7 @@
 			></div>
 			<div class="flex_none p-x_3">
 				<div
-					class="flex_none flex flex_row flex_nowrap items_center c_secondary-2"
+					class="flex_none flex flex_row flex_nowrap items_center c_secondary-2 pointer"
 					aria-expanded="false"
 					data-bs-toggle="collapse"
 					data-bs-target="#meta-list-unique"
@@ -2348,18 +2299,11 @@
 	<aside class="aspect-ratio_16x9 bg_cover br-tl_radius br-tr_radius relative w_100" style="background-image:url(https://picsum.photos/640/480/)">
 		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
 		<div class="absolute t_3 r_3 z_2" data-element="save-toggle">
-		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
+		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
 	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
 	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
-<style lang="">
-	.font-size_up-2x{
-			font-size: 2em;
-		}
-		.font-size_up-3x{
-			font-size: 3em;
-		}
-</style>
+
 		</div>
 		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
 	<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
@@ -2412,7 +2356,7 @@
 			</a>
 		</li>
 	</ul>
-	<ul data-component="credits.medium-list" class="flex flex_row font_n1 gap_2 ul_none">
+	<ul data-component="credits.medium-list" class="flex flex_row font_n1 gap_2 ul_none wrap">
 	<li><div
 	class="inline-block bg_shade-n2 br_radius c_white bg_black-5 [bg_black-5|bg_credit] shadow_1"
 >
@@ -2500,7 +2444,7 @@
 			></div>
 			<div class="flex_none p-x_3">
 				<div
-					class="flex_none flex flex_row flex_nowrap items_center c_secondary-2"
+					class="flex_none flex flex_row flex_nowrap items_center c_secondary-2 pointer"
 					aria-expanded="false"
 					data-bs-toggle="collapse"
 					data-bs-target="#meta-list-unique"
@@ -2642,18 +2586,11 @@
 	<aside class="aspect-ratio_16x9 bg_cover br-tl_radius br-tr_radius relative w_100" style="background-image:url(https://picsum.photos/640/480/)">
 		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
 		<div class="absolute t_3 r_3 z_2" data-element="save-toggle">
-		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
+		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
 	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
 	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
-<style lang="">
-	.font-size_up-2x{
-			font-size: 2em;
-		}
-		.font-size_up-3x{
-			font-size: 3em;
-		}
-</style>
+
 		</div>
 		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
 	<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
@@ -2706,7 +2643,7 @@
 			</a>
 		</li>
 	</ul>
-	<ul data-component="credits.medium-list" class="flex flex_row font_n1 gap_2 ul_none">
+	<ul data-component="credits.medium-list" class="flex flex_row font_n1 gap_2 ul_none wrap">
 	<li><div
 	class="inline-block bg_shade-n2 br_radius c_white bg_black-5 [bg_black-5|bg_credit] shadow_1"
 >
@@ -2794,7 +2731,7 @@
 			></div>
 			<div class="flex_none p-x_3">
 				<div
-					class="flex_none flex flex_row flex_nowrap items_center c_secondary-2"
+					class="flex_none flex flex_row flex_nowrap items_center c_secondary-2 pointer"
 					aria-expanded="false"
 					data-bs-toggle="collapse"
 					data-bs-target="#meta-list-unique"
@@ -2952,12 +2889,12 @@
 document.addEventListener( 'DOMContentLoaded', function() {
   var splide = new Splide( '.splide' , {
   type       : '',
-  perPage    : 4,
+  perPage    : 5,
   padding    : "1rem",
   gap: '1rem',
   breakpoints: {
+	1400:{perPage: 4,},
 	1200:{perPage: 3,},
-	1024:{perPage: 2,},
 	768: {
 	perPage: 2,
   },
@@ -2990,26 +2927,23 @@ classes: {
 </section> 
   </div>
 </header>
-<section class="grid-area_mainArea bg_white-8 br-br_radius overflow_visible p_4 p-x_5:xl p-x_6:xxl p-y_4:lg  p-y_5:xxl">
-  <h3 class="font_display font_xbold c_primary-n2">(Collection Title) Yearly Conference </h3>
-  <ul class="grid grid-x_4:xl grid-x_3:lg grid-x_2:md grid-x_1 gap_5 ul_none"> 
+
+<section class="grid-area_mainArea overflow_visible br-br_radius">
+  <div class="bg_white-8 relative font_1 font_2:lg font_3:xxl  p_4 p-x_5:xl p-x_6:xxl">
+    <h3 class="font_display font_xbold c_primary-n2">(Collection Title) Deeper Learning & Trining </h3>
+  </div>
+<div class="  p_4 p-x_5:xl p-x_6:xxl bg_white-6 br-br_radius">
+  <ul class="grid grid-x_5:xxl grid-x_4:xl grid-x_3:lg grid-x_2:md grid-x_1 gap_5 ul_none"> 
 				
     <article class="cq_parent overflow_hidden splide__slide flex flex_column user-select_none relative br_round bg_white-9  shadow_bevel-light flex flex_column br_solid br_black-3 br_1 self_stretch font_0">
 	<aside class="aspect-ratio_16x9 b_radius bg_cover br_radius  m-x_4:md m-t_4:md m-x_3 m-t_3 relative w_auto" style="background-image:url(https://picsum.photos/640/480/)">
 		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-1" data-element="flags">80%</div>
 		<div class="absolute t_3 r_3 z_2 font-size_down-1" data-element="save-toggle">
-		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
+		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
 	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
 	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
-<style lang="">
-	.font-size_up-2x{
-			font-size: 2em;
-		}
-		.font-size_up-3x{
-			font-size: 3em;
-		}
-</style>
+
 		</div>
 		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
 	<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
@@ -3018,7 +2952,7 @@ classes: {
 	<main class="lh_1 flex flex_column gap-y_2 p_4 p_5:xl font_display">
 		<h2 class="font-size_0 font_bold font_display c_primary-n1 m-y_0 lh_2">(Title) Odio illum et nemo odit harum. </h2>
 		<h3 class="c_black-7 font-size_down-1 font_medium font_ui m-y_0 lh_1">(Session Sub Title) Rhythm and Conduction Disorders</h3>
-		<ul data-component="credits.small-list" class="flex flex_row font_n2 gap_1 ul_none">
+		<ul data-component="credits.small-list" class="flex flex_row warp font_n2 gap_1 ul_none">
 	<li><div
 	data-component="credit.small-w-value"
 	class="inline-block  br_round c_white bg_black-5 [bg_black-5|bg_credit] "
@@ -3090,18 +3024,11 @@ classes: {
 	<aside class="aspect-ratio_16x9 b_radius bg_cover br_radius  m-x_4:md m-t_4:md m-x_3 m-t_3 relative w_auto" style="background-image:url(https://picsum.photos/640/480/)">
 		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-1" data-element="flags">80%</div>
 		<div class="absolute t_3 r_3 z_2 font-size_down-1" data-element="save-toggle">
-		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
+		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
 	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
 	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
-<style lang="">
-	.font-size_up-2x{
-			font-size: 2em;
-		}
-		.font-size_up-3x{
-			font-size: 3em;
-		}
-</style>
+
 		</div>
 		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
 	<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
@@ -3110,7 +3037,7 @@ classes: {
 	<main class="lh_1 flex flex_column gap-y_2 p_4 p_5:xl font_display">
 		<h2 class="font-size_0 font_bold font_display c_primary-n1 m-y_0 lh_2">(Title) Odio illum et nemo odit harum. </h2>
 		<h3 class="c_black-7 font-size_down-1 font_medium font_ui m-y_0 lh_1">(Session Sub Title) Rhythm and Conduction Disorders</h3>
-		<ul data-component="credits.small-list" class="flex flex_row font_n2 gap_1 ul_none">
+		<ul data-component="credits.small-list" class="flex flex_row warp font_n2 gap_1 ul_none">
 	<li><div
 	data-component="credit.small-w-value"
 	class="inline-block  br_round c_white bg_black-5 [bg_black-5|bg_credit] "
@@ -3183,18 +3110,11 @@ classes: {
 	<aside class="aspect-ratio_16x9 b_radius bg_cover br_radius  m-x_4:md m-t_4:md m-x_3 m-t_3 relative w_auto" style="background-image:url(https://picsum.photos/640/480/)">
 		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-1" data-element="flags">80%</div>
 		<div class="absolute t_3 r_3 z_2 font-size_down-1" data-element="save-toggle">
-		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
+		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
 	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
 	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
-<style lang="">
-	.font-size_up-2x{
-			font-size: 2em;
-		}
-		.font-size_up-3x{
-			font-size: 3em;
-		}
-</style>
+
 		</div>
 		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
 	<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
@@ -3203,7 +3123,7 @@ classes: {
 	<main class="lh_1 flex flex_column gap-y_2 p_4 p_5:xl font_display">
 		<h2 class="font-size_0 font_bold font_display c_primary-n1 m-y_0 lh_2">(Title) Odio illum et nemo odit harum. </h2>
 		<h3 class="c_black-7 font-size_down-1 font_medium font_ui m-y_0 lh_1">(Session Sub Title) Rhythm and Conduction Disorders</h3>
-		<ul data-component="credits.small-list" class="flex flex_row font_n2 gap_1 ul_none">
+		<ul data-component="credits.small-list" class="flex flex_row warp font_n2 gap_1 ul_none">
 	<li><div
 	data-component="credit.small-w-value"
 	class="inline-block  br_round c_white bg_black-5 [bg_black-5|bg_credit] "
@@ -3276,18 +3196,11 @@ classes: {
 	<aside class="aspect-ratio_16x9 b_radius bg_cover br_radius  m-x_4:md m-t_4:md m-x_3 m-t_3 relative w_auto" style="background-image:url(https://picsum.photos/640/480/)">
 		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-1" data-element="flags">80%</div>
 		<div class="absolute t_3 r_3 z_2 font-size_down-1" data-element="save-toggle">
-		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
+		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
 	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
 	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
-<style lang="">
-	.font-size_up-2x{
-			font-size: 2em;
-		}
-		.font-size_up-3x{
-			font-size: 3em;
-		}
-</style>
+
 		</div>
 		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
 	<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
@@ -3296,7 +3209,7 @@ classes: {
 	<main class="lh_1 flex flex_column gap-y_2 p_4 p_5:xl font_display">
 		<h2 class="font-size_0 font_bold font_display c_primary-n1 m-y_0 lh_2">(Title) Odio illum et nemo odit harum. </h2>
 		<h3 class="c_black-7 font-size_down-1 font_medium font_ui m-y_0 lh_1">(Session Sub Title) Rhythm and Conduction Disorders</h3>
-		<ul data-component="credits.small-list" class="flex flex_row font_n2 gap_1 ul_none">
+		<ul data-component="credits.small-list" class="flex flex_row warp font_n2 gap_1 ul_none">
 	<li><div
 	data-component="credit.small-w-value"
 	class="inline-block  br_round c_white bg_black-5 [bg_black-5|bg_credit] "
@@ -3368,18 +3281,11 @@ classes: {
 	<aside class="aspect-ratio_16x9 b_radius bg_cover br_radius  m-x_4:md m-t_4:md m-x_3 m-t_3 relative w_auto" style="background-image:url(https://picsum.photos/640/480/)">
 		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-1" data-element="flags">80%</div>
 		<div class="absolute t_3 r_3 z_2 font-size_down-1" data-element="save-toggle">
-		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
+		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
 	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
 	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
-<style lang="">
-	.font-size_up-2x{
-			font-size: 2em;
-		}
-		.font-size_up-3x{
-			font-size: 3em;
-		}
-</style>
+
 		</div>
 		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
 	<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
@@ -3388,7 +3294,7 @@ classes: {
 	<main class="lh_1 flex flex_column gap-y_2 p_4 p_5:xl font_display">
 		<h2 class="font-size_0 font_bold font_display c_primary-n1 m-y_0 lh_2">(Title) Odio illum et nemo odit harum. </h2>
 		<h3 class="c_black-7 font-size_down-1 font_medium font_ui m-y_0 lh_1">(Session Sub Title) Rhythm and Conduction Disorders</h3>
-		<ul data-component="credits.small-list" class="flex flex_row font_n2 gap_1 ul_none">
+		<ul data-component="credits.small-list" class="flex flex_row warp font_n2 gap_1 ul_none">
 	<li><div
 	data-component="credit.small-w-value"
 	class="inline-block  br_round c_white bg_black-5 [bg_black-5|bg_credit] "
@@ -3460,18 +3366,11 @@ classes: {
 	<aside class="aspect-ratio_16x9 b_radius bg_cover br_radius  m-x_4:md m-t_4:md m-x_3 m-t_3 relative w_auto" style="background-image:url(https://picsum.photos/640/480/)">
 		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-1" data-element="flags">80%</div>
 		<div class="absolute t_3 r_3 z_2 font-size_down-1" data-element="save-toggle">
-		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
+		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
 	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
 	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
-<style lang="">
-	.font-size_up-2x{
-			font-size: 2em;
-		}
-		.font-size_up-3x{
-			font-size: 3em;
-		}
-</style>
+
 		</div>
 		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
 	<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
@@ -3480,7 +3379,7 @@ classes: {
 	<main class="lh_1 flex flex_column gap-y_2 p_4 p_5:xl font_display">
 		<h2 class="font-size_0 font_bold font_display c_primary-n1 m-y_0 lh_2">(Title) Odio illum et nemo odit harum. </h2>
 		<h3 class="c_black-7 font-size_down-1 font_medium font_ui m-y_0 lh_1">(Session Sub Title) Rhythm and Conduction Disorders</h3>
-		<ul data-component="credits.small-list" class="flex flex_row font_n2 gap_1 ul_none">
+		<ul data-component="credits.small-list" class="flex flex_row warp font_n2 gap_1 ul_none">
 	<li><div
 	data-component="credit.small-w-value"
 	class="inline-block  br_round c_white bg_black-5 [bg_black-5|bg_credit] "
@@ -3552,18 +3451,11 @@ classes: {
 	<aside class="aspect-ratio_16x9 b_radius bg_cover br_radius  m-x_4:md m-t_4:md m-x_3 m-t_3 relative w_auto" style="background-image:url(https://picsum.photos/640/480/)">
 		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-1" data-element="flags">80%</div>
 		<div class="absolute t_3 r_3 z_2 font-size_down-1" data-element="save-toggle">
-		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
+		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
 	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
 	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
-<style lang="">
-	.font-size_up-2x{
-			font-size: 2em;
-		}
-		.font-size_up-3x{
-			font-size: 3em;
-		}
-</style>
+
 		</div>
 		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
 	<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
@@ -3572,7 +3464,7 @@ classes: {
 	<main class="lh_1 flex flex_column gap-y_2 p_4 p_5:xl font_display">
 		<h2 class="font-size_0 font_bold font_display c_primary-n1 m-y_0 lh_2">(Title) Odio illum et nemo odit harum. </h2>
 		<h3 class="c_black-7 font-size_down-1 font_medium font_ui m-y_0 lh_1">(Session Sub Title) Rhythm and Conduction Disorders</h3>
-		<ul data-component="credits.small-list" class="flex flex_row font_n2 gap_1 ul_none">
+		<ul data-component="credits.small-list" class="flex flex_row warp font_n2 gap_1 ul_none">
 	<li><div
 	data-component="credit.small-w-value"
 	class="inline-block  br_round c_white bg_black-5 [bg_black-5|bg_credit] "
@@ -3644,18 +3536,11 @@ classes: {
 	<aside class="aspect-ratio_16x9 b_radius bg_cover br_radius  m-x_4:md m-t_4:md m-x_3 m-t_3 relative w_auto" style="background-image:url(https://picsum.photos/640/480/)">
 		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-1" data-element="flags">80%</div>
 		<div class="absolute t_3 r_3 z_2 font-size_down-1" data-element="save-toggle">
-		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
+		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
 	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
 	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
-<style lang="">
-	.font-size_up-2x{
-			font-size: 2em;
-		}
-		.font-size_up-3x{
-			font-size: 3em;
-		}
-</style>
+
 		</div>
 		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
 	<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
@@ -3664,7 +3549,7 @@ classes: {
 	<main class="lh_1 flex flex_column gap-y_2 p_4 p_5:xl font_display">
 		<h2 class="font-size_0 font_bold font_display c_primary-n1 m-y_0 lh_2">(Title) Odio illum et nemo odit harum. </h2>
 		<h3 class="c_black-7 font-size_down-1 font_medium font_ui m-y_0 lh_1">(Session Sub Title) Rhythm and Conduction Disorders</h3>
-		<ul data-component="credits.small-list" class="flex flex_row font_n2 gap_1 ul_none">
+		<ul data-component="credits.small-list" class="flex flex_row warp font_n2 gap_1 ul_none">
 	<li><div
 	data-component="credit.small-w-value"
 	class="inline-block  br_round c_white bg_black-5 [bg_black-5|bg_credit] "
@@ -3736,18 +3621,11 @@ classes: {
 	<aside class="aspect-ratio_16x9 b_radius bg_cover br_radius  m-x_4:md m-t_4:md m-x_3 m-t_3 relative w_auto" style="background-image:url(https://picsum.photos/640/480/)">
 		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-1" data-element="flags">80%</div>
 		<div class="absolute t_3 r_3 z_2 font-size_down-1" data-element="save-toggle">
-		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
+		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
 	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
 	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
-<style lang="">
-	.font-size_up-2x{
-			font-size: 2em;
-		}
-		.font-size_up-3x{
-			font-size: 3em;
-		}
-</style>
+
 		</div>
 		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
 	<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
@@ -3756,7 +3634,7 @@ classes: {
 	<main class="lh_1 flex flex_column gap-y_2 p_4 p_5:xl font_display">
 		<h2 class="font-size_0 font_bold font_display c_primary-n1 m-y_0 lh_2">(Title) Odio illum et nemo odit harum. </h2>
 		<h3 class="c_black-7 font-size_down-1 font_medium font_ui m-y_0 lh_1">(Session Sub Title) Rhythm and Conduction Disorders</h3>
-		<ul data-component="credits.small-list" class="flex flex_row font_n2 gap_1 ul_none">
+		<ul data-component="credits.small-list" class="flex flex_row warp font_n2 gap_1 ul_none">
 	<li><div
 	data-component="credit.small-w-value"
 	class="inline-block  br_round c_white bg_black-5 [bg_black-5|bg_credit] "
@@ -3828,18 +3706,11 @@ classes: {
 	<aside class="aspect-ratio_16x9 b_radius bg_cover br_radius  m-x_4:md m-t_4:md m-x_3 m-t_3 relative w_auto" style="background-image:url(https://picsum.photos/640/480/)">
 		<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-1" data-element="flags">80%</div>
 		<div class="absolute t_3 r_3 z_2 font-size_down-1" data-element="save-toggle">
-		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
+		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
 	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
 	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
-<style lang="">
-	.font-size_up-2x{
-			font-size: 2em;
-		}
-		.font-size_up-3x{
-			font-size: 3em;
-		}
-</style>
+
 		</div>
 		<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
 	<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
@@ -3848,7 +3719,7 @@ classes: {
 	<main class="lh_1 flex flex_column gap-y_2 p_4 p_5:xl font_display">
 		<h2 class="font-size_0 font_bold font_display c_primary-n1 m-y_0 lh_2">(Title) Odio illum et nemo odit harum. </h2>
 		<h3 class="c_black-7 font-size_down-1 font_medium font_ui m-y_0 lh_1">(Session Sub Title) Rhythm and Conduction Disorders</h3>
-		<ul data-component="credits.small-list" class="flex flex_row font_n2 gap_1 ul_none">
+		<ul data-component="credits.small-list" class="flex flex_row warp font_n2 gap_1 ul_none">
 	<li><div
 	data-component="credit.small-w-value"
 	class="inline-block  br_round c_white bg_black-5 [bg_black-5|bg_credit] "
@@ -3919,6 +3790,8 @@ classes: {
 
   </ul>
   <div class="flex flex_row-reverse p-t_3 p-b_4"><a href="" class="link self_end   ">view all from "(Collection Title) Yearly Conference" <i class="fal fa-chevron-circle-right m-r_3"></i></a></div>
+</div>
+
 </section>
 
 		<!-- These Styles are just for the styleguide and are not to be included with the pattern. -->
@@ -4102,7 +3975,7 @@ classes: {
 			<a class="c_inherit-all flex flex_row h:undecorated p_3" href="./credits"><i class="icon fas fa-fw fa-award p-y_2 self_center"></i><span class="label p-l_3 lowercase lh_0 ">Credits</span></a>
 		</li>
 		<li class="nav-item flex_auto c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary a:shadow_overlap-light ">
-			<a class="c_inherit-all flex flex_row h:undecorated p_3" href="./faculty"><i class="icon fas fa-fw fa-user p-y_2 self_center"></i><span class="label p-l_3 lowercase lh_0 ">Faculty</span></a>
+			<a class="c_inherit-all flex flex_row h:undecorated p_3" href="./faculty-simple"><i class="icon fas fa-fw fa-user p-y_2 self_center"></i><span class="label p-l_3 lowercase lh_0 ">Faculty</span></a>
 		</li>
 
 		<li class="nav-item flex_auto c_white-8 bg_acc-n1 h:bg_black-9 h:c_white a:c_white a:bg_primary a:shadow_overlap-light">

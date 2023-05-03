@@ -6,8 +6,8 @@ layout: Prototype-TableofContents
 ---
 
 ## library
-
-{% for netflix_prototype in site.netflix_prototype %}
+ {% assign sortedPosts = site.netflix_prototype | sort: 'name' %} 
+{% for netflix_prototype in sortedPosts %}
 
   <ul class="ul_none ">
 	<li class="p_3 p-l_0 h:bg_primary-5">

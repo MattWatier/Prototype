@@ -102,3 +102,7 @@ ul[data-element="button-ripple--wrapper"] { display: flex; list-style: none; mar
 .grid-area_filterArea { grid-area: filterArea; }
 
 .grid-area_contentArea { grid-area: contentArea; }
+
+.font-size_up-2x { font-size: 2em; }
+
+.font-size_up-3x { font-size: 3em; }

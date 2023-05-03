@@ -1,6 +1,6 @@
 --- 
 layout: library_app_frame 
-name: "Home" 
+name: "2.0 | Home" 
 uri: "root/index (authenticated & access)" 
 homeActive: true 
 ---
@@ -24,9 +24,13 @@ homeActive: true
     {% include_relative netflix/home/slider.html %} 
   </div>
 </header>
-<section class="grid-area_mainArea bg_white-8 br-br_radius overflow_visible p_4 p-x_5:xl p-x_6:xxl p-y_4:lg  p-y_5:xxl">
-  <h3 class="font_display font_xbold c_primary-n2">(Collection Title) Yearly Conference </h3>
-  <ul class="grid grid-x_4:xl grid-x_3:lg grid-x_2:md grid-x_1 gap_5 ul_none"> 
+
+<section class="grid-area_mainArea overflow_visible br-br_radius">
+  <div class="bg_white-8 relative font_1 font_2:lg font_3:xxl  p_4 p-x_5:xl p-x_6:xxl">
+    <h3 class="font_display font_xbold c_primary-n2">(Collection Title) Deeper Learning & Trining </h3>
+  </div>
+<div class="  p_4 p-x_5:xl p-x_6:xxl bg_white-6 br-br_radius">
+  <ul class="grid grid-x_5:xxl grid-x_4:xl grid-x_3:lg grid-x_2:md grid-x_1 gap_5 ul_none"> 
 				
     {% include_relative netflix/program/session-small-card.html %}				
     {% include_relative netflix/program/session-small-card.html %}				
@@ -43,4 +47,6 @@ homeActive: true
 
   </ul>
   <div class="flex flex_row-reverse p-t_3 p-b_4"><a href="" class="link self_end   ">view all from "(Collection Title) Yearly Conference" <i class="fal fa-chevron-circle-right m-r_3"></i></a></div>
+</div>
+
 </section>

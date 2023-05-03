@@ -1,13 +1,13 @@
 --- 
 layout: library_app_frame 
-name: "Faculty" 
+name: "6.0 | Faculty - No Photo" 
 uri: "root/outline/faculty" 
 facultyActive: true 
 ---
 
 {% include_relative netflix/app-header-w-search.html %}
 {% include_relative netflix/breadcrumb-course.html %}
-<header id="AlphaNavTop" class="grid-area_pageHead overflow_visible relative bg_white-8 relative p_5:xl p_4:lg p_3 font_n1 font_0:lg font_1:xxl br-b_1 br_black-3 br_solid">
+<header id="AlphaNavTop" class="grid-area_pageHead overflow_visible relative bg_white-8 relative p_5:xl p_4:lg p_3 font_n1 font_0:lg  br-b_1 br_black-3 br_solid">
 	<h2 class="font-size_up-1 font_bold font_display c_primary-n1 m-y_0 lh_1">Faculty</h2>
 
 </header>
@@ -21,7 +21,7 @@ facultyActive: true
 	{% if contains_titles.size >= 1 and contains_titles.first != '' %}
 	  {% assign location_font_size = 'font-size_1' %}
 	{% endif %}
-	<section class="relative font_1:xl font_0:md font_n1" >
+	<section class="relative font_0:xl font_n1:md font_n2" >
 
 	  <div class="sticky t_0:md t_5 r_0 z_1 font_0">
 		<div class="absolute r_4 t_0:md t_3 flex flex_row flex_nowrap gap-x_3">

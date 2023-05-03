@@ -145,7 +145,7 @@
 				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md justify_start" href="./player"><i class="icon far fa-regular fa-fw fa-play m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_0 opacity_10 ">Watching</span></a>
 			</li>
 			<li class="nav-item m-r_3 flex_none br_radius c_black-8 h:bg_brand-n4 h:c_white a:c_white a:bg_primary-n1 h:shadow_overlap-light a:shadow_overlap-light transition_2 ">
-				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md justify_start" href="./faculty"><i class="icon far fa-regular fa-fw fa-user m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_0 opacity_10 ">faculty</span></a>
+				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md justify_start" href="./faculty-simple"><i class="icon far fa-regular fa-fw fa-user m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_0 opacity_10 ">faculty</span></a>
 			</li>
 			<li class="nav-item m-r_3 flex_none br_radius c_black-8 h:bg_brand-n4 h:c_white a:c_white a:bg_primary-n1 h:shadow_overlap-light a:shadow_overlap-light transition_2   ">
 				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md justify_start" href="./credits"><i class="icon far fa-regular fa-fw fa-award m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_0 opacity_10 ">Credits</span></a>
@@ -229,8 +229,9 @@
 				</li>
 			</ul>
 		</nav>
+		
 		<ul id="filterFacets" class="ul_none font_n1 {display_none} opacity_none transition_3 min-h_30:md">
-			<li data-name="library-search-facet" class="bg_white-8 br_radius m-t_3 p_3 max-w_20:md Filter1">
+			<li data-name="library-search-facet" class="bg_white-8 br_radius m-t_3 p_3 Filter1">
 				<header class="flex flex_row font-size_up-1 m-y_2">
 					<div class="flex_auto p-l_0 lh_1 font-size_up-1 font_medium">Type Ahead Filter</div>
 				</header>
@@ -278,7 +279,7 @@
 					<footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
 				</main>
 			</li>
-			<li data-name="library-search-facet" class="bg_white-8 br_radius m-t_3 p_3  max-w_20:md Filter2">
+			<li data-name="library-search-facet" class="bg_white-8 br_radius m-t_3 p_3  Filter2">
 				<header class="flex flex_row font-size_up-1 m-y_2">
 					<div class="flex_auto  self_center p-l_0 lh_1 font-size_up-1 font_medium">Primary Category </div>
 					<div class="c_primary-n2 flex flex_nowrap flex_row font-size_down h:c_primary-n3 h:opacity h:undecorated items_center lh_1 m-l_auto opacity_5 self_center toggle user-select_none p-l_4" data-bs-toggle="collapse" data-bs-target="#CollapseFacetGroupPrimaryID" role="button" aria-expanded="true" aria-controls="#CollapseFacetGroupPrimaryID">
@@ -332,7 +333,7 @@
 					<footer class="text_center font-size_down c_primary-n1 p-t_3"><span class="cursor_not-allowed c_black-3">less</span><span class="c_primary"> | </span><span class="link h:underline h:black link h:underline h:black cursor_pointer">more</span></footer>
 				</main>
 			</li>
-			<li data-name="library-search-facet" class="bg_white-8 br_radius m-t_3 p_3  max-w_20:md Filter3">
+			<li data-name="library-search-facet" class="bg_white-8 br_radius m-t_3 p_3  Filter3">
 				<header class="flex flex_row font-size_up-1 m-y_2">
 					<div class="flex_auto  self_center p-l_0 lh_1 font-size_up-1 font_medium">Drugs Generic </div>
 					<div class="c_primary-n2 flex flex_nowrap flex_row font-size_down h:c_primary-n3 h:opacity h:undecorated items_center lh_1 m-l_auto opacity_5 self_center toggle user-select_none p-l_4" data-bs-toggle="collapse" data-bs-target="#CollapseFacetGroupID" role="button" aria-expanded="true" aria-controls="#CollapseFacetGroupID">
@@ -388,14 +389,14 @@
 			</li>
 		</ul>
 	</div>
-	<div class="grid-area_contentArea row-start_1 isolation_isolate" id="SearchBarTop">
+	<div class="grid-area_contentArea row-start_1 isolation_isolate" >
 		<div class=" sticky jump-buttons_top t_5 t_0:lg r_0 z_3">
 			<div class="absolute r_4 t_4 t_0:md flex flex_row flex_nowrap gap-x_3">
 				<!--  Helper Jump links -->
-				<a class="br-tl_square br-tr_square br_radius btn btn-sm btn-warning grid items_center justify_center m-l_auto m-t_n2 m-t_0:lg self_center shadow_3" href="#SearchBarTop">
+				<a class="br-tl_square br-tr_square br_radius btn btn-sm btn-warning grid items_center justify_center m-l_auto m-t_n2 m-t_0:lg self_center shadow_3" href="search/#SearchBarTop">
 					<span><i class="fas fa-arrow-up"></i><i class="m-l_2 fas fa-search"></i></span>
 				</a>
-				<a :href="#FilterNavContainer" class="br-tl_square br-tr_square br_radius btn btn-sm btn-warning display_none:lg grid items_center justify_center m-l_auto m-t_n2 m-t_0:lg self_center shadow_3">
+				<a href="search/#FilterNavContainer" class="br-tl_square br-tr_square br_radius btn btn-sm btn-warning display_none:lg grid items_center justify_center m-l_auto m-t_n2 m-t_0:lg self_center shadow_3">
 					<span><i class="fas fa-arrow-down"></i><i class="m-l_2 fas fa-filter"></i></span>
 				</a>
 				<!--  Helper Jump links -->
@@ -403,7 +404,7 @@
 		</div>
 		<div class="bg_white br_radius p_4:lg p_3 shadow_overlap-light z_5 relative">
 			<h1 class="c_primary-n1 font_display m-b_3 m-t_0 flex flex_row justify_between"><span>Search</span>
-				<a :href="#FilterNavContainer" class="absolute br-tl_square br-tr_square br_radius btn btn-accent btn-sm display_none:lg flex_none grid items_center justify_center m-l_auto r_3 self_center t_0">
+				<a href="search/#FilterNavContainer" class="absolute br-tl_square br-tr_square br_radius btn btn-accent btn-sm display_none:lg flex_none grid items_center justify_center m-l_auto r_3 self_center t_0">
 					<span><i class="fas fa-arrow-down"></i><i class="fas fa-filter"></i></span>
 				</a>
 			</h1>
@@ -480,18 +481,11 @@
             <aside class="br_radius m-l_4 m-r_6 m-r_0:md m-t_4 relative self_start shadow_2 aspect-ratio_16x9 overflow_hidden">
                 <img src="https://picsum.photos/640/480/" alt="" class="w_100 aspect-ratio_16x9 max-w_20 ">
                 <div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
-                <div class="absolute t_3 r_3 z_2" data-element="save-toggle"> <span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
+                <div class="absolute t_3 r_3 z_2" data-element="save-toggle"> <span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
 	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
 	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
-<style lang="">
-	.font-size_up-2x{
-			font-size: 2em;
-		}
-		.font-size_up-3x{
-			font-size: 3em;
-		}
-</style> </div> <div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
+ </div> <div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
 	<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
 </div>
             </aside>
@@ -537,7 +531,7 @@
 			</a>
 		</li>
 	</ul>
-	<ul data-component="credits.medium-list" class="flex flex_row font_n1 gap_2 ul_none">
+	<ul data-component="credits.medium-list" class="flex flex_row font_n1 gap_2 ul_none wrap">
 	<li><div
 	class="inline-block bg_shade-n2 br_radius c_white bg_black-5 [bg_black-5|bg_credit] shadow_1"
 >
@@ -625,7 +619,7 @@
 			></div>
 			<div class="flex_none p-x_3">
 				<div
-					class="flex_none flex flex_row flex_nowrap items_center c_secondary-2"
+					class="flex_none flex flex_row flex_nowrap items_center c_secondary-2 pointer"
 					aria-expanded="false"
 					data-bs-toggle="collapse"
 					data-bs-target="#meta-list-unique"
@@ -764,33 +758,26 @@
         </article>
         <section data-element="presentation-list">
             <ul class="ul_none font_copy">
-                <li class="br-t_1 br_solid br_black-3 flex flex_row relative h:bg_accent-5  relative"> <div class="p-y_4 p-x_2 font_n2"><span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
+                <li> <div class="br-t_1 br_solid br_black-3 flex flex_row relative h:bg_accent-5 flex_100">
+	<div class="bg_black-_05 br-r_1 br_black-2 br_solid flex_none font_n1 p_4 "><span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
 	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
 	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
-<style lang="">
-	.font-size_up-2x{
-			font-size: 2em;
-		}
-		.font-size_up-3x{
-			font-size: 3em;
-		}
-</style></div>
-<div class="p_4">
-	<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">(Presentation Title) Rhythm and Conduction Disorders </h3>
-	<h4 class="c_black-6 font-size_down-2 font_display font_medium m-y_0">(Sub Presentation Title) Rhythm and Conduction Disorders</h4>
-	<!-- Start of Keyword Found Conditional Block: This block turns on if the keywords were found within the video transcript, title, or subtitle of this presentation -->
-	<!-- <span class="bg_accent-2 br_radius c_black font-size_down-2 p-x_3 p-y_2 r_0 t_0 inline-block">
-		<i class="fas fa-solid fa-search m-r_3"></i>
-		<strong class="font_medium font_ui">Keyword Found in Video @: </strong>
-		<ul class="ul_none ul_inline-pipe gap_1">
-			<li class=""><a href="" class="c_black h:c_black underline h:undecorated">0:59</a></li>
-			<li class=""><a href="" class="c_black h:c_black underline h:undecorated">1:10</a></li>
+</div>
+	<div class="p_4 flex_auto ">
+		<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">(Presentation Title) Rhythm and Conduction Disorders </h3>
+		<h4 class="c_black-6 font-size_down-1 font_display font_medium m-y_0">(Sub Presentation Title) Rhythm and Conduction Disorders</h4>
+		<ul class="ul_inline-semicolon font-size_down-2" data-element="value">
+			<li data-element="label" class="no-after font_bold w_100 w_auto:md c_secondary-n2">
+				<i class="fal display_none [fa-icon-class|display_none]"></i>
+				<span>Faculty:</span>
+			</li>
+			<li>Bernice Lakin</li>
+			<li>Eddie Nikolaus II</li>
+			<li>Nick Larkin</li>
 		</ul>
-	</span> -->
-	<!-- End of Keyword Found Conditional Block -->
-</div> 
-<div data-element="presentation-footer" class="font_1 font_2:lg m_n1 m-l_auto w_auto z_2 ">
+	</div>
+	<div data-element="presentation-footer" class="font_1 font_2:lg m_n1 m-l_auto w_auto z_2 ">
 	<nav data-element="button-ripple" data-element-option="inline-end">
 			<ul  data-element="button-ripple--wrapper">
 				<li data-element="button-ripple--button-edge" >
@@ -802,34 +789,61 @@
 	
 			</ul>
 	</nav>
+</div>
 </div> </li>
-                <li class="br-t_1 br_solid br_black-3 flex flex_row relative h:bg_accent-5  relative"> <div class="p-y_4 p-x_2 font_n2"><span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
+                <li> <div class="br-t_1 br_solid br_black-3 flex flex_row relative bg_black-2 cursor_not-allowed">
+	<div class="bg_black-_05 br-r_1 br_black-2 br_solid flex_none font_n1 p_4">
+		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
+			<i class="c_inherit-all col-end_end col-start_start fa-lock-alt fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
+		</span>
+	</div>
+	<div class="p_4 flex_auto opacity_7">
+		<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">(Presentation Title)[Locked] Rhythm and Conduction Disorders</h3>
+		<h4 class="c_black-6 font-size_down-1 font_display font_medium m-y_0">(Sub Presentation Title) Rhythm and Conduction Disorders</h4>
+		<ul class="ul_inline-semicolon font-size_down-2" data-element="value">
+			<li data-element="label" class="no-after font_bold w_100 w_auto:md c_secondary-n2">
+				<i class="fal display_none [fa-icon-class|display_none]"></i>
+				<span>Faculty:</span>
+			</li>
+			<li>Brent Schumm</li>
+			<li>Lana Williamson</li>
+		</ul>
+	</div>
+	<div data-element="presentation-footer" class="font_1 font_2:lg m_n1 m-l_auto w_auto z_2 ">
+	<nav data-element="button-ripple" data-element-option="inline-end">
+			<ul  data-element="button-ripple--wrapper">
+				<li data-element="button-ripple--button-edge" >
+					<span data-element="button-ripple--button" class="[expanded-click-area] bg_white-6  c_black h:bg_primary h:c_white ">
+						<i class="c_inherit-all fa-lock fa-solid fas font-size_down-2"></i>
+					</span>
+					<span data-element="button-ripple--button-edge-corners"></span>
+				</li>
+	
+			</ul>
+	</nav>
+</div>
+</div>
+ </li>
+                <li> <div class="br-t_1 br_solid br_black-3 flex flex_row relative h:bg_accent-5 flex_100">
+	<div class="bg_black-_05 br-r_1 br_black-2 br_solid flex_none font_n1 p_4 "><span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
 	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
 	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
-<style lang="">
-	.font-size_up-2x{
-			font-size: 2em;
-		}
-		.font-size_up-3x{
-			font-size: 3em;
-		}
-</style></div>
-<div class="p_4">
-	<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">(Presentation Title) Rhythm and Conduction Disorders </h3>
-	<h4 class="c_black-6 font-size_down-2 font_display font_medium m-y_0">(Sub Presentation Title) Rhythm and Conduction Disorders</h4>
-	<!-- Start of Keyword Found Conditional Block: This block turns on if the keywords were found within the video transcript, title, or subtitle of this presentation -->
-	<!-- <span class="bg_accent-2 br_radius c_black font-size_down-2 p-x_3 p-y_2 r_0 t_0 inline-block">
-		<i class="fas fa-solid fa-search m-r_3"></i>
-		<strong class="font_medium font_ui">Keyword Found in Video @: </strong>
-		<ul class="ul_none ul_inline-pipe gap_1">
-			<li class=""><a href="" class="c_black h:c_black underline h:undecorated">0:59</a></li>
-			<li class=""><a href="" class="c_black h:c_black underline h:undecorated">1:10</a></li>
+</div>
+	<div class="p_4 flex_auto ">
+		<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">(Presentation Title) Rhythm and Conduction Disorders </h3>
+		<h4 class="c_black-6 font-size_down-1 font_display font_medium m-y_0">(Sub Presentation Title) Rhythm and Conduction Disorders</h4>
+		<ul class="ul_inline-semicolon font-size_down-2" data-element="value">
+			<li data-element="label" class="no-after font_bold w_100 w_auto:md c_secondary-n2">
+				<i class="fal display_none [fa-icon-class|display_none]"></i>
+				<span>Faculty:</span>
+			</li>
+			<li>Bernice Lakin</li>
+			<li>Eddie Nikolaus II</li>
+			<li>Nick Larkin</li>
 		</ul>
-	</span> -->
-	<!-- End of Keyword Found Conditional Block -->
-</div> 
-<div data-element="presentation-footer" class="font_1 font_2:lg m_n1 m-l_auto w_auto z_2 ">
+	</div>
+	<div data-element="presentation-footer" class="font_1 font_2:lg m_n1 m-l_auto w_auto z_2 ">
 	<nav data-element="button-ripple" data-element-option="inline-end">
 			<ul  data-element="button-ripple--wrapper">
 				<li data-element="button-ripple--button-edge" >
@@ -841,51 +855,31 @@
 	
 			</ul>
 	</nav>
-</div> </li>
-                <li class="br-t_1 br_solid br_black-3 flex flex_row relative h:bg_accent-5  relative"> <div class="p-y_4 p-x_2 font_n2"><span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
-	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
-	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
-</span>
-<style lang="">
-	.font-size_up-2x{
-			font-size: 2em;
-		}
-		.font-size_up-3x{
-			font-size: 3em;
-		}
-</style></div>
-<div class="p_4">
-	<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">(Presentation Title) Rhythm and Conduction Disorders </h3>
-	<h4 class="c_black-6 font-size_down-2 font_display font_medium m-y_0">(Sub Presentation Title) Rhythm and Conduction Disorders</h4>
-	<!-- Start of Keyword Found Conditional Block: This block turns on if the keywords were found within the video transcript, title, or subtitle of this presentation -->
-	<!-- <span class="bg_accent-2 br_radius c_black font-size_down-2 p-x_3 p-y_2 r_0 t_0 inline-block">
-		<i class="fas fa-solid fa-search m-r_3"></i>
-		<strong class="font_medium font_ui">Keyword Found in Video @: </strong>
-		<ul class="ul_none ul_inline-pipe gap_1">
-			<li class=""><a href="" class="c_black h:c_black underline h:undecorated">0:59</a></li>
-			<li class=""><a href="" class="c_black h:c_black underline h:undecorated">1:10</a></li>
-		</ul>
-	</span> -->
-	<!-- End of Keyword Found Conditional Block -->
-</div> 
-<div data-element="presentation-footer" class="font_1 font_2:lg m_n1 m-l_auto w_auto z_2 ">
-	<nav data-element="button-ripple" data-element-option="inline-end">
-			<ul  data-element="button-ripple--wrapper">
-				<li data-element="button-ripple--button-edge" >
-					<a href="" data-element="button-ripple--button" class="[expanded-click-area] bg_white-6  c_black h:bg_primary h:c_white ">
-						<i class="c_inherit-all fa-play fa-solid fas font-size_down-2"></i>
-					</a>
-					<span data-element="button-ripple--button-edge-corners"></span>
-				</li>
-	
-			</ul>
-	</nav>
+</div>
 </div> </li>
             </ul>
         </section>
-        <footer data-element="footer-button-bar" class="bg_brand-n2 br-br_radius br-bl_radius flex flex_row-reverse nowrap items_end  font_2 m_n1 m-t_auto">
+        <footer data-element="footer-button-bar" class="bg_brand-n2 flex flex_row-reverse nowrap items_end  font_2 m_n1 m-t_auto">
         </footer>
     </div>
+    <div class="bg_black-2 br-bl_radius br-br_radius br-t_0 br_1 br_black-3 br_solid c_black  m-b_n1 m-x_n1 p_3 relative self_stretch">
+        <div class=" uppercase flex flex_row flex_wrap font-size_down-2 justify_start">
+          <ul class=" gap-x_3 gap-y_3 justify_end:md justify_start self_center ul_inline-pipe uppercase">
+            <li class="inline-flex items_center lh_0">
+              <span class="bg_CME bg_black-2 br_1 br_black-3 br_circle br_solid  m-r_2" style=" height: 1em; width: 1em;"></span> <span class="font_medium">CME: </span> 2
+            </li>
+            <li class="inline-flex items_center lh_0">
+              <span class="bg_CNE bg_black-2 br_1 br_black-3 br_circle br_solid  m-r_2" style=" height: 1em; width: 1em;"></span> CNE: 1.2
+            </li>
+            <li class="inline-flex items_center lh_0">
+              <span class="bg_COP bg_black-2 br_1 br_black-3 br_circle br_solid  m-r_2" style=" height: 1em; width: 1em;"></span> COP
+            </li>
+            <li class="inline-flex items_center lh_0">
+              <span class="bg_MOCII bg_black-2 br_1 br_black-3 br_circle br_solid  m-r_2" style=" height: 1em; width: 1em;"></span> MOCII: 4.5
+            </li>
+          </ul>
+        </div>
+      </div>
 </div>
 			<div data-element="session" class="cq_parent">
     <div class="flex flex_column br_radius bg_white-9 shadow_bevel-light  br_solid br_black-3 br_1 self_stretch user-select_none relative w_100">
@@ -893,18 +887,11 @@
             <aside class="br_radius m-l_4 m-r_6 m-r_0:md m-t_4 relative self_start shadow_2 aspect-ratio_16x9 overflow_hidden">
                 <img src="https://picsum.photos/640/480/" alt="" class="w_100 aspect-ratio_16x9 max-w_20 ">
                 <div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
-                <div class="absolute t_3 r_3 z_2" data-element="save-toggle"> <span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
+                <div class="absolute t_3 r_3 z_2" data-element="save-toggle"> <span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
 	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
 	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
-<style lang="">
-	.font-size_up-2x{
-			font-size: 2em;
-		}
-		.font-size_up-3x{
-			font-size: 3em;
-		}
-</style> </div> <div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
+ </div> <div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
 	<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
 </div>
             </aside>
@@ -950,7 +937,7 @@
 			</a>
 		</li>
 	</ul>
-	<ul data-component="credits.medium-list" class="flex flex_row font_n1 gap_2 ul_none">
+	<ul data-component="credits.medium-list" class="flex flex_row font_n1 gap_2 ul_none wrap">
 	<li><div
 	class="inline-block bg_shade-n2 br_radius c_white bg_black-5 [bg_black-5|bg_credit] shadow_1"
 >
@@ -1038,7 +1025,7 @@
 			></div>
 			<div class="flex_none p-x_3">
 				<div
-					class="flex_none flex flex_row flex_nowrap items_center c_secondary-2"
+					class="flex_none flex flex_row flex_nowrap items_center c_secondary-2 pointer"
 					aria-expanded="false"
 					data-bs-toggle="collapse"
 					data-bs-target="#meta-list-unique"
@@ -1177,33 +1164,26 @@
         </article>
         <section data-element="presentation-list">
             <ul class="ul_none font_copy">
-                <li class="br-t_1 br_solid br_black-3 flex flex_row relative h:bg_accent-5  relative"> <div class="p-y_4 p-x_2 font_n2"><span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
+                <li> <div class="br-t_1 br_solid br_black-3 flex flex_row relative h:bg_accent-5 flex_100">
+	<div class="bg_black-_05 br-r_1 br_black-2 br_solid flex_none font_n1 p_4 "><span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
 	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
 	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
-<style lang="">
-	.font-size_up-2x{
-			font-size: 2em;
-		}
-		.font-size_up-3x{
-			font-size: 3em;
-		}
-</style></div>
-<div class="p_4">
-	<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">(Presentation Title) Rhythm and Conduction Disorders </h3>
-	<h4 class="c_black-6 font-size_down-2 font_display font_medium m-y_0">(Sub Presentation Title) Rhythm and Conduction Disorders</h4>
-	<!-- Start of Keyword Found Conditional Block: This block turns on if the keywords were found within the video transcript, title, or subtitle of this presentation -->
-	<!-- <span class="bg_accent-2 br_radius c_black font-size_down-2 p-x_3 p-y_2 r_0 t_0 inline-block">
-		<i class="fas fa-solid fa-search m-r_3"></i>
-		<strong class="font_medium font_ui">Keyword Found in Video @: </strong>
-		<ul class="ul_none ul_inline-pipe gap_1">
-			<li class=""><a href="" class="c_black h:c_black underline h:undecorated">0:59</a></li>
-			<li class=""><a href="" class="c_black h:c_black underline h:undecorated">1:10</a></li>
+</div>
+	<div class="p_4 flex_auto ">
+		<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">(Presentation Title) Rhythm and Conduction Disorders </h3>
+		<h4 class="c_black-6 font-size_down-1 font_display font_medium m-y_0">(Sub Presentation Title) Rhythm and Conduction Disorders</h4>
+		<ul class="ul_inline-semicolon font-size_down-2" data-element="value">
+			<li data-element="label" class="no-after font_bold w_100 w_auto:md c_secondary-n2">
+				<i class="fal display_none [fa-icon-class|display_none]"></i>
+				<span>Faculty:</span>
+			</li>
+			<li>Bernice Lakin</li>
+			<li>Eddie Nikolaus II</li>
+			<li>Nick Larkin</li>
 		</ul>
-	</span> -->
-	<!-- End of Keyword Found Conditional Block -->
-</div> 
-<div data-element="presentation-footer" class="font_1 font_2:lg m_n1 m-l_auto w_auto z_2 ">
+	</div>
+	<div data-element="presentation-footer" class="font_1 font_2:lg m_n1 m-l_auto w_auto z_2 ">
 	<nav data-element="button-ripple" data-element-option="inline-end">
 			<ul  data-element="button-ripple--wrapper">
 				<li data-element="button-ripple--button-edge" >
@@ -1215,34 +1195,61 @@
 	
 			</ul>
 	</nav>
+</div>
 </div> </li>
-                <li class="br-t_1 br_solid br_black-3 flex flex_row relative h:bg_accent-5  relative"> <div class="p-y_4 p-x_2 font_n2"><span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
+                <li> <div class="br-t_1 br_solid br_black-3 flex flex_row relative bg_black-2 cursor_not-allowed">
+	<div class="bg_black-_05 br-r_1 br_black-2 br_solid flex_none font_n1 p_4">
+		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
+			<i class="c_inherit-all col-end_end col-start_start fa-lock-alt fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
+		</span>
+	</div>
+	<div class="p_4 flex_auto opacity_7">
+		<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">(Presentation Title)[Locked] Rhythm and Conduction Disorders</h3>
+		<h4 class="c_black-6 font-size_down-1 font_display font_medium m-y_0">(Sub Presentation Title) Rhythm and Conduction Disorders</h4>
+		<ul class="ul_inline-semicolon font-size_down-2" data-element="value">
+			<li data-element="label" class="no-after font_bold w_100 w_auto:md c_secondary-n2">
+				<i class="fal display_none [fa-icon-class|display_none]"></i>
+				<span>Faculty:</span>
+			</li>
+			<li>Brent Schumm</li>
+			<li>Lana Williamson</li>
+		</ul>
+	</div>
+	<div data-element="presentation-footer" class="font_1 font_2:lg m_n1 m-l_auto w_auto z_2 ">
+	<nav data-element="button-ripple" data-element-option="inline-end">
+			<ul  data-element="button-ripple--wrapper">
+				<li data-element="button-ripple--button-edge" >
+					<span data-element="button-ripple--button" class="[expanded-click-area] bg_white-6  c_black h:bg_primary h:c_white ">
+						<i class="c_inherit-all fa-lock fa-solid fas font-size_down-2"></i>
+					</span>
+					<span data-element="button-ripple--button-edge-corners"></span>
+				</li>
+	
+			</ul>
+	</nav>
+</div>
+</div>
+ </li>
+                <li> <div class="br-t_1 br_solid br_black-3 flex flex_row relative h:bg_accent-5 flex_100">
+	<div class="bg_black-_05 br-r_1 br_black-2 br_solid flex_none font_n1 p_4 "><span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
 	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
 	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
-<style lang="">
-	.font-size_up-2x{
-			font-size: 2em;
-		}
-		.font-size_up-3x{
-			font-size: 3em;
-		}
-</style></div>
-<div class="p_4">
-	<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">(Presentation Title) Rhythm and Conduction Disorders </h3>
-	<h4 class="c_black-6 font-size_down-2 font_display font_medium m-y_0">(Sub Presentation Title) Rhythm and Conduction Disorders</h4>
-	<!-- Start of Keyword Found Conditional Block: This block turns on if the keywords were found within the video transcript, title, or subtitle of this presentation -->
-	<!-- <span class="bg_accent-2 br_radius c_black font-size_down-2 p-x_3 p-y_2 r_0 t_0 inline-block">
-		<i class="fas fa-solid fa-search m-r_3"></i>
-		<strong class="font_medium font_ui">Keyword Found in Video @: </strong>
-		<ul class="ul_none ul_inline-pipe gap_1">
-			<li class=""><a href="" class="c_black h:c_black underline h:undecorated">0:59</a></li>
-			<li class=""><a href="" class="c_black h:c_black underline h:undecorated">1:10</a></li>
+</div>
+	<div class="p_4 flex_auto ">
+		<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">(Presentation Title) Rhythm and Conduction Disorders </h3>
+		<h4 class="c_black-6 font-size_down-1 font_display font_medium m-y_0">(Sub Presentation Title) Rhythm and Conduction Disorders</h4>
+		<ul class="ul_inline-semicolon font-size_down-2" data-element="value">
+			<li data-element="label" class="no-after font_bold w_100 w_auto:md c_secondary-n2">
+				<i class="fal display_none [fa-icon-class|display_none]"></i>
+				<span>Faculty:</span>
+			</li>
+			<li>Bernice Lakin</li>
+			<li>Eddie Nikolaus II</li>
+			<li>Nick Larkin</li>
 		</ul>
-	</span> -->
-	<!-- End of Keyword Found Conditional Block -->
-</div> 
-<div data-element="presentation-footer" class="font_1 font_2:lg m_n1 m-l_auto w_auto z_2 ">
+	</div>
+	<div data-element="presentation-footer" class="font_1 font_2:lg m_n1 m-l_auto w_auto z_2 ">
 	<nav data-element="button-ripple" data-element-option="inline-end">
 			<ul  data-element="button-ripple--wrapper">
 				<li data-element="button-ripple--button-edge" >
@@ -1254,51 +1261,31 @@
 	
 			</ul>
 	</nav>
-</div> </li>
-                <li class="br-t_1 br_solid br_black-3 flex flex_row relative h:bg_accent-5  relative"> <div class="p-y_4 p-x_2 font_n2"><span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
-	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
-	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
-</span>
-<style lang="">
-	.font-size_up-2x{
-			font-size: 2em;
-		}
-		.font-size_up-3x{
-			font-size: 3em;
-		}
-</style></div>
-<div class="p_4">
-	<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">(Presentation Title) Rhythm and Conduction Disorders </h3>
-	<h4 class="c_black-6 font-size_down-2 font_display font_medium m-y_0">(Sub Presentation Title) Rhythm and Conduction Disorders</h4>
-	<!-- Start of Keyword Found Conditional Block: This block turns on if the keywords were found within the video transcript, title, or subtitle of this presentation -->
-	<!-- <span class="bg_accent-2 br_radius c_black font-size_down-2 p-x_3 p-y_2 r_0 t_0 inline-block">
-		<i class="fas fa-solid fa-search m-r_3"></i>
-		<strong class="font_medium font_ui">Keyword Found in Video @: </strong>
-		<ul class="ul_none ul_inline-pipe gap_1">
-			<li class=""><a href="" class="c_black h:c_black underline h:undecorated">0:59</a></li>
-			<li class=""><a href="" class="c_black h:c_black underline h:undecorated">1:10</a></li>
-		</ul>
-	</span> -->
-	<!-- End of Keyword Found Conditional Block -->
-</div> 
-<div data-element="presentation-footer" class="font_1 font_2:lg m_n1 m-l_auto w_auto z_2 ">
-	<nav data-element="button-ripple" data-element-option="inline-end">
-			<ul  data-element="button-ripple--wrapper">
-				<li data-element="button-ripple--button-edge" >
-					<a href="" data-element="button-ripple--button" class="[expanded-click-area] bg_white-6  c_black h:bg_primary h:c_white ">
-						<i class="c_inherit-all fa-play fa-solid fas font-size_down-2"></i>
-					</a>
-					<span data-element="button-ripple--button-edge-corners"></span>
-				</li>
-	
-			</ul>
-	</nav>
+</div>
 </div> </li>
             </ul>
         </section>
-        <footer data-element="footer-button-bar" class="bg_brand-n2 br-br_radius br-bl_radius flex flex_row-reverse nowrap items_end  font_2 m_n1 m-t_auto">
+        <footer data-element="footer-button-bar" class="bg_brand-n2 flex flex_row-reverse nowrap items_end  font_2 m_n1 m-t_auto">
         </footer>
     </div>
+    <div class="bg_black-2 br-bl_radius br-br_radius br-t_0 br_1 br_black-3 br_solid c_black  m-b_n1 m-x_n1 p_3 relative self_stretch">
+        <div class=" uppercase flex flex_row flex_wrap font-size_down-2 justify_start">
+          <ul class=" gap-x_3 gap-y_3 justify_end:md justify_start self_center ul_inline-pipe uppercase">
+            <li class="inline-flex items_center lh_0">
+              <span class="bg_CME bg_black-2 br_1 br_black-3 br_circle br_solid  m-r_2" style=" height: 1em; width: 1em;"></span> <span class="font_medium">CME: </span> 2
+            </li>
+            <li class="inline-flex items_center lh_0">
+              <span class="bg_CNE bg_black-2 br_1 br_black-3 br_circle br_solid  m-r_2" style=" height: 1em; width: 1em;"></span> CNE: 1.2
+            </li>
+            <li class="inline-flex items_center lh_0">
+              <span class="bg_COP bg_black-2 br_1 br_black-3 br_circle br_solid  m-r_2" style=" height: 1em; width: 1em;"></span> COP
+            </li>
+            <li class="inline-flex items_center lh_0">
+              <span class="bg_MOCII bg_black-2 br_1 br_black-3 br_circle br_solid  m-r_2" style=" height: 1em; width: 1em;"></span> MOCII: 4.5
+            </li>
+          </ul>
+        </div>
+      </div>
 </div>
 			<div data-element="session" class="cq_parent">
     <div class="flex flex_column br_radius bg_white-9 shadow_bevel-light  br_solid br_black-3 br_1 self_stretch user-select_none relative w_100">
@@ -1306,18 +1293,11 @@
             <aside class="br_radius m-l_4 m-r_6 m-r_0:md m-t_4 relative self_start shadow_2 aspect-ratio_16x9 overflow_hidden">
                 <img src="https://picsum.photos/640/480/" alt="" class="w_100 aspect-ratio_16x9 max-w_20 ">
                 <div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
-                <div class="absolute t_3 r_3 z_2" data-element="save-toggle"> <span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
+                <div class="absolute t_3 r_3 z_2" data-element="save-toggle"> <span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
 	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
 	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
-<style lang="">
-	.font-size_up-2x{
-			font-size: 2em;
-		}
-		.font-size_up-3x{
-			font-size: 3em;
-		}
-</style> </div> <div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
+ </div> <div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
 	<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
 </div>
             </aside>
@@ -1363,7 +1343,7 @@
 			</a>
 		</li>
 	</ul>
-	<ul data-component="credits.medium-list" class="flex flex_row font_n1 gap_2 ul_none">
+	<ul data-component="credits.medium-list" class="flex flex_row font_n1 gap_2 ul_none wrap">
 	<li><div
 	class="inline-block bg_shade-n2 br_radius c_white bg_black-5 [bg_black-5|bg_credit] shadow_1"
 >
@@ -1451,7 +1431,7 @@
 			></div>
 			<div class="flex_none p-x_3">
 				<div
-					class="flex_none flex flex_row flex_nowrap items_center c_secondary-2"
+					class="flex_none flex flex_row flex_nowrap items_center c_secondary-2 pointer"
 					aria-expanded="false"
 					data-bs-toggle="collapse"
 					data-bs-target="#meta-list-unique"
@@ -1590,33 +1570,26 @@
         </article>
         <section data-element="presentation-list">
             <ul class="ul_none font_copy">
-                <li class="br-t_1 br_solid br_black-3 flex flex_row relative h:bg_accent-5  relative"> <div class="p-y_4 p-x_2 font_n2"><span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
+                <li> <div class="br-t_1 br_solid br_black-3 flex flex_row relative h:bg_accent-5 flex_100">
+	<div class="bg_black-_05 br-r_1 br_black-2 br_solid flex_none font_n1 p_4 "><span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
 	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
 	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
-<style lang="">
-	.font-size_up-2x{
-			font-size: 2em;
-		}
-		.font-size_up-3x{
-			font-size: 3em;
-		}
-</style></div>
-<div class="p_4">
-	<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">(Presentation Title) Rhythm and Conduction Disorders </h3>
-	<h4 class="c_black-6 font-size_down-2 font_display font_medium m-y_0">(Sub Presentation Title) Rhythm and Conduction Disorders</h4>
-	<!-- Start of Keyword Found Conditional Block: This block turns on if the keywords were found within the video transcript, title, or subtitle of this presentation -->
-	<!-- <span class="bg_accent-2 br_radius c_black font-size_down-2 p-x_3 p-y_2 r_0 t_0 inline-block">
-		<i class="fas fa-solid fa-search m-r_3"></i>
-		<strong class="font_medium font_ui">Keyword Found in Video @: </strong>
-		<ul class="ul_none ul_inline-pipe gap_1">
-			<li class=""><a href="" class="c_black h:c_black underline h:undecorated">0:59</a></li>
-			<li class=""><a href="" class="c_black h:c_black underline h:undecorated">1:10</a></li>
+</div>
+	<div class="p_4 flex_auto ">
+		<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">(Presentation Title) Rhythm and Conduction Disorders </h3>
+		<h4 class="c_black-6 font-size_down-1 font_display font_medium m-y_0">(Sub Presentation Title) Rhythm and Conduction Disorders</h4>
+		<ul class="ul_inline-semicolon font-size_down-2" data-element="value">
+			<li data-element="label" class="no-after font_bold w_100 w_auto:md c_secondary-n2">
+				<i class="fal display_none [fa-icon-class|display_none]"></i>
+				<span>Faculty:</span>
+			</li>
+			<li>Bernice Lakin</li>
+			<li>Eddie Nikolaus II</li>
+			<li>Nick Larkin</li>
 		</ul>
-	</span> -->
-	<!-- End of Keyword Found Conditional Block -->
-</div> 
-<div data-element="presentation-footer" class="font_1 font_2:lg m_n1 m-l_auto w_auto z_2 ">
+	</div>
+	<div data-element="presentation-footer" class="font_1 font_2:lg m_n1 m-l_auto w_auto z_2 ">
 	<nav data-element="button-ripple" data-element-option="inline-end">
 			<ul  data-element="button-ripple--wrapper">
 				<li data-element="button-ripple--button-edge" >
@@ -1628,34 +1601,61 @@
 	
 			</ul>
 	</nav>
+</div>
 </div> </li>
-                <li class="br-t_1 br_solid br_black-3 flex flex_row relative h:bg_accent-5  relative"> <div class="p-y_4 p-x_2 font_n2"><span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
+                <li> <div class="br-t_1 br_solid br_black-3 flex flex_row relative bg_black-2 cursor_not-allowed">
+	<div class="bg_black-_05 br-r_1 br_black-2 br_solid flex_none font_n1 p_4">
+		<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
+			<i class="c_inherit-all col-end_end col-start_start fa-lock-alt fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
+		</span>
+	</div>
+	<div class="p_4 flex_auto opacity_7">
+		<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">(Presentation Title)[Locked] Rhythm and Conduction Disorders</h3>
+		<h4 class="c_black-6 font-size_down-1 font_display font_medium m-y_0">(Sub Presentation Title) Rhythm and Conduction Disorders</h4>
+		<ul class="ul_inline-semicolon font-size_down-2" data-element="value">
+			<li data-element="label" class="no-after font_bold w_100 w_auto:md c_secondary-n2">
+				<i class="fal display_none [fa-icon-class|display_none]"></i>
+				<span>Faculty:</span>
+			</li>
+			<li>Brent Schumm</li>
+			<li>Lana Williamson</li>
+		</ul>
+	</div>
+	<div data-element="presentation-footer" class="font_1 font_2:lg m_n1 m-l_auto w_auto z_2 ">
+	<nav data-element="button-ripple" data-element-option="inline-end">
+			<ul  data-element="button-ripple--wrapper">
+				<li data-element="button-ripple--button-edge" >
+					<span data-element="button-ripple--button" class="[expanded-click-area] bg_white-6  c_black h:bg_primary h:c_white ">
+						<i class="c_inherit-all fa-lock fa-solid fas font-size_down-2"></i>
+					</span>
+					<span data-element="button-ripple--button-edge-corners"></span>
+				</li>
+	
+			</ul>
+	</nav>
+</div>
+</div>
+ </li>
+                <li> <div class="br-t_1 br_solid br_black-3 flex flex_row relative h:bg_accent-5 flex_100">
+	<div class="bg_black-_05 br-r_1 br_black-2 br_solid flex_none font_n1 p_4 "><span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
 	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
 	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
-<style lang="">
-	.font-size_up-2x{
-			font-size: 2em;
-		}
-		.font-size_up-3x{
-			font-size: 3em;
-		}
-</style></div>
-<div class="p_4">
-	<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">(Presentation Title) Rhythm and Conduction Disorders </h3>
-	<h4 class="c_black-6 font-size_down-2 font_display font_medium m-y_0">(Sub Presentation Title) Rhythm and Conduction Disorders</h4>
-	<!-- Start of Keyword Found Conditional Block: This block turns on if the keywords were found within the video transcript, title, or subtitle of this presentation -->
-	<!-- <span class="bg_accent-2 br_radius c_black font-size_down-2 p-x_3 p-y_2 r_0 t_0 inline-block">
-		<i class="fas fa-solid fa-search m-r_3"></i>
-		<strong class="font_medium font_ui">Keyword Found in Video @: </strong>
-		<ul class="ul_none ul_inline-pipe gap_1">
-			<li class=""><a href="" class="c_black h:c_black underline h:undecorated">0:59</a></li>
-			<li class=""><a href="" class="c_black h:c_black underline h:undecorated">1:10</a></li>
+</div>
+	<div class="p_4 flex_auto ">
+		<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">(Presentation Title) Rhythm and Conduction Disorders </h3>
+		<h4 class="c_black-6 font-size_down-1 font_display font_medium m-y_0">(Sub Presentation Title) Rhythm and Conduction Disorders</h4>
+		<ul class="ul_inline-semicolon font-size_down-2" data-element="value">
+			<li data-element="label" class="no-after font_bold w_100 w_auto:md c_secondary-n2">
+				<i class="fal display_none [fa-icon-class|display_none]"></i>
+				<span>Faculty:</span>
+			</li>
+			<li>Bernice Lakin</li>
+			<li>Eddie Nikolaus II</li>
+			<li>Nick Larkin</li>
 		</ul>
-	</span> -->
-	<!-- End of Keyword Found Conditional Block -->
-</div> 
-<div data-element="presentation-footer" class="font_1 font_2:lg m_n1 m-l_auto w_auto z_2 ">
+	</div>
+	<div data-element="presentation-footer" class="font_1 font_2:lg m_n1 m-l_auto w_auto z_2 ">
 	<nav data-element="button-ripple" data-element-option="inline-end">
 			<ul  data-element="button-ripple--wrapper">
 				<li data-element="button-ripple--button-edge" >
@@ -1667,51 +1667,31 @@
 	
 			</ul>
 	</nav>
-</div> </li>
-                <li class="br-t_1 br_solid br_black-3 flex flex_row relative h:bg_accent-5  relative"> <div class="p-y_4 p-x_2 font_n2"><span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible">
-	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
-	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
-</span>
-<style lang="">
-	.font-size_up-2x{
-			font-size: 2em;
-		}
-		.font-size_up-3x{
-			font-size: 3em;
-		}
-</style></div>
-<div class="p_4">
-	<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">(Presentation Title) Rhythm and Conduction Disorders </h3>
-	<h4 class="c_black-6 font-size_down-2 font_display font_medium m-y_0">(Sub Presentation Title) Rhythm and Conduction Disorders</h4>
-	<!-- Start of Keyword Found Conditional Block: This block turns on if the keywords were found within the video transcript, title, or subtitle of this presentation -->
-	<!-- <span class="bg_accent-2 br_radius c_black font-size_down-2 p-x_3 p-y_2 r_0 t_0 inline-block">
-		<i class="fas fa-solid fa-search m-r_3"></i>
-		<strong class="font_medium font_ui">Keyword Found in Video @: </strong>
-		<ul class="ul_none ul_inline-pipe gap_1">
-			<li class=""><a href="" class="c_black h:c_black underline h:undecorated">0:59</a></li>
-			<li class=""><a href="" class="c_black h:c_black underline h:undecorated">1:10</a></li>
-		</ul>
-	</span> -->
-	<!-- End of Keyword Found Conditional Block -->
-</div> 
-<div data-element="presentation-footer" class="font_1 font_2:lg m_n1 m-l_auto w_auto z_2 ">
-	<nav data-element="button-ripple" data-element-option="inline-end">
-			<ul  data-element="button-ripple--wrapper">
-				<li data-element="button-ripple--button-edge" >
-					<a href="" data-element="button-ripple--button" class="[expanded-click-area] bg_white-6  c_black h:bg_primary h:c_white ">
-						<i class="c_inherit-all fa-play fa-solid fas font-size_down-2"></i>
-					</a>
-					<span data-element="button-ripple--button-edge-corners"></span>
-				</li>
-	
-			</ul>
-	</nav>
+</div>
 </div> </li>
             </ul>
         </section>
-        <footer data-element="footer-button-bar" class="bg_brand-n2 br-br_radius br-bl_radius flex flex_row-reverse nowrap items_end  font_2 m_n1 m-t_auto">
+        <footer data-element="footer-button-bar" class="bg_brand-n2 flex flex_row-reverse nowrap items_end  font_2 m_n1 m-t_auto">
         </footer>
     </div>
+    <div class="bg_black-2 br-bl_radius br-br_radius br-t_0 br_1 br_black-3 br_solid c_black  m-b_n1 m-x_n1 p_3 relative self_stretch">
+        <div class=" uppercase flex flex_row flex_wrap font-size_down-2 justify_start">
+          <ul class=" gap-x_3 gap-y_3 justify_end:md justify_start self_center ul_inline-pipe uppercase">
+            <li class="inline-flex items_center lh_0">
+              <span class="bg_CME bg_black-2 br_1 br_black-3 br_circle br_solid  m-r_2" style=" height: 1em; width: 1em;"></span> <span class="font_medium">CME: </span> 2
+            </li>
+            <li class="inline-flex items_center lh_0">
+              <span class="bg_CNE bg_black-2 br_1 br_black-3 br_circle br_solid  m-r_2" style=" height: 1em; width: 1em;"></span> CNE: 1.2
+            </li>
+            <li class="inline-flex items_center lh_0">
+              <span class="bg_COP bg_black-2 br_1 br_black-3 br_circle br_solid  m-r_2" style=" height: 1em; width: 1em;"></span> COP
+            </li>
+            <li class="inline-flex items_center lh_0">
+              <span class="bg_MOCII bg_black-2 br_1 br_black-3 br_circle br_solid  m-r_2" style=" height: 1em; width: 1em;"></span> MOCII: 4.5
+            </li>
+          </ul>
+        </div>
+      </div>
 </div>
 		</ul>
 	</div>	
@@ -1897,7 +1877,7 @@
 			<a class="c_inherit-all flex flex_row h:undecorated p_3" href="./credits"><i class="icon fas fa-fw fa-award p-y_2 self_center"></i><span class="label p-l_3 lowercase lh_0 ">Credits</span></a>
 		</li>
 		<li class="nav-item flex_auto c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary a:shadow_overlap-light ">
-			<a class="c_inherit-all flex flex_row h:undecorated p_3" href="./faculty"><i class="icon fas fa-fw fa-user p-y_2 self_center"></i><span class="label p-l_3 lowercase lh_0 ">Faculty</span></a>
+			<a class="c_inherit-all flex flex_row h:undecorated p_3" href="./faculty-simple"><i class="icon fas fa-fw fa-user p-y_2 self_center"></i><span class="label p-l_3 lowercase lh_0 ">Faculty</span></a>
 		</li>
 
 		<li class="nav-item flex_auto c_white-8 bg_acc-n1 h:bg_black-9 h:c_white a:c_white a:bg_primary a:shadow_overlap-light">

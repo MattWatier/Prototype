@@ -1,6 +1,6 @@
 --- 
 layout: library_app_frame 
-name: "Player scroll sidebar" 
+name: "4.1 | Player scroll sidebar" 
 uri: "root/player/course/video-que/presentation-name" 
 watchingActive: true 
 ---
@@ -18,57 +18,13 @@ watchingActive: true
 			<div class="absolute t_3 r_3 z_2 font_n1" data-element="save-toggle">
 				{% include_relative netflix/sub/save-star.html %}
 			</div>
-			<main data-label="player" class="w_100" >
-				<div class="player hd full player hd full p-x_6:xl p-x_5:lg p-x_4:md p-x_3 p-y_4 p-y_5:xl">
-					<h3 class="font-size_down-3 c_secondary-n1 uppercase p-r_4">(Collection Name) Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque</h3>
-					<div class="aspect-ratio_16x9 bg_cover br-solid br_1 br_black-3 br_radius relative self_start shadow_2 w_100" style="background-image:url(https://picsum.photos/640/480/)">
-						<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
-	
-						<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
-							<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
-						</div>
-					</div>
-					<header class="p-b_5 p-t_4 p-y_4:md p-y_4:xl max-w_60">
-						<h1 data-label="session-name" class="font-size_down-3 c_black-7 uppercase font_display font_medium m-y_0">(Video Que Name) Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque</h1>
-						<h2  data-label="presentation-name"class="font-size_up-1 c_primary-n1 font_display font_bold lh_0 m-y_2:lg m-y_0">Rerum omnis odio voluptate eaque est necessitatibus.</h2>
-						<h3  data-label="Presentation-subname" class="font-size_down-2 c_black-8 font_ui m-y_0 lh_1">Quibusdam quia errorco. Sectetur dolores molestiae</h3>
-						<span class="bg_accent-n2 br_radius c_white font-size_down-2 p-x_3 p-y_2 r_0 t_0 inline-block font-size_down-3">
-							<i class="fas fa-solid fa-search m-r_3"></i>
-							<strong class="font_medium font_ui">Keyword Found in Video @: </strong>
-							<ul class="ul_none ul_inline-pipe gap_1">
-								<li class=""><a href="" class="c_white h:c_white underline h:undecorated">0:59</a></li>
-								<li class=""><a href="" class="c_white h:c_white underline h:undecorated">1:10</a></li>
-							</ul>
-						</span>
-					</header>
-					<div class="">
-						<h5 class="c_black-8 font-size_down-3">How did you like this presentation?</h5>
-						<ul class="ul_none flex flex_row   flex flex_row gap_2">
-							<li class="br_solid br_black-3 br_radius br_1 h:bg_black-3">
-								<a class="p-y_3 p-x_4 " href=""><i class="fal fa-thumbs-up"></i></a>
-							</li>
-							<li class="br_solid br_black-3 br_radius br_1 h:bg_black-3">
-								<a class="p-y_3 p-x_4 " href=""><i class="fal fa-thumbs-down"></i></a>
-							</li>
-							<li class="br_solid br_black-3 br_radius br_1 h:bg_black-3 m-l_auto">
-								<a class="p-y_3 p-x_4 " href=""><i class="fal fa-paperclip"></i> Attachments</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</main>
+			{%  include_relative netflix/player/video.html %}
 
 		</article>	
-		<aside data-label="video-test" class="col-end_end col-start_5 font_n1 font_0:lg grid items_stretch justify_stretch overflow_auto relative scrollbar-mini">
-			<div class="absolute:lg bg_white-8 p_4 br-l_1 br_black-3 br_solid flex flex_column items_stretch justify_start justify_stretch b_1 l_1 r_1 t_1 ul_none">
-				<div class="reading-typography font-size_down-1 font-size_0:md">
-					<h2>Description</h2>
-					<h4>Educational Objectives:</h4>
-					
-					<p>Establish safety measures for patient screening before an MR exam.</p>
-					<h4>Important Information on ARRT Category A Credits</h4>
-					<p>This activity may be available in multiple formats or from different sponsors. ARRT regulations state that an individual may not repeat a live seminar/meeting or self-learning activity for credit if it was reported in the same or any subsequent biennium. </p>
-				</div>
+		<aside class="col-end_end col-start_5 font_n2 font_n1:lg grid items_stretch justify_stretch overflow_auto relative scrollbar-mini shadow_emboss-light bg_black-2">
+			<div class="absolute:lg br-l_1 br_black-3 br_solid flex flex_column items_stretch justify_start justify_stretch b_1 l_1 r_1 t_1 ul_none"> 
+
+				{% include_relative netflix/player/sidebar-text.html %}
 			</div>
 		</aside>
 	</section>

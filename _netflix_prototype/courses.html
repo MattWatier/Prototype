@@ -1,6 +1,6 @@
 --- 
 layout: library_app_frame 
-name: "Course Overview" 
+name: "5.0 | Courses Listing" 
 uri: "root/player/course/" 
 coursesActive: true 
 ---
@@ -14,132 +14,34 @@ coursesActive: true
 	</div>
 </header>
 <div class="grid-area_mainArea br-br_radius overflow_visible">
-    <article class="bg_white-6 relative font_1 font_2:lg font_3:xxl p_4 p_5:xl">
-        <h1 class="">Courses</h1>
-        <h2>Collection Name</h2>
-        <!-- Slider main container -->
-        <section id="splide_1" class="splide bg_black-_05 br_1 br_black-2 br_radius br_solid m-b_4 p-y_4 shadow_emboss-light " aria-label="Splide Basic HTML Example">
-          <div class="splide__track">
-                <ul class="splide__list">
-                    <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
-                    <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
-                    <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
-                    <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
-                    <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
-                    <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
-                    <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
-                    <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
-                    <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
-                    <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
-                    <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
-                    <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
-                    <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
-                    <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
-                </ul>
-          </div>
-        </section>
-        <h1 class="">Courses</h1>
-        <h2>Collection Name</h2>
-        <section id="splide_2" class="splide bg_black-_05 br_1 br_black-2 br_radius br_solid m-b_4 p-y_4 shadow_emboss-light " aria-label="Splide Basic HTML Example">
-          <div class="splide__track">
-                <ul class="splide__list">
-                    <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
-                    <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
-                    <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
-                    <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
-                    <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
-                    <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
-                    <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
-                    <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
-                    <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
-                    <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
-                    <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
-                    <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
-                    <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
-                    <li class="splide__slide">{% include_relative netflix/course/course.html %}</li>
-                </ul>
-          </div>
-        </section>
-    </article>
+  <div class="bg_white-8 relative font_1 font_2:lg font_3:xxl p_4 p_5:xl">
+    <h2>Featured Courses</h2>
+</div>
+<div class="bg_white-7  br-b_1 br_black-3 br_solid p-y_4">
+  {% include_relative netflix/home/slider.html %} 
+</div>
+<div class="bg_white-8 relative font_1 font_2:lg font_3:xxl  p_4 p-x_5:xl p-x_6:xxl">
+  <h3 class="font_display font_xbold c_primary-n2">(Collection Title) Yearly Conference </h3>
+</div>
+<div class="  p_4 p-x_5:xl p-x_6:xxl bg_white-6 br-br_radius">
+<ul class="grid grid-x_5:xxl grid-x_4:xl grid-x_3:lg grid-x_2:md grid-x_1 gap_5 ul_none"> 
+      
+  {% include_relative netflix/program/session-small-card.html %}				
+  {% include_relative netflix/program/session-small-card.html %}				
+
+  {% include_relative netflix/program/session-small-card.html %}				
+
+  {% include_relative netflix/program/session-small-card.html %}				
+  {% include_relative netflix/program/session-small-card.html %}				
+  {% include_relative netflix/program/session-small-card.html %}				
+  {% include_relative netflix/program/session-small-card.html %}				
+  {% include_relative netflix/program/session-small-card.html %}				
+  {% include_relative netflix/program/session-small-card.html %}	
+  {% include_relative netflix/program/session-small-card.html %}				
+
+</ul>
+<div class="flex flex_row-reverse p-t_3 p-b_4"><a href="" class="link self_end   ">view all from "(Collection Title) Yearly Conference" <i class="fal fa-chevron-circle-right m-r_3"></i></a></div>
 </div>
 
-<!-- // https://splidejs.com/ -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.17/dist/css/splide-core.min.css">
-<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.17/dist/css/sea-green.min.css"> -->
-<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.17/dist/js/splide.min.js"></script>
-
-
-<script>
-    document.addEventListener( 'DOMContentLoaded', function() {
-      var splide_1 = new Splide( '#splide_1' , {
-      type       : '',
-      perPage    : 5,
-      padding    : "1rem",
-      gap: '1rem',
-      breakpoints: {
-        1200:{perPage: 4,},
-        1024:{perPage: 3,},
-        768: {
-        perPage: 2,
-      },
-      640: {
-        perPage: 1,
-      },
-      480: {
-        perPage: 1,
-        padding    : "2rem",
-      },
-
-    },
-    classes: {
-        // Add classes for arrows.
-        arrows: 'splide__arrows your-class-arrows',
-        arrow : 'splide__arrow your-class-arrow scale_50 absolute t_6 b_6 z_5 shadow_overlap-light h:bg_primary-3 br_black-2 br_solid br_1 br_radius br-tr_square br-br_square',
-        prev  : 'splide__arrow--prev your-class-prev l_n5:md l_n4 rotate_180 ',
-        next  : 'splide__arrow--next your-class-next r_n5:md r_n4 ',
-
-        // Add classes for pagination.
-        pagination: 'splide__pagination your-class-pagination gap_3', // container
-        page      : 'splide__pagination__page your-class-page br_round aspect-ratio_1x1 bg_black-6 a:bg_primary', // each button
-      },
-    } );
-      splide_1.mount();
-
-      var splide_2 = new Splide( '#splide_2' , {
-      type       : '',
-      perPage    : 5,
-      padding    : "1rem",
-      gap: '1rem',
-      breakpoints: {
-        1200:{perPage: 4,},
-        1024:{perPage: 3,},
-        768: {
-        perPage: 2,
-      },
-      640: {
-        perPage: 1,
-      },
-      480: {
-        perPage: 1,
-        padding    : "2rem",
-      },
-
-    },
-    classes: {
-        // Add classes for arrows.
-        arrows: 'splide__arrows your-class-arrows',
-        arrow : 'splide__arrow your-class-arrow scale_50 absolute t_6 b_6 z_5 shadow_overlap-light h:bg_primary-3 br_black-2 br_solid br_1 br_radius br-tr_square br-br_square',
-        prev  : 'splide__arrow--prev your-class-prev l_n5:md l_n4 rotate_180 ',
-        next  : 'splide__arrow--next your-class-next r_n5:md r_n4 ',
-
-        // Add classes for pagination.
-        pagination: 'splide__pagination your-class-pagination gap_3', // container
-        page      : 'splide__pagination__page your-class-page br_round aspect-ratio_1x1 bg_black-6 a:bg_primary', // each button
-      },
-    } );
-      splide_2.mount();
-    } );
-  </script>
-  <style>
-
-  </style>
+</section>
+</div>
