@@ -70,7 +70,7 @@ facultyActive: true
 		  >
 			<div class="flex_none">
 			  <div
-				class="c_white font-size_up-4 font_accent font_bold inline-block uppercase shadow_overlap-light bg_primary-n2 lh_0 br_radius p_2 p-x_4 m-x_3 sticky t_4 flex_none"
+				class="c_white font-size_up-4 font_accent font_bold inline-block uppercase shadow_overlap-light bg_primary-n2 lh_0 br_radius p_2 p-x_4 m-x_3 sticky t_6 t_4:md flex_none"
 			  >
 				{{ alpha }}
 			  </div>
@@ -80,7 +80,7 @@ facultyActive: true
 			>
 			  {% for person in people %}
 				{% if person.group == alpha %}
-				  <li class="lh_1 font_ui flex flex_column p-b_4 m-b_4 gap-x_5:lg gap-x_4 bg_white-4 br_round p_5:lg p_4:md p_3">
+				  <li class="lh_1 font_ui flex flex_column p-b_4 m-b_4 gap-x_5:lg gap-x_4 bg_white-4 br_round p_5:lg p_4:md p_3 relative shadow_bevel-light">
 
 					<div
 						class="flex_shrink m-b_4 grid items_center justify_center "
@@ -119,7 +119,7 @@ facultyActive: true
 							<p>{{person.bio}}</p>        </div>
 						</div>				
 						<div class="grid justify_center m-t_auto">
-							<a class="btn btn-secondary bg_twitter br_radius c_white font-size_down-1 h:bg_secondary-n3 h:c_secondary-n3 h:c_white h:undecorated p-x_4 p_3" href="https://www.twitter.com/Tweat_DrSoda" target="_blank">
+							<a class="btn btn-secondary bg_twitter br_radius c_white font-size_down-1 h:bg_secondary-n4 h:c_secondary-n3 h:c_white h:undecorated p-x_4 p_3 expanded-click-area" href="https://www.twitter.com/Tweat_DrSoda" target="_blank">
 								<i class="br-r_1 br-white-5 br_solid fa-twitter fab m-l_n2 m-r_3 m-y_n2 p-r_3 p-r_3:lg p-y_2"></i>
 								<i class="fa-at fas opacity_8 p-r_1"></i>
 								Tweat_DrSoda</a>        </div>

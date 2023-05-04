@@ -106,3 +106,5 @@ ul[data-element="button-ripple--wrapper"] { display: flex; list-style: none; mar
 .font-size_up-2x { font-size: 2em; }
 
 .font-size_up-3x { font-size: 3em; }
+
+.bg_credit { background-color: #30309f; }
