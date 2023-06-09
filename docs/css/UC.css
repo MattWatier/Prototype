@@ -123,6 +123,10 @@
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
+*[data-bs-toggle=collapse]:not(.collapsed) .a\:rotation.fa-minus.rotate_0, *[data-bs-toggle=collapse].show .a\:rotation.fa-minus.rotate_0 {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
 
 *[data-bs-toggle=collapse]:not(.collapsed) .a\:display_none, *[data-bs-toggle=collapse].show .a\:display_none {
   display: none;
