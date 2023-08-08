@@ -84,7 +84,10 @@ Toggle.addEventListener("click", NavToggle);
 
 
 let filterZone = document.getElementById("filterZone");
-let filterZoneNav = filterZone.querySelector("#navigation");
+if(filterZone){
+	
+
+let filterZoneNav = filterZone.querySelector("nav");
 let filterFacets = filterZone.querySelector("#filterFacets");
 let filterZoneExpanded = true;
 filterZoneNav.addEventListener("click", function () {
@@ -128,3 +131,4 @@ filterZoneNav.addEventListener("click", function () {
 		return;
 	}
 });
+}
