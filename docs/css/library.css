@@ -107,4 +107,20 @@ ul[data-element="button-ripple--wrapper"] { display: flex; list-style: none; mar
 
 .font-size_up-3x { font-size: 3em; }
 
-.bg_credit { background-color: #30309f; }
+:root { --credit-1-h: 219.4; --credit-1-s: 57.26%; --credit-1-l: 22.94%; --credit-2-h: 217.13; --credit-2-s: 58.17%; --credit-2-l: 28.39%; --credit-3-h: 214.87; --credit-3-s: 59.09%; --credit-3-l: 33.85%; --credit-4-h: 212.6; --credit-4-s: 60%; --credit-4-l: 39.3%; --credit-5-h: 210.33; --credit-5-s: 60.91%; --credit-5-l: 44.76%; --credit-6-h: 208.07; --credit-6-s: 61.83%; --credit-6-l: 50.52%; --credit-7-h: 205.8; --credit-7-s: 62.74%; --credit-7-l: 56.27%; }
+
+.bg_credit { background-color: hsla(var(--primary-h), var(--primary-s), var(--primary-l), 1); }
+
+.bg_credit-1 { background-color: hsla(var(--credit-1-h), var(--credit-1-s), var(--credit-1-l), 1); }
+
+.bg_credit-2 { background-color: hsla(var(--credit-2-h), var(--credit-2-s), var(--credit-2-l), 1); }
+
+.bg_credit-3 { background-color: hsla(var(--credit-3-h), var(--credit-3-s), var(--credit-3-l), 1); }
+
+.bg_credit-4 { background-color: hsla(var(--credit-4-h), var(--credit-4-s), var(--credit-4-l), 1); }
+
+.bg_credit-5 { background-color: hsla(var(--credit-5-h), var(--credit-5-s), var(--credit-5-l), 1); }
+
+.bg_credit-6 { background-color: hsla(var(--credit-6-h), var(--credit-6-s), var(--credit-6-l), 1); }
+
+.bg_credit-7 { background-color: hsla(var(--credit-6-h), var(--credit-6-s), var(--credit-6-l), 1); }
