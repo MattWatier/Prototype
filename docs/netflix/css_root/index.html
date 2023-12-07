@@ -165,48 +165,57 @@
     <label for="br">Brand Color:</label>
     <input type="color" id="br" />
     <input type="text" id="br-text" placeholder="#FFFFFF" />
-  </div>
+<button class="clear-btn">Clear</button> 
+</div>
 
   <div class="color-input">
     <label for="p">Primary Color:</label>
     <input type="color" id="p" />
     <input type="text" id="p-text" placeholder="#FFFFFF" />
-  </div>
+<button class="clear-btn">Clear</button> 
+</div>
   <div class="color-input">
     <label for="s">Secondary Color:</label>
     <input type="color" id="s" />
     <input type="text" id="s-text" placeholder="#FFFFFF" />
-  </div>
+<button class="clear-btn">Clear</button> 
+</div>
   <div class="color-input">
     <label for="a">Accent Color:</label>
     <input type="color" id="a" />
     <input type="text" id="a-text" placeholder="#FFFFFF" />
-  </div>
+<button class="clear-btn">Clear</button> 
+</div>
   <div class="color-input">
     <label for="h">Highlighted Color:</label>
     <input type="color" id="h" />
     <input type="text" id="h-text" placeholder="#FFFFFF" />
-  </div>
+<button class="clear-btn">Clear</button> 
+</div>
   <div class="color-input">
     <label for="i">Info Color:</label>
     <input type="color" id="i" />
     <input type="text" id="i-text" placeholder="#FFFFFF" />
-  </div>
+<button class="clear-btn">Clear</button> 
+</div>
   <div class="color-input">
     <label for="al">Alert Color:</label>
     <input type="color" id="al" />
     <input type="text" id="al-text" placeholder="#FFFFFF" />
-  </div>
+<button class="clear-btn">Clear</button> 
+</div>
   <div class="color-input">
     <label for="w">Warning Color:</label>
     <input type="color" id="w" />
     <input type="text" id="w-text" placeholder="#FFFFFF" />
-  </div>
+<button class="clear-btn">Clear</button> 
+</div>
   <div class="color-input">
     <label for="su">Success Color:</label>
     <input type="color" id="su" />
     <input type="text" id="su-text" placeholder="#FFFFFF" />
-  </div>
+<button class="clear-btn">Clear</button> 
+</div>
   <button id="update-query-string">Submit</button>
   <button id="apply-cssvar-colors">Apply Colors</button>
 </div>
@@ -298,6 +307,20 @@ function updateStyleTag(cssText) {
     let newStyles = ':root {' + cssText + '}';
     styleTag.innerHTML = newStyles;
 }
+document.querySelectorAll('.clear-btn').forEach(clearButton => {
+        clearButton.addEventListener('click', function() {
+            const parentDiv = clearButton.parentElement;
+            const colorInput = parentDiv.querySelector('input[type=color]');
+            const textInput = parentDiv.querySelector('input[type=text]');
+            
+            // Reset the color and text inputs
+            colorInput.value = '';
+            textInput.value = '';
+
+            // Optionally, update CSS variables and query string if needed
+            updateCSSVariables();
+        });
+    });
 updateQueryStringButton.addEventListener('click', function() {
     const queryParams = new URLSearchParams();
     
@@ -314,7 +337,6 @@ updateQueryStringButton.addEventListener('click', function() {
     // Update the URL in the browser without reloading the page
     window.history.pushState({path: newUrl}, '', newUrl);
 
-    alert('Query string updated');
 });
 
 updateRootCSSVarButton.addEventListener('click', function() {
