@@ -6,8 +6,9 @@ homeActive: true
 ---
 
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.x.x/dist/alpine.min.js" defer></script>
-<div x-data="colorPicker()" class="p_4" x-init="initializeColorsFromUrl">
-
+<div x-data="colorPicker()" x-init="initializeColorsFromUrl">
+<section class="p_4 bg_white-3 br-b_1 br_solid br_black-3">
+    <h1>Colors</h1>
     <!-- Example of color input and text input binding -->
     <template x-for="color in colors" :key="color.name">
         <div class="question font_ui">
@@ -26,25 +27,21 @@ homeActive: true
     <div class="flex flex_row justify_start m-y_3 gap_2">
         <!-- Button for clearing color selections -->
         <button class="btn btn-secondary btn-sm" x-on:click="clearColors">Clear</button>
-        <button class="btn btn-secondary btn-sm" x-on:click="generateUrl()">Generate URL</button>
-        <!-- Button to generate CSS string -->
-        <button class="btn btn-secondary btn-sm" x-on:click="generateCssString()">Generate CSS</button>
     </div>
+</section>
 
+<section class="bg_white-8 p_4">
 
     <!-- Code block to display the generated CSS -->
+    <h4>Root CSS</h4>
     <pre class="br_radius p_4 bg_black-2 m-y_3"><code class="user-select-all" x-text="cssString"></code></pre>
-
+<h4>URL</h4>
     <!-- Dynamic CSS Update -->
     <div class="question font_ui">
-        <label class="label-holder flex font-size_up-1 font_display font_medium p-y_2 lh_1  ">
-            <span> URL</span>
-        </label>
         <div  x-text="generatedUrl" class="input-holder br_radius p_4 bg_black-2 m-y_3 flex self_end br_2 p-y_2 br_solid flex_auto p-l_4 lh_3 c_black bg_white f:bg_primary br_black-2 user-select-all">
         </div>
     </div>
-
-
+</section>
 </div>
 <script>
     function colorPicker() {
@@ -97,6 +94,8 @@ homeActive: true
                 color.s = hsl.s;
                 color.l = hsl.l;
                 this.updateCSSVariables(color);
+                this.generateUrl();
+                this.generateCssString();
             },
 
             clearColors: function () {
@@ -161,3 +160,29 @@ homeActive: true
 <style>
     :root {}
 </style>
+
+{% include_relative netflix/app-header-w-search.html %}
+{% include_relative netflix/breadcrumb-search.html %}
+<header class="font-size_up-1-1 ">
+	<div class="introduction p-x_3 p-x_4:lg p-x_5:xxl p-y_4:xxl p-y_3:lg p-y_2 bg_white-8 br-b_1 br_solid br_black-3">
+		<h3 class="font_display font_xbold c_primary-n2 m-y_2">Video Player with Sidebar</h3>
+	</div>
+</header>
+<div class="grid-area_mainArea br-br_radius overflow_visible cq_parent">
+	<section class="grid:md grid-x_6:lg grid-x_5:xl grid-x_4:xxl">
+		<article class="bg_white-6 col-start_start col-end_4 relative font_1 font_2:lg font_3:xxl">
+			<div class="absolute t_3 r_3 z_2 font_n1" data-element="save-toggle">
+				{% include_relative netflix/sub/save-star.html %}
+			</div>
+			{%  include_relative netflix/player/video.html %}
+
+		</article>	
+		<aside class="col-end_end col-start_4 font_n2 font_n1:lg grid items_stretch justify_stretch overflow_auto relative scrollbar-mini shadow_emboss-light bg_black-2">
+			<div class="absolute:lg br-l_1 br_black-3 br_solid flex flex_column items_stretch justify_start justify_stretch b_1 l_1 r_1 t_1 ul_none"> 
+
+				{% include_relative netflix/player/sidebar-text.html %}
+			</div>
+		</aside>
+	</section>
+{% include_relative netflix/player/information.html %}
+</div>
