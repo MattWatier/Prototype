@@ -201,12 +201,12 @@
     function colorPicker() {
         return {
             colors: [
-                { name: 'brand', hex: '#000000' },
-                { name: 'primary', hex: '#000000' },
-                { name: 'secondary', hex: '#000000' },
-                { name: 'highlighted', hex: '#000000' },
-                { name: 'info', hex: '#000000' },
-                { name: 'accent', hex: '#000000' },
+                { name: 'brand', hex: '#00000000' },
+                { name: 'primary', hex: '#00000000' },
+                { name: 'secondary', hex: '#00000000' },
+                { name: 'highlighted', hex: '#00000000' },
+                { name: 'info', hex: '#00000000' },
+                { name: 'accent', hex: '#00000000' },
             ],
 
             hexToHSL: function (hex) {
@@ -253,7 +253,14 @@
             },
 
             clearColors: function () {
-                this.colors.forEach(color => color.hex = '#000000');
+                this.colors.forEach(color => color.hex = '#00000000');
+
+                // Update each color in the UI
+                this.colors.forEach(color => {
+                    this.updateColor(color);
+                });
+                this.generatedUrl = window.location.href.split('?')[0];
+                history.pushState(null, '', this.generatedUrl);
             },
             generatedUrl: '',
             cssString: '',
@@ -283,14 +290,22 @@
             },
             updateCSSVariables: function (color) {
                 const rootStyle = document.documentElement.style;
-                rootStyle.setProperty(`--${color.name}-h`, color.h);
-                rootStyle.setProperty(`--${color.name}-s`, color.s + '%');
-                rootStyle.setProperty(`--${color.name}-l`, color.l + '%');
+                if (color.hex !== '#00000000') {
+                    // If the color is not fully transparent black, set the CSS variables
+                    rootStyle.setProperty(`--${color.name}-h`, color.h);
+                    rootStyle.setProperty(`--${color.name}-s`, color.s + '%');
+                    rootStyle.setProperty(`--${color.name}-l`, color.l + '%');
+                } else {
+                    // If the color is fully transparent black, remove the CSS variables
+                    rootStyle.removeProperty(`--${color.name}-h`);
+                    rootStyle.removeProperty(`--${color.name}-s`);
+                    rootStyle.removeProperty(`--${color.name}-l`);
+                }
             },
             generateCssString: function () {
                 this.cssString = ':root {\n';
                 this.colors.forEach(color => {
-                    if (color.hex !== '#000000') {
+                    if (color.hex !== '#00000000') {
                         let hsl = this.hexToHSL(color.hex);
                         this.cssString += `  --${color.name}-h: ${hsl.h};\n`;
                         this.cssString += `  --${color.name}-s: ${hsl.s}%;\n`;
