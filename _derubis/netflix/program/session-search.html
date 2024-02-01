@@ -1,0 +1,40 @@
+<div data-element="session" class="cq_parent">
+    <div class="flex flex_column br_radius bg_white-9 shadow_bevel-light  br_solid br_black-3 br_1 self_stretch user-select_none relative w_100">
+        <article class="flex flex_row:md flex_column gap-x_5:xl gap-x_4 relative">
+            <aside class="br_radius m-l_4 m-r_6 m-r_0:md m-t_4 relative self_start shadow_2 aspect-ratio_16x9 overflow_hidden">
+                <img src="https://picsum.photos/640/480/" alt="" class="w_100 aspect-ratio_16x9 max-w_20 ">
+                <div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags">Watched</div>
+                <div class="absolute t_3 r_3 z_2" data-element="save-toggle"> {% include_relative netflix/sub/save-star.html %} </div> {% include_relative netflix/sub/progress.html %}
+            </aside>
+            <main class="flex flex_100 flex_auto flex_column font_display gap-y_2 lh_1 m-r_3 p-r_5:lg p-t_4 p-x_0:md p-x_4"> {% include_relative netflix/sub/session-label-long.html %} <div class="m-t_auto font_ui"> {% include_relative netflix/sub/session-card-meta.html %} </div>
+            </main> {% include_relative netflix/sub/result-session-footer.html %}
+        </article>
+        <section data-element="presentation-list">
+            <ul class="ul_none font_copy">
+                <li> {% include_relative netflix/program/presentation.html %} </li>
+                <li> {% include_relative netflix/program/locked-presentation.html %} </li>
+                <li> {% include_relative netflix/program/presentation.html %} </li>
+            </ul>
+        </section>
+        <footer data-element="footer-button-bar" class="bg_brand-n2 flex flex_row-reverse nowrap items_end  font_2 m_n1 m-t_auto">
+        </footer>
+    </div>
+    <div class="bg_black-2 br-bl_radius br-br_radius br-t_0 br_1 br_black-3 br_solid c_black  m-b_n1 m-x_n1 p_3 relative self_stretch">
+        <div class=" uppercase flex flex_row flex_wrap font-size_down-2 justify_start">
+          <ul class=" gap-x_3 gap-y_3 justify_end:md justify_start self_center ul_inline-pipe uppercase">
+            <li class="inline-flex items_center lh_0">
+              <span class="bg_CME bg_black-2 br_1 br_black-3 br_circle br_solid  m-r_2" style=" height: 1em; width: 1em;"></span> <span class="font_medium">CME: </span> 2
+            </li>
+            <li class="inline-flex items_center lh_0">
+              <span class="bg_CNE bg_black-2 br_1 br_black-3 br_circle br_solid  m-r_2" style=" height: 1em; width: 1em;"></span> CNE: 1.2
+            </li>
+            <li class="inline-flex items_center lh_0">
+              <span class="bg_COP bg_black-2 br_1 br_black-3 br_circle br_solid  m-r_2" style=" height: 1em; width: 1em;"></span> COP
+            </li>
+            <li class="inline-flex items_center lh_0">
+              <span class="bg_MOCII bg_black-2 br_1 br_black-3 br_circle br_solid  m-r_2" style=" height: 1em; width: 1em;"></span> MOCII: 4.5
+            </li>
+          </ul>
+        </div>
+      </div>
+</div>

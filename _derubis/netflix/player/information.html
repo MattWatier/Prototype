@@ -1,0 +1,65 @@
+<section id="Information" class="grid:md  grid-x_6:lg grid-x_5:xl grid-x_4:xxl bg_white-5 font_n1 font_0:lg br-t_1 br_solid br_black-3 p-t_1">
+	<div id="Primary-Info" class="col-start_start col-end_4 relative p_5:xl p_4:lg p_3:md p_4">
+		<div data-label="information">
+			<div class="flex_column flex gap-y_4">
+				<div data-element="faculty-list-photos">
+				<div data-element="section-label"  class="flex_row:md flex m-y_3 m-y_0:md">
+					<div class="flex_auto grid">
+						<span class="br-t_1 br_black-6 br_dotted br_inherit self_center"></span>
+					</div>
+					<div class="flex_shrink p-x_3 p-x_4:md p-x_5:xl lh_1 text_center">
+						<strong class="c_black-8 block font_ui font-size_down-1 p-y_4 p-y_2:md">Faculty</strong>
+					</div>
+					<div class="flex_auto grid">
+						<span class="br-t_1 br_black-6 br_dotted br_inherit self_center"></span>
+					</div>
+				</div>
+				<div class="grid grid-x_4:xl grid-x_3:lg grid-x_2 gap-x_5:xl gap-x_4 gap-y_5 justify_center items_center"> 
+					{% include_relative netflix/sub/faculty.html %} 
+					{% include_relative netflix/sub/faculty.html %} 
+					{% include_relative netflix/sub/faculty.html %} 
+					{% include_relative netflix/sub/faculty.html %} 
+				</div>
+			</div></div>
+			<div data-element="faculty-list-photos">
+				<div data-element="section-label" class="flex_row:md flex m-y_3 m-y_0:md">
+					<div class="flex_auto grid">
+						<span class="br-t_1 br_black-6 br_dotted br_inherit self_center"></span>
+					</div>
+					<div class="flex_shrink p-x_3 p-x_4:md p-x_5:xl lh_1 text_center">
+						<strong class="c_black-8 block font_ui font-size_down-1 p-y_4 p-y_2:md">Faculty Just Text</strong>
+					</div>
+					<div class="flex_auto grid">
+						<span class="br-t_1 br_black-6 br_dotted br_inherit self_center"></span>
+					</div>
+				</div>
+				<div class="grid grid-x_4:xl grid-x_3:lg grid-x_2 gap-x_5:xl gap-x_4 gap-y_5 justify_center items_center"> 
+					{% include_relative netflix/sub/faculty_text-only.html %} 
+					{% include_relative netflix/sub/faculty_text-only.html %} 
+					{% include_relative netflix/sub/faculty_text-only.html %} 
+					{% include_relative netflix/sub/faculty_text-only.html %} </div>
+			</div>
+		</div>
+	</div>
+	<div id="Secondary-Info" class="col-start_4 col-end_end grid justify_stretch items_stretch p_5:xl p_4:lg p_3:md p_4">
+		<div data-label="information">
+			<div class="flex_row:md flex m-y_3 m-y_0:md">
+				<div class="flex_auto grid">
+					<span class="br-t_1 br_black-6 br_dotted br_inherit self_center"></span>
+				</div>
+				<div class="flex_shrink p-x_3 p-x_4:md p-x_5:xl lh_1 text_center">
+					<strong class="c_black-8 block font_ui font-size_down-1 p-y_4 p-y_2:md">Meta Data</strong>
+				</div>
+				<div class="flex_auto grid">
+					<span class="br-t_1 br_black-6 br_dotted br_inherit self_center"></span>
+				</div>
+			</div>
+			<ul data-element="meta-data-list" class="grid grid-x_3:xl grid-x_2:lg grid-x_1 gap-x_5:xl gap-x_4 gap-y_5:lg gap-y_3 justify_center items_center font-size_down-1 ul_none"> 
+				{% include sub/meta-data.html %} 
+				{% include sub/meta-data.html %} 
+				{% include sub/meta-data.html %} 
+				{% include sub/meta-data.html %} 
+				{% include sub/meta-data.html %} </ul>
+		</div>
+	</div>
+</section>

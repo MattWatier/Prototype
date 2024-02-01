@@ -21,31 +21,32 @@
 title: Prototyping
 email: mattwatier@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 baseurl: "/Prototype" # the subpath of your site, e.g. /blog
 url: "https://mattwatier.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
-github_username:  mattwatier
+github_username: mattwatier
 
 # Build settings
 theme: jekyll-theme-minimal
 plugins:
-  - jekyll-feed
-  - jekyll-github-metadata
+- jekyll-feed
+- jekyll-github-metadata
 destination: "docs"
 github: [metadata]
 port: 4001
 
 sass:
   sass_dir: _sass
-  
+
 
 collections:
   netflix_prototype:
     output: true
     permalink: /netflix/:path/
+  derubis:
+    output: true
+    permalink: /netflix_v2/:path/
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -1,0 +1,19 @@
+{% assign people = site.data.people | sort: 'sortname' %} {% assign person = site.data.people[0] %}
+<section class="flex_auto flex_column justify_start" >
+
+		<a class="m-b_0 speaker_name font_display font_bold font-size_0 lh_1 c_primary-n1 m-b_2 expand-click-area">{{ person.fullname }}</a>
+		<ul class="speaker_metadata ul_none font_ui font-size_down-1 flex gap-y_2 lh_2 c_black-8 ">
+            <li class="c_primary-n1 font_bold">Role Type</li>
+            <!-- This is a repeated snippet of titles -->
+			{% if person.title != null and person.title != '' %} <li data-name="newMember__role" class="block c_black-8">
+				{{- person.title -}}
+			</li> 
+			{% endif %}
+			{% if person.location != null and person.location != '' %}
+			<li data-name="newMember__location" class="block c_secondary-n2 lh_1 font_accent">
+				{{- person.location -}} {%- if person.location != null and person.country != null -%} , {% endif %} {{ person.country -}}
+			</li> 
+			{% endif %}
+        </ul>
+
+</section>
