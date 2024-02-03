@@ -1,19 +1,17 @@
 --- 
 layout: V2-library_blank
 ---
-<body class="BODY_TAG-stand-in bg_black-4 w_100 grid:md min-h_100">
-<div class="page-wrapper grid:md isolation_isolate bg_white-7 z_1 m_4:lg m_3:md  m_2">
-	<div id="AppFrame" class="grid:md grid-template_page flex flex_column expanded">
-	{% include netflix/top-nav-mobile.html %}
-	{% include netflix/left-nav-desktop.html %}
 
+<div class="page-wrapper grid:md isolation_isolate bg_white-7 z_1 m_4:lg m_3:md  m_2">
+	<div id="AppFrame" grid-template="app-frame" class="expanded">
 		{{ content }}
 		<!-- These Styles are just for the styleguide and are not to be included with the pattern. -->
 		
+		{% include netflix/top-nav-mobile.html %}
+		{% include netflix/left-nav-desktop.html %}
 	</div>
 </div>
-</div>
-{% include netflix/filter-off-canvas.html %}
+<!-- {% include netflix/filter-off-canvas.html %}
 <div id="topNavCollapse"  class="collapse fixed b_0 r_0 l_0 bg_secondary-n2">
 	<ul class="flex flex_column ul_none justify_start">
 		<li class="nav-item flex_auto c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary a:shadow_overlap-light {% if page.savedActive %}active{% endif %}">
@@ -30,13 +28,12 @@ layout: V2-library_blank
 			<a href="../" class="c_inherit-all flex flex_row h:undecorated p_3"><i class="icon fas fa-fw fa-sign-out-alt p-y_2 self_center"></i><span class="p-l_3 label self_center lowercase lh_0 font_n2 nowrap h_1h">Log Out</span></a>
 		</li>
 	</ul>
-  </div>
+  </div> -->
 <script
-  src="https://code.jquery.com/jquery-3.6.1.min.js"
-  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
-  crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-	<script src="{{ 'assets/js/drag.js' | relative_url }}"></script>
-	<script src="{{ 'assets/js/Nav.js' | relative_url }}"></script>
+src="https://code.jquery.com/jquery-3.6.1.min.js"
+integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<script src="{{ 'assets/js/drag.js' | relative_url }}"></script>
+<script src="{{ 'assets/js/Nav.js' | relative_url }}"></script>
 
-</body>
