@@ -34,8 +34,9 @@ body {
 	margin:var(--app-spacing);
 }
 .grid-template_page {
+	--primary-menu-width:5.5rem
 	transition: grid-template-columns 1s;
-	grid-template-columns: 5.5rem calc(100% - 5.5rem);
+	grid-template-columns: var(--primary-menu-width) calc(100% - var(--primary-menu-width));
 	grid-template-rows: auto auto auto 1fr auto;
 	grid-template-areas: "menuArea headerArea" "menuArea breadcrumbArea" "menuArea pageHead" "menuArea mainArea" "menuArea footerArea";
 	min-height: calc(100vh - (2 * clamp(8px, 1vw, 16px)));
@@ -43,8 +44,9 @@ body {
 	
 }
 .grid-template_page.expanded {
+	--primary-menu-width_expanded:15rem;
 	transition: grid-template-columns 1s;
-	grid-template-columns: var(--expanded_sideMenu-width, 15rem) calc(100% - var(--expanded_sideMenu-width, 15rem));
+	grid-template-columns: var(--primary-menu-width_expanded) calc(100% - var(--primary-menu-width_expanded));
 	grid-template-rows: auto auto auto 1fr auto;
 	grid-template-areas: "menuArea headerArea" "menuArea breadcrumbArea" "menuArea pageHead" "menuArea mainArea" "menuArea footerArea";
 	max-width: calc(100vw - var(--app-spacing) * 2);
