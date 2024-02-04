@@ -1,0 +1,52 @@
+---
+layout: V2-library_app_frame
+name: "V2: 5.1 | Single Course"
+uri: "root/outline/course/course-name"
+coursesActive: true
+---
+
+
+{% include_relative netflix/breadcrumb-course.html %}
+<div grid-area="app-page">
+  <header grid-area="header"
+    class="grid-area_pageHead overflow_visible relative bg_white-8 relative p_5:xl p_4:lg p_3 font_n1 font_0:lg font_1:xxl br-b_1 br_black-3 br_solid">
+    {% include_relative netflix/sub/session-label.html %}
+    <div class="absolute t_3 r_2 z_2 font_n1" data-element="save-toggle">
+      {% include_relative netflix/sub/save-star.html %}
+    </div>
+  </header>
+  <div class="grid-area_mainArea br-br_radius overflow_visible grid:lg grid-x_5:lg grid-x_4:xl grid-x_4:xxl">
+    <section
+      class="bg_white-6 col-start_3 col-start_2:xl col-end_end  font_0 font_1:lg p_3 p_4:lg p_5:xl relative row-start_start">
+      <div data-element="text-container" class="">
+        <h1 class="">Module 1: Introduction and Self Evaluation</h1>
+        <p class="">
+          Module One, Introduction and Self Evaluation, will explain the purpose of the course, the desired outcomes,
+          and
+          the requirements that need to be fulfilled in order to graduate.
+        </p>
+      </div>
+      <ul class="ul_none flex flex_column gap_5">
+        <!-- Start Chapter -->
+        <li>
+          {% include_relative netflix/chapter/chapter.html %}
+        </li>
+        <li>
+          {% include_relative netflix/chapter/chapter.html %}
+        </li>
+        <!-- End Chapter -->
+        <!-- BEGIN COURSE WRAPPER TOP INCLUDE -->
+      </ul>
+    </section>
+    <aside data-label="module-que-navigation"
+      class="col-start_start col-end_3 col-end_2:xl font_0 font_1:lg grid items_stretch justify_stretch overflow_auto relative scrollbar-mini shadow_emboss-light bg_black-2">
+      <div class="absolute:lg flex flex_column items_stretch justify_start justify_stretch b_1 l_1 r_1 t_1 ul_none">
+        <h2
+          class="bg_white-8 br_0 br-t_1 br-b_1 br_solid br_black-2 p_3 p_4:lg shadow_overlap-light m-b_0 w_100 font-size_up-1 font_display font_medium">
+          Chapter Progress
+        </h2>
+        {% include_relative netflix/course/module-que.html %}
+      </div>
+    </aside>
+  </div>
+</div>

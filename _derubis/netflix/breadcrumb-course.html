@@ -1,12 +1,22 @@
-<div class="grid-area_breadcrumbArea bg_white-2 p-l_5:md p-l_3 p-y_3 font_1 br-b_1 br_solid br_black-3 grid gap-x_4 justify_start items_center shadow_emboss-light c_primary-n2">
-	<div class="grid-breadcrumb-buttonArea">
+<div grid-template="breadcrumb" grid-area="app-breadcrumb"
+	class="relative bg_white-2 p-l_5:md p-l_3 p-y_3 font_1 br-b_1 br_solid br_black-3 grid gap-x_4 justify_start items_stretch shadow_emboss-light c_primary-n2">
+	<div grid-area="toggle" class="relative">
+		<div id="mainDesktopNavTouchToggle" class="absolute b_0 display_none flex:md flex_column font_2 l_n4 t_3 z_3">
+			<span
+				class="aspect-ratio_1x1 bg_brand br_radius c_white-8 flex_none grid h:bg_primary h:c_white m-y_auto p_2 relative shadow_bevel-bold shadow_n3 text_center w_auto">
+				<i
+					class="[rotate_180] block fa-caret-left fa-fw fa-regular far icon lh_1 p_1 self_center text-shadow_black-1 transition_2"></i></span>
+		</div>
+	</div>
+	<div grid-area="back-btn">
 		<button class="btn btn-primary shadow_overlap-light br_solid br_black-3 br_1 block w_100">
 			<i class="fa-arrow-left fas font-size_down-1"></i>
 			<span class="inline-block:md display_none">back</span>
 		</button>
 	</div>
-	<div class="grid-breadcrumb-listArea">
-		<ul class="flex flex_inline flex_row wrap font-size_0:lg font-size_down-1:md font-size_down-2 lh_0 text-shadow_white-1 ul_none gap-y_2 overflow_hidden">
+	<div grid-area="breadcrumb-list">
+		<ul
+			class="flex flex_inline flex_row wrap font-size_0:lg font-size_down-1:md font-size_down-2 lh_0 text-shadow_white-1 ul_none gap-y_2 overflow_hidden">
 			<li class="flex flex_row nowrap relative overflow_hidden">
 				<div class="flex flex_row nowrap overflow_hidden">
 					<i class="c_black-9 fas fa-solid m-l_1 fa-fw m-r_2 flex_none self_center fa-home"></i>
@@ -16,8 +26,10 @@
 			<li class="flex flex_row nowrap relative overflow_hidden">
 				<i class="fas fa-angle-right c_accent-n2 m-x_3 self_center font-size_down-1 lh_2"></i>
 				<div class="flex flex_row nowrap overflow_hidden">
-					<i class="c_black-9 fas fa-solid m-l_1 fa-fw m-r_2 flex_none self_center fa-graduation-cap lh_2"></i>
-					<a href="./course" class="font_medium flex_auto self_center h:underline c_inherit-all overflow_hidden lh_2">Courses</a>
+					<i
+						class="c_black-9 fas fa-solid m-l_1 fa-fw m-r_2 flex_none self_center fa-graduation-cap lh_2"></i>
+					<a href="./course"
+						class="font_medium flex_auto self_center h:underline c_inherit-all overflow_hidden lh_2">Courses</a>
 				</div>
 			</li>
 		</ul>

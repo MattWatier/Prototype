@@ -2,7 +2,7 @@
 layout: V2-library_blank
 ---
 
-<div class="page-wrapper grid:md isolation_isolate bg_white-7 z_1 m_4:lg m_3:md  m_2">
+<div class="page-wrapper grid:md isolation_isolate bg_white-7 z_1 br_radius">
 	<div id="AppFrame" grid-template="app-frame" class="expanded">
 		{{ content }}
 		<!-- These Styles are just for the styleguide and are not to be included with the pattern. -->
@@ -11,7 +11,8 @@ layout: V2-library_blank
 		{% include netflix/left-nav-desktop.html %}
 	</div>
 </div>
-<!-- {% include netflix/filter-off-canvas.html %}
+{% include netflix/filter-off-canvas.html %}
+<!--
 <div id="topNavCollapse"  class="collapse fixed b_0 r_0 l_0 bg_secondary-n2">
 	<ul class="flex flex_column ul_none justify_start">
 		<li class="nav-item flex_auto c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary a:shadow_overlap-light {% if page.savedActive %}active{% endif %}">

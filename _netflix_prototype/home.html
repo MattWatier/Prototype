@@ -1,27 +1,32 @@
---- 
-layout: library_app_frame 
-name: "2.0 | Home" 
-uri: "root/index (authenticated & access)" 
-homeActive: true 
+---
+layout: library_app_frame
+name: "2.0 | Home"
+uri: "root/index (authenticated & access)"
+homeActive: true
 ---
 
 <!-- 
-	{% include_relative netflix/home-header-branding.html %} --> 
+	{% include_relative netflix/home-header-branding.html %} -->
 
-{% include_relative netflix/app-header-w-search.html %} 
+{% include_relative netflix/app-header-w-search.html %}
 <header class="font-size_up-1 grid-area_pageHead ">
-  
-  <div data-zone="introduction" class="bg_white-8 br-b_1 br_black-3 br_solid p_4 p-x_5:xl p-x_6:xxl p-y_4:lg  p-y_5:xxl">
-    {% include_relative netflix/home/home-branding.html %} 
-		<h3 class="font_display font_xbold c_primary-n2">Weldome</h3>
-    <p class="max-w_70">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quam temporibus quae repellat dolorem aperiam explicabo, tempora pariatur iste earum quaerat sequi ea optio magni, mollitia animi, dignissimos deserunt quia?</p>
-	</div>
+
+  <div data-zone="introduction"
+    class="bg_white-8 br-b_1 br_black-3 br_solid p_4 p-x_5:xl p-x_6:xxl p-y_4:lg  p-y_5:xxl">
+    {% include_relative netflix/home/home-branding.html %}
+    <h3 class="font_display font_xbold c_primary-n2">Weldome</h3>
+    <p class="max-w_70">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quam temporibus quae repellat
+      dolorem aperiam explicabo, tempora pariatur iste earum quaerat sequi ea optio magni, mollitia animi, dignissimos
+      deserunt quia?</p>
+  </div>
   <div data-zone="featured" class="bg_white-8 p_4 p-x_5:xl p-x_6:xxl p-y_4:lg  p-y_5:xxl">
-		<h3 class="font_display font_xbold c_primary-n2">Featured</h3>
-		<p class="max-w_70">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt reiciendis cumque ut eum alias recusandae illum officiis debitis dolores corrupti deleniti velit maiores, dignissimos adipisci rerum odio? Rerum, reprehenderit doloremque?</p>
-	</div>
+    <h3 class="font_display font_xbold c_primary-n2">Featured</h3>
+    <p class="max-w_70">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt reiciendis cumque ut eum alias
+      recusandae illum officiis debitis dolores corrupti deleniti velit maiores, dignissimos adipisci rerum odio? Rerum,
+      reprehenderit doloremque?</p>
+  </div>
   <div class="bg_white-7  br-b_1 br_black-3 br_solid p-y_4">
-    {% include_relative netflix/home/slider.html %} 
+    {% include_relative netflix/home/slider.html %}
   </div>
 </header>
 
@@ -29,24 +34,25 @@ homeActive: true
   <div class="bg_white-8 relative font_1 font_2:lg font_3:xxl  p_4 p-x_5:xl p-x_6:xxl">
     <h3 class="font_display font_xbold c_primary-n2">(Collection Title) Deeper Learning & Trining </h3>
   </div>
-<div class="  p_4 p-x_5:xl p-x_6:xxl bg_white-6 br-br_radius">
-  <ul class="grid grid-x_5:xxl grid-x_4:xl grid-x_3:lg grid-x_2:md grid-x_1 gap_5 ul_none"> 
-				
-    {% include_relative netflix/program/session-small-card.html %}				
-    {% include_relative netflix/program/session-small-card.html %}				
+  <div class="  p_4 p-x_5:xl p-x_6:xxl bg_white-6 br-br_radius">
+    <ul class="grid grid-x_5:xxl grid-x_4:xl grid-x_3:lg grid-x_2:md grid-x_1 gap_5 ul_none">
 
-    {% include_relative netflix/program/session-small-card.html %}				
+      {% include_relative netflix/program/session-small-card.html %}
+      {% include_relative netflix/program/session-small-card.html %}
 
-    {% include_relative netflix/program/session-small-card.html %}				
-    {% include_relative netflix/program/session-small-card.html %}				
-    {% include_relative netflix/program/session-small-card.html %}				
-    {% include_relative netflix/program/session-small-card.html %}				
-    {% include_relative netflix/program/session-small-card.html %}				
-    {% include_relative netflix/program/session-small-card.html %}	
-    {% include_relative netflix/program/session-small-card.html %}				
+      {% include_relative netflix/program/session-small-card.html %}
 
-  </ul>
-  <div class="flex flex_row-reverse p-t_3 p-b_4"><a href="" class="link self_end   ">view all from "(Collection Title) Yearly Conference" <i class="fal fa-chevron-circle-right m-r_3"></i></a></div>
-</div>
+      {% include_relative netflix/program/session-small-card.html %}
+      {% include_relative netflix/program/session-small-card.html %}
+      {% include_relative netflix/program/session-small-card.html %}
+      {% include_relative netflix/program/session-small-card.html %}
+      {% include_relative netflix/program/session-small-card.html %}
+      {% include_relative netflix/program/session-small-card.html %}
+      {% include_relative netflix/program/session-small-card.html %}
+
+    </ul>
+    <div class="flex flex_row-reverse p-t_3 p-b_4"><a href="" class="link self_end   ">view all from "(Collection Title)
+        Yearly Conference" <i class="fal fa-chevron-circle-right m-r_3"></i></a></div>
+  </div>
 
 </section>
