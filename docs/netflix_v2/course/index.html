@@ -1500,9 +1500,13 @@
 	</ul>
 </nav>
 
-		<div grid-area="app-menu" class="display_none flex:md sticky t_4  grid-area_menuArea br-r_1 br_solid br_black-3 font_ui font_2:lg font_1 " style="
+		<div grid-area="app-menu" class="display_none flex:md sticky t_4 isolation_isolate br-r_1 br_solid br_black-3 font_ui font_2:lg font_1 " style="
     height: calc(100vh - 2rem);
 ">
+	<div id="mainDesktopNavTouchToggle" class="absolute display_none block:md font_1 r_n4 t_4 z_3">
+		<span class="aspect-ratio_1x1 bg_brand br_radius c_white-8 flex_none grid h:bg_primary h:c_white m-y_auto p_2 relative shadow_bevel-bold shadow_n3 text_center w_auto">
+			<i class="[rotate_180] block fa-caret-left fa-fw fa-solid fas icon lh_1 p_1 self_center text-shadow_black-1 transition_2"></i></span>
+	</div>
 	<nav id="navigation" class="w_100 overflow-hidden filter_blur overflow_hidden br_radius flex:md flex_column:md justify_between p_3  p_4:lg">
 		<!-- <div id="mainDesktopNavTouchToggle2" class="block flex:md flex_column font_1 font_2:lg grid items_center justify_start m-b_4 m-r_3 self_center">
 		<span class="aspect-ratio_1x1 bg_brand br_radius c_white-8 flex_none grid h:bg_primary h:c_white m-y_auto p_2 relative shadow_bevel-bold shadow_n3 text_center w_auto"><i class="block fa-caret-left fa-fw far fa-regular icon [rotate_180] self_center text-shadow_black-1 transition_2 rotate_180"></i></span>
@@ -1714,24 +1718,6 @@
 		<button href="" class="block btn btn-lg btn-primary shadow_overlap-light " data-bs-dismiss="offcanvas" aria-label="Close">Search</butt>
 			</section>
 	</div> -->
-<!--
-<div id="topNavCollapse"  class="collapse fixed b_0 r_0 l_0 bg_secondary-n2">
-	<ul class="flex flex_column ul_none justify_start">
-		<li class="nav-item flex_auto c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary a:shadow_overlap-light ">
-			<a class="c_inherit-all flex flex_row h:undecorated p_3" href="./saved"><i class="icon fas fa-fw fa-star p-y_2 self_center"></i><span class="label p-l_3 lowercase lh_0 nowrap ">Saved</span></a>
-		</li>
-		<li class="nav-item flex_auto c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary a:shadow_overlap-light ">
-			<a class="c_inherit-all flex flex_row h:undecorated p_3" href="./credits"><i class="icon fas fa-fw fa-award p-y_2 self_center"></i><span class="label p-l_3 lowercase lh_0 ">Credits</span></a>
-		</li>
-		<li class="nav-item flex_auto c_white-8 h:bg_black-9 h:c_white a:c_white a:bg_primary a:shadow_overlap-light ">
-			<a class="c_inherit-all flex flex_row h:undecorated p_3" href="./faculty-simple"><i class="icon fas fa-fw fa-user p-y_2 self_center"></i><span class="label p-l_3 lowercase lh_0 ">Faculty</span></a>
-		</li>
-
-		<li class="nav-item flex_auto c_white-8 bg_acc-n1 h:bg_black-9 h:c_white a:c_white a:bg_primary a:shadow_overlap-light">
-			<a href="../" class="c_inherit-all flex flex_row h:undecorated p_3"><i class="icon fas fa-fw fa-sign-out-alt p-y_2 self_center"></i><span class="p-l_3 label self_center lowercase lh_0 font_n2 nowrap h_1h">Log Out</span></a>
-		</li>
-	</ul>
-  </div> -->
 <script
 src="https://code.jquery.com/jquery-3.6.1.min.js"
 integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
