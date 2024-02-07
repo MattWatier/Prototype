@@ -7,7 +7,7 @@ coursesActive: true
 
 
 {% include_relative netflix/breadcrumb-course.html %}
-<div grid-area="app-page">
+<div grid-area="app-content" grid-template="page" class="br-br_radius">
   <header grid-area="header"
     class="grid-area_pageHead overflow_visible relative bg_white-8 relative p_5:xl p_4:lg p_3 font_n1 font_0:lg font_1:xxl br-b_1 br_black-3 br_solid">
     {% include_relative netflix/sub/session-label.html %}
@@ -15,9 +15,9 @@ coursesActive: true
       {% include_relative netflix/sub/save-star.html %}
     </div>
   </header>
-  <div class="grid-area_mainArea br-br_radius overflow_visible grid:lg grid-x_5:lg grid-x_4:xl grid-x_4:xxl">
-    <section
-      class="bg_white-6 col-start_3 col-start_2:xl col-end_end  font_0 font_1:lg p_3 p_4:lg p_5:xl relative row-start_start">
+  <section grid-area="content" class="grid:md columns_3 columns_5:lg columns_4:lg">
+    <main
+      class="CONTAINER bg_white-6 col-start_3 col-start_2:xl col-end_end  font_0 font_1:lg p_3 p_4:lg p_5:xl relative row-start_start">
       <div data-element="text-container" class="">
         <h1 class="">Module 1: Introduction and Self Evaluation</h1>
         <p class="">
@@ -37,9 +37,9 @@ coursesActive: true
         <!-- End Chapter -->
         <!-- BEGIN COURSE WRAPPER TOP INCLUDE -->
       </ul>
-    </section>
+    </main>
     <aside data-label="module-que-navigation"
-      class="col-start_start col-end_3 col-end_2:xl font_0 font_1:lg grid items_stretch justify_stretch overflow_auto relative scrollbar-mini shadow_emboss-light bg_black-2">
+      class="CONTAINER col-start_start col-end_3 col-end_2:xl font_0 font_1:lg grid items_stretch justify_stretch overflow_auto relative scrollbar-mini shadow_emboss-light bg_black-2">
       <div class="absolute:lg flex flex_column items_stretch justify_start justify_stretch b_1 l_1 r_1 t_1 ul_none">
         <h2
           class="bg_white-8 br_0 br-t_1 br-b_1 br_solid br_black-2 p_3 p_4:lg shadow_overlap-light m-b_0 w_100 font-size_up-1 font_display font_medium">
@@ -48,5 +48,5 @@ coursesActive: true
         {% include_relative netflix/course/module-que.html %}
       </div>
     </aside>
-  </div>
+  </section>
 </div>

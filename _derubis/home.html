@@ -1,24 +1,21 @@
 --- 
 layout: V2-library_app_frame
-name: "V2: 1.0 | Frame" 
+name: "V2: 1.0 | Home" 
 uri: "root/index (authenticated & access)" 
 homeActive: true 
 ---
 
 
-<div data-zone="introduction" grid-area="app-breadcrumb" class="bg_white-8 br-b_1 br_black-3 br_solid p_4 p-x_5:xl p-x_6:xxl p-y_4:lg  p-y_5:xxl">
-  {% include_relative netflix/home/home-branding.html %} 
-  <h3 class="font_display font_xbold c_primary-n2">Welcome</h3>
-  <p class="max-w_70">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quam temporibus quae repellat dolorem aperiam explicabo, tempora pariatur iste earum quaerat sequi ea optio magni, mollitia animi, dignissimos deserunt quia?</p>
-</div>
 <div grid-area="app-page" grid-template="app-page">
-  <header class="font-size_up-1">
-    
-
-  
+  <header grid-area="header" class="font-size_up-1">
+    <div data-zone="introduction" grid-area="app-breadcrumb" class="bg_white-8 br-b_1 br_black-3 br_solid p_4 p-x_5:xl p-x_6:xxl p-y_4:lg  p-y_5:xxl">
+      {% include_relative netflix/home/home-branding.html %} 
+      <h3 class="font_display font_xbold c_primary-n2">Welcome</h3>
+      <p class="max-w_70">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quam temporibus quae repellat dolorem aperiam explicabo, tempora pariatur iste earum quaerat sequi ea optio magni, mollitia animi, dignissimos deserunt quia?</p>
+    </div>  
   </header>
   
-  <section grid-area="primary-content" class="bg_white-8 p_4 p-x_5:xl p-x_6:xxl p-y_4:lg  p-y_5:xxl">
+  <section grid-area="split-content-primary" class="bg_white-8 p_4 p-x_5:xl p-x_6:xxl p-y_4:lg  p-y_5:xxl">
 
       <h3 class="font_display font_xbold c_primary-n2">Featured</h3>
       <p class="max-w_70">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt reiciendis cumque ut eum alias
@@ -27,12 +24,12 @@ homeActive: true
 
         
       </section> 
-      <section  grid-area="secondary-content" class="bg_white-7 br-b_1 br_black-3 br_solid p-y_4">
+      <section  grid-area="split-content-secondary" class="bg_white-7 br-b_1 br_black-3 br_solid p-y_4">
         {% include_relative netflix/home/slider.html %}
       </section>
-  <footer grid-area="footer" class="">
+  <footer grid-area="footer" class="bg_black-6 p_3 c_white">
   
-  
+  footer
   </footer> 
 
 </div>
