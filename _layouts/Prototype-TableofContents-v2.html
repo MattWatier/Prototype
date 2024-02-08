@@ -1,7 +1,7 @@
 --- 
 layout: default 
 --- 
-{% include utility-headv2.html %}
+{% include v2-utility_head.html %}
 
 <body class="bg_black-2">
   <div class="max-w_90 m_auto flex_column flex justify_around bg_white shadow_overlap-light ">
@@ -32,7 +32,7 @@ layout: default
         <h1><a href="{{ " /" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
         <p>{{ site.description | default: site.github.project_tagline }}</p>
     </header>
-    <section class="p_4 flex_auto min-h_80">
+    <section class="p_4 flex_auto min-h_80 reading-typography">
       {{ content }}
     </section>
   </div>
