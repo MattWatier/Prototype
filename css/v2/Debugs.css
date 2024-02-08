@@ -1,0 +1,43 @@
+.bg_transparent {
+  background-color: transparent;
+}
+
+.debug .CONTAINER {
+  --data-label: var(attr(data-label, ""));
+  --grid-area: var(attr(grid-area, ""));
+  --grid-template: var(attr(grid-template, ""));
+  position: relative;
+  outline: 1px dashed var(--highlight, #e300c1);
+}
+.debug .CONTAINER:before {
+  content: "Container: Generic";
+  color: var(--highlight, #e300c1);
+  font-family: var(--font-mono);
+  position: absolute;
+  inset: 3px;
+  font-size: 10px;
+}
+.debug .CONTAINER[data-label]:before, .debug .CONTAINER[grid-area]:before, .debug .CONTAINER[dgrid-template]:before {
+  content: "Container: " var(--data-label) " " var(--grid-area) " " var(--grid-template);
+}
+
+.debug .grid {
+  --data-label: var(attr(data-label, ""));
+  --grid-area: var(attr(grid-area, ""));
+  --grid-template: var(attr(grid-template, ""));
+  position: relative;
+  outline: 1px dashed var(--accent, #00e3c1);
+}
+.debug .grid:before {
+  content: "Container: Generic";
+  color: var(--accent, #00e3c1);
+  font-family: var(--font-mono);
+  position: absolute;
+  inset: 3px;
+  font-size: 10px;
+}
+.debug .grid [data-label]:before, .debug .grid [grid-area]:before, .debug .grid[dgrid-template]:before {
+  content: "Container: " var(--data-label) " " var(--grid-area) " " var(--grid-template);
+}
+
+/*# sourceMappingURL=Debugs.css.map */

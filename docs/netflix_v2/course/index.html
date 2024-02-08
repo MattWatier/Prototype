@@ -11,6 +11,10 @@
   <!-- <link rel="stylesheet" href="https://raw.githubusercontent.com/MattWatier/UtilityClass@latest/3.0.0/dist/css/UC.css"> -->
   <!-- <link rel="stylesheet" href="https://raw.githubusercontent.com/MattWatier/UtilityClass@latest/3.0.0/dist/css/Library.Custom.css"> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MattWatier/UtilityClass@3.1.02/dist/css/Library.Custom.css">
+<<<<<<< HEAD
+=======
+  <!-- <link rel="stylesheet" href="./Prototype/css/v2/Library.Custom.css"> -->
+>>>>>>> origin/main
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MattWatier/UtilityClass@latest/dist/css/ColorCodes.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MattWatier/UtilityClass@latest/dist/css/Bootstrap.Shim.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MattWatier/UtilityClass@latest/dist/css/Debug.css">
@@ -59,16 +63,16 @@
 
 	<div id="AppFrame" grid-template="app-frame" class="expanded">
 		<div grid-template="breadcrumb" grid-area="app-breadcrumb"
-	class="relative bg_white-2 p-l_5:md p-l_3 p-y_3 font_1 br-b_1 br_solid br_black-3 grid gap-x_4 justify_start items_stretch shadow_emboss-light c_primary-n2">
+	class="relative bg_white-2 p-x_5:md p-x_3 p-y_3 font_1 br-b_1 br_solid br_black-3 grid gap-x_4 c_primary-n2 CONTAINER">
 	<div grid-area="back-btn">
 		<button class="btn btn-primary shadow_overlap-light br_solid br_black-3 br_1 block w_100">
 			<i class="fa-arrow-left fas font-size_down-1"></i>
 			<span class="inline-block:md display_none">back</span>
 		</button>
 	</div>
-	<div grid-area="breadcrumb-list">
+	<div grid-area="breadcrumb-list" class="grid items_center">
 		<ul
-			class="flex flex_inline flex_row wrap font-size_0:lg font-size_down-1:md font-size_down-2 lh_0 text-shadow_white-1 ul_none gap-y_2 overflow_hidden">
+			class="flex flex_row wrap font-size_0:lg font-size_down-1:md font-size_down-2 lh_0 text-shadow_white-1 ul_none gap-y_2 overflow_hidden">
 			<li class="flex flex_row nowrap relative overflow_hidden">
 				<div class="flex flex_row nowrap overflow_hidden">
 					<i class="c_black-9 fas fa-solid m-l_1 fa-fw m-r_2 flex_none self_center fa-home"></i>
@@ -89,14 +93,14 @@
 </div>
 <div grid-area="app-content" grid-template="page" class="br-br_radius">
   <header grid-area="header"
-    class="grid-area_pageHead overflow_visible relative bg_white-8 relative p_5:xl p_4:lg p_3 font_n1 font_0:lg font_1:xxl br-b_1 br_black-3 br_solid">
-    <h1 class="c_secondary-n1 font-size_down-2 font_display font_xbold m-y_0 opacity_7 lh_1"> (Collection Title) Yearly Conference </h1>
-<h2 class="font-size_0 font_bold font_display c_primary-n1 m-y_0 lh_2">(Title) Odio illum et nemo odit harum. </h2>
-<h3 class="c_black-7 font-size_down-1 font_medium font_ui m-y_0 lh_1">(Session Sub Title) Rhythm and Conduction Disorders</h3>
-    <div class="absolute t_3 r_2 z_2 font_n1" data-element="save-toggle">
+    class="CONTAINER relative bg_white-8 relative p_5:xl p_4:lg p_3 font_n1 font_0:md font_1:lg font_1:xxl br-b_1 br_black-3 br_solid">
+    <h1 class="font-size_down-1 c_secondary-n1 font_display font_bold m-y_0 opacity_7 lh_1"> (Collection Title) Yearly Conference </h1>
+<h2 class="font-size_up-1 font_bold font_display c_primary-n1 m-y_0 lh_2">(Title) Odio illum et nemo odit harum. </h2>
+<h3 class="font-size_0 c_black-7 font_medium font_ui m-y_0 lh_1">(Session Sub Title) Rhythm and Conduction Disorders</h3>
+    <div class="absolute t_3 r_2 z_2 font_n2" data-element="save-toggle">
       <span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
-	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
-	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
+	<i class="c_inherit-all col_all fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
+	<i class="c_white-5 col_all fa-solid fa-star fas m-t_n1 h:c_white row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
 
     </div>
@@ -140,8 +144,8 @@
 		<i class="c_white col-end_end col-start_start fa-file fa-solid fas font-size_0 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 	</span>
 	<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
-	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
-	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
+	<i class="c_inherit-all col_all fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
+	<i class="c_white-5 col_all fa-solid fa-star fas m-t_n1 h:c_white row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
 
 	</div>
@@ -224,8 +228,8 @@
 		<i class="c_white col-end_end col-start_start fa-file fa-solid fas font-size_0 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 	</span>
 	<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
-	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
-	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
+	<i class="c_inherit-all col_all fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
+	<i class="c_white-5 col_all fa-solid fa-star fas m-t_n1 h:c_white row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
 
 	</div>
@@ -308,8 +312,8 @@
 		<i class="c_white col-end_end col-start_start fa-file fa-solid fas font-size_0 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 	</span>
 	<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
-	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
-	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
+	<i class="c_inherit-all col_all fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
+	<i class="c_white-5 col_all fa-solid fa-star fas m-t_n1 h:c_white row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
 
 	</div>
@@ -392,8 +396,8 @@
 		<i class="c_white col-end_end col-start_start fa-file fa-solid fas font-size_0 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 	</span>
 	<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
-	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
-	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
+	<i class="c_inherit-all col_all fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
+	<i class="c_white-5 col_all fa-solid fa-star fas m-t_n1 h:c_white row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
 
 	</div>
@@ -490,8 +494,8 @@
 		<i class="c_white col-end_end col-start_start fa-file fa-solid fas font-size_0 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 	</span>
 	<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
-	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
-	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
+	<i class="c_inherit-all col_all fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
+	<i class="c_white-5 col_all fa-solid fa-star fas m-t_n1 h:c_white row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
 
 	</div>
@@ -574,8 +578,8 @@
 		<i class="c_white col-end_end col-start_start fa-file fa-solid fas font-size_0 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 	</span>
 	<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
-	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
-	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
+	<i class="c_inherit-all col_all fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
+	<i class="c_white-5 col_all fa-solid fa-star fas m-t_n1 h:c_white row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
 
 	</div>
@@ -658,8 +662,8 @@
 		<i class="c_white col-end_end col-start_start fa-file fa-solid fas font-size_0 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 	</span>
 	<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
-	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
-	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
+	<i class="c_inherit-all col_all fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
+	<i class="c_white-5 col_all fa-solid fa-star fas m-t_n1 h:c_white row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
 
 	</div>
@@ -742,8 +746,8 @@
 		<i class="c_white col-end_end col-start_start fa-file fa-solid fas font-size_0 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 	</span>
 	<span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
-	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
-	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
+	<i class="c_inherit-all col_all fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
+	<i class="c_white-5 col_all fa-solid fa-star fas m-t_n1 h:c_white row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
 
 	</div>
@@ -831,8 +835,8 @@
 			
 <div class="br-t_1 br_solid br_black-3 flex flex_row-reverse relative h:bg_accent-5 flex_100 isolation_isolate ">
 	<div class="bg_black-_05 br-l_1  br_black-2 br_solid flex_none font_n1 p_4 z_2 p-t_5"><span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
-	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
-	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
+	<i class="c_inherit-all col_all fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
+	<i class="c_white-5 col_all fa-solid fa-star fas m-t_n1 h:c_white row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
 </div>
 	<div class="p_4 flex_auto p-t_5">
@@ -869,8 +873,8 @@
 		<li class="bg_white-6 br-r_4 br_highlight br_solid flex flex_row m-l_n1 relative">
 			<div class="br-t_1 br_solid br_black-3 flex flex_row-reverse relative h:bg_accent-5 flex_100">
 	<div class="bg_black-_05 br-l_1 m-r_n2  br_black-2 br_solid flex_none font_n1 p_4 z_2 p-t_5"><span class="aspect-ratio_1x1 c_black-5 grid h:c_black items_center justify_center overflow_visible z_3">
-	<i class="c_inherit-all col-end_end col-start_start fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
-	<i class="c_white-5 col-end_end col-start_start fa-solid fa-star fas h:c_white-8 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
+	<i class="c_inherit-all col_all fa-bookmark fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
+	<i class="c_white-5 col_all fa-solid fa-star fas m-t_n1 h:c_white row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
 </span>
 </div>
 	<div class="p_4 flex_auto p-t_5">
