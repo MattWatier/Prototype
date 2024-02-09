@@ -35,10 +35,10 @@ const Toggle = document.getElementById("mainDesktopNavTouchToggle");
 const NavToggle = () => {
 	const Frame = document.getElementById("AppFrame");
 
-	const Toggle = document
+	const ToggleIcon = document
 		.getElementById("mainDesktopNavTouchToggle")
-		.querySelector("span > i");
-	Toggle.classList.toggle("rotate_180");
+		.querySelector("span > svg");
+	ToggleIcon.classList.toggle("rotate_180");
 	const navigationItems = document.querySelectorAll("#navigation .nav-item");
 	const logo_1x1 = document.getElementById("logo_1x1");
 	const logo_3x1 = document.getElementById("logo_3x1");

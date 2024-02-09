@@ -823,4 +823,55 @@
 
 </body>
 
+
+ <!-- Placeholder for your data as a JSON object -->
+<script type="application/json" id="loremipsumData">
+    [{"sub-label":"opportunity over cut individual stay major blue ok","label":"somebody indeed life example possible check peace expect","category-label":"By blue help rest.","description":"End sister really hotel five draw visit home. Executive travel action dinner.","array-list":"Kayla Harris, David Bell, Sara Wilson, Benjamin Morgan, Sarah George, Shawn Simpson"},{"sub-label":"interview manage able to lawyer people","label":"individual method generation outside school when heart sure","category-label":"Reflect evidence attack book weight.","description":"Brother moment down brother arrive. Source impact development career son ready. Old couple condition although room exactly. Month may general buy.","array-list":"Anna Jones, Joseph Hammond"},{"sub-label":"same behavior employee there if employee follow interesting mention","label":"after candidate care article top run forward matter interesting common","category-label":"Media former check it him strategy.","description":"Et ratione omnis qui sint id vel distinctio. Minima sit officia veniam quod cum. Itaque dignissimos quas vitae. Molestias perferendis vitae.","array-list":"Alan Garcia MD, James Torres"},{"sub-label":"nothing interview study human effect couple culture push officer","label":"give end so environmental even story friend","category-label":"With include add bank other arrive.","description":"Et ut delectus alias. Voluptatem dolores delectus. Nulla consequatur quidem nesciunt maxime.","array-list":"Jack Salinas, James Sandoval, Heather Johnson"},{"sub-label":"without imagine reveal different second stuff someone team story","label":"commercial strategy up drive notice evidence note development","category-label":"Research rule look by exist democratic.","description":"Position skin dinner. Follow star expect window. Parent music finally care successful.","array-list":"Alyssa Clayton, Heather Moore, Blake Mcknight"},{"sub-label":"avoid if for word minute project writer candidate yard summer","label":"firm easy power where budget beautiful alone parent","category-label":"Up bed arrive morning.","description":"Aut quis dolore esse repellat enim et quae rerum. Consequuntur rerum sunt et ea. Voluptas dicta nihil nulla facere vitae iste soluta. Dolorem commodi maiores aperiam est. Error quam a animi est reiciendis ratione temporibus rerum et. Quos dolorem qui deserunt.","array-list":"Kayla Livingston, Isabel Murray, Hannah Nelson, Tiffany Banks, Yvonne Ruiz, Jonathan Cooper, Erik Khan"},{"sub-label":"sure reveal behind realize minute interest","label":"out fund whom debate issue character thought example way determine","category-label":"Industry game use indicate in painting.","description":"Ago religious recognize activity. Enter always indeed traditional throw campaign identify. Position represent democratic room history. Scientist true friend lawyer pattern bill foreign.","array-list":"Shawn Smith, Donald Hill, Heather Delgado, Anthony Russell, Riley Ross"},{"sub-label":"hard response these already throw return remember line","label":"student drive cover data he","category-label":"Involve church can final.","description":"Skill during detail perform. Prove then who guy. Beat financial culture deep.","array-list":"Mrs. Diane Alvarez, Matthew Davis"},{"sub-label":"production now hotel if so save up especially recent","label":"compare picture social hold again with","category-label":"Truth product official civil art environment.","description":"Movement score sign country pick mind want. Range east worker of large. Then career kind character their statement. Benefit purpose our blue situation Democrat science.","array-list":"Nicole Cooper, Billy Cantu"},{"sub-label":"media expert part effort drug general","label":"learn make peace instead summer teacher discover dream","category-label":"Religious writer east would.","description":"Nihil ea neque vero tenetur non vitae asperiores. Excepturi quia porro maxime. Qui voluptate est nulla asperiores magni. Sit nam qui harum. Magnam tempora autem minima eum commodi facere et aut. Voluptatum beatae suscipit.","array-list":"Sharon Williams, Alicia Campbell, Michael Smith, Sara Rollins, Adam Crawford"}]
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var dataElement = document.getElementById('loremipsumData');
+    if (!dataElement) {
+        // If the data element isn't found, exit the function.
+        return;
+    }
+    var data = JSON.parse(dataElement.textContent);
+
+    document.querySelectorAll('.randomData').forEach(function(element) {
+        var randomIndex = Math.floor(Math.random() * data.length);
+        var randomRow = data[randomIndex];
+
+        var updateTextContent = function(selector, text) {
+            var el = element.querySelector(selector);
+            if (el) {
+                el.textContent = text;
+            }
+        };
+
+        var updateListContent = function(selector, listString) {
+            var listElements = element.querySelectorAll(selector);
+            listElements.forEach(function(el) {
+                var parent = el.parentNode;
+                var items = listString.split(',').map(function(item) {
+                    var li = document.createElement('li');
+                    li.textContent = item.trim();
+                    return li;
+                });
+
+                // Replace the span with new li elements
+                items.forEach(function(li) {
+                    parent.insertBefore(li, el);
+                });
+                parent.removeChild(el);
+            });
+        };
+
+        updateTextContent('.randomSubLabel', randomRow['sub-label']);
+        updateTextContent('.randomLabel', randomRow['label']);
+        updateTextContent('.randomCategoryLabel', randomRow['category-label']);
+        updateTextContent('.randomDescription', randomRow['description']);
+        updateListContent('.randomArrayList', randomRow['array-list']);
+    });
+});
+</script>
 </html>

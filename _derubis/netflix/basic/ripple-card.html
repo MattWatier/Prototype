@@ -1,5 +1,7 @@
-<li id="GRID_TEST" grid-template="ripple-card" layout="ripple-inline-start" class="grid active br-t_1 br_solid br_black-3 relative h:bg_accent-5">
-	<div grid-area="content-primary" class="p_4">
+<div id="CHAPTERS" grid-template="ripple-card" layout="ripple-right"
+	class="br-t_1 br_solid br_black-3 relative h:bg_accent-5">
+	<div class="p_4" grid-area="content-primary">
+		<!-- html snippet goes here -->
 		<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">
 			(Presentation Title) Rhythm and Conduction Disorders
 		</h3>
@@ -19,14 +21,13 @@
 			</li>
 			<li>Bernice Lakin</li>
 		</ul>
+		<!-- html snippet ends here -->
 	</div>
 	<div grid-area="content-secondary"
-	class="bg_black-_05 br-l_1 br_black-2 br_solid flex flex_column items_center font-size_down-2"
-	>
-	{% include_relative /netflix/sub/save-star.html %}
-	</div>	
-	{% include_relative /netflix/sub/ripple-button.html data_element_option="" icon="play" %}
-	{% include_relative /netflix/sub/status-flags.html status="current" layout="right" %}
-
-	<div grid-area="active-highlight" class="display_none a:block bg_highlight"></div>
-</li>
+		class="bg_black-_05 br-r_1 br_black-2 br_solid flex flex_column items_center font-size_down-2">
+		{% include_relative /netflix/sub/file-icon.html file_type="archive" %}
+		{% include_relative /netflix/sub/save-star.html %}
+	</div>
+	{% include_relative /netflix/sub/status-flags.html status="failed" %}
+	{% include_relative /netflix/sub/ripple-button.html data_element_option="inline-end" icon="arrow-right" %}
+</div>

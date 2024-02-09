@@ -1,0 +1,16 @@
+{% assign file_type = include.file_type | default: "document" %}
+
+<div class="fa-2x">
+    {% case file_type %}
+        {% when "document" %}
+            <i class="fa-solid fa-file h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-circle" data-fa-mask-id="circle"></i>
+        {% when "powerpoint" %}
+            <i class="fa-solid fa-file-powerpoint h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-circle" data-fa-mask-id="circle"></i>
+        {% when "video" %}
+            <i class="fa-solid fa-file-video h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-circle" data-fa-mask-id="circle"></i>
+        {% when "archive" %}
+            <i class="fa-solid fa-file-archive h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-circle" data-fa-mask-id="circle"></i>
+        {% else %}
+            <i class="fa-solid fa-file h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-circle" data-fa-mask-id="circle"></i>
+    {% endcase %}
+</div>

@@ -1,61 +1,40 @@
-<div id="CHAPTERS" grid-template="ripple-card" layout="ripple-right"
-	class="br-t_1 br_solid br_black-3 relative h:bg_accent-5"
->
-	<div grid-area="content-secondary"
-		class="bg_black-_05 br-r_1 br_black-2 br_solid flex flex_column items_center font-size_down-2"
-	>
-	{% include_relative /netflix/sub/doc-circle.html %}
-	{% include_relative /netflix/sub/save-star.html %}
-	</div>
-	<div class="p_4" grid-area="content-primary">
-		<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">
-			(Presentation Title) Rhythm and Conduction Disorders
+<!-- TODO: use this for a model of the generic ripple-cards.html -->
+{% assign layout = include.layout | default: "ripple-inline-end" %}
+{% assign active_class = include.active | default: "" %}
+{% assign flag = include.flag | default: "current" %}
+<div id="CHAPTERS" grid-template="ripple-card" layout="{{ layout}}"
+	class="br-t_1 br_solid br_black-3 relative h:bg_accent-5  {{ active_class }}">
+	<div class="p_4 randomData" grid-area="content-primary">
+		<!-- html snippet goes here -->
+		<h5 class="randomCategoryLabel uppercase font-size_down-1 font_display font_medium c_brand-n1 m-y_0 lh_1">Category Label</h5>
+		<h3 class="randomLabel c_black-9 font-size_up-2 font_bold font_display lh_2 m-y_0 m_0 capitalize">
+			Presentation Title
 		</h3>
-		<h4 class="c_black-6 font-size_down-1 font_display font_medium m-y_0">
-			(Sub Presentation Title) Rhythm and Conduction Disorders
+		<h4 class="randomSubLabel c_black-6 font-size_0 font_display font_medium m-y_0 capitalize">
+			Sub Presentation Title
 		</h4>
-		<p class="">
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde illum
-			doloremque autem sapiente quidem modi earum officiis obcaecati
-			debitis quisquam, exercitationem non blanditiis quia. Consectetur
-			earum nesciunt assumenda magni delectus.
+		<p class="randomDescription m-y_3 lh_2">
+			Random Description
 		</p>
 		<ul class="ul_inline-semicolon font-size_down-2" data-element="value">
-			<li
-				data-element="label"
-				class="no-after font_bold w_100 w_auto:md c_secondary-n2"
-			>
+			<li data-element="label" class="no-after font_bold w_100 w_auto:md c_secondary-n2">
 				<i class="fal display_none [fa-icon-class|display_none]"></i>
 				<span>Faculty:</span>
 			</li>
-			<li>Bernice Lakin</li>
+			<li class="randomArrayList">Bernice Lakin</li>
 		</ul>
+		<!-- html snippet ends here -->
 	</div>
-	<ul grid-area="flags" class="absolute font_ui font_medium t_0 l_4 font-size_down-2 ul_none flex flex_row nowrap gap-x_2" data-element="flags">
-		<li class="p-x_3 p-y_2 uppercase bg_success-n2 br-br_radius br-bl_radius c_white"><i class="fas fa-check"></i> Completed</li>
-	</ul>
-	<footer
-		grid-area="ripple"
-		data-element="chapter-footer"
-		class="font-size_0 z_2"
-	>
-		<nav data-element="button-ripple" data-element-option="inline-end">
-			<ul data-element="button-ripple--wrapper">
-				<li data-element="button-ripple--button-edge">
-					<a
-						href=""
-						data-element="button-ripple--button"
-						class="expanded-click-area bg_white-6 c_black h:bg_primary h:c_white"
-					>
-						<i
-							class="c_inherit-all fa-arrow-right fa-solid fas font-size_down-2"
-						></i>
-					</a>
-					<span
-						data-element="button-ripple--button-edge-corners"
-					></span>
-				</li>
-			</ul>
-		</nav>
-	</footer>
+	<div grid-area="content-secondary"
+		class="bg_black-_05 br-r_1 br_black-2 br_solid flex flex_column items_center font-size_down-2">
+		{% include_relative /netflix/sub/file-icon.html file_type="archive" %}
+		{% include_relative /netflix/sub/save-star.html %}
+	</div>
+	<!-- TODO: wrap this in logic so I can pass in the flag. I can't pass in variables into a inlcude tag. -->
+	{% include_relative /netflix/sub/status-flags.html status="current" %}
+	{% include_relative /netflix/sub/ripple-button.html icon="arrow-right" %}
+	<div grid-area="active-highlight" class="display_none a:block bg_highlight"></div>
 </div>
+
+
+

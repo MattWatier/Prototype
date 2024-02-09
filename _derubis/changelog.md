@@ -35,6 +35,13 @@ uri: root/
         + content => middle content
         + content-primary => split of content comes first
         + content-secondary => plit of content comes second
+    + ripple-card => the card that makes most of the lists. this has a layout of `ripple-left` and `ripple-right`
+        *grid-area* attribute:
+        + content-primary => where text goes this is the body of the card
+        + content-secondary => this is were secondary actions go: bookmark, downloads, select marks
+        + ripple => primary action where the ripple button goes
+        + flags => this are are the flag holder of the item: watched, locked, completed, failed etc.
+        + active-highlight => a bar of color that represents that the item is active.
     + bucket => this is a full container within a space. 
 
 ## Switching to Font Awesome 6 Javascript + SVG

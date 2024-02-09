@@ -1,4 +1,55 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'en-US' }}"> 
  {{ content}}
+
+ <!-- Placeholder for your data as a JSON object -->
+<script type="application/json" id="loremipsumData">
+    {{ site.data.loremipsum | jsonify }}
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var dataElement = document.getElementById('loremipsumData');
+    if (!dataElement) {
+        // If the data element isn't found, exit the function.
+        return;
+    }
+    var data = JSON.parse(dataElement.textContent);
+
+    document.querySelectorAll('.randomData').forEach(function(element) {
+        var randomIndex = Math.floor(Math.random() * data.length);
+        var randomRow = data[randomIndex];
+
+        var updateTextContent = function(selector, text) {
+            var el = element.querySelector(selector);
+            if (el) {
+                el.textContent = text;
+            }
+        };
+
+        var updateListContent = function(selector, listString) {
+            var listElements = element.querySelectorAll(selector);
+            listElements.forEach(function(el) {
+                var parent = el.parentNode;
+                var items = listString.split(',').map(function(item) {
+                    var li = document.createElement('li');
+                    li.textContent = item.trim();
+                    return li;
+                });
+
+                // Replace the span with new li elements
+                items.forEach(function(li) {
+                    parent.insertBefore(li, el);
+                });
+                parent.removeChild(el);
+            });
+        };
+
+        updateTextContent('.randomSubLabel', randomRow['sub-label']);
+        updateTextContent('.randomLabel', randomRow['label']);
+        updateTextContent('.randomCategoryLabel', randomRow['category-label']);
+        updateTextContent('.randomDescription', randomRow['description']);
+        updateListContent('.randomArrayList', randomRow['array-list']);
+    });
+});
+</script>
 </html>
