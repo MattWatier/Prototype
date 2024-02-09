@@ -1,19 +1,7 @@
 <nav data-component="course.module-que" class="col-start_4 col-end_end font_n1 font_0:sm font_1:lg grid justify_stretch items_stretch bg_white-8 ">
 	<ul class="b_0 t_0 ul_none">
-		<li class="relative h:bg_white-4 flex flex_row m-l_n1"> 
-			{% include_relative /netflix/course/module.html spacing="p-t_5" %}
-			<ul class="absolute t_0 r_3 font_ui font_medium font-size_down-2 ul_none flex flex_row nowrap gap-x_2" data-element="flags">
-				<li class="p-x_3 p-y_2 uppercase bg_success-n2 br-br_radius br-bl_radius c_white">Completed</li>
-			</ul>
-		</li>
-		<li class="bg_white-6 br-r_4 br_highlight br_solid flex flex_row m-l_n1 relative">
-			{% include_relative  /netflix/course/module-current.html spacing="p-t_5" %}
-			<ul class="absolute t_0 r_3 font_ui font_medium font-size_down-2 ul_none flex flex_row nowrap gap-x_2" data-element="flags">
-				<li class="p-x_3 p-y_2 uppercase bg_highlight-1 br-br_radius br-bl_radius c_black font_xbold"><i class="fas fa-solid fa-play"></i> current</li>
-			</ul>
-		</li>
-		
-		<li class="relative h:bg_white-4 flex flex_row m-l_n1"> {% include_relative  /netflix/course/locked-module.html spacing="p-t_0"  %}</li>
-
+		{% include_relative /netflix/course/module.html %}
+		{% include_relative /netflix/course/module-current.html %}
+		{% include_relative /netflix/course/module-locked.html %}
 	</ul>
 </nav>

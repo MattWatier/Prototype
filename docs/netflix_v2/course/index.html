@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Course - UC System</title>
   <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MattWatier/UtilityClass@3.1.03/dist/css/UC.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MattWatier/UtilityClass@3.1.04/dist/css/UC.css">
   <!-- <link rel="stylesheet" href="https://raw.githubusercontent.com/MattWatier/UtilityClass@latest/3.0.0/dist/css/UC.css"> -->
   <!-- <link rel="stylesheet" href="https://raw.githubusercontent.com/MattWatier/UtilityClass@latest/3.0.0/dist/css/Library.Custom.css"> -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MattWatier/UtilityClass@3.1.03/dist/css/Library.Custom.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MattWatier/UtilityClass@3.1.04/dist/css/Library.Custom.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MattWatier/UtilityClass@latest/dist/css/ColorCodes.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MattWatier/UtilityClass@latest/dist/css/Bootstrap.Shim.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MattWatier/UtilityClass@latest/dist/css/Debug.css">
@@ -98,14 +98,133 @@
 
     </div>
   </header>
-  <section grid-area="content" class="grid:md columns_3 columns_5:lg columns_4:lg">
-    <main
-      class="CONTAINER bg_white-6 col-start_3 col-start_2:xl col-end_end  font_0 font_1:lg p_3 p_4:lg p_5:xl relative row-start_start">
+  <section grid-area="content" class="grid:md columns_3 columns_4:lg">
+    <aside data-label="module-que-navigation" grid-template='bucket'
+      class="CONTAINER col-start_start col-end_3 col-end_2:lg font_0 font_1:lg grid items_stretch justify_stretch overflow_auto relative scrollbar-mini shadow_emboss-light bg_black-2">
+      <div class="absolute:lg flex flex_column items_stretch justify_start justify_stretch b_1 l_1 r_1 t_1 ul_none">
+        <h2
+          class="bg_white-8 br_0 br-t_1 br-b_1 br_solid br_black-2 p_3 p_4:lg shadow_overlap-light m-b_0 w_100 font-size_up-1 font_display font_medium">
+          Chapter Progress
+        </h2>
+        <nav data-component="course.module-que" class="col-start_4 col-end_end font_n1 font_0:sm font_1:lg grid justify_stretch items_stretch bg_white-8 ">
+	<ul class="b_0 t_0 ul_none">
+		
+<li grid-template="ripple-card" layout="ripple-left" class="br-t_1 br_solid br_black-3 relative grid h:bg_accent-5 isolation_isolate ">
+	<div grid-area="content-primary" class="p_4">
+		<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">(Module Title)Feeling Burnt Out? </h3>
+		<h4 class="c_black-6 font-size_down-1 font_display font_medium m-y_0">(Sub Presentation Title) Here are 10 Proven Strategies for Overcoming Workplace Exhaustion</h4>
+		<ul class="ul_inline-semicolon font-size_down-2" data-element="value">
+			<li data-element="label" class="no-after font_bold w_100 w_auto:md c_secondary-n2">
+				<i class="fal display_none [fa-icon-class|display_none]"></i>
+				<span>Faculty:</span>
+			</li>
+			<li>Bernice Lakin</li>
+			<li>Eddie Nikolaus II</li>
+			<li>Nick Larkin</li>
+		</ul>
+	</div>
+	<div grid-area="content-secondary" class="bg_black-_05 br-l_1 m-r_n2 flex flex_column items_center br_black-2 br_solid font-size_down-2">		<div class="fa-3x"><i class="fa-solid fa-star h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-bookmark" data-fa-mask-id="bookmark"></i></div>
+
+
+	</div>
+	<ul grid-area="labels" class="absolute t_0 r_3 font_ui font_medium font-size_down-2 ul_none flex flex_row nowrap gap-x_2" data-element="flags">
+		<li class="p-x_3 p-y_2 uppercase bg_success-n2 br-br_radius br-bl_radius c_white">Completed</li>
+	</ul>
+	<footer grid-area="ripple" layout="ripple-left">
+	<nav data-element="button-ripple" data-element-option="inline-start">
+			<ul  data-element="button-ripple--wrapper">
+				<li data-element="button-ripple--button-edge" >
+					<a href="" data-element="button-ripple--button" class="expanded-click-area bg_white-6  c_black h:bg_primary h:c_white z_0">
+						<i class="c_inherit-all fa-check fa-solid fas font-size_down-2"></i>
+					</a>
+					<span data-element="button-ripple--button-edge-corners"></span>
+				</li>
+	
+			</ul>
+	</nav>
+</footer>
+</li>
+		<li id="GRID_TEST" grid-template="ripple-card" layout="ripple-left" class="grid active br-t_1 br_solid br_black-3 relative h:bg_accent-5">
+	<div grid-area="content-primary" class="p_4 flex_auto">
+		<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">(Module Title) Introduction and Self Evaluation</h3>
+		<h4 class="c_black-6 font-size_down-1 font_display font_medium m-y_0">(Sub Presentation Title) Course Outline and Expectations</h4>
+		<ul class="ul_inline-semicolon font-size_down-2" data-element="value">
+			<li data-element="label" class="no-after font_bold w_100 w_auto:md c_secondary-n2">
+				<i class="fal display_none [fa-icon-class|display_none]"></i>
+				<span>Faculty:</span>
+			</li>
+			<li>Bernice Lakin</li>
+			<li>Eddie Nikolaus II</li>
+			<li>Nick Larkin</li>
+		</ul>
+	</div>
+	<div grid-area="content-secondary" class="bg_black-_05 br-l_1 text_center br_black-2 br_solid flex_none font-size_down-2"><div class="fa-3x"><i class="fa-solid fa-star h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-bookmark" data-fa-mask-id="bookmark"></i></div>
+
+</div>
+	<footer grid-area="ripple">
+	<nav data-element="button-ripple" data-element-option="inline-start">
+			<ul  data-element="button-ripple--wrapper">
+				<li data-element="button-ripple--button-edge" >
+					<span href="" data-element="button-ripple--button" class="bg_highlight c_black">
+						<i class="c_inherit-all fa-play fa-solid fas font-size_down-2"></i>
+					</span>
+					<span data-element="button-ripple--button-edge-corners"></span>
+				</li>
+	
+			</ul>
+	</nav>
+</footer>
+	<ul grid-area="labels" class="absolute t_0 r_3 font_ui font_medium font-size_down-2 ul_none flex flex_row nowrap gap-x_2">
+		<li class="p-x_3 p-y_2 uppercase bg_highlight-1 br-br_radius br-bl_radius c_black font_xbold"><i class="fas fa-solid fa-play"></i> current</li>
+	</ul>
+	<div grid-area="active-highlight" class="display_none a:block bg_highlight"></div>
+</li>
+
+		<li grid-template="ripple-card" layout="ripple-left" class="br-t_1 br_solid br_black-3 flex flex_row-reverse relative bg_black-2 cursor_not-allowed">
+
+	<div grid-area="content-primary" class="p_4 flex_auto opacity_7">
+		<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">(Presentation Title)[Locked] Overcoming
+			Burnout</h3>
+		<h4 class="c_black-6 font-size_down-1 font_display font_medium m-y_0">(Sub Presentation Title) Practical Tips
+			from Successful Entrepreneurs and Business Leaders</h4>
+		<ul class="ul_inline-semicolon font-size_down-2" data-element="value">
+			<li data-element="label" class="no-after font_bold w_100 w_auto:md c_secondary-n2">
+				<i class="fal display_none [fa-icon-class|display_none]"></i>
+				<span>Faculty:</span>
+			</li>
+			<li>Brent Schumm</li>
+			<li>Lana Williamson</li>
+		</ul>
+	</div>
+	<div grid-area="content-secondary" class="bg_black-_05 br-l_1 m-r_n2 flex flex_column items_center br_black-2 br_solid font-size_down-2">
+		<div class="fa-3x"><i class="fa-solid fa-lock h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-square" data-fa-mask-id="square"></i></div>
+
+
+	</div>
+	<footer grid-area="ripple" class="opacity_6">
+	<nav data-element="button-ripple" data-element-option="inline-start">
+		<ul  data-element="button-ripple--wrapper">
+			<li data-element="button-ripple--button-edge" >
+				<a href="" data-element="button-ripple--button" class="expanded-click-area bg_white-6 c_black">
+					<i class="c_inherit-all fa-lock fa-solid fas font-size_down-2"></i>
+				</a>
+				<span data-element="button-ripple--button-edge-corners"></span>
+			</li>	
+		</ul>
+	</nav>
+</footer>
+</li>
+
+
+	</ul>
+</nav>
+      </div>
+    </aside>
+    <main class="bg_white-6 col-start_3 col-start_2:lg col-end_end  font_0 font_1:lg p_3 p_4:lg p_5:xl relative row-start_start">
       <div data-element="text-container" class="">
         <h1 class="">Module 1: Introduction and Self Evaluation</h1>
         <p class="">
-          Module One, Introduction and Self Evaluation, will explain the purpose of the course, the desired outcomes,
-          and
+          Module One, Introduction and Self Evaluation, will explain the purpose of the course, the desired outcomes, and
           the requirements that need to be fulfilled in order to graduate.
         </p>
       </div>
@@ -123,24 +242,21 @@
 		<ul class="ul_none display_content">
 
 
-			<li class="relative isolation_isolate cq_parent">
-				<div
-	class="br-t_1 br_solid br_black-3 flex flex_row relative h:bg_accent-5 flex_100"
+			<li class="relative isolation_isolate">
+				<div id="CHAPTERS" grid-template="ripple-card" layout="ripple-right"
+	class="br-t_1 br_solid br_black-3 relative h:bg_accent-5"
 >
-	<div
-		class="bg_black-_05 br-r_1 br_black-2 br_solid flex_none flex flex_column font_0 p-t_5"
+	<div grid-area="conetent-secondary"
+		class="bg_black-_05 br-r_1 br_black-2 br_solid flex flex_column items_center"
 	>
+	<div class="fa-3x"><i class="fa-solid fa-file h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-circle" data-fa-mask-id="circle"></i></div>
 
 
-	<span class="aspect-ratio_1x1 br-b_1 br_black-2 br_solid c_black-8 grid items_center justify_center:md overflow_visible p_4">
-		<i class="c_inherit-all col-end_end col-start_start fa-circle fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
-		<i class="c_white col-end_end col-start_start fa-file fa-solid fas font-size_0 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
-	</span>
 	<div class="fa-3x"><i class="fa-solid fa-star h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-bookmark" data-fa-mask-id="bookmark"></i></div>
 
 
 	</div>
-	<div class="p_4 flex_auto p-t_5">
+	<div class="p_4" grid-area="content-primary">
 		<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">
 			(Presentation Title) Rhythm and Conduction Disorders
 		</h3>
@@ -164,21 +280,13 @@
 			<li>Bernice Lakin</li>
 		</ul>
 	</div>
-	<div
-		class="icon flex_shrink grid items_center justify_center p_5:xxl p_4:lg p_3 font-size_up-3"
-	>
-		<!-- <span class="fa-stack grid items_center justify_center relative">
-			<i class="fas fa-circle fa-stack-2x" style="font-size: 229%;"></i>
-			<i class="fas fa-flag fa-stack-1x fa-inverse"></i>
-			<i
-				class="c_success fa-check-circle fa-stack fas"
-				style="top: -53%; right: -76%; font-size: 64%;"
-			></i>
-		</span> -->
-	</div>
-	<div
-		data-element="presentation-footer"
-		class="font_1 font_2:lg m_n1 m-l_auto w_auto z_2"
+	<ul grid-area="labels" class="absolute font_ui font_medium t_0 l_4 font-size_down-2 ul_none flex flex_row nowrap gap-x_2" data-element="flags">
+		<li class="p-x_3 p-y_2 uppercase bg_success-n2 br-br_radius br-bl_radius c_white"><i class="fas fa-check"></i> Completed</li>
+	</ul>
+	<footer
+		grid-area="ripple"
+		data-element="chapter-footer"
+		class="font-size_0 z_2"
 	>
 		<nav data-element="button-ripple" data-element-option="inline-end">
 			<ul data-element="button-ripple--wrapper">
@@ -198,31 +306,26 @@
 				</li>
 			</ul>
 		</nav>
-	</div>
+	</footer>
 </div>
 
-				<ul class="absolute font_ui font_medium t_0 l_4 font-size_down-2 ul_none flex flex_row nowrap gap-x_2" data-element="flags">
-					<li class="p-x_3 p-y_2 uppercase bg_success-n2 br-br_radius br-bl_radius c_white"><i class="fas fa-check"></i> Completed</li>
-				</ul>
+
 			</li>
-			<li class="relative isolation_isolate cq_parent">
-				<div
-	class="br-t_1 br_solid br_black-3 flex flex_row relative h:bg_accent-5 flex_100"
+			<li class="relative isolation_isolate">
+				<div id="CHAPTERS" grid-template="ripple-card" layout="ripple-right"
+	class="br-t_1 br_solid br_black-3 relative h:bg_accent-5"
 >
-	<div
-		class="bg_black-_05 br-r_1 br_black-2 br_solid flex_none flex flex_column font_0 p-t_5"
+	<div grid-area="conetent-secondary"
+		class="bg_black-_05 br-r_1 br_black-2 br_solid flex flex_column items_center"
 	>
+	<div class="fa-3x"><i class="fa-solid fa-file h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-circle" data-fa-mask-id="circle"></i></div>
 
 
-	<span class="aspect-ratio_1x1 br-b_1 br_black-2 br_solid c_black-8 grid items_center justify_center:md overflow_visible p_4">
-		<i class="c_inherit-all col-end_end col-start_start fa-circle fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
-		<i class="c_white col-end_end col-start_start fa-file fa-solid fas font-size_0 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
-	</span>
 	<div class="fa-3x"><i class="fa-solid fa-star h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-bookmark" data-fa-mask-id="bookmark"></i></div>
 
 
 	</div>
-	<div class="p_4 flex_auto p-t_5">
+	<div class="p_4" grid-area="content-primary">
 		<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">
 			(Presentation Title) Rhythm and Conduction Disorders
 		</h3>
@@ -246,21 +349,13 @@
 			<li>Bernice Lakin</li>
 		</ul>
 	</div>
-	<div
-		class="icon flex_shrink grid items_center justify_center p_5:xxl p_4:lg p_3 font-size_up-3"
-	>
-		<!-- <span class="fa-stack grid items_center justify_center relative">
-			<i class="fas fa-circle fa-stack-2x" style="font-size: 229%;"></i>
-			<i class="fas fa-flag fa-stack-1x fa-inverse"></i>
-			<i
-				class="c_success fa-check-circle fa-stack fas"
-				style="top: -53%; right: -76%; font-size: 64%;"
-			></i>
-		</span> -->
-	</div>
-	<div
-		data-element="presentation-footer"
-		class="font_1 font_2:lg m_n1 m-l_auto w_auto z_2"
+	<ul grid-area="labels" class="absolute font_ui font_medium t_0 l_4 font-size_down-2 ul_none flex flex_row nowrap gap-x_2" data-element="flags">
+		<li class="p-x_3 p-y_2 uppercase bg_success-n2 br-br_radius br-bl_radius c_white"><i class="fas fa-check"></i> Completed</li>
+	</ul>
+	<footer
+		grid-area="ripple"
+		data-element="chapter-footer"
+		class="font-size_0 z_2"
 	>
 		<nav data-element="button-ripple" data-element-option="inline-end">
 			<ul data-element="button-ripple--wrapper">
@@ -280,31 +375,28 @@
 				</li>
 			</ul>
 		</nav>
-	</div>
+	</footer>
 </div>
 
 				<ul class="absolute font_ui font_medium t_0 l_4 font-size_down-2 ul_none flex flex_row nowrap gap-x_2" data-element="flags">
 					<li class="p-x_3 p-y_2 uppercase bg_highlight-1 br-br_radius br-bl_radius c_black"><i class="fas fa-check"></i> In Progress</li>
 				</ul>
 			</li>
-			<li class="relative isolation_isolate cq_parent">
-				<div
-	class="br-t_1 br_solid br_black-3 flex flex_row relative h:bg_accent-5 flex_100"
+			<li class="relative isolation_isolate">
+				<div id="CHAPTERS" grid-template="ripple-card" layout="ripple-right"
+	class="br-t_1 br_solid br_black-3 relative h:bg_accent-5"
 >
-	<div
-		class="bg_black-_05 br-r_1 br_black-2 br_solid flex_none flex flex_column font_0 p-t_5"
+	<div grid-area="conetent-secondary"
+		class="bg_black-_05 br-r_1 br_black-2 br_solid flex flex_column items_center"
 	>
+	<div class="fa-3x"><i class="fa-solid fa-file h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-circle" data-fa-mask-id="circle"></i></div>
 
 
-	<span class="aspect-ratio_1x1 br-b_1 br_black-2 br_solid c_black-8 grid items_center justify_center:md overflow_visible p_4">
-		<i class="c_inherit-all col-end_end col-start_start fa-circle fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
-		<i class="c_white col-end_end col-start_start fa-file fa-solid fas font-size_0 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
-	</span>
 	<div class="fa-3x"><i class="fa-solid fa-star h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-bookmark" data-fa-mask-id="bookmark"></i></div>
 
 
 	</div>
-	<div class="p_4 flex_auto p-t_5">
+	<div class="p_4" grid-area="content-primary">
 		<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">
 			(Presentation Title) Rhythm and Conduction Disorders
 		</h3>
@@ -328,21 +420,13 @@
 			<li>Bernice Lakin</li>
 		</ul>
 	</div>
-	<div
-		class="icon flex_shrink grid items_center justify_center p_5:xxl p_4:lg p_3 font-size_up-3"
-	>
-		<!-- <span class="fa-stack grid items_center justify_center relative">
-			<i class="fas fa-circle fa-stack-2x" style="font-size: 229%;"></i>
-			<i class="fas fa-flag fa-stack-1x fa-inverse"></i>
-			<i
-				class="c_success fa-check-circle fa-stack fas"
-				style="top: -53%; right: -76%; font-size: 64%;"
-			></i>
-		</span> -->
-	</div>
-	<div
-		data-element="presentation-footer"
-		class="font_1 font_2:lg m_n1 m-l_auto w_auto z_2"
+	<ul grid-area="labels" class="absolute font_ui font_medium t_0 l_4 font-size_down-2 ul_none flex flex_row nowrap gap-x_2" data-element="flags">
+		<li class="p-x_3 p-y_2 uppercase bg_success-n2 br-br_radius br-bl_radius c_white"><i class="fas fa-check"></i> Completed</li>
+	</ul>
+	<footer
+		grid-area="ripple"
+		data-element="chapter-footer"
+		class="font-size_0 z_2"
 	>
 		<nav data-element="button-ripple" data-element-option="inline-end">
 			<ul data-element="button-ripple--wrapper">
@@ -362,31 +446,28 @@
 				</li>
 			</ul>
 		</nav>
-	</div>
+	</footer>
 </div>
 
 				<ul class="absolute font_ui font_medium t_0 l_4 font-size_down-2 ul_none flex flex_row nowrap gap-x_2" data-element="flags">
 					<li class="p-x_3 p-y_2 uppercase bg_alert-n2 br-br_radius br-bl_radius c_white"><i class="fas fa-check"></i> Failed </li>
 				</ul>
 			</li>
-			<li class="relative isolation_isolate cq_parent">
-				<div
-	class="br-t_1 br_solid br_black-3 flex flex_row relative h:bg_accent-5 flex_100"
+			<li class="relative isolation_isolate">
+				<div id="CHAPTERS" grid-template="ripple-card" layout="ripple-right"
+	class="br-t_1 br_solid br_black-3 relative h:bg_accent-5"
 >
-	<div
-		class="bg_black-_05 br-r_1 br_black-2 br_solid flex_none flex flex_column font_0 "
+	<div grid-area="conetent-secondary"
+		class="bg_black-_05 br-r_1 br_black-2 br_solid flex flex_column items_center"
 	>
+	<div class="fa-3x"><i class="fa-solid fa-file h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-circle" data-fa-mask-id="circle"></i></div>
 
 
-	<span class="aspect-ratio_1x1 br-b_1 br_black-2 br_solid c_black-8 grid items_center justify_center:md overflow_visible p_4">
-		<i class="c_inherit-all col-end_end col-start_start fa-circle fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
-		<i class="c_white col-end_end col-start_start fa-file fa-solid fas font-size_0 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
-	</span>
 	<div class="fa-3x"><i class="fa-solid fa-star h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-bookmark" data-fa-mask-id="bookmark"></i></div>
 
 
 	</div>
-	<div class="p_4 flex_auto ">
+	<div class="p_4" grid-area="content-primary">
 		<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">
 			(Presentation Title) Rhythm and Conduction Disorders
 		</h3>
@@ -410,21 +491,13 @@
 			<li>Bernice Lakin</li>
 		</ul>
 	</div>
-	<div
-		class="icon flex_shrink grid items_center justify_center p_5:xxl p_4:lg p_3 font-size_up-3"
-	>
-		<!-- <span class="fa-stack grid items_center justify_center relative">
-			<i class="fas fa-circle fa-stack-2x" style="font-size: 229%;"></i>
-			<i class="fas fa-flag fa-stack-1x fa-inverse"></i>
-			<i
-				class="c_success fa-check-circle fa-stack fas"
-				style="top: -53%; right: -76%; font-size: 64%;"
-			></i>
-		</span> -->
-	</div>
-	<div
-		data-element="presentation-footer"
-		class="font_1 font_2:lg m_n1 m-l_auto w_auto z_2"
+	<ul grid-area="labels" class="absolute font_ui font_medium t_0 l_4 font-size_down-2 ul_none flex flex_row nowrap gap-x_2" data-element="flags">
+		<li class="p-x_3 p-y_2 uppercase bg_success-n2 br-br_radius br-bl_radius c_white"><i class="fas fa-check"></i> Completed</li>
+	</ul>
+	<footer
+		grid-area="ripple"
+		data-element="chapter-footer"
+		class="font-size_0 z_2"
 	>
 		<nav data-element="button-ripple" data-element-option="inline-end">
 			<ul data-element="button-ripple--wrapper">
@@ -444,7 +517,7 @@
 				</li>
 			</ul>
 		</nav>
-	</div>
+	</footer>
 </div>
 
 				
@@ -453,7 +526,7 @@
 	</nav>
 </article>
         </li>
-        <li>
+      <li>
           <article data-component="chapter.chapter" class="br_radius m_3 shadow_overlap-light bg_white-8">
 	<header class="p_3 p_4:lg br-b_1 br_solid br_black-2 font-size_0">
 		<h2 class=""><span class="block c_secondary font-size_down-3 lh_0">Chapter Name:</span>Lorem ipsum dolor sit amet consectetur, adipisicing elit</h2>
@@ -465,24 +538,21 @@
 		<ul class="ul_none display_content">
 
 
-			<li class="relative isolation_isolate cq_parent">
-				<div
-	class="br-t_1 br_solid br_black-3 flex flex_row relative h:bg_accent-5 flex_100"
+			<li class="relative isolation_isolate">
+				<div id="CHAPTERS" grid-template="ripple-card" layout="ripple-right"
+	class="br-t_1 br_solid br_black-3 relative h:bg_accent-5"
 >
-	<div
-		class="bg_black-_05 br-r_1 br_black-2 br_solid flex_none flex flex_column font_0 p-t_5"
+	<div grid-area="conetent-secondary"
+		class="bg_black-_05 br-r_1 br_black-2 br_solid flex flex_column items_center"
 	>
+	<div class="fa-3x"><i class="fa-solid fa-file h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-circle" data-fa-mask-id="circle"></i></div>
 
 
-	<span class="aspect-ratio_1x1 br-b_1 br_black-2 br_solid c_black-8 grid items_center justify_center:md overflow_visible p_4">
-		<i class="c_inherit-all col-end_end col-start_start fa-circle fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
-		<i class="c_white col-end_end col-start_start fa-file fa-solid fas font-size_0 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
-	</span>
 	<div class="fa-3x"><i class="fa-solid fa-star h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-bookmark" data-fa-mask-id="bookmark"></i></div>
 
 
 	</div>
-	<div class="p_4 flex_auto p-t_5">
+	<div class="p_4" grid-area="content-primary">
 		<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">
 			(Presentation Title) Rhythm and Conduction Disorders
 		</h3>
@@ -506,21 +576,13 @@
 			<li>Bernice Lakin</li>
 		</ul>
 	</div>
-	<div
-		class="icon flex_shrink grid items_center justify_center p_5:xxl p_4:lg p_3 font-size_up-3"
-	>
-		<!-- <span class="fa-stack grid items_center justify_center relative">
-			<i class="fas fa-circle fa-stack-2x" style="font-size: 229%;"></i>
-			<i class="fas fa-flag fa-stack-1x fa-inverse"></i>
-			<i
-				class="c_success fa-check-circle fa-stack fas"
-				style="top: -53%; right: -76%; font-size: 64%;"
-			></i>
-		</span> -->
-	</div>
-	<div
-		data-element="presentation-footer"
-		class="font_1 font_2:lg m_n1 m-l_auto w_auto z_2"
+	<ul grid-area="labels" class="absolute font_ui font_medium t_0 l_4 font-size_down-2 ul_none flex flex_row nowrap gap-x_2" data-element="flags">
+		<li class="p-x_3 p-y_2 uppercase bg_success-n2 br-br_radius br-bl_radius c_white"><i class="fas fa-check"></i> Completed</li>
+	</ul>
+	<footer
+		grid-area="ripple"
+		data-element="chapter-footer"
+		class="font-size_0 z_2"
 	>
 		<nav data-element="button-ripple" data-element-option="inline-end">
 			<ul data-element="button-ripple--wrapper">
@@ -540,31 +602,26 @@
 				</li>
 			</ul>
 		</nav>
-	</div>
+	</footer>
 </div>
 
-				<ul class="absolute font_ui font_medium t_0 l_4 font-size_down-2 ul_none flex flex_row nowrap gap-x_2" data-element="flags">
-					<li class="p-x_3 p-y_2 uppercase bg_success-n2 br-br_radius br-bl_radius c_white"><i class="fas fa-check"></i> Completed</li>
-				</ul>
+
 			</li>
-			<li class="relative isolation_isolate cq_parent">
-				<div
-	class="br-t_1 br_solid br_black-3 flex flex_row relative h:bg_accent-5 flex_100"
+			<li class="relative isolation_isolate">
+				<div id="CHAPTERS" grid-template="ripple-card" layout="ripple-right"
+	class="br-t_1 br_solid br_black-3 relative h:bg_accent-5"
 >
-	<div
-		class="bg_black-_05 br-r_1 br_black-2 br_solid flex_none flex flex_column font_0 p-t_5"
+	<div grid-area="conetent-secondary"
+		class="bg_black-_05 br-r_1 br_black-2 br_solid flex flex_column items_center"
 	>
+	<div class="fa-3x"><i class="fa-solid fa-file h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-circle" data-fa-mask-id="circle"></i></div>
 
 
-	<span class="aspect-ratio_1x1 br-b_1 br_black-2 br_solid c_black-8 grid items_center justify_center:md overflow_visible p_4">
-		<i class="c_inherit-all col-end_end col-start_start fa-circle fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
-		<i class="c_white col-end_end col-start_start fa-file fa-solid fas font-size_0 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
-	</span>
 	<div class="fa-3x"><i class="fa-solid fa-star h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-bookmark" data-fa-mask-id="bookmark"></i></div>
 
 
 	</div>
-	<div class="p_4 flex_auto p-t_5">
+	<div class="p_4" grid-area="content-primary">
 		<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">
 			(Presentation Title) Rhythm and Conduction Disorders
 		</h3>
@@ -588,21 +645,13 @@
 			<li>Bernice Lakin</li>
 		</ul>
 	</div>
-	<div
-		class="icon flex_shrink grid items_center justify_center p_5:xxl p_4:lg p_3 font-size_up-3"
-	>
-		<!-- <span class="fa-stack grid items_center justify_center relative">
-			<i class="fas fa-circle fa-stack-2x" style="font-size: 229%;"></i>
-			<i class="fas fa-flag fa-stack-1x fa-inverse"></i>
-			<i
-				class="c_success fa-check-circle fa-stack fas"
-				style="top: -53%; right: -76%; font-size: 64%;"
-			></i>
-		</span> -->
-	</div>
-	<div
-		data-element="presentation-footer"
-		class="font_1 font_2:lg m_n1 m-l_auto w_auto z_2"
+	<ul grid-area="labels" class="absolute font_ui font_medium t_0 l_4 font-size_down-2 ul_none flex flex_row nowrap gap-x_2" data-element="flags">
+		<li class="p-x_3 p-y_2 uppercase bg_success-n2 br-br_radius br-bl_radius c_white"><i class="fas fa-check"></i> Completed</li>
+	</ul>
+	<footer
+		grid-area="ripple"
+		data-element="chapter-footer"
+		class="font-size_0 z_2"
 	>
 		<nav data-element="button-ripple" data-element-option="inline-end">
 			<ul data-element="button-ripple--wrapper">
@@ -622,31 +671,28 @@
 				</li>
 			</ul>
 		</nav>
-	</div>
+	</footer>
 </div>
 
 				<ul class="absolute font_ui font_medium t_0 l_4 font-size_down-2 ul_none flex flex_row nowrap gap-x_2" data-element="flags">
 					<li class="p-x_3 p-y_2 uppercase bg_highlight-1 br-br_radius br-bl_radius c_black"><i class="fas fa-check"></i> In Progress</li>
 				</ul>
 			</li>
-			<li class="relative isolation_isolate cq_parent">
-				<div
-	class="br-t_1 br_solid br_black-3 flex flex_row relative h:bg_accent-5 flex_100"
+			<li class="relative isolation_isolate">
+				<div id="CHAPTERS" grid-template="ripple-card" layout="ripple-right"
+	class="br-t_1 br_solid br_black-3 relative h:bg_accent-5"
 >
-	<div
-		class="bg_black-_05 br-r_1 br_black-2 br_solid flex_none flex flex_column font_0 p-t_5"
+	<div grid-area="conetent-secondary"
+		class="bg_black-_05 br-r_1 br_black-2 br_solid flex flex_column items_center"
 	>
+	<div class="fa-3x"><i class="fa-solid fa-file h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-circle" data-fa-mask-id="circle"></i></div>
 
 
-	<span class="aspect-ratio_1x1 br-b_1 br_black-2 br_solid c_black-8 grid items_center justify_center:md overflow_visible p_4">
-		<i class="c_inherit-all col-end_end col-start_start fa-circle fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
-		<i class="c_white col-end_end col-start_start fa-file fa-solid fas font-size_0 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
-	</span>
 	<div class="fa-3x"><i class="fa-solid fa-star h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-bookmark" data-fa-mask-id="bookmark"></i></div>
 
 
 	</div>
-	<div class="p_4 flex_auto p-t_5">
+	<div class="p_4" grid-area="content-primary">
 		<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">
 			(Presentation Title) Rhythm and Conduction Disorders
 		</h3>
@@ -670,21 +716,13 @@
 			<li>Bernice Lakin</li>
 		</ul>
 	</div>
-	<div
-		class="icon flex_shrink grid items_center justify_center p_5:xxl p_4:lg p_3 font-size_up-3"
-	>
-		<!-- <span class="fa-stack grid items_center justify_center relative">
-			<i class="fas fa-circle fa-stack-2x" style="font-size: 229%;"></i>
-			<i class="fas fa-flag fa-stack-1x fa-inverse"></i>
-			<i
-				class="c_success fa-check-circle fa-stack fas"
-				style="top: -53%; right: -76%; font-size: 64%;"
-			></i>
-		</span> -->
-	</div>
-	<div
-		data-element="presentation-footer"
-		class="font_1 font_2:lg m_n1 m-l_auto w_auto z_2"
+	<ul grid-area="labels" class="absolute font_ui font_medium t_0 l_4 font-size_down-2 ul_none flex flex_row nowrap gap-x_2" data-element="flags">
+		<li class="p-x_3 p-y_2 uppercase bg_success-n2 br-br_radius br-bl_radius c_white"><i class="fas fa-check"></i> Completed</li>
+	</ul>
+	<footer
+		grid-area="ripple"
+		data-element="chapter-footer"
+		class="font-size_0 z_2"
 	>
 		<nav data-element="button-ripple" data-element-option="inline-end">
 			<ul data-element="button-ripple--wrapper">
@@ -704,31 +742,28 @@
 				</li>
 			</ul>
 		</nav>
-	</div>
+	</footer>
 </div>
 
 				<ul class="absolute font_ui font_medium t_0 l_4 font-size_down-2 ul_none flex flex_row nowrap gap-x_2" data-element="flags">
 					<li class="p-x_3 p-y_2 uppercase bg_alert-n2 br-br_radius br-bl_radius c_white"><i class="fas fa-check"></i> Failed </li>
 				</ul>
 			</li>
-			<li class="relative isolation_isolate cq_parent">
-				<div
-	class="br-t_1 br_solid br_black-3 flex flex_row relative h:bg_accent-5 flex_100"
+			<li class="relative isolation_isolate">
+				<div id="CHAPTERS" grid-template="ripple-card" layout="ripple-right"
+	class="br-t_1 br_solid br_black-3 relative h:bg_accent-5"
 >
-	<div
-		class="bg_black-_05 br-r_1 br_black-2 br_solid flex_none flex flex_column font_0 "
+	<div grid-area="conetent-secondary"
+		class="bg_black-_05 br-r_1 br_black-2 br_solid flex flex_column items_center"
 	>
+	<div class="fa-3x"><i class="fa-solid fa-file h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-circle" data-fa-mask-id="circle"></i></div>
 
 
-	<span class="aspect-ratio_1x1 br-b_1 br_black-2 br_solid c_black-8 grid items_center justify_center:md overflow_visible p_4">
-		<i class="c_inherit-all col-end_end col-start_start fa-circle fa-solid fas font-size_up-2x row-end_end row-start_start text-shadow_black-1 text_center" aria-hidden="true"></i>
-		<i class="c_white col-end_end col-start_start fa-file fa-solid fas font-size_0 m-t_n1 row-end_end row-start_start t_n1 text_center" aria-hidden="true"></i>
-	</span>
 	<div class="fa-3x"><i class="fa-solid fa-star h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-bookmark" data-fa-mask-id="bookmark"></i></div>
 
 
 	</div>
-	<div class="p_4 flex_auto ">
+	<div class="p_4" grid-area="content-primary">
 		<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">
 			(Presentation Title) Rhythm and Conduction Disorders
 		</h3>
@@ -752,21 +787,13 @@
 			<li>Bernice Lakin</li>
 		</ul>
 	</div>
-	<div
-		class="icon flex_shrink grid items_center justify_center p_5:xxl p_4:lg p_3 font-size_up-3"
-	>
-		<!-- <span class="fa-stack grid items_center justify_center relative">
-			<i class="fas fa-circle fa-stack-2x" style="font-size: 229%;"></i>
-			<i class="fas fa-flag fa-stack-1x fa-inverse"></i>
-			<i
-				class="c_success fa-check-circle fa-stack fas"
-				style="top: -53%; right: -76%; font-size: 64%;"
-			></i>
-		</span> -->
-	</div>
-	<div
-		data-element="presentation-footer"
-		class="font_1 font_2:lg m_n1 m-l_auto w_auto z_2"
+	<ul grid-area="labels" class="absolute font_ui font_medium t_0 l_4 font-size_down-2 ul_none flex flex_row nowrap gap-x_2" data-element="flags">
+		<li class="p-x_3 p-y_2 uppercase bg_success-n2 br-br_radius br-bl_radius c_white"><i class="fas fa-check"></i> Completed</li>
+	</ul>
+	<footer
+		grid-area="ripple"
+		data-element="chapter-footer"
+		class="font-size_0 z_2"
 	>
 		<nav data-element="button-ripple" data-element-option="inline-end">
 			<ul data-element="button-ripple--wrapper">
@@ -786,7 +813,7 @@
 				</li>
 			</ul>
 		</nav>
-	</div>
+	</footer>
 </div>
 
 				
@@ -799,127 +826,8 @@
         <!-- BEGIN COURSE WRAPPER TOP INCLUDE -->
       </ul>
     </main>
-    <aside data-label="module-que-navigation"
-      class="CONTAINER col-start_start col-end_3 col-end_2:xl font_0 font_1:lg grid items_stretch justify_stretch overflow_auto relative scrollbar-mini shadow_emboss-light bg_black-2">
-      <div class="absolute:lg flex flex_column items_stretch justify_start justify_stretch b_1 l_1 r_1 t_1 ul_none">
-        <h2
-          class="bg_white-8 br_0 br-t_1 br-b_1 br_solid br_black-2 p_3 p_4:lg shadow_overlap-light m-b_0 w_100 font-size_up-1 font_display font_medium">
-          Chapter Progress
-        </h2>
-        <nav data-component="course.module-que" class="col-start_4 col-end_end font_n1 font_0:sm font_1:lg grid justify_stretch items_stretch bg_white-8 ">
-	<ul class="b_0 t_0 ul_none">
-		<li class="relative h:bg_white-4 flex flex_row m-l_n1"> 
-			
-<div class="br-t_1 br_solid br_black-3 flex flex_row-reverse relative h:bg_accent-5 flex_100 isolation_isolate ">
-	<div class="bg_black-_05 br-l_1  br_black-2 br_solid flex_none font_n1 p_4 z_2 p-t_5"><div class="fa-3x"><i class="fa-solid fa-star h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-bookmark" data-fa-mask-id="bookmark"></i></div>
-
-</div>
-	<div class="p_4 flex_auto p-t_5">
-		<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">(Module Title)Feeling Burnt Out? </h3>
-		<h4 class="c_black-6 font-size_down-1 font_display font_medium m-y_0">(Sub Presentation Title) Here are 10 Proven Strategies for Overcoming Workplace Exhaustion</h4>
-		<ul class="ul_inline-semicolon font-size_down-2" data-element="value">
-			<li data-element="label" class="no-after font_bold w_100 w_auto:md c_secondary-n2">
-				<i class="fal display_none [fa-icon-class|display_none]"></i>
-				<span>Faculty:</span>
-			</li>
-			<li>Bernice Lakin</li>
-			<li>Eddie Nikolaus II</li>
-			<li>Nick Larkin</li>
-		</ul>
-	</div>
-	<footer class="font_1 font_2:lg m_n1 w_auto z_1 p-r_5">
-	<nav data-element="button-ripple" data-element-option="inline-start">
-			<ul  data-element="button-ripple--wrapper">
-				<li data-element="button-ripple--button-edge" >
-					<a href="" data-element="button-ripple--button" class="expanded-click-area bg_white-6  c_black h:bg_primary h:c_white z_0">
-						<i class="c_inherit-all fa-check fa-solid fas font-size_down-2"></i>
-					</a>
-					<span data-element="button-ripple--button-edge-corners"></span>
-				</li>
-	
-			</ul>
-	</nav>
-</footer>
-</div>
-			<ul class="absolute t_0 r_3 font_ui font_medium font-size_down-2 ul_none flex flex_row nowrap gap-x_2" data-element="flags">
-				<li class="p-x_3 p-y_2 uppercase bg_success-n2 br-br_radius br-bl_radius c_white">Completed</li>
-			</ul>
-		</li>
-		<li class="bg_white-6 br-r_4 br_highlight br_solid flex flex_row m-l_n1 relative">
-			<div class="br-t_1 br_solid br_black-3 flex flex_row-reverse relative h:bg_accent-5 flex_100">
-	<div class="bg_black-_05 br-l_1 text_center br_black-2 br_solid flex_none font_n1 p-t_5"><div class="fa-3x"><i class="fa-solid fa-star h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-bookmark" data-fa-mask-id="bookmark"></i></div>
-
-</div>
-	<div class="p_4 flex_auto p-t_5">
-		<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">(Module Title) Introduction and Self Evaluation</h3>
-		<h4 class="c_black-6 font-size_down-1 font_display font_medium m-y_0">(Sub Presentation Title) Course Outline and Expectations</h4>
-		<ul class="ul_inline-semicolon font-size_down-2" data-element="value">
-			<li data-element="label" class="no-after font_bold w_100 w_auto:md c_secondary-n2">
-				<i class="fal display_none [fa-icon-class|display_none]"></i>
-				<span>Faculty:</span>
-			</li>
-			<li>Bernice Lakin</li>
-			<li>Eddie Nikolaus II</li>
-			<li>Nick Larkin</li>
-		</ul>
-	</div>
-	<footer class="font_1 font_2:lg m_n1 w_auto z_2 p-r_5">
-	<nav data-element="button-ripple" data-element-option="inline-start">
-			<ul  data-element="button-ripple--wrapper">
-				<li data-element="button-ripple--button-edge" >
-					<span href="" data-element="button-ripple--button" class="bg_highlight c_black">
-						<i class="c_inherit-all fa-play fa-solid fas font-size_down-2"></i>
-					</span>
-					<span data-element="button-ripple--button-edge-corners"></span>
-				</li>
-	
-			</ul>
-	</nav>
-</footer>
-</div>
-			<ul class="absolute t_0 r_3 font_ui font_medium font-size_down-2 ul_none flex flex_row nowrap gap-x_2" data-element="flags">
-				<li class="p-x_3 p-y_2 uppercase bg_highlight-1 br-br_radius br-bl_radius c_black font_xbold"><i class="fas fa-solid fa-play"></i> current</li>
-			</ul>
-		</li>
-		
-		<li class="relative h:bg_white-4 flex flex_row m-l_n1"> <div class="br-t_1 br_solid br_black-3 flex flex_row-reverse relative bg_black-2 cursor_not-allowed">
-	<div class="bg_black-_05 br-l_1 m-r_n2  br_black-2 br_solid flex_none font_n1 p_4 z_2 p-t_0"><div class="fa-3x"><i class="fa-solid fa-lock h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-square" data-fa-mask-id="square"></i></div>
-
-</div>
-
-	<div class="p_4 flex_auto opacity_7">
-		<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">(Presentation Title)[Locked] Overcoming Burnout</h3>
-		<h4 class="c_black-6 font-size_down-1 font_display font_medium m-y_0">(Sub Presentation Title)  Practical Tips from Successful Entrepreneurs and Business Leaders</h4>
-		<ul class="ul_inline-semicolon font-size_down-2" data-element="value">
-			<li data-element="label" class="no-after font_bold w_100 w_auto:md c_secondary-n2">
-				<i class="fal display_none [fa-icon-class|display_none]"></i>
-				<span>Faculty:</span>
-			</li>
-			<li>Brent Schumm</li>
-			<li>Lana Williamson</li>
-		</ul>
-	</div>
-	<footer class="font_1 font_2:lg m_n1 w_auto z_2 p-r_5 opacity_6">
-	<nav data-element="button-ripple" data-element-option="inline-start">
-			<ul  data-element="button-ripple--wrapper">
-				<li data-element="button-ripple--button-edge" >
-					<a href="" data-element="button-ripple--button" class="expanded-click-area bg_white-6 c_black">
-						<i class="c_inherit-all fa-lock fa-solid fas font-size_down-2"></i>
-					</a>
-					<span data-element="button-ripple--button-edge-corners"></span>
-				</li>
-	
-			</ul>
-	</nav>
-</footer>
-</div>
-</li>
-
-	</ul>
-</nav>
-      </div>
-    </aside>
   </section>
+  
 </div>
 		<!-- These Styles are just for the styleguide and are not to be included with the pattern. -->
 		

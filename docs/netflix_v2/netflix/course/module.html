@@ -1,7 +1,6 @@
 
-<div class="br-t_1 br_solid br_black-3 flex flex_row-reverse relative h:bg_accent-5 flex_100 isolation_isolate ">
-	<div class="bg_black-_05 br-l_1  br_black-2 br_solid flex_none font_n1 p_4 z_2 {{ include.spacing }}">{% include_relative /netflix/sub/save-star.html %}</div>
-	<div class="p_4 flex_auto {{ include.spacing }}">
+<li grid-template="ripple-card" layout="ripple-left" class="br-t_1 br_solid br_black-3 relative grid h:bg_accent-5 isolation_isolate ">
+	<div grid-area="content-primary" class="p_4">
 		<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">(Module Title)Feeling Burnt Out? </h3>
 		<h4 class="c_black-6 font-size_down-1 font_display font_medium m-y_0">(Sub Presentation Title) Here are 10 Proven Strategies for Overcoming Workplace Exhaustion</h4>
 		<ul class="ul_inline-semicolon font-size_down-2" data-element="value">
@@ -14,5 +13,10 @@
 			<li>Nick Larkin</li>
 		</ul>
 	</div>
+	<div grid-area="content-secondary" class="bg_black-_05 br-l_1 m-r_n2 flex flex_column items_center br_black-2 br_solid font-size_down-2">		{% include_relative /netflix/sub/save-star.html %}
+	</div>
+	<ul grid-area="labels" class="absolute t_0 r_3 font_ui font_medium font-size_down-2 ul_none flex flex_row nowrap gap-x_2" data-element="flags">
+		<li class="p-x_3 p-y_2 uppercase bg_success-n2 br-br_radius br-bl_radius c_white">Completed</li>
+	</ul>
 	{% include_relative netflix/sub/module-completed-footer.html %}
-</div>
+</li>
