@@ -1,0 +1,34 @@
+{% assign secondary_actions = include.secondary_actions | default: 'bookmark' | split: ',' %}
+{% assign locked = false %}
+{% assign classes = "h:c_black c_black-5" %}
+{% assign disabled_classes = "" %}
+
+<!-- Check if any action is locked -->
+{% for action in secondary_actions %}
+    {% if action == "lock" %}
+        {% assign disabled_classes = "disabled cursor_not-allowed not-allowed user-select-none" %}
+        {% assign classes = "" %}
+        {% break %}
+    {% endif %}
+{% endfor %}
+{% for action in secondary_actions %}
+    <div class="fa-2x {{disabled_classes}}">
+        {% case action %}
+            {% when "bookmark" %}
+                {% unless locked == "false" %}
+                    <i class="fa-solid fa-star {{classes}} z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-bookmark" data-fa-mask-id="bookmark"></i>
+                {% endunless %}
+            {% when "lock" %}
+                    <i class="fa-solid fa-lock {{classes}} z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-square" data-fa-mask-id="square"></i>
+            {% when "document" %}
+                <i class="fa-solid fa-file {{classes}} z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-circle" data-fa-mask-id="circle"></i>
+            {% when "powerpoint" %}
+                <i class="fa-solid fa-file-powerpoint {{classes}} z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-circle" data-fa-mask-id="circle"></i>
+            {% when "video" %}
+                <i class="fa-solid fa-file-video {{classes}} z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-circle" data-fa-mask-id="circle"></i>
+            {% when "archive" %}
+                <i class="fa-solid fa-file-archive {{classes}} z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-circle" data-fa-mask-id="circle"></i>
+            {% else %}
+        {% endcase %}
+    </div>
+{% endfor %}

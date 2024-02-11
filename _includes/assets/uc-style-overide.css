@@ -280,6 +280,11 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
   --font_headline-color: var(--primary-h) var(--primary-s) calc(var(--primary-l) + var(--primary-l)*-.37);
 }
 
+.reading-typography {
+  font-size: 1em;
+  --foo:boo;
+}
+
 :where(.reading-typography) :where(h1,
         h2,
         h3,
@@ -40026,21 +40031,15 @@ Styleguide Recipes.InteractiveExtras.Scrollbar
 }
 
 .disabled {
+  filter: grayscale(90%) contrast(60%) brightness(150%);
   opacity: 0.5;
-  color: hsl(var(--black-h), var(--black-s), 80%) !important;
-  border-color: hsl(var(--black-h), var(--black-s), 50%) !important;
-  cursor: not-allowed;
-}
-.disabled[class*=bg] {
-  background-color: hsl(var(--black-h), var(--black-s), 60%) !important;
 }
 .disabled .disabled {
   opacity: 1;
 }
 
 .disabled .disabled-dark {
-  color: hsl(var(--black-h), var(--black-s), 30%) !important;
-  border-color: hsl(var(--black-h), var(--black-s), 40%) !important;
+  filter: grayscale(100%) contrast(60%) brightness(50%);
 }
 
 /*# sourceMappingURL=UC.css.map */

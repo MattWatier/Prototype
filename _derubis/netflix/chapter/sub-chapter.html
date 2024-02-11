@@ -1,4 +1,3 @@
-<!-- TODO: use this for a model of the generic ripple-cards.html -->
 {% assign layout = include.layout | default: "ripple-inline-end" %}
 {% assign active_class = include.active | default: "" %}
 {% assign flag = include.flag | default: "current" %}
@@ -30,7 +29,6 @@
 		{% include_relative /netflix/sub/file-icon.html file_type="archive" %}
 		{% include_relative /netflix/sub/save-star.html %}
 	</div>
-	<!-- TODO: wrap this in logic so I can pass in the flag. I can't pass in variables into a inlcude tag. -->
 	{% include_relative /netflix/sub/status-flags.html status="current" %}
 	{% include_relative /netflix/sub/ripple-button.html icon="arrow-right" %}
 	<div grid-area="active-highlight" class="display_none a:block bg_highlight"></div>

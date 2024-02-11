@@ -1,27 +1,30 @@
 <!-- Replace "failed" with "completed", "watched", "current", or "in progress" to show different list items. If you want to show all items, you can either omit the status parameter or set it to "all". -->
-{% assign status = include.status | default: "all" %}
-{% assign layout = include.layout | default: "left" %}
-{% if layout == "left" %}
+{% assign status = include.status | default: "" %}
+{% assign layout = include.layout | default: "ripple-inline-start" %}
+{% if layout == "ripple-inline-end" %}
     {% assign layout_class = "l_0" %}
-{% elsif layout == "right" %}
+{% elsif layout == "ripple-inline-start" %}
     {% assign layout_class = "r_0" %}
 {% endif %}
 
+{% if status != '' %}
+    
 
 <ul grid-area="flags" class="font_ui p-x_3 font_medium font-size_down-2 ul_none flex flex_row nowrap gap-x_2 absolute t_0 {{ layout_class }}">
-    {% if status == "all" or status == "failed" %}
+    {% if status == "failed" %}
     <li class="p-x_3 p-y_2 uppercase bg_alert-n2 br-br_radius br-bl_radius c_white"><i class="fas fa-times"></i> Failed</li>
     {% endif %}
-    {% if status == "all" or status == "completed" %}
+    {% if status == "completed" %}
     <li class="p-x_3 p-y_2 uppercase bg_success-n2 br-br_radius br-bl_radius c_white"><i class="fas fa-check"></i> Completed</li>
     {% endif %}
-    {% if status == "all" or status == "watched" %}
-    <li class="p-x_3 p-y_2 uppercase bg_info-n2 br-br_radius br-bl_radius c_white"><i class="fas fa-eye"></i> Watched</li>
+    {% if status == "watched" %}
+    <li class="p-x_3 p-y_2 uppercase bg_brand-n2 br-br_radius br-bl_radius c_white"><i class="fas fa-eye"></i> Watched</li>
     {% endif %}
-    {% if status == "all" or status == "current" %}
+    {% if status == "current" %}
     <li class="p-x_3 p-y_2 uppercase bg_highlight-n2 br-br_radius br-bl_radius c_white"><i class="fas fa-dot-circle"></i> Current</li>
     {% endif %}
-    {% if status == "all" or status == "in progress" %}
+    {% if status == "in progress" %}
     <li class="p-x_3 p-y_2 uppercase bg_primary-n2 br-br_radius br-bl_radius c_white"><i class="fas fa-spinner fa-pulse"></i> In Progress</li>
     {% endif %}
 </ul>
+{% endif %}

@@ -305,6 +305,11 @@ h1 .link_icons-only, h1 .link_light, h1 .link, h1 :where(.reading-typography) a,
   --font_headline-color: var(--primary-h) var(--primary-s) calc(var(--primary-l) + var(--primary-l)*-.37);
 }
 
+.reading-typography {
+  font-size: 1em;
+  --foo:boo;
+}
+
 :where(.reading-typography) :where(h1,
         h2,
         h3,
@@ -40051,465 +40056,461 @@ Styleguide Recipes.InteractiveExtras.Scrollbar
 }
 
 .disabled {
+  filter: grayscale(90%) contrast(60%) brightness(150%);
   opacity: 0.5;
-  color: hsl(var(--black-h), var(--black-s), 80%) !important;
-  border-color: hsl(var(--black-h), var(--black-s), 50%) !important;
-  cursor: not-allowed;
-}
-.disabled[class*=bg] {
-  background-color: hsl(var(--black-h), var(--black-s), 60%) !important;
 }
 .disabled .disabled {
   opacity: 1;
 }
 
 .disabled .disabled-dark {
-  color: hsl(var(--black-h), var(--black-s), 30%) !important;
-  border-color: hsl(var(--black-h), var(--black-s), 40%) !important;
+  filter: grayscale(100%) contrast(60%) brightness(50%);
 }
 
 /*# sourceMappingURL=UC.css.map */
 
 .grid-hs {
-    display: grid;
-    grid-template-columns: 10px;
-    grid-template-rows: minmax(150px, 1fr);
-    grid-auto-flow: column;
-    grid-auto-columns: calc(100% - var(--gutter) * 2);
-    overflow-x: scroll;
-    scroll-snap-type: x proximity;
+  display: grid;
+  grid-template-columns: 10px;
+  grid-template-rows: minmax(150px, 1fr);
+  grid-auto-flow: column;
+  grid-auto-columns: calc(100% - var(--gutter) * 2);
+  overflow-x: scroll;
+  scroll-snap-type: x proximity;
+}
+@media screen and (min-width: 45rem) {
+  .grid-hs {
+    grid-auto-columns: calc(80% - var(--gutter) * 2);
   }
-  @media screen and (min-width: 45rem) {
-    .grid-hs {
-      grid-auto-columns: calc(80% - var(--gutter) * 2);
-    }
+}
+@media screen and (min-width: 64rem) {
+  .grid-hs {
+    grid-auto-columns: calc(50% - var(--gutter) * 2);
   }
-  @media screen and (min-width: 64rem) {
-    .grid-hs {
-      grid-auto-columns: calc(50% - var(--gutter) * 2);
-    }
+}
+@media screen and (min-width: 90rem) {
+  .grid-hs {
+    grid-auto-columns: calc(25% - var(--gutter) * 2);
   }
-  @media screen and (min-width: 90rem) {
-    .grid-hs {
-      grid-auto-columns: calc(25% - var(--gutter) * 2);
-    }
+}
+@media screen and (min-width: 120rem) {
+  .grid-hs {
+    grid-auto-columns: calc(20% - var(--gutter) * 2);
   }
-  @media screen and (min-width: 120rem) {
-    .grid-hs {
-      grid-auto-columns: calc(20% - var(--gutter) * 2);
-    }
-  }
-  
-  .grid-hs:before {
-    content: "";
-    width: calc(0.5 * var(--gutter));
-  }
-  
-  .grid-hs > li,
-  .item {
-    scroll-snap-align: center;
-  }
-  
-  .your-class-arrow {
-    scale: 50%;
-  }
-  
-  .splide__arrow.your-class-arrow:disabled {
-    cursor: not-allowed;
-    background-color: hsl(var(--primary-h), calc( var(--primary-s) - ((var(--primary-s)) * 0.9 * .1 ) ), calc( var(--primary-l) + ((100% - var(--primary-l)) * 0.9) ));
-    fill: hsl(var(--black-h), var(--black-s), 85%);
-    box-shadow: none;
-  }
-  
-  .grid-template_filterAndContent {
-    grid-template-columns: auto 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "filterArea contentArea";
-  }
-  
-  .grid-area_filterArea {
-    grid-area: filterArea;
-  }
-  
-  .grid-area_contentArea {
-    grid-area: contentArea;
-  }
-  
+}
+
+.grid-hs:before {
+  content: "";
+  width: calc(0.5 * var(--gutter));
+}
+
+.grid-hs > li,
+.item {
+  scroll-snap-align: center;
+}
+
+.your-class-arrow {
+  scale: 50%;
+}
+
+.splide__arrow.your-class-arrow:disabled {
+  cursor: not-allowed;
+  background-color: hsl(var(--primary-h), calc( var(--primary-s) - ((var(--primary-s)) * 0.9 * .1 ) ), calc( var(--primary-l) + ((100% - var(--primary-l)) * 0.9) ));
+  fill: hsl(var(--black-h), var(--black-s), 85%);
+  box-shadow: none;
+}
+
+.grid-template_filterAndContent {
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "filterArea contentArea";
+}
+
+.grid-area_filterArea {
+  grid-area: filterArea;
+}
+
+.grid-area_contentArea {
+  grid-area: contentArea;
+}
+
+.page-wrapper {
+  --app-spacing: .2rem;
+  margin: var(--app-spacing);
+}
+@media screen and (min-width: 45rem) {
   .page-wrapper {
-    --app-spacing: .2rem;
-    margin: var(--app-spacing);
+    --app-spacing: .5rem;
   }
-  @media screen and (min-width: 45rem) {
-    .page-wrapper {
-      --app-spacing: .5rem;
-    }
+}
+@media screen and (min-width: 64rem) {
+  .page-wrapper {
+    --app-spacing: .75rem;
   }
-  @media screen and (min-width: 64rem) {
-    .page-wrapper {
-      --app-spacing: .75rem;
-    }
+}
+@media screen and (min-width: 90rem) {
+  .page-wrapper {
+    --app-spacing: 1rem;
   }
-  @media screen and (min-width: 90rem) {
-    .page-wrapper {
-      --app-spacing: 1rem;
-    }
+}
+@media screen and (min-width: 120rem) {
+  .page-wrapper {
+    --app-spacing: 1.5rem;
   }
-  @media screen and (min-width: 120rem) {
-    .page-wrapper {
-      --app-spacing: 1.5rem;
-    }
-  }
-  
+}
+
+[grid-template=app-frame] {
+  --app-spacing: var(--app-spacing: .2rem);
+  --primary-menu-width:5.5rem;
+  display: grid;
+  transition: grid-template-columns 1s;
+  grid-template-columns: [app-start app-menu-start app-page-start] 1fr [app-page-end app-end app-menu-end];
+  grid-template-rows: [app-start app-menu-start breadcrumb-start branding-start app-page-start] auto [breadcrumb-end branding-end app-content-start] 1fr [app-content-end footer-area-start] auto [footer-area-end app-page-end app-menu-end app-page-end app-end];
+  min-height: calc(100vh - (2 * clamp(8px, 1vw, 16px)));
+  max-width: calc(100vw - var(--app-spacing) * 2);
+}
+
+@media screen and (min-width: 45rem) {
   [grid-template=app-frame] {
-    --app-spacing: var(--app-spacing: .2rem);
-    --primary-menu-width:5.5rem;
-    display: grid;
-    transition: grid-template-columns 1s;
-    grid-template-columns: [app-start app-menu-start app-page-start] 1fr [app-page-end app-end app-menu-end];
-    grid-template-rows: [app-start app-menu-start breadcrumb-start branding-start app-page-start] auto [breadcrumb-end branding-end app-content-start] 1fr [app-content-end footer-area-start] auto [footer-area-end app-page-end app-menu-end app-page-end app-end];
-    min-height: calc(100vh - (2 * clamp(8px, 1vw, 16px)));
-    max-width: calc(100vw - var(--app-spacing) * 2);
+    grid-template-columns: [app-start app-menu-start] var(--primary-menu-width) [app-menu-end app-page-start] calc(100% - var(--primary-menu-width)) [app-page-end app-end];
   }
-  
-  @media screen and (min-width: 45rem) {
-    [grid-template=app-frame] {
-      grid-template-columns: [app-start app-menu-start] var(--primary-menu-width) [app-menu-end app-page-start] calc(100% - var(--primary-menu-width)) [app-page-end app-end];
-    }
-  }
-  [grid-template=app-frame].expanded {
-    --primary-menu-width:var(--primary-menu-width-expanded,15rem);
-  }
-  
-  [grid-area=app-menu] {
-    grid-area: app-menu;
-  }
-  
-  [grid-area=app-page] {
-    grid-row: app-page;
-    grid-column: app-page;
-  }
-  
-  [grid-area=app-breadcrumb] {
-    grid-column: app-page;
-    grid-row: breadcrumb;
-  }
-  
-  [grid-area=app-branding] {
-    grid-column: app-page;
-    grid-row: branding;
-  }
-  
-  [grid-area=app-footer] {
-    grid-column: app-page;
-    grid-row: footer;
-  }
-  
-  [grid-area=app-content] {
-    grid-column: app-page;
-    grid-row: app-content;
-  }
-  
+}
+[grid-template=app-frame].expanded {
+  --primary-menu-width:var(--primary-menu-width-expanded,15rem);
+}
+
+[grid-area=app-menu] {
+  grid-area: app-menu;
+}
+
+[grid-area=app-page] {
+  grid-row: app-page;
+  grid-column: app-page;
+}
+
+[grid-area=app-breadcrumb] {
+  grid-column: app-page;
+  grid-row: breadcrumb;
+}
+
+[grid-area=app-branding] {
+  grid-column: app-page;
+  grid-row: branding;
+}
+
+[grid-area=app-footer] {
+  grid-column: app-page;
+  grid-row: footer;
+}
+
+[grid-area=app-content] {
+  grid-column: app-page;
+  grid-row: app-content;
+}
+
+[grid-template=breadcrumb] {
+  display: grid;
+  grid-template-columns: [back-btn-start] 3rem [back-btn-end breadcrumb-list-start] 1fr [breadcrumb-list-end];
+  grid-template-rows: [all-start breadcrumb-start] auto [all-end breadcrumb-end];
+}
+@media screen and (min-width: 45rem) {
   [grid-template=breadcrumb] {
-    display: grid;
-    grid-template-columns: [back-btn-start] 3rem [back-btn-end breadcrumb-list-start] 1fr [breadcrumb-list-end];
-    grid-template-rows: [all-start breadcrumb-start] auto [all-end breadcrumb-end];
+    grid-template-columns: [back-btn-start] 7rem [back-btn-end breadcrumb-list-start] 1fr [breadcrumb-list-end];
   }
-  @media screen and (min-width: 45rem) {
-    [grid-template=breadcrumb] {
-      grid-template-columns: [back-btn-start] 7rem [back-btn-end breadcrumb-list-start] 1fr [breadcrumb-list-end];
-    }
-  }
-  
-  [grid-template=breadcrumb] [grid-area=back-btn], [grid-template=breadcrumb] [grid-area=breadcrumb-list] {
-    display: grid;
-    justify-content: stretch;
-    align-items: center;
-  }
-  
-  [grid-template=breadcrumb] [grid-area=back-btn] {
-    grid-row: breadcrumb;
-    grid-column: back-btn;
-  }
-  
-  [grid-template=breadcrumb] [grid-area=breadcrumb-list] {
-    grid-column: breadcrumb-list;
-    grid-row: breadcrumb;
-  }
-  
-  [grid-template=page] {
-    display: grid;
-    grid-template-rows: [page-start header-start] auto [header-end content-primary-start page-content-start] auto [content-primary-end split-content-secondary-start] auto [split-content-secondary-end page-content-end footer-start] auto [page-end footer-end];
-  }
-  
-  [grid-template=page] [grid-area=header] {
-    grid-row: header;
-  }
-  
-  [grid-template=page] [grid-area=content] {
-    grid-row: page-content;
-  }
-  
-  [grid-template=page] [grid-area=content-primary] {
-    grid-row: split-content-primary;
-  }
-  
-  [grid-template=page] [grid-area=content-secondary] {
-    grid-row: split-content-secondary;
-  }
-  
-  [grid-template=page] [grid-area=page-footer] {
-    grid-row: footer;
-  }
-  
-  html:not([data-scroll="0"]) #navigation_mobile .label {
-    opacity: 0 !important;
-    height: 0;
-  }
-  
-  html:not([data-scroll="0"]) #navigation_mobile {
-    font-size: 0.8em;
-    top: 0;
-    position: sticky;
-    border-radius: 0;
-  }
-  
-  [grid-template=ripple-card] {
-    --ripple-edge-width: calc(2.0em + .5rem);
-    --card-highlight-wdith:.5em;
-    --flags-height:calc(.65em + .75rem);
-    display: grid;
-    position: relative;
-    isolation: isolate;
-    grid-template-columns: [card-start ripple-edge-inlineStart-start card-active-highlight-inlineStart-start] var(--card-highlight-wdith) [card-active-highlight-inlineStart-end] calc( var(--ripple-edge-width) - var(--card-highlight-wdith)) [card-content-start ripple-edge-inlineStart-end] 1fr [card-content-end ripple-edge-inlineEnd-start] var(--ripple-edge-width) [card-active-highlight-inlineEnd-start] var(--card-highlight-wdith) [card-active-highlight-inlineEnd-end ripple-edge-inlineEnd-end card-end];
-    grid-template-rows: [card-start card-content-start] auto [card-end card-content-end];
-  }
-  
-  [grid-template=ripple-card] > [grid-area] {
-    grid-row: card-content;
-  }
-  [grid-template=ripple-card] > [grid-area=active-highlight], [grid-template=ripple-card] > [grid-area=ripple] {
-    grid-row: card;
-  }
-  
-  [grid-template=ripple-card] > [grid-area=active-highlight] {
-    grid-column: card;
-  }
-  
-  [grid-template=ripple-card]:has([grid-area=flags]) {
-    grid-template-rows: [card-start flags-start] var(--flags-height) [flags-end card-content] auto [card-end card-content];
-  }
-  
-  [grid-area=content-primary] {
-    grid-column: card-content;
-  }
-  
-  [grid-template=ripple-card] [grid-area=ripple], [grid-template=ripple-card][layout=ripple-inline-end] [grid-area=ripple] {
-    grid-column: ripple-edge-inlineEnd;
-  }
-  [grid-template=ripple-card] [grid-area=active-highlight], [grid-template=ripple-card][layout=ripple-inline-end] [grid-area=active-highlight] {
-    grid-column: card-active-highlight-inlineStart;
-  }
-  [grid-template=ripple-card] [grid-area=content-secondary], [grid-template=ripple-card][layout=ripple-inline-end] [grid-area=content-secondary] {
-    grid-column-start: card-active-highlight-inlineStart-end;
-    grid-column-end: card-content-start;
-    padding-inline-end: var(--card-highlight-wdith);
-  }
-  [grid-template=ripple-card] [grid-area=flags], [grid-template=ripple-card][layout=ripple-inline-end] [grid-area=flags] {
-    grid-row: flags;
-    grid-column-start: card-active-highlight-inlineStart-end;
-    grid-column-end: card-content-end;
-  }
-  
-  [grid-template=ripple-card][layout=ripple-inline-start] [grid-area=ripple] {
-    grid-column: ripple-edge-inlineStart;
-  }
-  [grid-template=ripple-card][layout=ripple-inline-start] [grid-area=active-highlight] {
-    grid-column: card-active-highlight-inlineEnd;
-  }
-  [grid-template=ripple-card][layout=ripple-inline-start] [grid-area=content-secondary] {
-    grid-column-start: card-content-end;
-    grid-column-end: card-active-highlight-inlineEnd-start;
-    padding-inline-start: var(--card-highlight-wdith);
-  }
-  [grid-template=ripple-card][layout=ripple-inline-start] [grid-area=flags] {
-    grid-row: flags;
-    grid-column-start: card-content-start;
-    grid-column-end: card-active-highlight-inlineEnd-start;
-  }
-  
-  [grid-template=bucket] {
-    display: grid;
-    grid-template-columns: [bucket-start] auto [bucket-end];
-  }
-  
-  [grid-template=bucket] [grid-area=bucket] {
-    grid-column: bucket;
-  }
-  
-  [data-element=button-ripple] {
-    background-color: hsl(var(--brand-h), var(--brand-s), calc(var(--brand-l) + ((100% - var(--brand-l)) * 0)));
-    display: flex;
-    flex-wrap: nowrap;
-  }
-  [data-element=button-ripple][data-element-option^=block], [layout^=ripple-block] [data-element=button-ripple] {
-    padding-inline-end: 1em;
-    flex-direction: row-reverse;
-    min-width: 4em;
-    height: 0.75em;
-    width: 100%;
-  }
-  [data-element=button-ripple][data-element-option^=inline], [layout^=ripple-inline] [data-element=button-ripple] {
-    min-height: 4em;
-    width: 0.75em;
-    height: 100%;
-    padding-block-start: 1em;
-    flex-direction: column;
-  }
-  [data-element=button-ripple][data-element-option=inline-end], [layout=ripple-inline-end] [data-element=button-ripple] {
-    float: inline-end;
-  }
-  [data-element=button-ripple][data-element-option=inline-start], [layout=ripple-inline-start] [data-element=button-ripple] {
-    float: inline-start;
-  }
-  
-  ul[data-element=button-ripple--wrapper] {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 1em;
-  }
-  [data-element-option$=end] ul[data-element=button-ripple--wrapper], [layout$=end] ul[data-element=button-ripple--wrapper] {
-    align-items: end;
-  }
-  [data-element-option$=start] ul[data-element=button-ripple--wrapper], [layout$=start] ul[data-element=button-ripple--wrapper] {
-    align-items: start;
-  }
-  [data-element-option^=block] ul[data-element=button-ripple--wrapper], [layout^=ripple-block] ul[data-element=button-ripple--wrapper] {
-    flex-direction: row;
-  }
-  [data-element-option^=inline] ul[data-element=button-ripple--wrapper], [layout^=ripple-inline] ul[data-element=button-ripple--wrapper] {
-    flex-direction: column;
-  }
-  [data-element-option=block-end] ul[data-element=button-ripple--wrapper], [layout=ripple-block-end] ul[data-element=button-ripple--wrapper] {
-    margin-block-start: -1em;
-  }
-  [data-element-option=inline-start] ul[data-element=button-ripple--wrapper], [layout=ripple-inline-start] ul[data-element=button-ripple--wrapper] {
-    margin-inline-end: -1em;
-  }
-  
-  [data-element=button-ripple--button-edge] {
-    background-color: hsl(var(--brand-h), var(--brand-s), calc(var(--brand-l) + ((100% - var(--brand-l)) * 0)));
-    width: 2em;
-    height: 2em;
-    aspect-ratio: 1/1;
-    display: grid;
-    grid-template-columns: [t] 0.2em [c] 1.6em [b] 0.2em;
-    grid-template-rows: [l] 0.2em [c] 1.6em [r] 0.2em;
-    justify-content: center;
-    align-items: center;
-    z-index: 0;
-  }
-  [data-element-option=block-end] [data-element=button-ripple--button-edge], [layout=ripple-block-end] [data-element=button-ripple--button-edge] {
-    margin-block-start: -0.35em;
-    border-start-start-radius: 50%;
-    border-start-end-radius: 50%;
-  }
-  [data-element-option=block-start] [data-element=button-ripple--button-edge], [layout=ripple-block-start] [data-element=button-ripple--button-edge] {
-    margin-block-end: -0.35em;
-    border-end-end-radius: 50%;
-    border-end-start-radius: 50%;
-  }
-  [data-element-option=inline-start] [data-element=button-ripple--button-edge], [layout=ripple-inline-start] [data-element=button-ripple--button-edge] {
-    margin-inline-end: -0.35em;
-    border-start-end-radius: 50%;
-    border-end-end-radius: 50%;
-  }
-  [data-element-option=inline-end] [data-element=button-ripple--button-edge], [layout=ripple-inline-end] [data-element=button-ripple--button-edge] {
-    margin-inline-start: -0.35em;
-    border-start-start-radius: 50%;
-    border-end-start-radius: 50%;
-  }
-  
-  [data-element=button-ripple--button-edge-corners] {
-    grid-row-start: 1;
-    grid-column-start: 1;
-    grid-row-end: -1;
-    grid-column-end: -1;
-    position: relative;
-    aspect-ratio: 1/1;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    z-index: 0;
-  }
-  [data-element=button-ripple--button-edge-corners]:after, [data-element=button-ripple--button-edge-corners]:before {
-    content: "";
-    position: absolute;
-    width: 1em;
-    height: 1em;
-    background: transparent;
-    z-index: -1;
-    border-radius: 50%;
-  }
-  [data-element-option=block-end] [data-element=button-ripple--button-edge-corners]:after, [data-element-option=block-end] [data-element=button-ripple--button-edge-corners]:before, [layout=ripple-block-end] [data-element=button-ripple--button-edge-corners]:after, [layout=ripple-block-end] [data-element=button-ripple--button-edge-corners]:before {
-    inset-block-start: 0.25em;
-  }
-  [data-element-option=block-end] [data-element=button-ripple--button-edge-corners]:after, [layout=ripple-block-end] [data-element=button-ripple--button-edge-corners]:after {
-    left: -1em;
-    box-shadow: 0.55em 0.55em hsl(var(--brand-h), var(--brand-s), calc(var(--brand-l) + ((100% - var(--brand-l)) * 0)));
-  }
-  [data-element-option=block-end] [data-element=button-ripple--button-edge-corners]:before, [layout=ripple-block-end] [data-element=button-ripple--button-edge-corners]:before {
-    right: -1em;
-    box-shadow: -0.55em 0.55em hsl(var(--brand-h), var(--brand-s), calc(var(--brand-l) + ((100% - var(--brand-l)) * 0)));
-  }
-  [data-element-option=block-start] [data-element=button-ripple--button-edge-corners]:after, [data-element-option=block-start] [data-element=button-ripple--button-edge-corners]:before, [layout=ripple-block-start] [data-element=button-ripple--button-edge-corners]:after, [layout=ripple-block-start] [data-element=button-ripple--button-edge-corners]:before {
-    inset-block-end: 0.25em;
-  }
-  [data-element-option=block-start] [data-element=button-ripple--button-edge-corners]:after, [layout=ripple-block-start] [data-element=button-ripple--button-edge-corners]:after {
-    left: -1em;
-    box-shadow: 0.55em -0.55em hsl(var(--brand-h), var(--brand-s), calc(var(--brand-l) + ((100% - var(--brand-l)) * 0)));
-  }
-  [data-element-option=block-start] [data-element=button-ripple--button-edge-corners]:before, [layout=ripple-block-start] [data-element=button-ripple--button-edge-corners]:before {
-    right: -1em;
-    box-shadow: -0.55em -0.55em hsl(var(--brand-h), var(--brand-s), calc(var(--brand-l) + ((100% - var(--brand-l)) * 0)));
-  }
-  [data-element-option=inline-start] [data-element=button-ripple--button-edge-corners]:after, [data-element-option=inline-start] [data-element=button-ripple--button-edge-corners]:before, [layout=ripple-inline-start] [data-element=button-ripple--button-edge-corners]:after, [layout=ripple-inline-start] [data-element=button-ripple--button-edge-corners]:before {
-    inset-inline-end: 0.25em;
-  }
-  [data-element-option=inline-start] [data-element=button-ripple--button-edge-corners]:before, [layout=ripple-inline-start] [data-element=button-ripple--button-edge-corners]:before {
-    inset-block-start: -1em;
-    box-shadow: -0.55em 0.55em hsl(var(--brand-h), var(--brand-s), calc(var(--brand-l) + ((100% - var(--brand-l)) * 0)));
-  }
-  [data-element-option=inline-start] [data-element=button-ripple--button-edge-corners]:after, [layout=ripple-inline-start] [data-element=button-ripple--button-edge-corners]:after {
-    inset-block-end: -1em;
-    box-shadow: -0.55em -0.55em hsl(var(--brand-h), var(--brand-s), calc(var(--brand-l) + ((100% - var(--brand-l)) * 0)));
-  }
-  [data-element-option=inline-end] [data-element=button-ripple--button-edge-corners]:after, [data-element-option=inline-end] [data-element=button-ripple--button-edge-corners]:before, [layout=ripple-inline-end] [data-element=button-ripple--button-edge-corners]:after, [layout=ripple-inline-end] [data-element=button-ripple--button-edge-corners]:before {
-    inset-inline-start: 0.25em;
-  }
-  [data-element-option=inline-end] [data-element=button-ripple--button-edge-corners]:before, [layout=ripple-inline-end] [data-element=button-ripple--button-edge-corners]:before {
-    inset-block-start: -1em;
-    box-shadow: 0.55em 0.55em hsl(var(--brand-h), var(--brand-s), calc(var(--brand-l) + ((100% - var(--brand-l)) * 0)));
-  }
-  [data-element-option=inline-end] [data-element=button-ripple--button-edge-corners]:after, [layout=ripple-inline-end] [data-element=button-ripple--button-edge-corners]:after {
-    inset-block-end: -1em;
-    box-shadow: 0.55em -0.55em hsl(var(--brand-h), var(--brand-s), calc(var(--brand-l) + ((100% - var(--brand-l)) * 0)));
-  }
-  
-  [data-element=button-ripple--button] {
-    grid-area: c;
-    border-radius: 50%;
-    aspect-ratio: 1/1;
-    width: 1.6em;
-    height: 1.6em;
-    padding: 0.2em;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-  }
-    
+}
+
+[grid-template=breadcrumb] [grid-area=back-btn], [grid-template=breadcrumb] [grid-area=breadcrumb-list] {
+  display: grid;
+  justify-content: stretch;
+  align-items: center;
+}
+
+[grid-template=breadcrumb] [grid-area=back-btn] {
+  grid-row: breadcrumb;
+  grid-column: back-btn;
+}
+
+[grid-template=breadcrumb] [grid-area=breadcrumb-list] {
+  grid-column: breadcrumb-list;
+  grid-row: breadcrumb;
+}
+
+[grid-template=page] {
+  display: grid;
+  grid-template-rows: [page-start header-start] auto [header-end content-primary-start page-content-start] 1fr [content-primary-end split-content-secondary-start] auto [split-content-secondary-end page-content-end footer-start] auto [page-end footer-end];
+}
+
+[grid-template=page] [grid-area=header] {
+  grid-row: header;
+}
+
+[grid-template=page] [grid-area=content] {
+  grid-row: page-content;
+}
+
+[grid-template=page] [grid-area=content-primary] {
+  grid-row: split-content-primary;
+}
+
+[grid-template=page] [grid-area=content-secondary] {
+  grid-row: split-content-secondary;
+}
+
+[grid-template=page] [grid-area=page-footer] {
+  grid-row: footer;
+}
+
+html:not([data-scroll="0"]) #navigation_mobile .label {
+  opacity: 0 !important;
+  height: 0;
+}
+
+html:not([data-scroll="0"]) #navigation_mobile {
+  font-size: 0.8em;
+  top: 0;
+  position: sticky;
+  border-radius: 0;
+}
+
+[grid-template=ripple-card] {
+  --ripple-edge-width: calc(2.0em + .5rem);
+  --card-highlight-wdith:.5em;
+  --flags-height:calc(.65em + .75rem);
+  display: grid;
+  position: relative;
+  isolation: isolate;
+  grid-template-columns: [card-start ripple-edge-inlineStart-start card-active-highlight-inlineStart-start] var(--card-highlight-wdith) [card-active-highlight-inlineStart-end] calc( var(--ripple-edge-width) - var(--card-highlight-wdith)) [card-content-start ripple-edge-inlineStart-end] 1fr [card-content-end ripple-edge-inlineEnd-start] var(--ripple-edge-width) [card-active-highlight-inlineEnd-start] var(--card-highlight-wdith) [card-active-highlight-inlineEnd-end ripple-edge-inlineEnd-end card-end];
+  grid-template-rows: [card-start card-content-start] auto [card-end card-content-end];
+}
+
+[grid-template=ripple-card] > [grid-area] {
+  grid-row: card-content;
+}
+[grid-template=ripple-card] > [grid-area=active-highlight], [grid-template=ripple-card] > [grid-area=ripple] {
+  grid-row: card;
+}
+
+[grid-template=ripple-card] > [grid-area=active-highlight] {
+  grid-column: card;
+}
+
+[grid-template=ripple-card]:has([grid-area=flags]) {
+  grid-template-rows: [card-start flags-start] var(--flags-height) [flags-end card-content] auto [card-end card-content];
+}
+
+[grid-area=content-primary] {
+  grid-column: card-content;
+}
+
+[grid-template=ripple-card] [grid-area=ripple], [grid-template=ripple-card][layout=ripple-inline-end] [grid-area=ripple] {
+  grid-column: ripple-edge-inlineEnd;
+}
+[grid-template=ripple-card] [grid-area=active-highlight], [grid-template=ripple-card][layout=ripple-inline-end] [grid-area=active-highlight] {
+  grid-column: card-active-highlight-inlineStart;
+}
+[grid-template=ripple-card] [grid-area=content-secondary], [grid-template=ripple-card][layout=ripple-inline-end] [grid-area=content-secondary] {
+  grid-column-start: card-active-highlight-inlineStart-end;
+  grid-column-end: card-content-start;
+  padding-inline-end: var(--card-highlight-wdith);
+}
+[grid-template=ripple-card] [grid-area=flags], [grid-template=ripple-card][layout=ripple-inline-end] [grid-area=flags] {
+  grid-row: flags;
+  grid-column-start: card-active-highlight-inlineStart-end;
+  grid-column-end: card-content-end;
+}
+
+[grid-template=ripple-card][layout=ripple-inline-start] [grid-area=ripple] {
+  grid-column: ripple-edge-inlineStart;
+}
+[grid-template=ripple-card][layout=ripple-inline-start] [grid-area=active-highlight] {
+  grid-column: card-active-highlight-inlineEnd;
+}
+[grid-template=ripple-card][layout=ripple-inline-start] [grid-area=content-secondary] {
+  grid-column-start: card-content-end;
+  grid-column-end: card-active-highlight-inlineEnd-start;
+  padding-inline-start: var(--card-highlight-wdith);
+}
+[grid-template=ripple-card][layout=ripple-inline-start] [grid-area=flags] {
+  grid-row: flags;
+  grid-column-start: card-content-start;
+  grid-column-end: card-active-highlight-inlineEnd-start;
+}
+
+[grid-template=bucket] {
+  display: grid;
+  grid-template-columns: [bucket-start] auto [bucket-end];
+}
+
+[grid-template=bucket] [grid-area=bucket] {
+  grid-column: bucket;
+}
+
+[data-element=button-ripple] {
+  background-color: hsl(var(--brand-h), var(--brand-s), calc(var(--brand-l) + ((100% - var(--brand-l)) * 0)));
+  display: flex;
+  flex-wrap: nowrap;
+}
+[data-element=button-ripple][data-element-option^=block], [layout^=ripple-block] [data-element=button-ripple] {
+  padding-inline-end: 1em;
+  flex-direction: row-reverse;
+  min-width: 4em;
+  height: 0.75em;
+  width: 100%;
+}
+[data-element=button-ripple][data-element-option^=inline], [layout^=ripple-inline] [data-element=button-ripple] {
+  min-height: 4em;
+  width: 0.75em;
+  height: 100%;
+  padding-block-start: 1em;
+  flex-direction: column;
+}
+[data-element=button-ripple][data-element-option=inline-end], [layout=ripple-inline-end] [data-element=button-ripple] {
+  float: inline-end;
+}
+[data-element=button-ripple][data-element-option=inline-start], [layout=ripple-inline-start] [data-element=button-ripple] {
+  float: inline-start;
+}
+
+ul[data-element=button-ripple--wrapper] {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1em;
+}
+[data-element-option$=end] ul[data-element=button-ripple--wrapper], [layout$=end] ul[data-element=button-ripple--wrapper] {
+  align-items: end;
+}
+[data-element-option$=start] ul[data-element=button-ripple--wrapper], [layout$=start] ul[data-element=button-ripple--wrapper] {
+  align-items: start;
+}
+[data-element-option^=block] ul[data-element=button-ripple--wrapper], [layout^=ripple-block] ul[data-element=button-ripple--wrapper] {
+  flex-direction: row;
+}
+[data-element-option^=inline] ul[data-element=button-ripple--wrapper], [layout^=ripple-inline] ul[data-element=button-ripple--wrapper] {
+  flex-direction: column;
+}
+[data-element-option=block-end] ul[data-element=button-ripple--wrapper], [layout=ripple-block-end] ul[data-element=button-ripple--wrapper] {
+  margin-block-start: -1em;
+}
+[data-element-option=inline-start] ul[data-element=button-ripple--wrapper], [layout=ripple-inline-start] ul[data-element=button-ripple--wrapper] {
+  margin-inline-end: -1em;
+}
+
+[data-element=button-ripple--button-edge] {
+  background-color: hsl(var(--brand-h), var(--brand-s), calc(var(--brand-l) + ((100% - var(--brand-l)) * 0)));
+  width: 2em;
+  height: 2em;
+  aspect-ratio: 1/1;
+  display: grid;
+  grid-template-columns: [t] 0.2em [c] 1.6em [b] 0.2em;
+  grid-template-rows: [l] 0.2em [c] 1.6em [r] 0.2em;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+[data-element-option=block-end] [data-element=button-ripple--button-edge], [layout=ripple-block-end] [data-element=button-ripple--button-edge] {
+  margin-block-start: -0.35em;
+  border-start-start-radius: 50%;
+  border-start-end-radius: 50%;
+}
+[data-element-option=block-start] [data-element=button-ripple--button-edge], [layout=ripple-block-start] [data-element=button-ripple--button-edge] {
+  margin-block-end: -0.35em;
+  border-end-end-radius: 50%;
+  border-end-start-radius: 50%;
+}
+[data-element-option=inline-start] [data-element=button-ripple--button-edge], [layout=ripple-inline-start] [data-element=button-ripple--button-edge] {
+  margin-inline-end: -0.35em;
+  border-start-end-radius: 50%;
+  border-end-end-radius: 50%;
+}
+[data-element-option=inline-end] [data-element=button-ripple--button-edge], [layout=ripple-inline-end] [data-element=button-ripple--button-edge] {
+  margin-inline-start: -0.35em;
+  border-start-start-radius: 50%;
+  border-end-start-radius: 50%;
+}
+
+[data-element=button-ripple--button-edge-corners] {
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-row-end: -1;
+  grid-column-end: -1;
+  position: relative;
+  aspect-ratio: 1/1;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+[data-element=button-ripple--button-edge-corners]:after, [data-element=button-ripple--button-edge-corners]:before {
+  content: "";
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  background: transparent;
+  z-index: -1;
+  border-radius: 50%;
+}
+[data-element-option=block-end] [data-element=button-ripple--button-edge-corners]:after, [data-element-option=block-end] [data-element=button-ripple--button-edge-corners]:before, [layout=ripple-block-end] [data-element=button-ripple--button-edge-corners]:after, [layout=ripple-block-end] [data-element=button-ripple--button-edge-corners]:before {
+  inset-block-start: 0.25em;
+}
+[data-element-option=block-end] [data-element=button-ripple--button-edge-corners]:after, [layout=ripple-block-end] [data-element=button-ripple--button-edge-corners]:after {
+  left: -1em;
+  box-shadow: 0.55em 0.55em hsl(var(--brand-h), var(--brand-s), calc(var(--brand-l) + ((100% - var(--brand-l)) * 0)));
+}
+[data-element-option=block-end] [data-element=button-ripple--button-edge-corners]:before, [layout=ripple-block-end] [data-element=button-ripple--button-edge-corners]:before {
+  right: -1em;
+  box-shadow: -0.55em 0.55em hsl(var(--brand-h), var(--brand-s), calc(var(--brand-l) + ((100% - var(--brand-l)) * 0)));
+}
+[data-element-option=block-start] [data-element=button-ripple--button-edge-corners]:after, [data-element-option=block-start] [data-element=button-ripple--button-edge-corners]:before, [layout=ripple-block-start] [data-element=button-ripple--button-edge-corners]:after, [layout=ripple-block-start] [data-element=button-ripple--button-edge-corners]:before {
+  inset-block-end: 0.25em;
+}
+[data-element-option=block-start] [data-element=button-ripple--button-edge-corners]:after, [layout=ripple-block-start] [data-element=button-ripple--button-edge-corners]:after {
+  left: -1em;
+  box-shadow: 0.55em -0.55em hsl(var(--brand-h), var(--brand-s), calc(var(--brand-l) + ((100% - var(--brand-l)) * 0)));
+}
+[data-element-option=block-start] [data-element=button-ripple--button-edge-corners]:before, [layout=ripple-block-start] [data-element=button-ripple--button-edge-corners]:before {
+  right: -1em;
+  box-shadow: -0.55em -0.55em hsl(var(--brand-h), var(--brand-s), calc(var(--brand-l) + ((100% - var(--brand-l)) * 0)));
+}
+[data-element-option=inline-start] [data-element=button-ripple--button-edge-corners]:after, [data-element-option=inline-start] [data-element=button-ripple--button-edge-corners]:before, [layout=ripple-inline-start] [data-element=button-ripple--button-edge-corners]:after, [layout=ripple-inline-start] [data-element=button-ripple--button-edge-corners]:before {
+  inset-inline-end: 0.25em;
+}
+[data-element-option=inline-start] [data-element=button-ripple--button-edge-corners]:before, [layout=ripple-inline-start] [data-element=button-ripple--button-edge-corners]:before {
+  inset-block-start: -1em;
+  box-shadow: -0.55em 0.55em hsl(var(--brand-h), var(--brand-s), calc(var(--brand-l) + ((100% - var(--brand-l)) * 0)));
+}
+[data-element-option=inline-start] [data-element=button-ripple--button-edge-corners]:after, [layout=ripple-inline-start] [data-element=button-ripple--button-edge-corners]:after {
+  inset-block-end: -1em;
+  box-shadow: -0.55em -0.55em hsl(var(--brand-h), var(--brand-s), calc(var(--brand-l) + ((100% - var(--brand-l)) * 0)));
+}
+[data-element-option=inline-end] [data-element=button-ripple--button-edge-corners]:after, [data-element-option=inline-end] [data-element=button-ripple--button-edge-corners]:before, [layout=ripple-inline-end] [data-element=button-ripple--button-edge-corners]:after, [layout=ripple-inline-end] [data-element=button-ripple--button-edge-corners]:before {
+  inset-inline-start: 0.25em;
+}
+[data-element-option=inline-end] [data-element=button-ripple--button-edge-corners]:before, [layout=ripple-inline-end] [data-element=button-ripple--button-edge-corners]:before {
+  inset-block-start: -1em;
+  box-shadow: 0.55em 0.55em hsl(var(--brand-h), var(--brand-s), calc(var(--brand-l) + ((100% - var(--brand-l)) * 0)));
+}
+[data-element-option=inline-end] [data-element=button-ripple--button-edge-corners]:after, [layout=ripple-inline-end] [data-element=button-ripple--button-edge-corners]:after {
+  inset-block-end: -1em;
+  box-shadow: 0.55em -0.55em hsl(var(--brand-h), var(--brand-s), calc(var(--brand-l) + ((100% - var(--brand-l)) * 0)));
+}
+
+[data-element=button-ripple--button] {
+  grid-area: c;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  width: 1.6em;
+  height: 1.6em;
+  padding: 0.2em;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+/*# sourceMappingURL=Library.Custom.css.map */
+
 </style>
 </head>
 
@@ -40577,163 +40578,230 @@ Styleguide Recipes.InteractiveExtras.Scrollbar
 <div grid-area="app-content" grid-template="page" class="br-br_radius">
   <header grid-area="header"
     class="CONTAINER relative bg_white-8 relative p_5:xl p_4:lg p_3 font_n1 font_0:md font_1:lg font_1:xxl br-b_1 br_black-3 br_solid">
-    <h1 class="font-size_down-1 c_secondary-n1 font_display font_bold m-y_0 opacity_7 lh_1"> (Collection Title) Yearly Conference </h1>
-<h2 class="font-size_up-1 font_bold font_display c_primary-n1 m-y_0 lh_2">(Title) Odio illum et nemo odit harum. </h2>
-<h3 class="font-size_0 c_black-7 font_medium font_ui m-y_0 lh_1">(Session Sub Title) Rhythm and Conduction Disorders</h3>
-    <div class="absolute t_3 r_2 z_2 font_n2" data-element="save-toggle">
+    <div class="reading-typography randomData">
+    <h2 class="c_primary-n1 m_0">
+        <span class="c_secondary-n1 block randomCategoryLabel uppercase font-size_down-4"> (Collection Title)
+            Yearly Conference </span> 
+        <span class="block randomLabel capitalize"></span>
+        <span class="c_black-7 m_0 randomSubLabel capitalize block font-size_down-2">(Session Sub Title) Rhythm and Conduction Disorders</span>
+    </h2>
+</div>
+    <div class="absolute t_3 r_2 z_2 font_n2 p-x_3:md p-x_2" data-element="save-toggle">
       
 
-<div class="fa-2x"><i class="fa-solid fa-star h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5"
-        data-fa-mask="fa-solid fa-bookmark" data-fa-mask-id="bookmark"></i></div>
 
+
+
+<!-- Check if any action is locked -->
+
+    
+
+
+    <div class="fa-2x ">
+        
+                
+                    <i class="fa-solid fa-star h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-bookmark" data-fa-mask-id="bookmark"></i>
+                
+            
+    </div>
 
     </div>
   </header>
   <section grid-area="content" class="grid:md columns_3 columns_4:lg">
-    <aside data-label="module-que-navigation" grid-template='bucket'
-      class="CONTAINER col-start_start col-end_3 col-end_2:lg font_0 font_1:lg grid items_stretch justify_stretch overflow_auto relative scrollbar-mini shadow_emboss-light bg_black-2">
-      <div class="absolute:lg flex flex_column items_stretch justify_start justify_stretch b_1 l_1 r_1 t_1 ul_none">
+    <!-- TODO scroll buckets need styles and the inner outter wrapper. -->
+    <aside data-label="module-que-navigation" grid-template='scroll-bucket'
+      class="CONTAINER bg_white-6 col-start_start col-end_3 col-end_2:lg grid items_stretch justify_stretch overflow_auto relative scrollbar-mini shadow_emboss-light bg_black-2">
+      <div class="absolute:lg flex flex_column items_stretch justify_start justify_stretch b_1 l_1 r_1 t_1 ul_none font_n1 font_0:md font_1:lg">
         <h2
           class="bg_white-8 br_0 br-t_1 br-b_1 br_solid br_black-2 p_3 p_4:lg shadow_overlap-light m-b_0 w_100 font-size_up-1 font_display font_medium">
           Chapter Progress
         </h2>
-        <!-- TODO: replace these with the generic ripple-cards.html -->
-        <nav data-component="course.module-que" class="col-start_4 col-end_end font_n1 font_0:sm font_1:lg grid justify_stretch items_stretch bg_white-8 ">
+        <nav data-component="course.module-que">
 	<ul class="b_0 t_0 ul_none">
-		<li id="GRID_TEST" grid-template="ripple-card" layout="ripple-inline-start" class="grid br-t_1 br_solid br_black-3 relative h:bg_accent-5">
-	<div grid-area="content-primary" class="p_4">
-		<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">
-			(Presentation Title) Rhythm and Conduction Disorders
-		</h3>
-		<h4 class="c_black-6 font-size_down-1 font_display font_medium m-y_0">
-			(Sub Presentation Title) Rhythm and Conduction Disorders
-		</h4>
-		<p class="">
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde illum
-			doloremque autem sapiente quidem modi earum officiis obcaecati
-			debitis quisquam, exercitationem non blanditiis quia. Consectetur
-			earum nesciunt assumenda magni delectus.
-		</p>
-		<ul class="ul_inline-semicolon font-size_down-2" data-element="value">
-			<li data-element="label" class="no-after font_bold w_100 w_auto:md c_secondary-n2">
-				<i class="fal display_none [fa-icon-class|display_none]"></i>
-				<span>Faculty:</span>
-			</li>
-			<li>Bernice Lakin</li>
-		</ul>
-	</div>
-	<div grid-area="content-secondary"
-	class="bg_black-_05 br-l_1 br_black-2 br_solid flex flex_column items_center font-size_down-2"
-	>
+		
+
+
+
+
+
+
+    
+
+
+
+<div
+  grid-template="ripple-card"
+  layout="ripple-inline-start"
+  class="br-t_1 br_solid br_black-3 relative   h:bg_accent-5"
+>
+<div class="reading-typography randomData p_3 p_4:md m-y_3:lg"  grid-area="content-primary">
+    <h3 class="c_primary-n1 m_0">
+        <span class="c_secondary-n1 block randomCategoryLabel uppercase font-size_down-4"> (Collection Title)
+            Yearly Conference </span> 
+        <span class="block randomLabel capitalize"></span>
+        <span class="c_black-7 m_0 randomSubLabel capitalize block font-size_down-2">(Session Sub Title) Rhythm and Conduction Disorders</span>
+    </h3>
+	<p class="randomDescription m-y_3 lh_2">Random Description</p>
+    <ul class="ul_inline-semicolon font-size_down-2" data-element="value">
+      <li data-element="label" class="no-after font_bold w_100 w_auto:md c_secondary-n2">
+        <i class="fal display_none [fa-icon-class|display_none]"></i>
+        <span>Faculty:</span>
+      </li>
+      <li class="randomArrayList">Bernice Lakin</li>
+    </ul>
+</div>
+
+
+  <div
+    grid-area="content-secondary"
+    class="bg_black-_05 br_black-2 br_solid flex flex_column items_center font-size_down-2
 	
+	br-l_1 
+		
+	"
+  >
 
-<div class="fa-2x"><i class="fa-solid fa-star h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5"
-        data-fa-mask="fa-solid fa-bookmark" data-fa-mask-id="bookmark"></i></div>
-
-
-	</div>	
-	
-
-
-<!-- TODO: add in the class logic for when this is locked and it adds these classes.  [disabled] [cursor_not-allowed]  -->
-<footer class="font-size_down-1" grid-area="ripple">
-    <nav data-element="button-ripple" data-element-option="">
-        <ul data-element="button-ripple--wrapper">
-            <li data-element="button-ripple--button-edge">
-                <a
-                    href=""
-                    data-element="button-ripple--button"
-                    class="[expanded-click-area] bg_white-6 c_black h:bg_primary h:c_white"
-                >
-                    
-                            <i class="c_inherit-all fa-check fa-solid fas font-size_down-2"></i>
-                    
-                </a>
-                <span data-element="button-ripple--button-edge-corners"></span>
-            </li>
-        </ul>
-    </nav>
-</footer>
-
-	<!-- Replace "failed" with "completed", "watched", "current", or "in progress" to show different list items. If you want to show all items, you can either omit the status parameter or set it to "all". -->
+    
 
 
 
 
+<!-- Check if any action is locked -->
+
+    
+
+
+    <div class="fa-2x ">
+        
+                
+                    <i class="fa-solid fa-star h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-bookmark" data-fa-mask-id="bookmark"></i>
+                
+            
+    </div>
+
+  </div>
+  <!-- Replace "failed" with "completed", "watched", "current", or "in progress" to show different list items. If you want to show all items, you can either omit the status parameter or set it to "all". -->
+
+
+
+
+
+    
 
 <ul grid-area="flags" class="font_ui p-x_3 font_medium font-size_down-2 ul_none flex flex_row nowrap gap-x_2 absolute t_0 r_0">
     
     
-    <li class="p-x_3 p-y_2 uppercase bg_success-n2 br-br_radius br-bl_radius c_white"><i class="fas fa-check"></i> Completed</li>
     
+    <li class="p-x_3 p-y_2 uppercase bg_brand-n2 br-br_radius br-bl_radius c_white"><i class="fas fa-eye"></i> Watched</li>
     
     
     
 </ul>
 
-	<div grid-area="active-highlight" class="display_none a:block bg_highlight"></div>
-</li>
-
-		<li id="GRID_TEST" grid-template="ripple-card" layout="ripple-inline-start" class="grid active br-t_1 br_solid br_black-3 relative h:bg_accent-5">
-	<div grid-area="content-primary" class="p_4">
-		<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">
-			(Presentation Title) Rhythm and Conduction Disorders
-		</h3>
-		<h4 class="c_black-6 font-size_down-1 font_display font_medium m-y_0">
-			(Sub Presentation Title) Rhythm and Conduction Disorders
-		</h4>
-		<p class="">
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde illum
-			doloremque autem sapiente quidem modi earum officiis obcaecati
-			debitis quisquam, exercitationem non blanditiis quia. Consectetur
-			earum nesciunt assumenda magni delectus.
-		</p>
-		<ul class="ul_inline-semicolon font-size_down-2" data-element="value">
-			<li data-element="label" class="no-after font_bold w_100 w_auto:md c_secondary-n2">
-				<i class="fal display_none [fa-icon-class|display_none]"></i>
-				<span>Faculty:</span>
-			</li>
-			<li>Bernice Lakin</li>
-		</ul>
-	</div>
-	<div grid-area="content-secondary"
-	class="bg_black-_05 br-l_1 br_black-2 br_solid flex flex_column items_center font-size_down-2"
-	>
-	
-
-<div class="fa-2x"><i class="fa-solid fa-star h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5"
-        data-fa-mask="fa-solid fa-bookmark" data-fa-mask-id="bookmark"></i></div>
+  
 
 
-	</div>	
-	
+
+    
 
 
-<!-- TODO: add in the class logic for when this is locked and it adds these classes.  [disabled] [cursor_not-allowed]  -->
+
 <footer class="font-size_down-1" grid-area="ripple">
     <nav data-element="button-ripple" data-element-option="">
         <ul data-element="button-ripple--wrapper">
-            <li data-element="button-ripple--button-edge">
-                <a
-                    href=""
-                    data-element="button-ripple--button"
-                    class="[expanded-click-area] bg_white-6 c_black h:bg_primary h:c_white"
-                >
-                    
-                            <i class="c_inherit-all fa-play fa-solid fas font-size_down-2"></i>
+            
+                <li data-element="button-ripple--button-edge">
+                    <a
+                        href=""
+                        data-element="button-ripple--button"
+                        class="[expanded-click-area] bg_white-6 c_black  h:bg_primary h:c_white"
+                    >
+                       
                         
-                </a>
-                <span data-element="button-ripple--button-edge-corners"></span>
-            </li>
+                                <i class="c_inherit-all fa-arrow-right fa-solid fas font-size_down-2"></i>
+                            
+                    </a>
+                    <span data-element="button-ripple--button-edge-corners"></span>
+                </li>
+            
         </ul>
     </nav>
 </footer>
 
-	<!-- Replace "failed" with "completed", "watched", "current", or "in progress" to show different list items. If you want to show all items, you can either omit the status parameter or set it to "all". -->
+
+
+  <div grid-area="active-highlight" class="display_none a:block bg_highlight"></div>
+</div>
+
+		
 
 
 
 
+
+
+    
+
+
+
+<div
+  grid-template="ripple-card"
+  layout="ripple-inline-start"
+  class="br-t_1 br_solid br_black-3 relative active  h:bg_accent-5"
+>
+<div class="reading-typography randomData p_3 p_4:md m-y_3:lg"  grid-area="content-primary">
+    <h3 class="c_primary-n1 m_0">
+        <span class="c_secondary-n1 block randomCategoryLabel uppercase font-size_down-4"> (Collection Title)
+            Yearly Conference </span> 
+        <span class="block randomLabel capitalize"></span>
+        <span class="c_black-7 m_0 randomSubLabel capitalize block font-size_down-2">(Session Sub Title) Rhythm and Conduction Disorders</span>
+    </h3>
+	<p class="randomDescription m-y_3 lh_2">Random Description</p>
+    <ul class="ul_inline-semicolon font-size_down-2" data-element="value">
+      <li data-element="label" class="no-after font_bold w_100 w_auto:md c_secondary-n2">
+        <i class="fal display_none [fa-icon-class|display_none]"></i>
+        <span>Faculty:</span>
+      </li>
+      <li class="randomArrayList">Bernice Lakin</li>
+    </ul>
+</div>
+
+
+  <div
+    grid-area="content-secondary"
+    class="bg_black-_05 br_black-2 br_solid flex flex_column items_center font-size_down-2
+	
+	br-l_1 
+		
+	"
+  >
+
+    
+
+
+
+
+<!-- Check if any action is locked -->
+
+    
+
+
+    <div class="fa-2x ">
+        
+                
+                    <i class="fa-solid fa-star h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-bookmark" data-fa-mask-id="bookmark"></i>
+                
+            
+    </div>
+
+  </div>
+  <!-- Replace "failed" with "completed", "watched", "current", or "in progress" to show different list items. If you want to show all items, you can either omit the status parameter or set it to "all". -->
+
+
+
+
+
+    
 
 <ul grid-area="flags" class="font_ui p-x_3 font_medium font-size_down-2 ul_none flex flex_row nowrap gap-x_2 absolute t_0 r_0">
     
@@ -40745,461 +40813,423 @@ Styleguide Recipes.InteractiveExtras.Scrollbar
     
 </ul>
 
-	<div grid-area="active-highlight" class="display_none a:block bg_highlight"></div>
-</li>
-
-		<li grid-template="ripple-card" layout="ripple-inline-start" class="br-t_1 br_solid br_black-3 flex flex_row-reverse relative bg_black-2 cursor_not-allowed">
-	<div grid-area="content-primary" class="p_4 flex_auto opacity_7">
-		<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">(Presentation Title)[Locked] Overcoming
-			Burnout</h3>
-		<h4 class="c_black-6 font-size_down-1 font_display font_medium m-y_0">(Sub Presentation Title) Practical Tips
-			from Successful Entrepreneurs and Business Leaders</h4>
-		<ul class="ul_inline-semicolon font-size_down-2" data-element="value">
-			<li data-element="label" class="no-after font_bold w_100 w_auto:md c_secondary-n2">
-				<i class="fal display_none [fa-icon-class|display_none]"></i>
-				<span>Faculty:</span>
-			</li>
-			<li>Brent Schumm</li>
-			<li>Lana Williamson</li>
-		</ul>
-	</div>
-	<div grid-area="content-secondary"
-	class="bg_black-_05 br-l_1 br_black-2 br_solid flex flex_column items_center font-size_down-2"
-	>
-	
+  
 
 
-<div class="fa-2x"><i class="fa-solid fa-lock h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5"
-        data-fa-mask="fa-solid fa-square" data-fa-mask-id="square"></i></div>
 
-	</div>	
-	
+    
 
 
-<!-- TODO: add in the class logic for when this is locked and it adds these classes.  [disabled] [cursor_not-allowed]  -->
+
 <footer class="font-size_down-1" grid-area="ripple">
     <nav data-element="button-ripple" data-element-option="">
         <ul data-element="button-ripple--wrapper">
-            <li data-element="button-ripple--button-edge">
-                <a
-                    href=""
-                    data-element="button-ripple--button"
-                    class="[expanded-click-area] bg_white-6 c_black h:bg_primary h:c_white"
-                >
-                    
-                            <i class="c_inherit-all fa-lock fa-solid fas font-size_down-2"></i>
+            
+                <li data-element="button-ripple--button-edge">
+                    <a
+                        href=""
+                        data-element="button-ripple--button"
+                        class="[expanded-click-area] bg_white-6 c_black  h:bg_primary h:c_white"
+                    >
+                       
                         
-                </a>
-                <span data-element="button-ripple--button-edge-corners"></span>
-            </li>
+                                <i class="c_inherit-all fa-play fa-solid fas font-size_down-2"></i>
+                            
+                    </a>
+                    <span data-element="button-ripple--button-edge-corners"></span>
+                </li>
+            
         </ul>
     </nav>
 </footer>
 
-</li>
 
+
+  <div grid-area="active-highlight" class="display_none a:block bg_highlight"></div>
+</div>
+
+		
+
+
+
+
+
+
+    
+        
+        
+
+
+<div
+  grid-template="ripple-card"
+  layout="ripple-inline-start"
+  class="br-t_1 br_solid br_black-3 relative   disabled cursor_not-allowed not-allowed user-select-none"
+>
+<div class="reading-typography randomData p_3 p_4:md m-y_3:lg"  grid-area="content-primary">
+    <h3 class="c_primary-n1 m_0">
+        <span class="c_secondary-n1 block randomCategoryLabel uppercase font-size_down-4"> (Collection Title)
+            Yearly Conference </span> 
+        <span class="block randomLabel capitalize"></span>
+        <span class="c_black-7 m_0 randomSubLabel capitalize block font-size_down-2">(Session Sub Title) Rhythm and Conduction Disorders</span>
+    </h3>
+	<p class="randomDescription m-y_3 lh_2">Random Description</p>
+    <ul class="ul_inline-semicolon font-size_down-2" data-element="value">
+      <li data-element="label" class="no-after font_bold w_100 w_auto:md c_secondary-n2">
+        <i class="fal display_none [fa-icon-class|display_none]"></i>
+        <span>Faculty:</span>
+      </li>
+      <li class="randomArrayList">Bernice Lakin</li>
+    </ul>
+</div>
+
+
+  <div
+    grid-area="content-secondary"
+    class="bg_black-_05 br_black-2 br_solid flex flex_column items_center font-size_down-2
+	
+	br-l_1 
+		
+	"
+  >
+
+    
+
+
+
+
+<!-- Check if any action is locked -->
+
+    
+        
+        
+        
+
+    <div class="fa-2x disabled cursor_not-allowed not-allowed user-select-none">
+        
+                    <i class="fa-solid fa-lock  z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-square" data-fa-mask-id="square"></i>
+            
+    </div>
+
+  </div>
+  <!-- Replace "failed" with "completed", "watched", "current", or "in progress" to show different list items. If you want to show all items, you can either omit the status parameter or set it to "all". -->
+
+
+
+
+
+  
+
+
+
+    
+        
+        
+
+
+<footer class="font-size_down-1" grid-area="ripple">
+    <nav data-element="button-ripple" data-element-option="">
+        <ul data-element="button-ripple--wrapper">
+            
+                <li data-element="button-ripple--button-edge">
+                    <a
+                        href=""
+                        data-element="button-ripple--button"
+                        class="[expanded-click-area] bg_white-6 c_black bg_primary disabled cursor_not-allowed not-allowed user-select-none"
+                    >
+                       
+                        
+                                <i class="c_inherit-all fa-lock fa-solid fas font-size_down-2"></i>
+                        
+                    </a>
+                    <span data-element="button-ripple--button-edge-corners"></span>
+                </li>
+            
+        </ul>
+    </nav>
+</footer>
+
+
+
+  <div grid-area="active-highlight" class="display_none a:block bg_highlight"></div>
+</div>
 
 	</ul>
 </nav>
       </div>
     </aside>
-    <main class="bg_white-6 col-start_3 col-start_2:lg col-end_end  font_0 font_1:lg p_3 p_4:lg p_5:xl relative row-start_start">
-      <div data-element="text-container" class="">
-        <h1 class="">Module 1: Introduction and Self Evaluation</h1>
-        <p class="">
-          Module One, Introduction and Self Evaluation, will explain the purpose of the course, the desired outcomes, and
-          the requirements that need to be fulfilled in order to graduate.
-        </p>
+    <main class="CONTAINER bg_white-6 col-start_3 col-start_2:lg col-end_end  relative row-start_start">
+      <div class="font_n1 font_0:md font_1:lg p_3 p_4:md p_5:lg">
+        <div class="reading-typography">
+          <h3>Module 1: Introduction and Self Evaluation</h4>
+          <p>
+            Module One, Introduction and Self Evaluation, will explain the purpose of the course, the desired outcomes, and
+            the requirements that need to be fulfilled in order to graduate.
+          </p>
+        </div>
+        <ul class="ul_none flex flex_column gap_5 m_0 p_0">
+          <!-- Start Chapter -->
+          <li>
+            <article data-component="chapter.chapter" class="br_radius m_3 shadow_overlap-light bg_white-8">
+              <header class="p_3 p_4:lg br-b_1 br_solid br_black-2 ">
+                <h2 class="font-size_0"><span class="block c_secondary font-size_down-3 lh_0">Chapter Name:</span>Lorem ipsum dolor sit amet consectetur, adipisicing elit</h2>
+              </header>
+              <main class="p_3 p_4:lg ">
+                <p>Alias omnis dolorem. Aut et voluptatem et natus non ea. Veniam ipsa et. Nam ut perferendis quasi doloribus quae hic. Ipsam praesentium eos error non laudantium eligendi beatae consequatur. Voluptas vitae fugit voluptate. </p>
+              </main>
+              <nav class="ul_none flex flex_column gap_3 br-t_1 br_solid br_primary-3 font_0">
+                <ul class="ul_none display_content">
+                  
+
+
+
+
+
+
+    
+
+
+
+<div
+  grid-template="ripple-card"
+  layout="ripple-inline-end"
+  class="br-t_1 br_solid br_black-3 relative   h:bg_accent-5"
+>
+<div class="reading-typography randomData p_3 p_4:md m-y_3:lg"  grid-area="content-primary">
+    <h3 class="c_primary-n1 m_0">
+        <span class="c_secondary-n1 block randomCategoryLabel uppercase font-size_down-4"> (Collection Title)
+            Yearly Conference </span> 
+        <span class="block randomLabel capitalize"></span>
+        <span class="c_black-7 m_0 randomSubLabel capitalize block font-size_down-2">(Session Sub Title) Rhythm and Conduction Disorders</span>
+    </h3>
+	<p class="randomDescription m-y_3 lh_2">Random Description</p>
+    <ul class="ul_inline-semicolon font-size_down-2" data-element="value">
+      <li data-element="label" class="no-after font_bold w_100 w_auto:md c_secondary-n2">
+        <i class="fal display_none [fa-icon-class|display_none]"></i>
+        <span>Faculty:</span>
+      </li>
+      <li class="randomArrayList">Bernice Lakin</li>
+    </ul>
+</div>
+
+
+  <div
+    grid-area="content-secondary"
+    class="bg_black-_05 br_black-2 br_solid flex flex_column items_center font-size_down-2
+	
+		br-r_1   
+		
+	"
+  >
+
+    
+
+
+
+
+<!-- Check if any action is locked -->
+
+    
+
+    
+        
+        
+        
+
+    <div class="fa-2x disabled cursor_not-allowed not-allowed user-select-none">
+        
+                
+                    <i class="fa-solid fa-star  z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-bookmark" data-fa-mask-id="bookmark"></i>
+                
+            
+    </div>
+
+    <div class="fa-2x disabled cursor_not-allowed not-allowed user-select-none">
+        
+                    <i class="fa-solid fa-lock  z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-square" data-fa-mask-id="square"></i>
+            
+    </div>
+
+  </div>
+  <!-- Replace "failed" with "completed", "watched", "current", or "in progress" to show different list items. If you want to show all items, you can either omit the status parameter or set it to "all". -->
+
+
+
+
+
+  
+
+
+
+    
+
+    
+
+
+
+<footer class="font-size_down-1" grid-area="ripple">
+    <nav data-element="button-ripple" data-element-option="">
+        <ul data-element="button-ripple--wrapper">
+            
+                <li data-element="button-ripple--button-edge">
+                    <a
+                        href=""
+                        data-element="button-ripple--button"
+                        class="[expanded-click-area] bg_white-6 c_black  h:bg_primary h:c_white"
+                    >
+                       
+                        
+                                <i class="c_inherit-all fa-arrow-right fa-solid fas font-size_down-2"></i>
+                            
+                    </a>
+                    <span data-element="button-ripple--button-edge-corners"></span>
+                </li>
+            
+                <li data-element="button-ripple--button-edge">
+                    <a
+                        href=""
+                        data-element="button-ripple--button"
+                        class="[expanded-click-area] bg_white-6 c_black  h:bg_primary h:c_white"
+                    >
+                       
+                        
+                                <i class="c_inherit-all fa-share fa-solid fas font-size_down-2"></i>
+                            
+                    </a>
+                    <span data-element="button-ripple--button-edge-corners"></span>
+                </li>
+            
+        </ul>
+    </nav>
+</footer>
+
+
+
+  <div grid-area="active-highlight" class="display_none a:block bg_highlight"></div>
+</div>
+
+                  
+
+
+
+
+
+
+    
+
+
+
+<div
+  grid-template="ripple-card"
+  layout="ripple-inline-end"
+  class="br-t_1 br_solid br_black-3 relative active  h:bg_accent-5"
+>
+<div class="reading-typography randomData p_3 p_4:md m-y_3:lg"  grid-area="content-primary">
+    <h3 class="c_primary-n1 m_0">
+        <span class="c_secondary-n1 block randomCategoryLabel uppercase font-size_down-4"> (Collection Title)
+            Yearly Conference </span> 
+        <span class="block randomLabel capitalize"></span>
+        <span class="c_black-7 m_0 randomSubLabel capitalize block font-size_down-2">(Session Sub Title) Rhythm and Conduction Disorders</span>
+    </h3>
+	<p class="randomDescription m-y_3 lh_2">Random Description</p>
+    <ul class="ul_inline-semicolon font-size_down-2" data-element="value">
+      <li data-element="label" class="no-after font_bold w_100 w_auto:md c_secondary-n2">
+        <i class="fal display_none [fa-icon-class|display_none]"></i>
+        <span>Faculty:</span>
+      </li>
+      <li class="randomArrayList">Bernice Lakin</li>
+    </ul>
+</div>
+
+
+  <div
+    grid-area="content-secondary"
+    class="bg_black-_05 br_black-2 br_solid flex flex_column items_center font-size_down-2
+	
+		br-r_1   
+		
+	"
+  >
+
+    
+
+
+
+
+<!-- Check if any action is locked -->
+
+    
+
+
+    <div class="fa-2x ">
+        
+                
+                    <i class="fa-solid fa-star h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-bookmark" data-fa-mask-id="bookmark"></i>
+                
+            
+    </div>
+
+  </div>
+  <!-- Replace "failed" with "completed", "watched", "current", or "in progress" to show different list items. If you want to show all items, you can either omit the status parameter or set it to "all". -->
+
+
+
+
+
+    
+
+<ul grid-area="flags" class="font_ui p-x_3 font_medium font-size_down-2 ul_none flex flex_row nowrap gap-x_2 absolute t_0 l_0">
+    
+    
+    
+    
+    <li class="p-x_3 p-y_2 uppercase bg_highlight-n2 br-br_radius br-bl_radius c_white"><i class="fas fa-dot-circle"></i> Current</li>
+    
+    
+</ul>
+
+  
+
+
+
+    
+
+
+
+<footer class="font-size_down-1" grid-area="ripple">
+    <nav data-element="button-ripple" data-element-option="">
+        <ul data-element="button-ripple--wrapper">
+            
+                <li data-element="button-ripple--button-edge">
+                    <a
+                        href=""
+                        data-element="button-ripple--button"
+                        class="[expanded-click-area] bg_white-6 c_black  h:bg_primary h:c_white"
+                    >
+                       
+                        
+                                <i class="c_inherit-all fa-arrow-right fa-solid fas font-size_down-2"></i>
+                            
+                    </a>
+                    <span data-element="button-ripple--button-edge-corners"></span>
+                </li>
+            
+        </ul>
+    </nav>
+</footer>
+
+
+
+  <div grid-area="active-highlight" class="display_none a:block bg_highlight"></div>
+</div>
+
+                </ul>
+              </nav>
+            </article>
+          </li>
+          <!-- End Chapter -->
+          <!-- BEGIN COURSE WRAPPER TOP INCLUDE -->
+        </ul>
       </div>
-      <ul class="ul_none flex flex_column gap_5 m_0 p_0">
-        <!-- Start Chapter -->
-        <li>
-        <article data-component="chapter.chapter" class="br_radius m_3 shadow_overlap-light bg_white-8">
-	<header class="p_3 p_4:lg br-b_1 br_solid br_black-2 font-size_0">
-		<h2 class=""><span class="block c_secondary font-size_down-3 lh_0">Chapter Name:</span>Lorem ipsum dolor sit amet consectetur, adipisicing elit</h2>
-	</header>
-	<main class="p_3 p_4:lg ">
-		<p>Alias omnis dolorem. Aut et voluptatem et natus non ea. Veniam ipsa et. Nam ut perferendis quasi doloribus quae hic. Ipsam praesentium eos error non laudantium eligendi beatae consequatur. Voluptas vitae fugit voluptate. </p>
-	</main>
-	<nav class="ul_none flex flex_column gap_3 br-t_1 br_solid br_primary-3 font_0">
-		<ul class="ul_none display_content">
-			<!-- TODO: use this for a model of the generic ripple-cards.html -->
-
-
-
-<div id="CHAPTERS" grid-template="ripple-card" layout="ripple-inline-end"
-	class="br-t_1 br_solid br_black-3 relative h:bg_accent-5  ">
-	<div class="p_4 randomData" grid-area="content-primary">
-		<!-- html snippet goes here -->
-		<h5 class="randomCategoryLabel uppercase font-size_down-1 font_display font_medium c_brand-n1 m-y_0 lh_1">Category Label</h5>
-		<h3 class="randomLabel c_black-9 font-size_up-2 font_bold font_display lh_2 m-y_0 m_0 capitalize">
-			Presentation Title
-		</h3>
-		<h4 class="randomSubLabel c_black-6 font-size_0 font_display font_medium m-y_0 capitalize">
-			Sub Presentation Title
-		</h4>
-		<p class="randomDescription m-y_3 lh_2">
-			Random Description
-		</p>
-		<ul class="ul_inline-semicolon font-size_down-2" data-element="value">
-			<li data-element="label" class="no-after font_bold w_100 w_auto:md c_secondary-n2">
-				<i class="fal display_none [fa-icon-class|display_none]"></i>
-				<span>Faculty:</span>
-			</li>
-			<li class="randomArrayList">Bernice Lakin</li>
-		</ul>
-		<!-- html snippet ends here -->
-	</div>
-	<div grid-area="content-secondary"
-		class="bg_black-_05 br-r_1 br_black-2 br_solid flex flex_column items_center font-size_down-2">
-		
-
-<div class="fa-2x">
-    
-            <i class="fa-solid fa-file-archive h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-circle" data-fa-mask-id="circle"></i>
-        
-</div>
-
-		
-
-<div class="fa-2x"><i class="fa-solid fa-star h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5"
-        data-fa-mask="fa-solid fa-bookmark" data-fa-mask-id="bookmark"></i></div>
-
-
-	</div>
-	<!-- TODO: wrap this in logic so I can pass in the flag. I can't pass in variables into a inlcude tag. -->
-	<!-- Replace "failed" with "completed", "watched", "current", or "in progress" to show different list items. If you want to show all items, you can either omit the status parameter or set it to "all". -->
-
-
-
-
-
-<ul grid-area="flags" class="font_ui p-x_3 font_medium font-size_down-2 ul_none flex flex_row nowrap gap-x_2 absolute t_0 l_0">
-    
-    
-    
-    
-    <li class="p-x_3 p-y_2 uppercase bg_highlight-n2 br-br_radius br-bl_radius c_white"><i class="fas fa-dot-circle"></i> Current</li>
-    
-    
-</ul>
-	
-
-
-<!-- TODO: add in the class logic for when this is locked and it adds these classes.  [disabled] [cursor_not-allowed]  -->
-<footer class="font-size_down-1" grid-area="ripple">
-    <nav data-element="button-ripple" data-element-option="">
-        <ul data-element="button-ripple--wrapper">
-            <li data-element="button-ripple--button-edge">
-                <a
-                    href=""
-                    data-element="button-ripple--button"
-                    class="[expanded-click-area] bg_white-6 c_black h:bg_primary h:c_white"
-                >
-                    
-                            <i class="c_inherit-all fa-arrow-right fa-solid fas font-size_down-2"></i>
-                    
-                </a>
-                <span data-element="button-ripple--button-edge-corners"></span>
-            </li>
-        </ul>
-    </nav>
-</footer>
-
-	<div grid-area="active-highlight" class="display_none a:block bg_highlight"></div>
-</div>
-
-
-
-
-			<!-- TODO: use this for a model of the generic ripple-cards.html -->
-
-
-
-<div id="CHAPTERS" grid-template="ripple-card" layout="ripple-inline-end"
-	class="br-t_1 br_solid br_black-3 relative h:bg_accent-5  active">
-	<div class="p_4 randomData" grid-area="content-primary">
-		<!-- html snippet goes here -->
-		<h5 class="randomCategoryLabel uppercase font-size_down-1 font_display font_medium c_brand-n1 m-y_0 lh_1">Category Label</h5>
-		<h3 class="randomLabel c_black-9 font-size_up-2 font_bold font_display lh_2 m-y_0 m_0 capitalize">
-			Presentation Title
-		</h3>
-		<h4 class="randomSubLabel c_black-6 font-size_0 font_display font_medium m-y_0 capitalize">
-			Sub Presentation Title
-		</h4>
-		<p class="randomDescription m-y_3 lh_2">
-			Random Description
-		</p>
-		<ul class="ul_inline-semicolon font-size_down-2" data-element="value">
-			<li data-element="label" class="no-after font_bold w_100 w_auto:md c_secondary-n2">
-				<i class="fal display_none [fa-icon-class|display_none]"></i>
-				<span>Faculty:</span>
-			</li>
-			<li class="randomArrayList">Bernice Lakin</li>
-		</ul>
-		<!-- html snippet ends here -->
-	</div>
-	<div grid-area="content-secondary"
-		class="bg_black-_05 br-r_1 br_black-2 br_solid flex flex_column items_center font-size_down-2">
-		
-
-<div class="fa-2x">
-    
-            <i class="fa-solid fa-file-archive h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-circle" data-fa-mask-id="circle"></i>
-        
-</div>
-
-		
-
-<div class="fa-2x"><i class="fa-solid fa-star h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5"
-        data-fa-mask="fa-solid fa-bookmark" data-fa-mask-id="bookmark"></i></div>
-
-
-	</div>
-	<!-- TODO: wrap this in logic so I can pass in the flag. I can't pass in variables into a inlcude tag. -->
-	<!-- Replace "failed" with "completed", "watched", "current", or "in progress" to show different list items. If you want to show all items, you can either omit the status parameter or set it to "all". -->
-
-
-
-
-
-<ul grid-area="flags" class="font_ui p-x_3 font_medium font-size_down-2 ul_none flex flex_row nowrap gap-x_2 absolute t_0 l_0">
-    
-    
-    
-    
-    <li class="p-x_3 p-y_2 uppercase bg_highlight-n2 br-br_radius br-bl_radius c_white"><i class="fas fa-dot-circle"></i> Current</li>
-    
-    
-</ul>
-	
-
-
-<!-- TODO: add in the class logic for when this is locked and it adds these classes.  [disabled] [cursor_not-allowed]  -->
-<footer class="font-size_down-1" grid-area="ripple">
-    <nav data-element="button-ripple" data-element-option="">
-        <ul data-element="button-ripple--wrapper">
-            <li data-element="button-ripple--button-edge">
-                <a
-                    href=""
-                    data-element="button-ripple--button"
-                    class="[expanded-click-area] bg_white-6 c_black h:bg_primary h:c_white"
-                >
-                    
-                            <i class="c_inherit-all fa-arrow-right fa-solid fas font-size_down-2"></i>
-                    
-                </a>
-                <span data-element="button-ripple--button-edge-corners"></span>
-            </li>
-        </ul>
-    </nav>
-</footer>
-
-	<div grid-area="active-highlight" class="display_none a:block bg_highlight"></div>
-</div>
-
-
-
-
-		</ul>
-	</nav>
-</article>
-        </li>
-        <li>
-        <article data-component="chapter.chapter" class="br_radius m_3 shadow_overlap-light bg_white-8">
-	<header class="p_3 p_4:lg br-b_1 br_solid br_black-2 font-size_0">
-		<h2 class=""><span class="block c_secondary font-size_down-3 lh_0">Chapter Name:</span>Lorem ipsum dolor sit amet consectetur, adipisicing elit</h2>
-	</header>
-	<main class="p_3 p_4:lg ">
-		<p>Alias omnis dolorem. Aut et voluptatem et natus non ea. Veniam ipsa et. Nam ut perferendis quasi doloribus quae hic. Ipsam praesentium eos error non laudantium eligendi beatae consequatur. Voluptas vitae fugit voluptate. </p>
-	</main>
-	<nav class="ul_none flex flex_column gap_3 br-t_1 br_solid br_primary-3 font_0">
-		<ul class="ul_none display_content">
-			<!-- TODO: use this for a model of the generic ripple-cards.html -->
-
-
-
-<div id="CHAPTERS" grid-template="ripple-card" layout="ripple-inline-end"
-	class="br-t_1 br_solid br_black-3 relative h:bg_accent-5  ">
-	<div class="p_4 randomData" grid-area="content-primary">
-		<!-- html snippet goes here -->
-		<h5 class="randomCategoryLabel uppercase font-size_down-1 font_display font_medium c_brand-n1 m-y_0 lh_1">Category Label</h5>
-		<h3 class="randomLabel c_black-9 font-size_up-2 font_bold font_display lh_2 m-y_0 m_0 capitalize">
-			Presentation Title
-		</h3>
-		<h4 class="randomSubLabel c_black-6 font-size_0 font_display font_medium m-y_0 capitalize">
-			Sub Presentation Title
-		</h4>
-		<p class="randomDescription m-y_3 lh_2">
-			Random Description
-		</p>
-		<ul class="ul_inline-semicolon font-size_down-2" data-element="value">
-			<li data-element="label" class="no-after font_bold w_100 w_auto:md c_secondary-n2">
-				<i class="fal display_none [fa-icon-class|display_none]"></i>
-				<span>Faculty:</span>
-			</li>
-			<li class="randomArrayList">Bernice Lakin</li>
-		</ul>
-		<!-- html snippet ends here -->
-	</div>
-	<div grid-area="content-secondary"
-		class="bg_black-_05 br-r_1 br_black-2 br_solid flex flex_column items_center font-size_down-2">
-		
-
-<div class="fa-2x">
-    
-            <i class="fa-solid fa-file-archive h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-circle" data-fa-mask-id="circle"></i>
-        
-</div>
-
-		
-
-<div class="fa-2x"><i class="fa-solid fa-star h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5"
-        data-fa-mask="fa-solid fa-bookmark" data-fa-mask-id="bookmark"></i></div>
-
-
-	</div>
-	<!-- TODO: wrap this in logic so I can pass in the flag. I can't pass in variables into a inlcude tag. -->
-	<!-- Replace "failed" with "completed", "watched", "current", or "in progress" to show different list items. If you want to show all items, you can either omit the status parameter or set it to "all". -->
-
-
-
-
-
-<ul grid-area="flags" class="font_ui p-x_3 font_medium font-size_down-2 ul_none flex flex_row nowrap gap-x_2 absolute t_0 l_0">
-    
-    
-    
-    
-    <li class="p-x_3 p-y_2 uppercase bg_highlight-n2 br-br_radius br-bl_radius c_white"><i class="fas fa-dot-circle"></i> Current</li>
-    
-    
-</ul>
-	
-
-
-<!-- TODO: add in the class logic for when this is locked and it adds these classes.  [disabled] [cursor_not-allowed]  -->
-<footer class="font-size_down-1" grid-area="ripple">
-    <nav data-element="button-ripple" data-element-option="">
-        <ul data-element="button-ripple--wrapper">
-            <li data-element="button-ripple--button-edge">
-                <a
-                    href=""
-                    data-element="button-ripple--button"
-                    class="[expanded-click-area] bg_white-6 c_black h:bg_primary h:c_white"
-                >
-                    
-                            <i class="c_inherit-all fa-arrow-right fa-solid fas font-size_down-2"></i>
-                    
-                </a>
-                <span data-element="button-ripple--button-edge-corners"></span>
-            </li>
-        </ul>
-    </nav>
-</footer>
-
-	<div grid-area="active-highlight" class="display_none a:block bg_highlight"></div>
-</div>
-
-
-
-
-			<!-- TODO: use this for a model of the generic ripple-cards.html -->
-
-
-
-<div id="CHAPTERS" grid-template="ripple-card" layout="ripple-inline-end"
-	class="br-t_1 br_solid br_black-3 relative h:bg_accent-5  active">
-	<div class="p_4 randomData" grid-area="content-primary">
-		<!-- html snippet goes here -->
-		<h5 class="randomCategoryLabel uppercase font-size_down-1 font_display font_medium c_brand-n1 m-y_0 lh_1">Category Label</h5>
-		<h3 class="randomLabel c_black-9 font-size_up-2 font_bold font_display lh_2 m-y_0 m_0 capitalize">
-			Presentation Title
-		</h3>
-		<h4 class="randomSubLabel c_black-6 font-size_0 font_display font_medium m-y_0 capitalize">
-			Sub Presentation Title
-		</h4>
-		<p class="randomDescription m-y_3 lh_2">
-			Random Description
-		</p>
-		<ul class="ul_inline-semicolon font-size_down-2" data-element="value">
-			<li data-element="label" class="no-after font_bold w_100 w_auto:md c_secondary-n2">
-				<i class="fal display_none [fa-icon-class|display_none]"></i>
-				<span>Faculty:</span>
-			</li>
-			<li class="randomArrayList">Bernice Lakin</li>
-		</ul>
-		<!-- html snippet ends here -->
-	</div>
-	<div grid-area="content-secondary"
-		class="bg_black-_05 br-r_1 br_black-2 br_solid flex flex_column items_center font-size_down-2">
-		
-
-<div class="fa-2x">
-    
-            <i class="fa-solid fa-file-archive h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-circle" data-fa-mask-id="circle"></i>
-        
-</div>
-
-		
-
-<div class="fa-2x"><i class="fa-solid fa-star h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5"
-        data-fa-mask="fa-solid fa-bookmark" data-fa-mask-id="bookmark"></i></div>
-
-
-	</div>
-	<!-- TODO: wrap this in logic so I can pass in the flag. I can't pass in variables into a inlcude tag. -->
-	<!-- Replace "failed" with "completed", "watched", "current", or "in progress" to show different list items. If you want to show all items, you can either omit the status parameter or set it to "all". -->
-
-
-
-
-
-<ul grid-area="flags" class="font_ui p-x_3 font_medium font-size_down-2 ul_none flex flex_row nowrap gap-x_2 absolute t_0 l_0">
-    
-    
-    
-    
-    <li class="p-x_3 p-y_2 uppercase bg_highlight-n2 br-br_radius br-bl_radius c_white"><i class="fas fa-dot-circle"></i> Current</li>
-    
-    
-</ul>
-	
-
-
-<!-- TODO: add in the class logic for when this is locked and it adds these classes.  [disabled] [cursor_not-allowed]  -->
-<footer class="font-size_down-1" grid-area="ripple">
-    <nav data-element="button-ripple" data-element-option="">
-        <ul data-element="button-ripple--wrapper">
-            <li data-element="button-ripple--button-edge">
-                <a
-                    href=""
-                    data-element="button-ripple--button"
-                    class="[expanded-click-area] bg_white-6 c_black h:bg_primary h:c_white"
-                >
-                    
-                            <i class="c_inherit-all fa-arrow-right fa-solid fas font-size_down-2"></i>
-                    
-                </a>
-                <span data-element="button-ripple--button-edge-corners"></span>
-            </li>
-        </ul>
-    </nav>
-</footer>
-
-	<div grid-area="active-highlight" class="display_none a:block bg_highlight"></div>
-</div>
-
-
-
-
-		</ul>
-	</nav>
-</article>
-        </li>
-        <!-- End Chapter -->
-        <!-- BEGIN COURSE WRAPPER TOP INCLUDE -->
-      </ul>
     </main>
   </section>
   
@@ -41212,8 +41242,8 @@ Styleguide Recipes.InteractiveExtras.Scrollbar
 		<div grid-area="app-menu"><div class="display_none flex:md sticky t_4 isolation_isolate br-r_1 br_solid br_black-3 font_ui font_2:lg font_1 " style="
     height: calc(100vh - 2rem);
 ">
-	<div id="mainDesktopNavTouchToggle" class="absolute display_none block:md font_1 r_n4 t_4 z_3">
-		<span class="aspect-ratio_1x1 bg_brand br_radius c_white-8 flex_none grid h:bg_primary h:c_white m-y_auto p_2 relative shadow_bevel-bold shadow_n3 text_center w_auto">
+	<div id="mainDesktopNavTouchToggle" class="absolute block:md display_none font_3 m-r_3 r_n5 t_3 z_3">
+		<span class="aspect-ratio_1x1 bg_brand br_radius c_white-8 flex_none grid h:bg_accent bg_brand h:c_white m-y_auto p_2 relative shadow_bevel-bold shadow_n3 text_center w_auto">
 			<i class="[rotate_180] block fa-caret-left fa-fw fa-solid fas icon lh_1 p_1 self_center text-shadow_black-1 transition_2"></i></span>
 	</div>
 	<nav id="navigation" class="w_100 overflow-hidden filter_blur overflow_hidden br_radius flex:md flex_column:md justify_between p_3  p_4:lg">

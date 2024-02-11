@@ -1,33 +1,61 @@
-<div id="CHAPTERS" grid-template="ripple-card" layout="ripple-right"
-	class="br-t_1 br_solid br_black-3 relative h:bg_accent-5">
-	<div class="p_4" grid-area="content-primary">
-		<!-- html snippet goes here -->
-		<h3 class="c_black-8 font-size_0 font_bold font_display lh_2 m-y_0 m_0">
-			(Presentation Title) Rhythm and Conduction Disorders
-		</h3>
-		<h4 class="c_black-6 font-size_down-1 font_display font_medium m-y_0">
-			(Sub Presentation Title) Rhythm and Conduction Disorders
-		</h4>
-		<p class="">
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde illum
-			doloremque autem sapiente quidem modi earum officiis obcaecati
-			debitis quisquam, exercitationem non blanditiis quia. Consectetur
-			earum nesciunt assumenda magni delectus.
-		</p>
-		<ul class="ul_inline-semicolon font-size_down-2" data-element="value">
-			<li data-element="label" class="no-after font_bold w_100 w_auto:md c_secondary-n2">
-				<i class="fal display_none [fa-icon-class|display_none]"></i>
-				<span>Faculty:</span>
-			</li>
-			<li>Bernice Lakin</li>
-		</ul>
-		<!-- html snippet ends here -->
-	</div>
-	<div grid-area="content-secondary"
-		class="bg_black-_05 br-r_1 br_black-2 br_solid flex flex_column items_center font-size_down-2">
-		{% include_relative /netflix/sub/file-icon.html file_type="archive" %}
-		{% include_relative /netflix/sub/save-star.html %}
-	</div>
-	{% include_relative /netflix/sub/status-flags.html status="failed" %}
-	{% include_relative /netflix/sub/ripple-button.html data_element_option="inline-end" icon="arrow-right" %}
+{% assign layout = include.layout | default: 'ripple-inline-end' %}
+{% assign flag = include.flag | default: '' %}
+{% assign primary_actions = include.primary_actions | default: "navigate" %}
+{% assign secondary_actions = include.secondary_actions | default: "bookmark" %}
+{% if flag == 'current' %}
+	{% assign active_class = 'active' %}
+{% else %}
+	{% assign active_class = '' %}
+{% endif %}
+{% assign hover-disabled_classes = "h:bg_accent-5" %}
+{% for action in primary_actions | split ',' %}
+    {% if action == "lock" %}
+        {% assign hover-disabled_classes = "disabled cursor_not-allowed not-allowed user-select-none" %}
+        {% break %}
+    {% endif %}
+{% endfor %}
+
+
+<div
+  grid-template="ripple-card"
+  layout="{{layout}}"
+  class="br-t_1 br_solid br_black-3 relative {{ active_class }}  {{ hover-disabled_classes }}"
+>
+<div class="reading-typography randomData p_3 p_4:md m-y_3:lg"  grid-area="content-primary">
+    <h3 class="c_primary-n1 m_0">
+        <span class="c_secondary-n1 block randomCategoryLabel uppercase font-size_down-4"> (Collection Title)
+            Yearly Conference </span> 
+        <span class="block randomLabel capitalize"></span>
+        <span class="c_black-7 m_0 randomSubLabel capitalize block font-size_down-2">(Session Sub Title) Rhythm and Conduction Disorders</span>
+    </h3>
+	<p class="randomDescription m-y_3 lh_2">Random Description</p>
+    <ul class="ul_inline-semicolon font-size_down-2" data-element="value">
+      <li data-element="label" class="no-after font_bold w_100 w_auto:md c_secondary-n2">
+        <i class="fal display_none [fa-icon-class|display_none]"></i>
+        <span>Faculty:</span>
+      </li>
+      <li class="randomArrayList">Bernice Lakin</li>
+    </ul>
+</div>
+
+
+  <div
+    grid-area="content-secondary"
+    class="bg_black-_05 br_black-2 br_solid flex flex_column items_center font-size_down-2
+	{% if layout =="ripple-inline-start" %}
+	br-l_1 
+		{% else %}
+		br-r_1   
+		{% endif %}
+	"
+  >
+
+    {% include_relative /netflix/sub/secondary-actions.html secondary_actions=secondary_actions %}
+  </div>
+  {% include_relative /netflix/sub/status-flags.html status=flag layout=layout %}
+  {% include_relative /netflix/sub/ripple-button.html primary_actions=primary_actions %}
+
+
+
+  <div grid-area="active-highlight" class="display_none a:block bg_highlight"></div>
 </div>

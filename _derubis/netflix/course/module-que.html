@@ -1,7 +1,7 @@
-<nav data-component="course.module-que" class="col-start_4 col-end_end font_n1 font_0:sm font_1:lg grid justify_stretch items_stretch bg_white-8 ">
+<nav data-component="course.module-que">
 	<ul class="b_0 t_0 ul_none">
-		{% include_relative /netflix/course/module.html %}
-		{% include_relative /netflix/course/module-current.html %}
-		{% include_relative /netflix/course/module-locked.html %}
+		{% include_relative netflix/basic/ripple-card.html layout="ripple-inline-start" primary_actions="navigate" flag="watched" secondary_actions="bookmark" %}
+		{% include_relative netflix/basic/ripple-card.html layout="ripple-inline-start" primary_actions="play" flag="current" secondary_actions="bookmark" %}
+		{% include_relative netflix/basic/ripple-card.html layout="ripple-inline-start" primary_actions="lock" flag="" secondary_actions="lock" %}
 	</ul>
 </nav>
