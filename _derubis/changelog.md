@@ -1,7 +1,7 @@
 --- 
 layout: Prototype-TableofContents-v2
 name: Read Me | Change Log
-uri: root/
+uri: documentation/
 ---
 # Change Log
 ## Grid classes altered

@@ -1,0 +1,32 @@
+--- 
+layout: V2-library_app_frame
+name: "V2 4.1 | Player scroll sidebar" 
+uri: "root/player/course/video-que/presentation-name" 
+watchingActive: true 
+---
+
+{% include_relative netflix/app-header-w-search.html %}
+{% include_relative netflix/breadcrumb-course-video.html %}
+<div grid-area="app-content" grid-template="page">
+	<header class="" grid-area="header">
+		<div class="introduction p-x_3 p-x_4:lg p-x_5:xxl p-y_4:xxl p-y_3:lg p-y_2 bg_white-8 br-b_1 br_solid br_black-3">
+			<h3 class="font_display font_xbold c_primary-n2 m-y_2">Video Player with Sidebar</h3>
+		</div>
+	</header>
+	<section grid-area="content-split-primary" class="grid:md columns_6:lg columns_5:xl columns_4:xxl">
+		<article class="bg_white-6 col-start_start col-end_4 relative font_1 font_2:lg font_3:xxl">
+			<div class="absolute t_3 r_2 z_2 font_n2 p-x_3:md p-x_2" data-element="save-toggle">
+				{% include_relative netflix/sub/secondary-actions.html %}
+			  </div>
+			{%  include_relative netflix/player/video.html %}
+
+		</article>	
+		<aside class="col-end_end col-start_4 font_n2 font_n1:lg grid items_stretch justify_stretch overflow_auto relative scrollbar-mini shadow_emboss-light bg_black-2">
+			<div class="absolute:lg br-l_1 br_black-3 br_solid flex flex_column items_stretch justify_start justify_stretch b_1 l_1 r_1 t_1 ul_none"> 
+
+				{% include_relative netflix/player/sidebar-text.html %}
+			</div>
+		</aside>
+	</section>
+{% include_relative netflix/player/information.html %}
+</div>
