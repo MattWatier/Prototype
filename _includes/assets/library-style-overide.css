@@ -268,10 +268,13 @@ html:not([data-scroll="0"]) #navigation_mobile {
 [grid-template=bucket] {
   display: grid;
   grid-template-columns: [bucket-start] auto [bucket-end];
+  grid-template-rows: [bucket-start] auto [bucket-end];
 }
 
-[grid-template=bucket] [grid-area=bucket] {
-  grid-column: bucket;
+[grid-template=bucket] [grid-area=bucket-inset] {
+  grid-area: bucket;
+  position: relative;
+  overflow: scroll;
 }
 
 [data-element=button-ripple] {
