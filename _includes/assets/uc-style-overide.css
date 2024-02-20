@@ -541,11 +541,11 @@ Styleguide Recipes.InteractiveExtras.Scrollbar
 }
 
 .items_start {
-  align-items: flex-start;
+  align-items: start;
 }
 
 .items_end {
-  align-items: flex-end;
+  align-items: end;
 }
 
 .items_baseline {
@@ -562,11 +562,11 @@ Styleguide Recipes.InteractiveExtras.Scrollbar
   }
 
   .items_start\:xs {
-    align-items: flex-start;
+    align-items: start;
   }
 
   .items_end\:xs {
-    align-items: flex-end;
+    align-items: end;
   }
 
   .items_baseline\:xs {
@@ -583,11 +583,11 @@ Styleguide Recipes.InteractiveExtras.Scrollbar
   }
 
   .items_start\:sm {
-    align-items: flex-start;
+    align-items: start;
   }
 
   .items_end\:sm {
-    align-items: flex-end;
+    align-items: end;
   }
 
   .items_baseline\:sm {
@@ -604,11 +604,11 @@ Styleguide Recipes.InteractiveExtras.Scrollbar
   }
 
   .items_start\:md {
-    align-items: flex-start;
+    align-items: start;
   }
 
   .items_end\:md {
-    align-items: flex-end;
+    align-items: end;
   }
 
   .items_baseline\:md {
@@ -625,11 +625,11 @@ Styleguide Recipes.InteractiveExtras.Scrollbar
   }
 
   .items_start\:lg {
-    align-items: flex-start;
+    align-items: start;
   }
 
   .items_end\:lg {
-    align-items: flex-end;
+    align-items: end;
   }
 
   .items_baseline\:lg {
@@ -646,11 +646,11 @@ Styleguide Recipes.InteractiveExtras.Scrollbar
   }
 
   .items_start\:xl {
-    align-items: flex-start;
+    align-items: start;
   }
 
   .items_end\:xl {
-    align-items: flex-end;
+    align-items: end;
   }
 
   .items_baseline\:xl {
@@ -667,11 +667,11 @@ Styleguide Recipes.InteractiveExtras.Scrollbar
   }
 
   .items_start\:xxl {
-    align-items: flex-start;
+    align-items: start;
   }
 
   .items_end\:xxl {
-    align-items: flex-end;
+    align-items: end;
   }
 
   .items_baseline\:xxl {
@@ -687,11 +687,11 @@ Styleguide Recipes.InteractiveExtras.Scrollbar
 }
 
 .self_start {
-  align-self: flex-start;
+  align-self: start;
 }
 
 .self_end {
-  align-self: flex-end;
+  align-self: end;
 }
 
 .self_baseline {
@@ -708,11 +708,11 @@ Styleguide Recipes.InteractiveExtras.Scrollbar
   }
 
   .self_start\:xs {
-    align-self: flex-start;
+    align-self: start;
   }
 
   .self_end\:xs {
-    align-self: flex-end;
+    align-self: end;
   }
 
   .self_baseline\:xs {
@@ -729,11 +729,11 @@ Styleguide Recipes.InteractiveExtras.Scrollbar
   }
 
   .self_start\:sm {
-    align-self: flex-start;
+    align-self: start;
   }
 
   .self_end\:sm {
-    align-self: flex-end;
+    align-self: end;
   }
 
   .self_baseline\:sm {
@@ -750,11 +750,11 @@ Styleguide Recipes.InteractiveExtras.Scrollbar
   }
 
   .self_start\:md {
-    align-self: flex-start;
+    align-self: start;
   }
 
   .self_end\:md {
-    align-self: flex-end;
+    align-self: end;
   }
 
   .self_baseline\:md {
@@ -771,11 +771,11 @@ Styleguide Recipes.InteractiveExtras.Scrollbar
   }
 
   .self_start\:lg {
-    align-self: flex-start;
+    align-self: start;
   }
 
   .self_end\:lg {
-    align-self: flex-end;
+    align-self: end;
   }
 
   .self_baseline\:lg {
@@ -792,11 +792,11 @@ Styleguide Recipes.InteractiveExtras.Scrollbar
   }
 
   .self_start\:xl {
-    align-self: flex-start;
+    align-self: start;
   }
 
   .self_end\:xl {
-    align-self: flex-end;
+    align-self: end;
   }
 
   .self_baseline\:xl {
@@ -813,11 +813,11 @@ Styleguide Recipes.InteractiveExtras.Scrollbar
   }
 
   .self_start\:xxl {
-    align-self: flex-start;
+    align-self: start;
   }
 
   .self_end\:xxl {
-    align-self: flex-end;
+    align-self: end;
   }
 
   .self_baseline\:xxl {
@@ -26520,12 +26520,12 @@ Styleguide Recipes.InteractiveExtras.Scrollbar
   isolation: isolate;
 }
 
-.justify_flex-start {
-  justify-content: flex-start;
+.justify_start {
+  justify-content: start;
 }
 
-.justify_flex-end {
-  justify-content: flex-end;
+.justify_end {
+  justify-content: end;
 }
 
 .justify_center {
@@ -26544,13 +26544,17 @@ Styleguide Recipes.InteractiveExtras.Scrollbar
   justify-content: space-evenly;
 }
 
+.justify_stretch {
+  justify-content: stretch;
+}
+
 @media screen and (min-width: 10rem) {
-  .justify_flex-start\:xs {
-    justify-content: flex-start;
+  .justify_start\:xs {
+    justify-content: start;
   }
 
-  .justify_flex-end\:xs {
-    justify-content: flex-end;
+  .justify_end\:xs {
+    justify-content: end;
   }
 
   .justify_center\:xs {
@@ -26568,14 +26572,18 @@ Styleguide Recipes.InteractiveExtras.Scrollbar
   .justify_space-evenly\:xs {
     justify-content: space-evenly;
   }
+
+  .justify_stretch\:xs {
+    justify-content: stretch;
+  }
 }
 @media screen and (min-width: 20rem) {
-  .justify_flex-start\:sm {
-    justify-content: flex-start;
+  .justify_start\:sm {
+    justify-content: start;
   }
 
-  .justify_flex-end\:sm {
-    justify-content: flex-end;
+  .justify_end\:sm {
+    justify-content: end;
   }
 
   .justify_center\:sm {
@@ -26593,14 +26601,18 @@ Styleguide Recipes.InteractiveExtras.Scrollbar
   .justify_space-evenly\:sm {
     justify-content: space-evenly;
   }
+
+  .justify_stretch\:sm {
+    justify-content: stretch;
+  }
 }
 @media screen and (min-width: 45rem) {
-  .justify_flex-start\:md {
-    justify-content: flex-start;
+  .justify_start\:md {
+    justify-content: start;
   }
 
-  .justify_flex-end\:md {
-    justify-content: flex-end;
+  .justify_end\:md {
+    justify-content: end;
   }
 
   .justify_center\:md {
@@ -26618,14 +26630,18 @@ Styleguide Recipes.InteractiveExtras.Scrollbar
   .justify_space-evenly\:md {
     justify-content: space-evenly;
   }
+
+  .justify_stretch\:md {
+    justify-content: stretch;
+  }
 }
 @media screen and (min-width: 64rem) {
-  .justify_flex-start\:lg {
-    justify-content: flex-start;
+  .justify_start\:lg {
+    justify-content: start;
   }
 
-  .justify_flex-end\:lg {
-    justify-content: flex-end;
+  .justify_end\:lg {
+    justify-content: end;
   }
 
   .justify_center\:lg {
@@ -26643,14 +26659,18 @@ Styleguide Recipes.InteractiveExtras.Scrollbar
   .justify_space-evenly\:lg {
     justify-content: space-evenly;
   }
+
+  .justify_stretch\:lg {
+    justify-content: stretch;
+  }
 }
 @media screen and (min-width: 90rem) {
-  .justify_flex-start\:xl {
-    justify-content: flex-start;
+  .justify_start\:xl {
+    justify-content: start;
   }
 
-  .justify_flex-end\:xl {
-    justify-content: flex-end;
+  .justify_end\:xl {
+    justify-content: end;
   }
 
   .justify_center\:xl {
@@ -26668,14 +26688,18 @@ Styleguide Recipes.InteractiveExtras.Scrollbar
   .justify_space-evenly\:xl {
     justify-content: space-evenly;
   }
+
+  .justify_stretch\:xl {
+    justify-content: stretch;
+  }
 }
 @media screen and (min-width: 120rem) {
-  .justify_flex-start\:xxl {
-    justify-content: flex-start;
+  .justify_start\:xxl {
+    justify-content: start;
   }
 
-  .justify_flex-end\:xxl {
-    justify-content: flex-end;
+  .justify_end\:xxl {
+    justify-content: end;
   }
 
   .justify_center\:xxl {
@@ -26692,6 +26716,10 @@ Styleguide Recipes.InteractiveExtras.Scrollbar
 
   .justify_space-evenly\:xxl {
     justify-content: space-evenly;
+  }
+
+  .justify_stretch\:xxl {
+    justify-content: stretch;
   }
 }
 .lh_0 {

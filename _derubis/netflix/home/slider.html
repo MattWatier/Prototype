@@ -2,26 +2,23 @@
 	<!-- Slider main container -->
 	<div class="splide bg_black-_05 br_1 br_black-2 br_radius br_solid m-b_4 p-y_4 shadow_emboss-light " aria-label="Splide Basic HTML Example">
   <div class="splide__arrows font_3:lg c_primary">
-	<button class="splide__arrow splide__arrow--prev absolute t_6 b_6 z_5 shadow_overlap-light h:bg_primary-3 br_black-2 br_solid br_1 br_radius br-tl_square br-bl_square l_n5:md l_n4">
+	<button class="splide__arrow splide__arrow--prev absolute t_6 b_6 z_3 shadow_overlap-light h:bg_primary-3 br_black-2 br_solid br_1 br_radius br-tl_square br-bl_square l_n5:md l_n4">
 	  <i class="fa-caret-left fas"></i>
 	</button>
-	<button class="splide__arrow splide__arrow--next absolute t_6 b_6 z_5 shadow_overlap-light h:bg_primary-3 br_black-2 br_solid br_1 br_radius br-tr_square br-br_square r_n5:md r_n4">
+	<button class="splide__arrow splide__arrow--next absolute t_6 b_6 z_3 shadow_overlap-light h:bg_primary-3 br_black-2 br_solid br_1 br_radius br-tr_square br-br_square r_n5:md r_n4">
 	  <i class="fa-caret-right fas"></i>
 	</button>
   </div>
+
   <div class="splide__track">
-			<ul class="splide__list"> 
+			<ul class="splide__list ul_none"> 
 				
-				{% include_relative netflix/program/session.html content="splide__slide" %}				
-				{% include_relative netflix/program/session.html content="splide__slide" %}					
-				{% include_relative netflix/program/session-extra-content.html content="splide__slide" %}					
-				{% include_relative netflix/program/session.html content="splide__slide" %}					
-				{% include_relative netflix/program/session.html content="splide__slide" %}					
-				{% include_relative netflix/program/session.html content="splide__slide" %}					
-				{% include_relative netflix/program/session.html content="splide__slide" %}					
-				{% include_relative netflix/program/session.html content="splide__slide" %}					
-				{% include_relative netflix/program/session.html content="splide__slide" %}
-				{% include_relative netflix/program/view-all.html content="splide__slide" %}
+				<li class="slide CQ_ROOT splide__slide grid">{% include_relative netflix/basic/ripple-card-vertical.html content="splide__slide" %}		</li>
+				<li class="slide CQ_ROOT splide__slide grid">{% include_relative netflix/basic/ripple-card-vertical.html content="splide__slide" %}		</li>
+				<li class="slide CQ_ROOT splide__slide grid">{% include_relative netflix/basic/ripple-card-vertical.html content="splide__slide" %}		</li>
+				<li class="slide CQ_ROOT splide__slide grid">{% include_relative netflix/basic/ripple-card-vertical.html content="splide__slide" %}		</li>
+				<li class="slide CQ_ROOT splide__slide grid">{% include_relative netflix/basic/ripple-card-vertical.html content="splide__slide" %}		</li>
+
 			</ul>
 		</div>
 	</div>
@@ -33,11 +30,11 @@
 document.addEventListener( 'DOMContentLoaded', function() {
   var splide = new Splide( '.splide' , {
   type       : '',
-  perPage    : 5,
+  perPage    : 3,
   padding    : "1rem",
   gap: '1rem',
   breakpoints: {
-	1400:{perPage: 4,},
+	1400:{perPage: 3,},
 	1200:{perPage: 3,},
 	768: {
 	perPage: 2,
@@ -54,7 +51,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
 classes: {
 	// Add classes for arrows.
 	arrows: 'splide__arrows your-class-arrows',
-	arrow : 'splide__arrow your-class-arrow scale_50 absolute t_6 b_6 z_5 shadow_overlap-light h:bg_primary-3 br_black-2 br_solid br_1 br_radius br-tr_square br-br_square',
+	arrow : 'splide__arrow your-class-arrow scale_50 absolute t_6 b_6 z_3 shadow_overlap-light h:bg_primary-3 br_black-2 br_solid br_1 br_radius br-tr_square br-br_square',
 	prev  : 'splide__arrow--prev your-class-prev l_0 rotate_180 ',
 	next  : 'splide__arrow--next your-class-next r_0 ',
 
@@ -69,3 +66,4 @@ classes: {
 
 <!-- Slider End Container -->
 </section>
+
