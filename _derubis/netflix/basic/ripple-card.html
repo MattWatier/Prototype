@@ -2,24 +2,27 @@
 {% assign flag = include.flag | default: '' %}
 {% assign primary_actions = include.primary_actions | default: "navigate" %}
 {% assign secondary_actions = include.secondary_actions | default: "bookmark" %}
+{% assign background = 'bg_white-5' %}
+{% assign hover-disabled_classes = "h:bg_accent-5" %}
+{% for action in primary_actions | split ',' %}
+    {% if action == "lock" %}
+        {% assign hover-disabled_classes = "disabled cursor_not-allowed not-allowed user-select-none" %}
+        {% assign flag = 'locked'%}
+        {% assign background = '' %}
+        {% break %}
+    {% endif %}
+{% endfor %}
 {% if flag == 'current' %}
 	{% assign active_class = 'active' %}
 {% else %}
 	{% assign active_class = '' %}
 {% endif %}
-{% assign hover-disabled_classes = "h:bg_accent-5" %}
-{% for action in primary_actions | split ',' %}
-    {% if action == "lock" %}
-        {% assign hover-disabled_classes = "disabled cursor_not-allowed not-allowed user-select-none" %}
-        {% break %}
-    {% endif %}
-{% endfor %}
 
 
 <div
   grid-template="ripple-card"
   layout="{{layout}}"
-  class="br-t_1 br_solid br_black-3 relative {{ active_class }}  {{ hover-disabled_classes }}"
+  class="br-t_1 br_solid br_black-3 relative {{ active_class }} {{background}} {{ hover-disabled_classes }}"
 >
 <div class="randomData p_3 p_4:md m-y_3:lg reading-typography"  grid-area="content-primary">
     <h3 class="c_primary-n1 m_0">
