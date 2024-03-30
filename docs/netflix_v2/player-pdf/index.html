@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Player - UC System</title>
+  <title>Player Pdf - UC System</title>
   <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MattWatier/UtilityClass@latest/dist/css/UC.css"> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MattWatier/UtilityClass@3.2.04/dist/css/UC.css">
@@ -103,9 +103,9 @@
             <i class="fas fa-angle-right c_accent-n2 m-x_3 self_center font-size_down-1 lh_2"></i>
             <!-- Breadcrumb Item -->
             <div class="flex flex_row nowrap overflow_hidden">
-               <i class="c_black-9 fas fa-solid m-l_1 fa-fw m-r_2 flex_none self_center fa-video"></i>
+               <i class="c_black-9 fas fa-solid m-l_1 fa-fw m-r_2 flex_none self_center fa-file-pdf"></i>
                
-               <a href="../player" class="font_medium flex_auto self_center h:underline c_inherit-all overflow_hidden">Video Queue</a>
+               <a href="../player-pdf" class="font_medium flex_auto self_center h:underline c_inherit-all overflow_hidden">Document</a>
                
             </div>
          </li>
@@ -146,45 +146,25 @@
     </div>
   </header>
   <section grid-area="content" class="CQ_ROOT">
-	<div  class="grid:lg columns_4 columns_5:xl columns_6:xxl rows_1">
+	<div  class="grid:lg columns_5 columns_6:xl rows_1">
 		<!-- TODO scroll buckets need styles and the inner outter wrapper. -->
 		<main class="CQ_ROOT bg_white-6 col-start_start col-end_n2 row_all:md relative row-start_start">
-			<div class="absolute t_3 r_2 z_2 font_n2 p-x_3:md p-x_2" data-element="save-toggle">
-				
 
-
-
-
-<!-- Check if any action is locked -->
-
-    
-
-
-    <div class="fa-2x ">
-        
-                
-                    <i class="fa-solid fa-star h:c_black c_black-5 z_3" data-fa-transform="shrink-10 up-.5" data-fa-mask="fa-solid fa-bookmark" data-fa-mask-id="bookmark"></i>
-                
-            
-    </div>
-
-			  </div>
-			  <div data-component="player.video" class="w_100 font_1 font_2:lg font_3:xxl">
-	<div class="player hd full player hd full p-x_6:xl p-x_5:lg p-x_4:md p-x_3 p-y_4 p-y_5:xl">
-		<h3 class="font-size_down-3 c_secondary-n1 uppercase p-r_4"> (Collection Name) Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque </h3>
-		<div class="aspect-ratio_16x9 bg_cover br-solid br_1 br_black-3 br_radius relative self_start shadow_2 w_100" style="
-				background-image: url(https://picsum.photos/640/480/);
-			">
-			<div class="absolute t_0 l_3 p-x_3 p-y_2 bg_brand-n3 br-br_radius br-bl_radius c_white font-size_down-2" data-element="flags"> Watched </div>
-			<div class="absolute b_3 flex font_n1 l_4 r_4 self_baseline">
-				<progress class="w_100" id="file" max="100" value="70"> 70% </progress>
-			</div>
+			  <div data-component="player.pdf" class="w_100 font_1 font_2:lg font_3:xxl">
+	<div class="player pdf p-x_6:xl p-x_5:lg p-x_4:md p-x_3 p-y_4 p-y_5:xl">
+		<div class="w_100 ">
+            <iframe src="/Prototype/assets/files/Placeholder.pdf"  class="w_100 aspect-ratio_8x11 m-y_5  " style="max-height: calc(100vh - 4rem);"></iframe>
 		</div>
-		<header class="p-b_5 p-t_4 p-y_4:md p-y_4:xl max-w_60">
-			<h1 data-label="session-name" class="font-size_down-3 c_black-7 uppercase font_display font_medium m-y_0"> (Video Que Name) Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque </h1>
-			<h2 data-label="presentation-name" class="font-size_up-1 c_primary-n1 font_display font_bold lh_0 m-y_2:lg m-y_0"> Rerum omnis odio voluptate eaque est necessitatibus. </h2>
-			<h3 data-label="Presentation-subname" class="font-size_down-2 c_black-8 font_ui m-y_0 lh_1"> Quibusdam quia errorco. Sectetur dolores molestiae </h3>
-			<span class="bg_accent-n2 br_radius c_white font-size_down-2 p-x_3 p-y_2 r_0 t_0 inline-block font-size_down-3">
+		<header class="p-b_5 p-t_4 p-y_4:md p-y_4:xl ">
+			<h1 data-label="session-name" class="font-size_down-3 c_black-7 uppercase font_display font_medium m-y_0">
+				(Video Que Name) Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque </h1>
+			<h2 data-label="presentation-name"
+				class="font-size_up-1 c_primary-n1 font_display font_bold lh_0 m-y_2:lg m-y_0"> Rerum omnis odio
+				voluptate eaque est necessitatibus. </h2>
+			<h3 data-label="Presentation-subname" class="font-size_down-2 c_black-8 font_ui m-y_0 lh_1"> Quibusdam quia
+				errorco. Sectetur dolores molestiae </h3>
+			<span
+				class="bg_accent-n2 br_radius c_white font-size_down-2 p-x_3 p-y_2 r_0 t_0 inline-block font-size_down-3">
 				<i class="fas fa-solid fa-search m-r_3"></i>
 				<strong class="font_medium font_ui">Keyword Found in Video @: </strong>
 				<ul class="ul_none ul_inline-pipe gap_1">
@@ -197,26 +177,31 @@
 				</ul>
 			</span>
 		</header>
-		<div class="cq_parent">
+		<div class="">
 			<h5 class="c_black-8 font-size_down-3"> How did you like this presentation? </h5>
 			<ul class="ul_none flex flex_row:md flex_column gap_3">
 				<ul class="ul_none flex flex_row gap_2">
-				<li>
-					<a class="p-y_3 p-x_4 br_solid br_black-3 br_radius br_1 h:bg_black-3 btn btn-light bg_transparent" href=""><i class="fal fa-thumbs-up"></i></a>
-				</li>
-				<li>
-					<a class="p-y_3 p-x_4 br_solid br_black-3 br_radius br_1 h:bg_black-3 btn btn-light bg_transparent " href=""><i class="fal fa-thumbs-down"></i></a>
-				</li></ul>
+					<li>
+						<a class="p-y_3 p-x_4 br_solid br_black-3 br_radius br_1 h:bg_black-3 btn btn-light bg_transparent"
+							href=""><i class="fal fa-thumbs-up"></i></a>
+					</li>
+					<li>
+						<a class="p-y_3 p-x_4 br_solid br_black-3 br_radius br_1 h:bg_black-3 btn btn-light bg_transparent "
+							href=""><i class="fal fa-thumbs-down"></i></a>
+					</li>
+				</ul>
 				<ul class="ul_none flex flex_row gap_2 m-l_auto:md wrap">
-				<li class="">
-					<a class="p-y_3 p-x_4 br_solid br_black-3 br_radius br_1 h:bg_black-3 btn btn-light" href=""><i class="fal fa-paperclip p-r_3"></i> Attachments</a>
-				</li>
-				<li >
-					<a class="p-y_3 p-x_4 br_solid br_black-3 br_radius br_1 h:bg_black-3 btn btn-primary" href="">
-						Take Exam
-						<i class="fal fa-list-alt p-l_3"></i>
-					</a>
-				</li></ul>
+					<li class="">
+						<a class="p-y_3 p-x_4 br_solid br_black-3 br_radius br_1 h:bg_black-3 btn btn-light" href=""><i
+								class="fal fa-paperclip p-r_3"></i> Attachments</a>
+					</li>
+					<li>
+						<a class="p-y_3 p-x_4 br_solid br_black-3 br_radius br_1 h:bg_black-3 btn btn-primary" href="">
+							Take Exam
+							<i class="fal fa-list-alt p-l_3"></i>
+						</a>
+					</li>
+				</ul>
 			</ul>
 		</div>
 	</div>
