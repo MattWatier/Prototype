@@ -13,28 +13,25 @@
 # https://learnxinyminutes.com/docs/yaml/
 #
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+# Basic settings
 title: Prototyping
 email: mattwatier@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-baseurl: "/Prototype" # the subpath of your site, e.g. /blog
-url: "https://mattwatier.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
+description: "Welcome to the ultimate HTML playground—a vibrant space where creativity meets functionality in web design. Our site is dedicated to exploring, experimenting, and showcasing innovative HTML patterns and layouts that breathe life into various projects. Whether you're a seasoned developer seeking inspiration or a newcomer eager to learn the ropes, our repository of cutting-edge designs is your go-to resource. Dive into our collection of meticulously crafted templates and dynamic layouts that promise to elevate your web projects from ordinary to extraordinary. Join us on this journey of discovery and innovation, where each HTML pattern opens the door to endless possibilities in the digital realm."
+baseurl: "/Prototype" # Ensure this matches your GitHub repo name exactly, and is case-sensitive
+url: "https://mattwatier.github.io" # Your site's base URL
+# Social media usernames (optional)
+twitter_username: mattwatier
 github_username: mattwatier
 # Build settings
-# theme: jekyll-theme-minimal
+theme: jekyll-theme-primer # Ensure this theme is supported by GitHub Pages; you can change this to any supported theme
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
   - jekyll-github-metadata
-destination: "docs"
-github: [metadata]
-port: 4001
-sass:
-  sass_dir: _sass
+# GitHub Pages settings
+github:
+  - metadata
+# Collections
 collections:
   netflix_prototype:
     output: true
@@ -42,23 +39,20 @@ collections:
   derubis:
     output: true
     permalink: /netflix_v2/:path/
+# SASS/SCSS Settings (optional)
+sass:
+  sass_dir: _sass
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# Exclusions (optional)
+# Here, we specify files and folders that Jekyll should ignore.
+# We've commented out common exclusions; uncomment as necessary.
+#exclude:
+#  - Gemfile
+#  - Gemfile.lock
+#  - node_modules
+#  - vendor/bundle/
+#  - vendor/cache/
+#  - vendor/gems/
+#  - vendor/ruby/
+# Plugins (if needed, add more plugins here, but ensure they are supported by GitHub Pages)
+# For a list of supported plugins, check: https://pages.github.com/versions/
