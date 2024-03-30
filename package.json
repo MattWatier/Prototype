@@ -7,7 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "serve": "bundle exec jekyll serve"
+    "serve": "bundle exec jekyll serve",
+    "serve-verbose": "bundle exec jekyll serve --verbose"
   },
   "repository": {
     "type": "git",
