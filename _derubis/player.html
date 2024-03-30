@@ -14,31 +14,39 @@ breadcrumbs:
     icon: "fa-video"
     url: "../player"
 ---
-{% include_relative netflix/app-header-w-search.html %}
+
 {% include_relative netflix/breadcrumb.html %}
-<div grid-area="app-content" grid-template="page">
-	<header class="" grid-area="header">
-		<div class="introduction p-x_3 p-x_4:lg p-x_5:xxl p-y_4:xxl p-y_3:lg p-y_2 bg_white-8 br-b_1 br_solid br_black-3">
-			<h3 class="font_display font_xbold c_primary-n2 m-y_2">Video Player with Sidebar</h3>
-		</div>
-	</header>
-	<section grid-area="content-split-primary" class="grid:md columns_4 columns_5:lg columns_6:xl rows_1">
-		<main class="CQ_ROOT bg_white-6 col-end_n2 col-start_start row_all:md relative row-start_start">
+<div grid-area="app-content" grid-template="page" class="br-br_radius">
+  <header grid-area="header CQ_ROOT "
+    class="relative bg_white-8 relative p_5:xl p_4:lg p_3 font_n1 font_0:md font_1:lg font_1:xxl br-b_1 br_black-3 br_solid">
+    {% include_relative netflix/sub/session-label.html %}
+    <div class="absolute t_3 r_2 z_2 font_n2 p-x_3:md p-x_2" data-element="save-toggle">
+      {% include_relative netflix/sub/secondary-actions.html %}
+    </div>
+  </header>
+  <section grid-area="content" class="CQ_ROOT">
+	<div  class="grid:lg columns_4 columns_5:xl columns_6:xxl rows_1">
+		<!-- TODO scroll buckets need styles and the inner outter wrapper. -->
+		<main class="CQ_ROOT bg_white-6 col-start_start col-end_n2 row_all:md relative row-start_start">
 			<div class="absolute t_3 r_2 z_2 font_n2 p-x_3:md p-x_2" data-element="save-toggle">
 				{% include_relative netflix/sub/secondary-actions.html %}
 			  </div>
-			{%  include_relative netflix/player/video.html %}
-		</main>	
-		<aside grid-template="bucket" class="col-end_end col-start-span_2 shadow_emboss-light bg_black-2 row_all:md CQ_ROOT">
-			<div grid-area="bucket-inset" class="br-l_1 br_solid:md br_none br_black-2 font_n2 font_n1:sm font_0:md"> 
-				<div grid-area="bucket-content" class="scrollbar-mini absolute:lg inset_1">
-					{% include_relative netflix/player/sidebar-text.html %}
+			  {%  include_relative netflix/player/video.html %}
+		</main>
+		<aside grid-template="bucket" class="col-start_n2 col-end_end shadow_emboss-light bg_black-2 row_all:md CQ_ROOT">
+				<div grid-area="bucket-inset" class="br-l_1 br_solid:md br_none br_white-2 font_n2 font_n1:sm font_0:md"> 
+					<div grid-area="bucket-content" class="scrollbar-mini absolute:lg inset_1">
+						{% include_relative netflix/player/sidebar-text.html %}
+					</div>
 				</div>
-			</div>
-		</aside>
-		
-	</section>
-
-	{% include_relative netflix/player/information.html %}
+			</aside>
+		</div>
+  </section>
+  {% include_relative netflix/player/information.html %}
 </div>
+
+
+
+
+
 
