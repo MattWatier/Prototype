@@ -20,18 +20,21 @@ description: "Welcome to the ultimate HTML playground—a vibrant space where cr
 baseurl: "/Prototype" # Ensure this matches your GitHub repo name exactly, and is case-sensitive
 url: "https://mattwatier.github.io" # Your site's base URL
 # Social media usernames (optional)
+
 twitter_username: mattwatier
 github_username: mattwatier
 # Build settings
-theme: jekyll-theme-primer # Ensure this theme is supported by GitHub Pages; you can change this to any supported theme
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-github-metadata
 # GitHub Pages settings
+
 github:
   - metadata
 # Collections
+
 collections:
   netflix_prototype:
     output: true
@@ -40,6 +43,7 @@ collections:
     output: true
     permalink: /netflix_v2/:path/
 # SASS/SCSS Settings (optional)
+
 sass:
   sass_dir: _sass
 
