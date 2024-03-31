@@ -1,19 +1,47 @@
 --- 
 layout: V2-library_blank
-name: 1.1 | grid-template=app-frame
+name: 1.1 | GRID DEBUG
 uri: root/
 ---
 	
-<div class="page-wrapper grid:md isolation_isolate bg_white-7 z_1 br_radius debug">
+<div class="page-wrapper grid:md isolation_isolate bg_white-7 z_1 br_radius debug" data-label="Page Wrapper">
     {% include_relative netflix/nav/top-nav-mobile.html %}
-        <div id="AppFrame" grid-template="app-frame" class="expanded grid">
-            <!-- Grid Areas With In Content  -->
-
-            <div grid-area="app-menu" class="br_dashed br_1 br_highlight">
-                &nbsp;
-            </div>
-        </div>
+	<div id="AppFrame" grid-template="app-frame" class="expanded">
+		<!-- Grid Areas With In Content  -->
+        {% include_relative netflix/breadcrumb.html %}
+<div grid-area="app-content" grid-template="page" class="br-br_radius">
+  <header grid-area="header CQ_ROOT "
+    class="relative bg_white-8 relative p_5:xl p_4:lg p_3 font_n1 font_0:md font_1:lg font_1:xxl br-b_1 br_black-3 br_solid">
+    {% include_relative netflix/sub/session-label.html %}
+    <div class="absolute t_3 r_2 z_2 font_n2 p-x_3:md p-x_2" data-element="save-toggle">
+      {% include_relative netflix/sub/secondary-actions.html %}
     </div>
+  </header>
+  <section grid-area="content" class="CQ_ROOT">
+	<div  class="grid:lg columns_5 columns_6:xl rows_1">
+		<!-- TODO scroll buckets need styles and the inner outter wrapper. -->
+		<main class="bg_white-6 col-start_start col-end_n2 row_all:md relative row-start_start">
+
+			  {%  include_relative netflix/player/pdf.html %}
+		</main>
+		<aside grid-template="bucket" class="col-start_n2 col-end_end shadow_emboss-light bg_black-2 row_all:md CQ_ROOT">
+				<div grid-area="bucket-inset" class="br-l_1 br_solid:md br_none br_white-2 font_n2 font_n1:sm font_0:md"> 
+					<div grid-area="bucket-content" class="scrollbar-mini absolute:lg inset_1">
+						{% include_relative netflix/player/sidebar-text.html %}
+					</div>
+				</div>
+			</aside>
+		</div>
+  </section>
+  {% include_relative netflix/player/information.html %}
+</div>
+
+        <!-- APP CONTENT END -->
+		<div grid-area="app-menu">
+			{% include_relative netflix/nav/left-nav-desktop.html %}
+		</div>
+
+	</div>
     {% include netflix/filter-off-canvas.html %}
     <script
     src="https://code.jquery.com/jquery-3.6.1.min.js"

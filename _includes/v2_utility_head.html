@@ -10,53 +10,66 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MattWatier/UtilityClass@latest/dist/css/Library.Custom.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MattWatier/UtilityClass@latest/dist/css/ColorCodes.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MattWatier/UtilityClass@latest/dist/css/Bootstrap.Shim.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MattWatier/UtilityClass@latest/dist/css/Debugs.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MattWatier/UtilityClass@latest/dist/css/Debugs.css"> -->
   <script src="https://kit.fontawesome.com/24228321b8.js" crossorigin="anonymous"></script>
   {% include google-fonts.html %}
-  <style>
-    .bg_transparent {
+<style>
+ .bg_transparent {
   background-color: transparent;
 }
 
-.debug .CQ_ROOT {
-  --data-label: var(attr(data-label, ""));
-  --grid-area: var(attr(grid-area, ""));
-  --grid-template: var(attr(grid-template, ""));
+.debug [grid-area], .debug [grid-template], .debug .CQ_ROOT, .debug {
   position: relative;
-  outline: 1px dashed var(--highlight, #e300c1);
+  border: var(--_style, 1px dashed) var(--_color, limegreen);
+  margin: 1.5rem 0 0;
 }
-.debug .CQ_ROOT:before {
-  content: "Container: Generic";
-  color: var(--highlight, #e300c1);
+.debug [grid-area]::before, .debug [grid-template]::before, .debug .CQ_ROOT::before, .debug::before {
+  color: var(--_color, limegreen);
   font-family: var(--font-mono);
   position: absolute;
-  inset: 3px;
-  font-size: 10px;
-}
-.debug .CQ_ROOT[data-label]:before, .debug .CQ_ROOT[grid-area]:before, .debug .CQ_ROOT[dgrid-template]:before {
-  content: "Container: " attr(data-label) " " attr(grid-area) " " attr(grid-template);
+  inset: 0.15rem auto auto 0.25rem;
+  font-size: 0.75rem;
+  background-color: #ffffff4d;
+  padding: 0.25rem;
+  z-index: 1000;
+  content: var(--_label) var(--_grid-template) var(--_grid-area) var(--_data-label);
 }
 
-.debug .grid {
-  --data-label: var(attr(data-label, ""));
-  --grid-area: var(attr(grid-area, ""));
-  --grid-template: var(attr(grid-template, ""));
-  position: relative;
-  outline: 1px dashed var(--accent, #00e3c1);
+.debug {
+  --_style: 1px solid;
+  --_color: magenta;
+  --_data-label: ": " attr(data-label) ":";
+  --_grid-template: attr(grid-template);
+  --_grid-area: attr(grid-area);
+  --_label: "DEBUG: ";
 }
-.debug .grid:before {
-  content: "Container: Generic";
-  color: var(--accent, #00e3c1);
-  font-family: var(--font-mono);
-  position: absolute;
-  inset: 3px;
-  font-size: 10px;
+
+.debug .CQ_ROOT {
+  --_style: 2px double;
+  --_color: cyan;
+  --_data-label:": " attr(data-label) ":";
+  --_grid-template: attr(grid-template);
+  --_grid-area: attr(grid-area);
+  --_label: "CQ_ROOT: ";
 }
-.debug .grid [data-label]:before, .debug .grid [grid-area]:before, .debug [grid-template]:before {
-  content: "Container: " attr(data-label) " " attr(grid-area) " " attr(grid-template);
+
+.debug [grid-template] {
+  --_style: 1px dashed;
+  --_color: rgb(19, 123, 251);
+  --_data-label:": " attr(data-label) ":";
+  --_grid-template: " grid-template:" attr(grid-template);
+  --_grid-area: attr(grid-area);
+  --_label: "Grid-Template: ";
+}
+
+.debug [grid-area] {
+  --_style: 1px dashed;
+  --_color: orangered;
+  --_data-label:": " attr(data-label) ":";
+  --_grid-template: " grid-template:" attr(grid-template);
+  --_grid-area: attr(grid-area);
+  --_label: "Grid-Area: ";
 }
 
 /*# sourceMappingURL=Debugs.css.map */
-
-  </style>
-</head>
+</style>
