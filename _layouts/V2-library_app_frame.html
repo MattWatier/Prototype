@@ -3,14 +3,13 @@ layout: V2-library_blank
 ---
 
 <div class="page-wrapper grid:md isolation_isolate bg_white-7 z_1 br_radius">
-{% include_relative netflix/nav/top-nav-mobile.html %}
+	{% include_relative netflix/nav/top-nav-mobile.html %}
 	<div id="AppFrame" grid-template="app-frame" class="expanded">
+		<!-- Grid Areas With In Content  -->
 		{{ content }}
-		<!-- These Styles are just for the styleguide and are not to be included with the pattern. -->
-		
-		
-		
-		<div grid-area="app-menu">{% include_relative netflix/nav/left-nav-desktop.html %}</div>
+		<div grid-area="app-menu">
+			{% include_relative netflix/nav/left-nav-desktop.html %}
+		</div>
 	</div>
 </div>
 {% include netflix/filter-off-canvas.html %}

@@ -13,4 +13,50 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MattWatier/UtilityClass@latest/dist/css/Debugs.css">
   <script src="https://kit.fontawesome.com/24228321b8.js" crossorigin="anonymous"></script>
   {% include google-fonts.html %}
+  <style>
+    .bg_transparent {
+  background-color: transparent;
+}
+
+.debug .CQ_ROOT {
+  --data-label: var(attr(data-label, ""));
+  --grid-area: var(attr(grid-area, ""));
+  --grid-template: var(attr(grid-template, ""));
+  position: relative;
+  outline: 1px dashed var(--highlight, #e300c1);
+}
+.debug .CQ_ROOT:before {
+  content: "Container: Generic";
+  color: var(--highlight, #e300c1);
+  font-family: var(--font-mono);
+  position: absolute;
+  inset: 3px;
+  font-size: 10px;
+}
+.debug .CQ_ROOT[data-label]:before, .debug .CQ_ROOT[grid-area]:before, .debug .CQ_ROOT[dgrid-template]:before {
+  content: "Container: " attr(data-label) " " attr(grid-area) " " attr(grid-template);
+}
+
+.debug .grid {
+  --data-label: var(attr(data-label, ""));
+  --grid-area: var(attr(grid-area, ""));
+  --grid-template: var(attr(grid-template, ""));
+  position: relative;
+  outline: 1px dashed var(--accent, #00e3c1);
+}
+.debug .grid:before {
+  content: "Container: Generic";
+  color: var(--accent, #00e3c1);
+  font-family: var(--font-mono);
+  position: absolute;
+  inset: 3px;
+  font-size: 10px;
+}
+.debug .grid [data-label]:before, .debug .grid [grid-area]:before, .debug [grid-template]:before {
+  content: "Container: " attr(data-label) " " attr(grid-area) " " attr(grid-template);
+}
+
+/*# sourceMappingURL=Debugs.css.map */
+
+  </style>
 </head>
