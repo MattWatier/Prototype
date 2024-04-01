@@ -28,16 +28,9 @@ breadcrumbs:
 	<div  class="grid:lg columns_5 columns_6:xl rows_1">
 		<!-- TODO scroll buckets need styles and the inner outter wrapper. -->
 		<main class="bg_white-6 col-start_start col-end_n2 row_all:md relative row-start_start">
-
-			  {%  include_relative netflix/player/pdf.html %}
+      {%  include_relative netflix/player/pdf.html %}
 		</main>
-		<aside grid-template="bucket" class="col-start_n2 col-end_end shadow_emboss-light bg_black-2 row_all:md CQ_ROOT">
-				<div grid-area="bucket-inset" class="br-l_1 br_solid:md br_none br_white-2 font_n2 font_n1:sm font_0:md"> 
-					<div grid-area="bucket-content" class="scrollbar-mini absolute:lg inset_1">
-						{% include_relative netflix/player/sidebar-text.html %}
-					</div>
-				</div>
-			</aside>
+    {% include_relative netflix/basic/aside-bucket.html aside_classes="col-start_n2 col-end_end row_all:md font_n2 font_n1:sm font_0:md" content_type="" %}
 		</div>
   </section>
   {% include_relative netflix/player/information.html %}
