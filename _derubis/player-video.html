@@ -16,28 +16,26 @@ breadcrumbs:
 ---
 
 {% include_relative netflix/breadcrumb.html %}
-<div grid-area="app-content" grid-template="page" class="br-br_radius">
-  <header grid-area="header CQ_ROOT "
+<div grid-area="app-content" grid-template="page" class="br-br_radius CQ_ROOT">
+  <header grid-area="header"
     class="relative bg_white-8 relative p_5:xl p_4:lg p_3 font_n1 font_0:md font_1:lg font_1:xxl br-b_1 br_black-3 br_solid">
     {% include_relative netflix/sub/session-label.html %}
     <div class="absolute t_3 r_2 z_2 font_n2 p-x_3:md p-x_2" data-element="save-toggle">
       {% include_relative netflix/sub/secondary-actions.html %}
     </div>
   </header>
-  <section grid-area="content" class="CQ_ROOT">
-	<div  class="grid:lg columns_4 columns_5:xl columns_6:xxl rows_1">
+  <section grid-area="primary-content" class="grid:lg columns_5 columns_6:xl columns_6:xxl rows_1">
 		<!-- TODO scroll buckets need styles and the inner outter wrapper. -->
 		<main class="CQ_ROOT bg_white-6 col-start_start col-end_n2 row_all:md relative row-start_start" style="scroll-snap-type: y mandatory;">
 			  {%  include_relative netflix/player/video.html %}
 		</main>
-		<aside grid-template="bucket" class="col-start_n2 col-end_end shadow_emboss-light bg_black-2 row_all:md CQ_ROOT">
-				<div grid-area="bucket-inset" class="br-l_1 br_solid:md br_none br_white-2 font_n2 font_n1:sm font_0:md"> 
+		<aside grid-template="bucket" class="col-start_n2 col-end_end shadow_emboss-light bg_black-2 row_all:md CQ_ROOT relative">
+				<div grid-area="bucket-inset" class="br-l_1 br_solid:md br_none br_white-2 font_n2 font_n1:sm font_0:md relative overflow-scroll"> 
 					<div grid-area="bucket-content" class="scrollbar-mini absolute:lg inset_1">
 						{% include_relative netflix/player/sidebar-text.html %}
 					</div>
 				</div>
 			</aside>
-		</div>
   </section>
   {% include_relative netflix/player/information.html %}
 </div>
