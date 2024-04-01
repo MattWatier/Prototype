@@ -1,24 +1,24 @@
 <aside grid-template="bucket"
-    class="{{ include.aside_classes }} shadow_emboss-light bg_black-2 CQ_ROOT br-l_1 br_solid:md br_none br_white-2 ">
+    class="{{ include.aside_classes }} shadow_emboss-light bg_black-2 br-l_1 br_solid:md br_none br_white-2 ">
     <div grid-area="bucket-inset">
 
         {% case include.content_type %}
         {% when 'text' %}
-        <div grid-area="bucket-content" class="scrollbar-mini">
+        <div grid-area="bucket-content" class="scrollbar-mini CQ_ROOT " breakpoint="{{include.breakpoint}}">
             {% include_relative netflix/basic/text.html %}
         </div>
         {% when 'tabs' %}
 
-        {% include_relative netflix/basic/slide-tabs.liquid %}
+        {% include_relative netflix/basic/slide-tabs.liquid breakpoint=include.breakpoint %}
 
         {% when 'video-que' %}
 
-        <div grid-area="bucket-content" class="scrollbar-mini">
+        <div grid-area="bucket-content" class="scrollbar-mini CQ_ROOT "  breakpoint="{{include.breakpoint}}">
             {% include_relative netflix/basic/video-que.html %}
         </div>
         {% else %}
 
-        <div grid-area="bucket-content" class="scrollbar-mini">
+        <div grid-area="bucket-content" class="scrollbar-mini CQ_ROOT "  breakpoint="{{include.breakpoint}}">
             {% include_relative netflix/basic/collapse-text.html %}
         </div>
         {% endcase %}
