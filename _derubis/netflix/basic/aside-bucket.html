@@ -9,7 +9,7 @@
         </div>
         {% when 'tabs' %}
 
-        {% case breakpoint %}
+        {% case include.breakpoint %}
         {% when "sm" %}
         {% assign include_breakpoint = "sm" %}
         {% when "md" %}

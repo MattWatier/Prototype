@@ -1,8 +1,8 @@
---- 
+---
 layout: V2-library_app_frame
-name: "V2 4.2 | Player PDF" 
-uri: "root/player/course/video-que/presentation-name" 
-watchingActive: true 
+name: "V2 4.2 | Player PDF"
+uri: "root/player/course/video-que/presentation-name"
+watchingActive: true
 breadcrumbs:
   - label: "Courses"
     icon: "fa-graduation-cap"
@@ -17,27 +17,27 @@ breadcrumbs:
 
 {% include_relative netflix/breadcrumb.html %}
 <div grid-area="app-content" grid-template="page" class="br-br_radius">
-  <header grid-area="header CQ_ROOT "
-    class="relative bg_white-8 relative p_5:xl p_4:lg p_3 font_n1 font_0:md font_1:lg font_1:xxl br-b_1 br_black-3 br_solid">
+  <header
+    grid-area="header CQ_ROOT "
+    class="relative bg_white-8 relative p_5:xl p_4:lg p_3 font_n1 font_0:md font_1:lg font_1:xxl br-b_1 br_black-3 br_solid"
+  >
     {% include_relative netflix/sub/session-label.html %}
-    <div class="absolute t_3 r_2 z_2 font_n2 p-x_3:md p-x_2" data-element="save-toggle">
+    <div
+      class="absolute t_3 r_2 z_2 font_n2 p-x_3:md p-x_2"
+      data-element="save-toggle"
+    >
       {% include_relative netflix/sub/secondary-actions.html %}
     </div>
   </header>
   <section grid-area="content" class="CQ_ROOT">
-	<div  class="grid:lg columns_5 columns_6:xl rows_1">
-		<!-- TODO scroll buckets need styles and the inner outter wrapper. -->
-		<main class="bg_white-6 col-start_start col-end_n2 row_all:md relative row-start_start">
-      {%  include_relative netflix/player/pdf.html %}
-		</main>
-    {% include_relative netflix/basic/aside-bucket.html aside_classes="col-start_n2 col-end_end row_all:md font_n2 font_n1:sm font_0:md" content_type="" breakpoint="lg" %}
-		</div>
+    <div class="grid:lg columns_5 columns_6:xl rows_2">
+      <!-- TODO scroll buckets need styles and the inner outter wrapper. -->
+      <main class="bg_white-6 col-start_start col-end_n2 row_first relative">
+        {% include_relative netflix/player/pdf.html %}
+      </main>
+      {% include_relative netflix/basic/aside-bucket.html  aside_classes="col-start_n2 col-end_end row_first font_n2 font_n1:sm
+      font_0:md" content_type="" breakpoint="lg" %} 
+      {% include_relative netflix/player/information.html %}
+    </div>
   </section>
-  {% include_relative netflix/player/information.html %}
 </div>
-
-
-
-
-
-

@@ -24,14 +24,15 @@ breadcrumbs:
       {% include_relative netflix/sub/secondary-actions.html %}
     </div>
   </header>
-  <section grid-area="primary-content" class="grid:lg columns_5 columns_6:xl columns_6:xxl rows_1">
+  <div grid-area="primary-content" class="grid:lg columns_5 columns_6:xl columns_6:xxl rows_2">
 		<!-- TODO scroll buckets need styles and the inner outter wrapper. -->
-		<main class="CQ_ROOT bg_white-6 col-start_start col-end_n2 row_all:md relative row-start_start" style="scroll-snap-type: y mandatory;">
+		<main class="CQ_ROOT bg_white-6 col-start_start col-end_n2 row_first relative" style="scroll-snap-type: y mandatory;">
 			  {%  include_relative netflix/player/video.html %}
 		</main>
-    {% include_relative netflix/basic/aside-bucket.html aside_classes="col-start_n2 col-end_end row_all:md font_n2 font_n1:sm font_0:md" content_type="tabs"  breakpoint="lg" %}
-  </section>
-  {% include_relative netflix/player/information.html %}
+    {% include_relative netflix/basic/aside-bucket.html aside_classes="col-start_n2 col-end_end row_first font_n2 font_n1:sm font_0:md" content_type="tabs"  breakpoint="lg" %}
+    {% include_relative netflix/player/information.html %}
+  </div>
+
 </div>
 
 
