@@ -1,6 +1,6 @@
 <aside grid-template="bucket"
-    class="{{ include.aside_classes }} shadow_emboss-light bg_black-2 br-l_1 br_solid:md br_none br_white-2 ">
-    <div grid-area="bucket-inset">
+    class="{{ include.aside_classes }} shadow_emboss-light bg_black-2 br-l_1 br_solid:md br_none br_white-2">
+    <div grid-area="bucket-inset" class="relative">
 
         {% case include.content_type %}
         {% when 'text' %}
@@ -9,7 +9,20 @@
         </div>
         {% when 'tabs' %}
 
-        {% include_relative netflix/basic/slide-tabs.liquid breakpoint=include.breakpoint %}
+        {% case breakpoint %}
+        {% when "sm" %}
+        {% assign include_breakpoint = "sm" %}
+        {% when "md" %}
+        {% assign include_breakpoint = "md" %}
+        {% when "lg" %}
+        {% assign include_breakpoint = "lg" %}
+        {% when "xl" %}
+        {% assign include_breakpoint = "xl" %}
+        {% else %}
+        {% assign include_breakpoint = "md" %}  
+        {% endcase %}
+        
+        {% include_relative netflix/basic/slide-tabs.liquid breakpoint=include_breakpoint %}
 
         {% when 'video-que' %}
 
