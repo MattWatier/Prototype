@@ -2,18 +2,18 @@
    class="relative bg_white-2 p-x_5:md p-x_3 p-y_3 font_1 br-b_1 br_solid br_black-3 grid gap-x_4 c_primary-n2 CQ_ROOT">
    	<!-- Back Button -->
    	<div grid-area="back-btn">
-		<button class="btn btn-primary shadow_overlap-light br_solid br_black-3 br_1 block w_100">
+		<a class="btn btn-primary shadow_overlap-light br_solid br_black-3 br_1 block w_100" href="../../">
 			<i class="fa-arrow-left fas font-size_down-1"></i>
-			<span class="inline-block:md display_none">back</span>
-		</button>
+			<span class="inline-block:lg display_none">back</span>
+      </a>
 	</div>
   	<!-- Breadcrumb List -->
    	<nav grid-area="breadcrumb-list" class="grid items_center font-size_0:lg font-size_down-1:md font-size_down-2 ">
       <ul class="flex flex_row wrap lh_0 text-shadow_white-1 ul_none gap-y_2 overflow_hidden">
 		<li class="flex flex_row nowrap relative overflow_hidden">
-			<div class="flex flex_row nowrap overflow_hidden">
+			<div class="flex flex_row nowrap overflow_hidden relative">
 				<i class="c_black-9 fa-light fas fa-solid m-l_1 fa-fw m-r_2 flex_none self_center fa-home"></i>
-				<a class="font_medium flex_auto self_center h:underline c_inherit-all overflow_hidden">Home</a>
+				<a class="font_medium flex_auto self_center h:underline c_inherit-all overflow_hidden expanded-click-area" href="../../">Home</a>
 			</div>
 		</li>
          {% for crumb in page.breadcrumbs %}
@@ -21,10 +21,10 @@
             <!-- Separator Icon -->
             <i class="fas fa-angle-right c_accent-n2 m-x_3 self_center font-size_down-1 lh_2"></i>
             <!-- Breadcrumb Item -->
-            <div class="flex flex_row nowrap overflow_hidden">
+            <div class="flex flex_row nowrap overflow_hidden relative">
                <i class="c_black-9 fas fa-solid m-l_1 fa-fw m-r_2 flex_none self_center {{ crumb.icon }}"></i>
                {% if crumb.url %}
-               <a href="{{ crumb.url }}" class="font_medium flex_auto self_center h:underline c_inherit-all overflow_hidden">{{ crumb.label }}</a>
+               <a href="{{ crumb.url }}" class="font_medium flex_auto self_center h:underline c_inherit-all overflow_hidden expanded-click-area">{{ crumb.label }}</a>
                {% else %}
                <span class="font_medium flex_auto self_center c_inherit-all overflow_hidden">{{ crumb.label }}</span>
                {% endif %}
