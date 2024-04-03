@@ -23,7 +23,7 @@ uri: documentation/
         + app-breadcrumb => top area of the app-page area.
         + app-branding => synonym of the app-breadcrumb. usefull if you are removing the breadcrumb on pages like home.
         + app-footer => last slot within the app-page zone.
-        + app-content => The area of app-page that excludes the breadcrumb an dfooter area.
+        + app-page => The area of app-page that excludes the breadcrumb an dfooter area.
     + breadcrumb
         *grid-area* attribute:
         + back-btn
