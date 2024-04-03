@@ -1,0 +1,32 @@
+<div class="display_none flex:md sticky t_4 isolation_isolate br-r_1 br_solid br_black-3 font_ui font_2:lg font_1 ">
+	<nav id="navigation" class="w_100 overflow-hidden filter_blur overflow_hidden br_radius flex:md flex_row:md justify_between p_3  p_4:lg">
+		<ul class="flex flex_row ul_none justify_around justify_start:md gap-y_3 w_100 w_auto:md">
+			<li class="nav-item m-r_3 flex_none br_radius c_black-8 h:bg_brand-n4 h:c_white a:c_white a:bg_primary-n1 h:shadow_overlap-light a:shadow_overlap-light transition_2  {% if page.homeActive %}active{% endif %}">
+				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md justify_start" href="./home"><i class="icon far fa-regular fa-fw fa-home-heart m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_0 opacity_10  ">Home</span></a>
+			</li>
+			<li class="nav-item m-r_3 flex_none br_radius c_black-8 h:bg_brand-n4 h:c_white a:c_white a:bg_primary-n1 h:shadow_overlap-light a:shadow_overlap-light transition_2 {% if page.coursesActive %}active{% endif %} 	">
+				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md justify_start" href="./courses"><i class="icon far fa-regular fa-fw fa-graduation-cap m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_0 opacity_10 ">Courses</span></a>
+			</li>
+			<li class="nav-item m-r_3 flex_none br_radius c_black-8 h:bg_brand-n4 h:c_white a:c_white a:bg_primary-n1 h:shadow_overlap-light a:shadow_overlap-light transition_2  {% if page.searchActive %}active{% endif %} ">
+				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md justify_start" href="./search"><i class="icon far fa-regular fa-fw fa-search m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_0 opacity_10 ">Search</span></a>
+			</li>
+			<li class="nav-item m-r_3 flex_none br_radius c_black-8 h:bg_brand-n4 h:c_white a:c_white a:bg_primary-n1 h:shadow_overlap-light a:shadow_overlap-light transition_2  {% if page.savedActive %}active{% endif %}">
+				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md justify_start" href="./saved"><i class="icon far fa-regular fa-fw fa-star m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_0 opacity_10   ">Saved</span></a>
+			</li>
+			<li class="nav-item m-r_3 flex_none br_radius c_black-8 h:bg_brand-n4 h:c_white a:c_white a:bg_primary-n1 h:shadow_overlap-light a:shadow_overlap-light transition_2 {% if page.watchingActive %}active{% endif %}">
+				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md justify_start" href="./player"><i class="icon far fa-regular fa-fw fa-play m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_0 opacity_10 ">Watching</span></a>
+			</li>
+			<li class="nav-item m-r_3 flex_none br_radius c_black-8 h:bg_brand-n4 h:c_white a:c_white a:bg_primary-n1 h:shadow_overlap-light a:shadow_overlap-light transition_2 {% if page.facultyActive %}active{% endif %}">
+				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md justify_start" href="./faculty-simple"><i class="icon far fa-regular fa-fw fa-user m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_0 opacity_10 ">faculty</span></a>
+			</li>
+			<li class="nav-item m-r_3 flex_none br_radius c_black-8 h:bg_brand-n4 h:c_white a:c_white a:bg_primary-n1 h:shadow_overlap-light a:shadow_overlap-light transition_2  {% if page.creditsActive %}active{% endif %} ">
+				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md justify_start" href="./credits"><i class="icon far fa-regular fa-fw fa-award m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_0 opacity_10 ">Credits</span></a>
+			</li>
+		</ul>
+		<ul class="flex_column:md flex_row ul_none justify_start gap_3  flex m-l_auto">
+			<li class="nav-item m-r_3 flex_none br_radius c_black-8 h:bg_brand-n4 h:c_white a:c_white a:bg_primary-n1 h:shadow_overlap-light a:shadow_overlap-light transition_2">
+				<a class="p_3 c_inherit-all h:undecorated undecorated flex flex_column flex_row:md justify_start" href="./presentation"><i class="icon far fa-regular fa-fw fa-sign-out-alt m-x_0:lg m-x_3 p-y_0:lg p-y_2 self_center"></i><span class="label transition_1 self_center p-l_3:md p-l_4:lg lowercase lh_0 opacity_0 opacity_10 ">Log Out</span></a>
+			</li>
+		</ul>
+	</nav>
+</div>

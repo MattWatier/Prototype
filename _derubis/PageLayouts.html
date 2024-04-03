@@ -1,0 +1,73 @@
+---
+layout: V2-library_app_frame
+name: "V2 4.2 | Page Layouts"
+uri: "root/player/course/video-que/presentation-name"
+watchingActive: true
+breadcrumbs:
+  - label: "Courses"
+    icon: "fa-graduation-cap"
+    url: "../courses"
+  - label: "Chapter"
+    icon: "fa-book"
+    url: "../course"
+  - label: "Document"
+    icon: "fa-file-pdf"
+    url: "../player-pdf"
+---
+
+{% include_relative netflix/breadcrumb.html %}
+<div grid-area="app-content" grid-template="page" class="br-br_radius">
+  <header
+    grid-area="header CQ_ROOT "
+    class="relative bg_white-8 relative p_5:xl p_4:lg p_3 font_n1 font_0:md font_1:lg font_1:xxl br-b_1 br_black-3 br_solid"
+  >
+    {% include_relative netflix/sub/session-label.html %}
+    <div
+      class="absolute t_3 r_2 z_2 font_n2 p-x_3:md p-x_2"
+      data-element="save-toggle"
+    >
+      {% include_relative netflix/sub/secondary-actions.html %}
+    </div>
+  </header>
+  <section grid-area="page-content" class="CQ_ROOT colored-zones space-holder">
+    <h4>Document(full-content)</h4>
+    <section grid-template="content-layout" >
+        <div grid-area="full-content">Full Content</div>
+    </section>
+    <h4>Content No Sidebars</h4>
+    <section grid-template="content-layout" >
+        <div grid-area="content">Content</div>
+    </section>
+    <h4>Content with Primary Sidebar</h4>
+    <section grid-template="content-layout" >
+        <div grid-area="sidebar-primary">sidebar primary</div>
+        <div grid-area="content">content</div>
+    </section>
+
+    <h4>Content with Secondary Sidebar</h4>
+    <section grid-template="content-layout" >
+        <div grid-area="sidebar-secondary">sidebar secondary</div>
+        <div grid-area="content">content</div>
+    </section>
+
+    <h4>Both Sidebars</h4>
+    <section grid-template="content-layout" >
+        <div grid-area="sidebar-secondary">sidebar secondary</div>
+        <div grid-area="content">content center</div>
+        <div grid-area="sidebar-primary">sidebar primary</div>
+    </section>
+    <style>
+    .space-holder section{padding:10px 0; background-color:rgba(128, 128, 128, 0.209); margin-bottom:10px;}
+    .space-holder div{min-height: 50px; color:rgb(0, 0, 0); padding:10px 10px;}
+    .colored-zones [grid-area="sidebar-secondary"] {background-color: #0080001b;}
+    .colored-zones [grid-area="sidebar-primary"] {background-color: #1668ff2d;}
+    .colored-zones [grid-area="full-content"] {background-color:#ff260040;}
+    .colored-zones [grid-area="content"] {background-color: #ffa6002b;}
+    [grid-area=full-content]{
+		grid-column: all;
+		grid-row:all;
+	}
+    </style>
+
+  </section>
+</div>

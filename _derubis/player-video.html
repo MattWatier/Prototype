@@ -16,15 +16,15 @@ breadcrumbs:
 ---
 
 {% include_relative netflix/breadcrumb.html %}
-<div grid-area="app-content" grid-template="page" class="br-br_radius CQ_ROOT">
-  <header grid-area="header"
+<div grid-area="app-page" grid-template="page" class="br-br_radius CQ_ROOT">
+  <header grid-area="page-header"
     class="relative bg_white-8 relative p_5:xl p_4:lg p_3 font_n1 font_0:md font_1:lg font_1:xxl br-b_1 br_black-3 br_solid">
     {% include_relative netflix/sub/session-label.html %}
     <div class="absolute t_3 r_2 z_2 font_n2 p-x_3:md p-x_2" data-element="save-toggle">
       {% include_relative netflix/sub/secondary-actions.html %}
     </div>
   </header>
-  <div grid-area="content" class="block grid:lg columns_5 columns_6:xl columns_6:xxl rows_2">
+  <div grid-area="page-content" class="block grid:lg columns_5 columns_6:xl columns_6:xxl rows_2">
 		<!-- TODO scroll buckets need styles and the inner outter wrapper. -->
 		<main class="CQ_ROOT bg_white-6 col-start_start col-end_n2 row_first relative row-start_start" style="scroll-snap-type: y mandatory;">
 			  {%  include_relative netflix/player/video.html %}

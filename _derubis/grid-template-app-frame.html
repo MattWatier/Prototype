@@ -10,7 +10,7 @@ uri: root/
 		<!-- Grid Areas With In Content  -->
         {% include_relative netflix/breadcrumb.html %}
 <div grid-area="app-content" grid-template="page" class="br-br_radius CQ_ROOT">
-  <header grid-area="header"
+  <header grid-area="page-header"
     class="relative bg_white-8 relative p_5:xl p_4:lg p_3 font_n1 font_0:md font_1:lg font_1:xxl br-b_1 br_black-3 br_solid">
     {% include_relative netflix/sub/session-label.html %}
     <div class="absolute t_3 r_2 z_2 font_n2 p-x_3:md p-x_2" data-element="save-toggle">
@@ -25,7 +25,7 @@ uri: root/
     {% include_relative netflix/basic/aside-bucket.html aside_classes="col-start_n2 col-end_end row_all:md font_n2 font_n1:sm font_0:md" content_type="tabs" %}
   </section>
   {% include_relative netflix/player/information.html %}
-  <footer grid-area="footer" class="bg_white-6 p_4"> footer</footer>
+  <footer grid-area="page-footer" class="bg_white-6 p_4"> footer</footer>
 </div>
 
         <!-- APP CONTENT END -->
