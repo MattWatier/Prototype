@@ -1,0 +1,58 @@
+{
+    "components": {
+        "webnav": {
+            "elements": {
+                "logo": {
+                    "src": "path_to_logo.png",
+                    "alt": "Company Logo"
+                },
+                "LinkList-items": [
+                    {
+                        "icon": "icon_path_home.png",
+                        "links": [
+                            {
+                                "text": "Home",
+                                "href": "/home"
+                            },
+                            {
+                                "text": "About",
+                                "href": "/about"
+                            },
+                            {
+                                "text": "Products",
+                                "href": "/products"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "footernav": {
+            "elements": {
+                "logo": {
+                    "src": "path_to_footer_logo.png",
+                    "alt": "Footer Logo"
+                },
+                "LinkList-items": [
+                    {
+                        "icon": "footer_icon_path_about.png",
+                        "links": [
+                            {
+                                "text": "Contact",
+                                "href": "/contact"
+                            },
+                            {
+                                "text": "FAQ",
+                                "href": "/faq"
+                            },
+                            {
+                                "text": "Support",
+                                "href": "/support"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+--- 
+layout: V2-library_app_frame
+name: "V2: 99 | dynamic style" 
+uri: "" 
+homeActive: true 
+---
+<h1>Dynamic Nav Styling Test</h1>
+{% assign component_name = 'webnav' %} <!-- Can be dynamically changed based on page context. -->
+
+<section class="{{ site.data.experimental.styles.components[component_name].classes }}" wc-component="{{ component_name }}">
+  {% assign style_elements = site.data.experimental.styles.components[component_name].elements %}
+  {% assign content_elements = site.data.experimental.contents.components[component_name].elements %}
+
+  <div wc-id="logo" class="{{ style_elements['logo'] }}">
+    <img src="{{ content_elements['logo'].src }}" alt="{{ content_elements['logo'].alt }}">
+  </div>
+  {% assign nav_loop = 'LinkList-primary,LinkList-secondary' |  split: "," %}
+  {% for nav_id in nav_loop %}
+  <nav wc-id="{{ nav_id }}" class="display_content CQ_Root {{ style_elements[nav_id] }}">
+    <ul wc-component="LinkListHorizontal" class="ul_none flex flex_row:md flex_column">
+      {% for item in content_elements['LinkList-items'] %}
+      <li wc-id="LinkList-item" class="{{ style_elements['LinkList-item'] }}">
+        {% for link in item.links %}
+        <a wc-id="LinkList-item-link" href="{{ link.href }}" class="{{ style_elements['LinkList-item-link'] }}">
+          <img src="{{ item.icon }}" alt="Icon" wc-id="LinkList-item-icon">
+          {{ link.text }}
+        </a>
+        {% endfor %}
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+  {% endfor %}
+</section>

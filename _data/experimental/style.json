@@ -1,0 +1,24 @@
+{
+    "components": {
+        "webnav": {
+            "classes": "webnav-styles",
+            "elements": {
+                "logo": "logo-style",
+                "LinkList-primary": "bg_primary flex flex_row:md flex_column",
+                "LinkList-secondary": "bg_secondary flex flex_row:md flex_column",
+                "LinkList-item": "list-item-style",
+                "LinkList-item-link": "link-style"
+            }
+        },
+        "footernav": {
+            "classes": "footernav-styles",
+            "elements": {
+                "logo": "footer-logo-style",
+                "LinkList-primary": "bg_dark flex flex_row:md flex_column",
+                "LinkList-secondary": "bg_light flex flex_row:md flex_column",
+                "LinkList-item": "footer-list-item-style",
+                "LinkList-item-link": "footer-link-style"
+            }
+        }
+    }
+}
