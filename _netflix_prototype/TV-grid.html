@@ -99,7 +99,7 @@ uri: root/security/TOS
         box-shadow: 0 var(--with-shadow-box-shadow-width) 0 color-mix( in hsl ,var(--with-shadow-box-shadow-color), white);
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: stretch;
         align-items: center;
     }
     .card:focus-within {
@@ -109,6 +109,10 @@ uri: root/security/TOS
     .card .header{
         color:var(--brand-color);
         font-size: var(--text-size-200);
+        flex: 0 0 50%;
+        display: grid;
+        align-items: center;
+        justify-items: center;
     }
     .card .section{
         --_font-size: var(--text-size-300);
