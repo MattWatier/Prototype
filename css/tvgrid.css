@@ -189,7 +189,7 @@ body {
         gap: 1rem;
         /* Left-right layout with header at 5em */
         grid-template-areas: "header section";
-        height: auto;
+        height: 100%;
         /* Allow flexible height */
     }
 
