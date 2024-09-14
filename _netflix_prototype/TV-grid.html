@@ -6,11 +6,16 @@ uri: root/security/TOS
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght@8..144,100..1000&display=swap"
     rel="stylesheet" />
 <script src="https://kit.fontawesome.com/71c9d25c4e.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="{{ 'css/tvgrid.css' | relative_url }}">
-
+<style>
+    :root {
+        --col-count: 7;
+        --row-count: 4;
+    }
+</style>
 <div class="wrapper slideshow-grid-wrapper">
 
     {% include_relative TV/tv-header.html %}
@@ -21,7 +26,7 @@ uri: root/security/TOS
                     <i class="fa-solid fa-chalkboard-user fa-fw fa-3x padding-y-3xs"></i>
                 </div>
                 <div class="section">
-                    <p class=""><b>BIM &amp; VDC</b></p>
+                    <p class="">BIM &amp; VDC</p>
                     <a href="neca_sub.php?client_portal_metadata_id=11"
                         class="expanded-click-area-after action-arrow"><i class="fa-solid fa-arrow-right"></i>
                     </a>
@@ -36,7 +41,7 @@ uri: root/security/TOS
                     <i class="fa-solid fa-cubes fa-fw fa-3x padding-y-3xs"></i>
                 </div>
                 <div class="section">
-                    <p class=""><b>Building Components</b></p>
+                    <p class="">Building Components</p>
                     <a href="neca_sub.php?client_portal_metadata_id=12"
                         class="expanded-click-area-after action-arrow"><i class="fa-solid fa-arrow-right"></i>
                     </a>
@@ -49,7 +54,7 @@ uri: root/security/TOS
                     <i class="fa-solid fa-chart-network fa-fw fa-3x padding-y-3xs"></i>
                 </div>
                 <div class="section">
-                    <p class=""><b>Distributors</b></p>
+                    <p class="">Distributors</p>
                     <a href="neca_sub.php?client_portal_metadata_id=13"
                         class="expanded-click-area-after action-arrow"><i class="fa-solid fa-arrow-right"></i>
                     </a>
@@ -63,7 +68,7 @@ uri: root/security/TOS
                     <i class="fa-solid fa-person-chalkboard fa-fw fa-3x padding-y-3xs"></i>
                 </div>
                 <div class="section">
-                    <p class=""><b>Education &amp; Advocacy</b></p>
+                    <p class="">Education &amp; Advocacy</p>
                     <a href="neca_sub.php?client_portal_metadata_id=14"
                         class="expanded-click-area-after action-arrow"><i class="fa-solid fa-arrow-right"></i>
                     </a>
@@ -77,7 +82,7 @@ uri: root/security/TOS
                     <i class="fa-solid fa-chart-mixed-up-circle-currency fa-fw fa-3x padding-y-3xs"></i>
                 </div>
                 <div class="section">
-                    <p class=""><b>ERP</b></p>
+                    <p class="">ERP</p>
                     <a href="neca_sub.php?client_portal_metadata_id=15"
                         class="expanded-click-area-after action-arrow"><i class="fa-solid fa-arrow-right"></i>
                     </a>
@@ -91,7 +96,7 @@ uri: root/security/TOS
                     <i class="fa-solid fa-screwdriver-wrench fa-fw fa-3x padding-y-3xs"></i>
                 </div>
                 <div class="section">
-                    <p class=""><b>Equipment</b></p>
+                    <p class="">Equipment</p>
                     <a href="neca_sub.php?client_portal_metadata_id=16"
                         class="expanded-click-area-after action-arrow"><i class="fa-solid fa-arrow-right"></i>
                     </a>
@@ -105,7 +110,7 @@ uri: root/security/TOS
                     <i class="fa-solid fa-nfc-trash fa-fw fa-3x padding-y-3xs"></i>
                 </div>
                 <div class="section">
-                    <p class=""><b>Facilities Management </b></p>
+                    <p class="">Facilities Management </p>
                     <a href="neca_sub.php?client_portal_metadata_id=17"
                         class="expanded-click-area-after action-arrow"><i class="fa-solid fa-arrow-right"></i>
                     </a>
@@ -119,7 +124,7 @@ uri: root/security/TOS
                     <i class="fa-solid fa-leaf fa-fw fa-3x padding-y-3xs"></i>
                 </div>
                 <div class="section">
-                    <p class=""><b>Green Energy</b></p>
+                    <p class="">Green Energy</p>
                     <a href="neca_sub.php?client_portal_metadata_id=18"
                         class="expanded-click-area-after action-arrow"><i class="fa-solid fa-arrow-right"></i>
                     </a>
@@ -133,7 +138,7 @@ uri: root/security/TOS
                     <i class="fa-solid fa-table-pivot fa-fw fa-3x padding-y-3xs"></i>
                 </div>
                 <div class="section">
-                    <p class=""><b>Inventory Management</b></p>
+                    <p class="">Inventory Management</p>
                     <a href="neca_sub.php?client_portal_metadata_id=19"
                         class="expanded-click-area-after action-arrow"><i class="fa-solid fa-arrow-right"></i>
                     </a>
@@ -147,7 +152,7 @@ uri: root/security/TOS
                     <i class="fa-solid fa-chart-scatter-3d fa-fw fa-3x padding-y-3xs"></i>
                 </div>
                 <div class="section">
-                    <p class=""><b>Layout</b></p>
+                    <p class="">Layout</p>
                     <a href="neca_sub.php?client_portal_metadata_id=20"
                         class="expanded-click-area-after action-arrow"><i class="fa-solid fa-arrow-right"></i>
                     </a>
@@ -161,7 +166,7 @@ uri: root/security/TOS
                     <i class="fa-solid fa-lightbulb-gear fa-fw fa-3x padding-y-3xs"></i>
                 </div>
                 <div class="section">
-                    <p class=""><b>Lighting</b></p>
+                    <p class="">Lighting</p>
                     <a href="neca_sub.php?client_portal_metadata_id=21"
                         class="expanded-click-area-after action-arrow"><i class="fa-solid fa-arrow-right"></i>
                     </a>
@@ -175,7 +180,7 @@ uri: root/security/TOS
                     <i class="fa-solid fa-ethernet fa-fw fa-3x padding-y-3xs"></i>
                 </div>
                 <div class="section">
-                    <p class=""><b>Low Voltage</b></p>
+                    <p class="">Low Voltage</p>
                     <a href="neca_sub.php?client_portal_metadata_id=22"
                         class="expanded-click-area-after action-arrow"><i class="fa-solid fa-arrow-right"></i>
                     </a>
@@ -190,7 +195,7 @@ uri: root/security/TOS
                 </div>
                 <div class="section">
 
-                    <p class=""><b>Payment Management</b></p>
+                    <p class="">Payment Management</p>
                     <a href="neca_sub.php?client_portal_metadata_id=23"
                         class="expanded-click-area-after action-arrow"><i class="fa-solid fa-arrow-right"></i>
                     </a>
@@ -207,7 +212,7 @@ uri: root/security/TOS
                 <div class="section">
 
 
-                    <p class=""><b>Power Utility</b></p>
+                    <p class="">Power Utility</p>
                     <a href="neca_sub.php?client_portal_metadata_id=24"
                         class="expanded-click-area-after action-arrow"><i class="fa-solid fa-arrow-right"></i>
                     </a>
@@ -221,7 +226,7 @@ uri: root/security/TOS
                     <i class="fa-solid fa-cart-shopping fa-fw fa-3x padding-y-3xs"></i>
                 </div>
                 <div class="section">
-                    <p class=""><b>Procurement</b></p>
+                    <p class="">Procurement</p>
                     <a href="neca_sub.php?client_portal_metadata_id=25"
                         class="expanded-click-area-after action-arrow"><i class="fa-solid fa-arrow-right"></i>
                     </a>
@@ -235,7 +240,7 @@ uri: root/security/TOS
                     <i class="fa-solid fa-browsers fa-fw fa-3x padding-y-3xs"></i>
                 </div>
                 <div class="section">
-                    <p class=""><b>Project Management</b></p>
+                    <p class="">Project Management</p>
                     <a href="neca_sub.php?client_portal_metadata_id=26"
                         class="expanded-click-area-after action-arrow"><i class="fa-solid fa-arrow-right"></i>
                     </a>
@@ -249,7 +254,7 @@ uri: root/security/TOS
                     <i class="fa-solid fa-shield-check fa-fw fa-3x padding-y-3xs"></i>
                 </div>
                 <div class="section">
-                    <p class=""><b>Safety</b></p>
+                    <p class="">Safety</p>
                     <a href="neca_sub.php?client_portal_metadata_id=27"
                         class="expanded-click-area-after action-arrow"><i class="fa-solid fa-arrow-right"></i>
                     </a>
@@ -263,7 +268,7 @@ uri: root/security/TOS
                     <i class="fa-solid fa-truck-pickup fa-fw fa-3x padding-y-3xs"></i>
                 </div>
                 <div class="section">
-                    <p class=""><b>Service &amp; Maintenance</b></p>
+                    <p class="">Service &amp; Maintenance</p>
                     <a href="neca_sub.php?client_portal_metadata_id=28"
                         class="expanded-click-area-after action-arrow"><i class="fa-solid fa-arrow-right"></i>
                     </a>
@@ -277,7 +282,7 @@ uri: root/security/TOS
                     <i class="fa-solid fa-weight-scale fa-fw fa-3x padding-y-3xs"></i>
                 </div>
                 <div class="section">
-                    <p class=""><b>Test &amp; Measurement</b></p>
+                    <p class="">Test &amp; Measurement</p>
                     <a href="neca_sub.php?client_portal_metadata_id=29"
                         class="expanded-click-area-after action-arrow"><i class="fa-solid fa-arrow-right"></i>
                     </a>

@@ -12,8 +12,8 @@
     --side-padding: 16px;
     --screen-width: 1920px;
     --screen-height: 1080px;
-    --text-size-80: 0.5rem;
-    --text-size-90: 0.707rem;
+    --text-size-80: 0.75rem;
+    --text-size-90: 0.9rem;
     --text-size-100: 1rem;
     --text-size-200: 1.414rem;
     --text-size-300: 1.999rem;
@@ -25,8 +25,21 @@
 
 body {
     background-color: rgb(185, 185, 185);
-    font-family: "Roboto Flex", sans-serif;
+    font-family: "Roboto Flex", system-ui;
     font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0,
+        "wdth" 60,
+        "GRAD" 0,
+        "XOPQ" 96,
+        "XTRA" 468,
+        "YOPQ" 79,
+        "YTAS" 750,
+        "YTDE" -203,
+        "YTFI" 738,
+        "YTLC" 514,
+        "YTUC" 712;
     font-weight: 300;
     font-style: normal;
     display: grid;
@@ -129,21 +142,27 @@ body {
     overflow: hidden;
     display: block;
     border-radius: 6px;
-    gap: var(--_grid-gap);
+    gap: calc(var(--_grid-gap)/2);
     outline: var(--card-border-width, 1px) solid var(--card-border-color, black);
     box-shadow: 0 var(--card-box-shadow-width) 1px var(--card-box-shadow-color);
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: 2fr 1fr;
     /* Explicit 50% height for each section */
     grid-template-areas:
         "header"
         "section";
+    place-content: center;
 }
 
 .card:has(img) {
-    grid-template-rows: 133px max-content;
+    grid-template-rows: 100px max-content;
+    align-content: stretch;
+}
+
+.card:has(img) .header {
+    align-self: start;
 }
 
 .card:focus-within {
@@ -151,7 +170,7 @@ body {
 }
 
 .card .header {
-    --_font-size: var(--text-size-300);
+    --_font-size: var(--text-size-200);
     font-size: var(--_font-size);
     grid-area: header;
     color: var(--brand-color);
@@ -167,19 +186,20 @@ body {
 }
 
 .card .header img {
-    margin: -3px -3px 0;
     width: 100%
 }
 
 .card .section {
-    --_font-size: var(--text-size-90);
+    font-family: "Roboto Flex", system-ui;
+    --_font-size: var(--text-size-80);
     font-size: var(--_font-size);
-    font-weight: 500;
+    font-weight: 300;
     grid-area: section;
     color: var(--brand-color);
     text-align: center;
     padding: 0 .5em;
     line-height: 1;
+    font-variation-settings: "wdth" 70;
 }
 
 .section p {
@@ -187,32 +207,58 @@ body {
     margin: .5em 0;
 }
 
-@container card(width > 180px) {
+@container card (width > 0) {
+    .card:has(img) {
+        grid-template-rows: 75cqw max-content;
+    }
+}
+
+@container card (width > 150px) {
+
+    .card .section {
+        --_font-size: var(--text-size-90);
+    }
+}
+
+@container card (width > 175px) {
+    .card .section {
+        --_font-size: var(--text-size-100);
+        font-variation-settings: "wdth" 90;
+    }
+}
+
+@container card (width > 200px) {
     .card {
         --_grid-gap: 32px;
     }
 
     .card .header {
-        --_font-size: var(--text-size-300);
-        padding: 1rem;
+        --_font-size: var(--text-size-200);
     }
 
     .card .section {
         --_font-size: var(--text-size-200);
-        font-weight: 700;
+        font-weight: 600;
+        font-variation-settings: "wdth" 100;
     }
 }
+
 
 @container card (width > 400px) {
     .card {
         grid-template-rows: none;
         /* Remove rows, switch to columns */
-        grid-template-columns: 122px auto;
+        grid-template-columns: 180px auto;
         gap: 1rem;
         /* Left-right layout with header at 5em */
         grid-template-areas: "header section";
-        height: 100%;
+        justify-content: start;
+        align-content: center;
         /* Allow flexible height */
+    }
+
+    .card:has(img) {
+        grid-template-rows: none;
     }
 
     .card .header {
@@ -222,12 +268,12 @@ body {
     }
 
     .card .section {
-        --_font-size: var(--text-size-200);
-        justify-content: flex-start;
-        /* Align text to the left in horizontal layout */
+        --_font-size: var(--text-size-300);
+        font-weight: 550;
         align-self: center;
+        justify-self: start;
         text-align: left;
-        padding: 10px;
+        font-variation-settings: "wdth" 110;
     }
 }
 
