@@ -122,12 +122,29 @@ body {
 }
 
 .slideshow-grid {
+    --_grid-gap: var(--grid-gap);
     grid-area: 2 / 1 / 3 / 2;
     display: grid;
     grid-template-columns: repeat(var(--col-count), 1fr);
     grid-template-rows: repeat(var(--row-count), 1fr);
-    gap: var(--_grid-gap, 16px);
+    gap: var(--_grid-gap);
 }
+
+/* For 30 children */
+.slideshow-grid:nth-child(30) {
+    --_grid-gap: var(--grid-gap);
+}
+
+/* For 20 children */
+.slideshow-grid:nth-child(21) {
+    --_grid-gap: calc(var(--grid-gap)* 1.5);
+}
+
+/* For 10 children */
+.slideshow-grid:nth-child(16) {
+    --_grid-gap: calc(var(--grid-gap)* 2);
+}
+
 
 .grid-item {
     container-type: inline-size;
@@ -216,18 +233,22 @@ body {
 @container card (width > 150px) {
 
     .card .section {
-        --_font-size: var(--text-size-90);
+        --_font-size: var(--text-size-80);
     }
 }
 
 @container card (width > 175px) {
     .card .section {
-        --_font-size: var(--text-size-100);
-        font-variation-settings: "wdth" 90;
+        --_font-size: var(--text-size-90);
+        font-variation-settings: "wdth" 80;
     }
 }
 
 @container card (width > 200px) {
+    .slideshow-grid {
+        --_grid-gap: 32px;
+    }
+
     .card {
         --_grid-gap: 32px;
     }
@@ -237,15 +258,29 @@ body {
     }
 
     .card .section {
-        --_font-size: var(--text-size-200);
+        --_font-size: var(--text-size-100);
         font-weight: 600;
         font-variation-settings: "wdth" 100;
     }
 }
 
+@container card (width > 275px) {
+    .card .section {
+        --_font-size: var(--text-size-200);
+    }
+}
+
+@container card (width > 350px) {
+    .card .section {
+        --_font-size: var(--text-size-300);
+    }
+}
 
 @container card (width > 400px) {
+
+
     .card {
+
         grid-template-rows: none;
         /* Remove rows, switch to columns */
         grid-template-columns: 180px auto;
