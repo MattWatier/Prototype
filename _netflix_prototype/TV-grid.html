@@ -12,17 +12,8 @@ uri: root/security/TOS
 <link rel="stylesheet" href="{{ 'css/tvgrid.css' | relative_url }}">
 
 <div class="wrapper slideshow-grid-wrapper">
-    <div class="header">
-        <a href="neca.php">
-            <img src="https://boilerplate.virtualplatform.live/signage/neca/uploads/logo.png" />
-        </a>
-        <ul class="breadcrumb">
-            <li><a href="#"><i class="fa-solid fa-home"></i><span class="label">home</span></a></li>
-            <li><a href="#"><i class="fa-solid fa-home"></i><span class="label">category</span></a></li>
-            <li><a href="#"><i class="fa-solid fa-home"></i><span class="label">page</span></a></li>
-        </ul>
-    </div>
 
+    {% include_relative TV/tv-header.html %}
     <div class="slideshow-grid">
         <div class="grid-item">
             <div class="icon card dark relative">
@@ -294,3 +285,4 @@ uri: root/security/TOS
             </div>
         </div>
     </div>
+</div>
