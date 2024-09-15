@@ -454,3 +454,13 @@ a.expanded-click-area-after:after {
     place-items: center;
     display: grid;
 }
+
+.specialVendor {
+    padding: .25em;
+    font-size: var(--text-size-200);
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    mix-blend-mode: difference;
+}

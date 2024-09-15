@@ -431,3 +431,13 @@ a.expanded-click-area-after:after {
     width: 100%;
     aspect-ratio: 1/1;
 }
+
+.specialVendor {
+    padding: .25em;
+    font-size: var(--text-size-200);
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    mix-blend-mode: difference;
+}
