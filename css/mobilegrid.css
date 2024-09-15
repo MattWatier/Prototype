@@ -359,7 +359,7 @@ a.expanded-click-area-after:after {
 .modal-grid {
     display: grid;
     grid-template-columns: 80px 80px 1fr 80px;
-    grid-template-rows: 80px 1fr 80px;
+    grid-template-rows: 120px 1fr 80px;
 
     grid-template-areas:
         "company-logo company-logo blank optional-logo"
@@ -384,8 +384,8 @@ a.expanded-click-area-after:after {
 .content-area {
     grid-area: content-area;
     font-size: var(--text-size-200);
-    padding-block-start: 32px;
-    margin-block-start: 32px;
+    padding-block-start: 24px;
+    margin-block-start: 0px;
     border-block-start: 1px solid var(--brand-color);
 }
 
