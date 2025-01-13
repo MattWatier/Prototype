@@ -1,0 +1,3 @@
+window.quickFetch.afterAuth(t=>{var e;if(((null==t||null===(e=t.user)||void 0===e?void 0:e.scopes)||[]).includes("chatspot-access")){window.quickFetch.makeEarlyRequest("chatspotAuth",{url:window.quickFetch.getApiUrl("/chatspot-high-volume/v1/user/info"),dataType:"json",contentType:"application/json",type:"GET"});window.quickFetch.makeEarlyRequest("chatspotPortalSetting",{url:window.quickFetch.getApiUrl("/chatspot-high-volume/v1/settings/portal"),dataType:"json",contentType:"application/json",type:"GET"})}});
+
+//# sourceMappingURL=earlyRequester.js.map
