@@ -77,6 +77,11 @@ body [screen-scroll=false] {
   padding: calc(var(--side-padding) * 2);
   width: var(--slideshow-grid-wrapper-width);
 }
+@media (width > 48rem) {
+  .slideshow-grid-wrapper {
+    grid-template-rows: 150px 1fr;
+  }
+}
 [screen-scroll=false] .slideshow-grid-wrapper {
   height: var(--slideshow-grid-wrapper-height);
 }
@@ -92,6 +97,8 @@ body [screen-scroll=false] {
 }
 @media (width > 90rem) {
   .header-grid {
+    grid-template-rows: 100px 36px;
+    grid-template-columns: 190px 1fr 1fr 150px;
     grid-template-areas: "header-logo header-text header-text header-qrcode" "breadcrumb breadcrumb breadcrumb breadcrumb";
   }
 }

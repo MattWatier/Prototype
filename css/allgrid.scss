@@ -111,6 +111,9 @@ body {
     gap: calc(var(--side-padding) * 2);
     padding: calc(var(--side-padding) * 2);
     width: var(--slideshow-grid-wrapper-width);
+    @include mediaQuery(tablet){
+        grid-template-rows: 150px 1fr;
+    }
     [screen-scroll="false"] &{
         height: var(--slideshow-grid-wrapper-height);
     }
@@ -128,6 +131,8 @@ body {
         "header-logo header-text header-qrcode"
         "breadcrumb breadcrumb breadcrumb";
     @include mediaQuery(desktop){
+        grid-template-rows: 100px 36px;
+        grid-template-columns: 190px 1fr 1fr 150px;
         grid-template-areas:
         "header-logo header-text header-text header-qrcode"
         "breadcrumb breadcrumb breadcrumb breadcrumb";
