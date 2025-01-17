@@ -96,7 +96,7 @@ body[screen-scroll=false] {
 .header-grid {
   display: grid;
   grid-template-rows: 80px 26px;
-  grid-template-columns: 80px 1fr 80px;
+  grid-template-columns: auto 1fr 80px;
   column-gap: calc(3 * var(--side-padding));
   row-gap: 8px;
   height: 100%;
@@ -105,7 +105,7 @@ body[screen-scroll=false] {
 @media (width > 90rem) {
   .header-grid {
     grid-template-rows: 100px 36px;
-    grid-template-columns: 190px 1fr 1fr 150px;
+    grid-template-columns: auto 1fr 1fr 150px;
     grid-template-areas: "header-logo header-text header-text header-qrcode" "breadcrumb breadcrumb breadcrumb breadcrumb";
   }
 }
