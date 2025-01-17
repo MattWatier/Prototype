@@ -199,6 +199,14 @@ body[screen-scroll=false] {
   padding: 0;
   color: inherit;
 }
+.breadcrumb li a .text {
+  display: none;
+}
+@media (width > 48rem) {
+  .breadcrumb li a .text {
+    display: inline;
+  }
+}
 
 .slideshow-grid {
   --_grid-gap: clamp(16px, 20px + 1vw, 48px);
