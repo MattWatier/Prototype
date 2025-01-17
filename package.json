@@ -8,7 +8,9 @@
   },
   "scripts": {
     "serve": "bundle exec jekyll serve",
+    "styles":"sass --watch ./css/allgrid.scss:./css/allgrid.css",
     "serve-verbose": "bundle exec jekyll serve --verbose"
+    
   },
   "repository": {
     "type": "git",
