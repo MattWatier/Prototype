@@ -2,7 +2,7 @@ $breakpoint-mobile: 25rem;      // 400px
 $breakpoint-mobilemax: 35rem;    // 560px - Small screens, mobile phones
 $breakpoint-tablet: 48rem;    // 768px - Tablets and small laptops
 $breakpoint-desktop: 90rem;   // 1440px - Desktop screens, below wide displays
-$breakpoint-tv: 1920px;
+$breakpoint-tv: 110rem;
 // Media queries
 @mixin mediaQuery($breakpoint) {
     @if $breakpoint == phone {
@@ -70,6 +70,9 @@ $breakpoint-tv: 1920px;
     @include mediaQuery(desktop){
         --col-count: 5;
     }
+    @include mediaQuery(tv){
+        --col-count: 6;
+    }
 }
 
 body {
@@ -95,9 +98,11 @@ body {
     justify-items: center;
     align-items: center;
     padding: calc(var(--side-padding) * .5);
-    [screen-scroll="false"]{
+    &[screen-scroll="false"]{
         --screen-width: 100dvw;
         --screen-height: 100dvh;
+        --col-count: var(--col-count-override);
+        --row-count: var(--row-count-override);
     }
 }
 
@@ -123,9 +128,9 @@ body {
 .header-grid {
     display: grid;
     grid-template-rows: 80px 26px;
-    grid-template-columns: 80px 1fr 80px;
+    grid-template-columns: 80px 1fr 80px; 
     column-gap: calc(3 * var(--side-padding));
-    row-gap: 8px;
+    row-gap: 8px;  
     height: 100%;
     grid-template-areas:
         "header-logo header-text header-qrcode"
@@ -472,6 +477,10 @@ a.expanded-click-area-after:after {
     @include mediaQuery(tablet){
         grid-template-columns: 180px 1fr 180px;
         grid-template-rows: 135px 1fr 180px;
+        grid-template-areas:
+        "company-logo company-logo  optional-logo"
+        "content-area content-area content-area"
+        "empty empty  modal-qr-code";
     }
 }
 
@@ -480,11 +489,19 @@ a.expanded-click-area-after:after {
     display: grid;
     justify-items: start;
     align-items: start;
+    outline: red 1px solid;
+    overflow: clip;
+    position: relative;
 
 }
 
 .company-logo img {
-    width: 100%;
+    width: inherit;
+    height: inherit;
+    outline: green 1px solid;
+    object-fit: contain;
+    object-position: left top;
+    position: absolute;
 }
 
 .content-area {
