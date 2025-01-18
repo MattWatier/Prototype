@@ -197,11 +197,11 @@ body[screen-scroll=false] {
   padding: 0;
   color: inherit;
 }
-.breadcrumb li a .text {
+.breadcrumb li a .label {
   display: none;
 }
 @media (width > 48rem) {
-  .breadcrumb li a .text {
+  .breadcrumb li a .label {
     display: inline;
   }
 }
@@ -420,7 +420,7 @@ a.expanded-click-area-after:after {
   .modal-grid {
     grid-template-columns: 180px 1fr 180px;
     grid-template-rows: 135px 1fr auto;
-    grid-template-areas: "company-logo content-area  optional-logo" "company-logo  content-area . " "company-logo  .  modal-qr-code";
+    grid-template-areas: "company-logo content-area content-area " "company-logo  content-area content-area " "optional-logo .  modal-qr-code";
   }
 }
 

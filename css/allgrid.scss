@@ -233,9 +233,9 @@ body {
     margin: 0;
     padding: 0;
     color: inherit;
-    .text{display:none;}
+    .label{display:none;}
     @include mediaQuery(tablet){
-        .text{display: inline;}
+        .label{display: inline;}
     }
 
 }
@@ -483,9 +483,9 @@ a.expanded-click-area-after:after {
         grid-template-columns: 180px 1fr 180px;
         grid-template-rows: 135px 1fr auto;
         grid-template-areas:
-        "company-logo content-area  optional-logo"
-        "company-logo  content-area . "
-        "company-logo  .  modal-qr-code";
+        "company-logo content-area content-area "
+        "company-logo  content-area content-area "
+        "optional-logo .  modal-qr-code";
     }
 }
 
