@@ -78,7 +78,7 @@ body[screen-scroll=false] {
   background-color: white;
   margin: auto;
   display: grid;
-  grid-template-rows: 114px 1fr;
+  grid-template-rows: 135px 1fr;
   grid-template-columns: 1fr;
   gap: calc(var(--side-padding) * 2);
   padding: calc(var(--side-padding) * 2);
@@ -96,12 +96,12 @@ body[screen-scroll=false] {
 
 .header-grid {
   display: grid;
-  grid-template-rows: 80px auto;
+  grid-template-rows: 80px 30px min-content;
   grid-template-columns: auto 1fr 80px;
   column-gap: calc(3 * var(--side-padding));
   row-gap: 8px;
   height: 100%;
-  grid-template-areas: "header-logo header-text header-qrcode" "breadcrumb breadcrumb breadcrumb";
+  grid-template-areas: "header-logo header-text header-text" "header-qrcode header-text header-text" "header-qrcode breadcrumb breadcrumb";
 }
 @media (width > 90rem) {
   .header-grid {
@@ -144,7 +144,7 @@ body[screen-scroll=false] {
   align-items: center;
   font-weight: 400;
   font-variation-settings: "wdth" 80;
-  font-size: var(--text-size-90);
+  font-size: var(--text-size-200);
 }
 @media (width > 48rem) {
   .header-text {
