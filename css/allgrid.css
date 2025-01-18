@@ -126,8 +126,11 @@ body[screen-scroll=false] {
 
 .header-qrcode {
   grid-area: header-qrcode;
-  align-items: end;
+  align-items: start;
   display: grid;
+  justify-items: end;
+  justify-content: end;
+  align-content: space-between;
 }
 
 .header-qrcode img {

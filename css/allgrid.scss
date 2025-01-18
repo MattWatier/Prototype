@@ -160,8 +160,11 @@ body {
 
 .header-qrcode {
     grid-area: header-qrcode;
-    align-items: end;
-    display: grid
+    align-items: start;
+    display: grid;
+    justify-items: end;
+    justify-content: end;
+    align-content: space-between;
 ;
 }
 
