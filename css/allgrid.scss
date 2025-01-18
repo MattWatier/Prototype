@@ -116,6 +116,7 @@ body {
     gap: calc(var(--side-padding) * 2);
     padding: calc(var(--side-padding) * 2);
     width: var(--slideshow-grid-wrapper-width);
+    min-height: calc(100dvh - (var(--side-padding) * 8));
     @include mediaQuery(tablet){
         grid-template-rows: 150px 1fr;
     }
@@ -127,7 +128,7 @@ body {
 
 .header-grid {
     display: grid;
-    grid-template-rows: 80px 26px;
+    grid-template-rows: 80px auto;
     grid-template-columns: auto 1fr 80px; 
     column-gap: calc(3 * var(--side-padding));
     row-gap: 8px;  
@@ -136,7 +137,7 @@ body {
         "header-logo header-text header-qrcode"
         "breadcrumb breadcrumb breadcrumb";
     @include mediaQuery(desktop){
-        grid-template-rows: 100px 36px;
+        grid-template-rows: 100px auto;
         grid-template-columns: auto 1fr 1fr 150px;
         grid-template-areas:
         "header-logo header-text header-text header-qrcode"
@@ -148,8 +149,12 @@ body {
     grid-area: header-logo;
 }
 
-.header-logo img {
-    width: 100%;
+.header-logo img, .header-qrcode img {
+    height: 80px;
+    @include mediaQuery(desktop){
+        height:100px
+    }
+    
 }
 
 .header-qrcode {
@@ -192,12 +197,7 @@ body {
     color: var(--brand-color);
 }
 
-.header a img {
-    width: 100%;
-    @include mediaQuery(tablet){
-        height: calc(150px - (var(--text-size-200) + 1rem));
-    }
-}
+
 
 .breadcrumb {
     display: flex;
@@ -208,6 +208,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1;
+    align-self: start;
 
 }
 
@@ -468,7 +469,7 @@ a.expanded-click-area-after:after {
 .modal-grid {
     display: grid;
     grid-template-columns: 80px 80px 1fr 80px;
-    grid-template-rows: 120px 1fr 80px;
+    grid-template-rows: 120px 1fr;
     grid-template-areas:
         "company-logo company-logo blank optional-logo"
         "content-area content-area content-area content-area"
@@ -490,22 +491,11 @@ a.expanded-click-area-after:after {
 
 .company-logo {
     grid-area: company-logo;
-    display: grid;
-    justify-items: start;
-    align-items: start;
-    outline: red 1px solid;
-    overflow: clip;
-    position: relative;
 
 }
 
 .company-logo img {
-    width: inherit;
-    height: inherit;
-    outline: green 1px solid;
-    object-fit: contain;
-    object-position: left top;
-    position: absolute;
+    height: 100%;
 }
 
 .content-area {
