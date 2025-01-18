@@ -419,8 +419,8 @@ a.expanded-click-area-after:after {
 @media (width > 48rem) {
   .modal-grid {
     grid-template-columns: 180px 1fr 180px;
-    grid-template-rows: 135px 1fr 180px;
-    grid-template-areas: "company-logo company-logo  optional-logo" "content-area content-area content-area" "empty empty  modal-qr-code";
+    grid-template-rows: 135px 1fr auto;
+    grid-template-areas: "company-logo content-area  optional-logo" "company-logo  content-area . " "company-logo  .  modal-qr-code";
   }
 }
 
@@ -429,7 +429,8 @@ a.expanded-click-area-after:after {
 }
 
 .company-logo img {
-  height: 100%;
+  height: auto;
+  max-width: 100%;
 }
 
 .content-area {
