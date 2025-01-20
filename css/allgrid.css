@@ -84,6 +84,7 @@ body[screen-scroll=false] {
   padding: calc(var(--side-padding) * 2);
   width: var(--slideshow-grid-wrapper-width);
   min-height: calc(100dvh - var(--side-padding) * 8);
+  align-items: start;
 }
 @media (width > 48rem) {
   .slideshow-grid-wrapper {
