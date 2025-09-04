@@ -1,15 +1,18 @@
 :root {
+  --base-unit: 16px;
   --grid-gap: 16px;
   --background-color: white;
   --brand-color: #1F7995;
   --card-border-color: #1F7995;
   --card-border-width: 3px;
   --arrow-opacity: 0;
-  --card-box-shadow-color: var(--card-border-color);
+  --breadcrumb-gap: 4px;
+  --card-box-shadow-color: color-mix( in srgb, var(--brand-color) 70%, black 30%);
   --card-box-shadow-width: 0.4em;
   --border-radius-app:clamp( 6px, 4px + 2vw, 32px);
   --side-padding: clamp(8px, 6px + .5vw, 16px);
   --border-radius:clamp( 4px, 2px + .5vw, 16px);
+  --border-radius-1:clamp( 8px, 4px + .75vw, 24px);
   --grid-gap: clamp(8px, 6px + 1vw, 16px);
   --screen-width: 100dvw;
   --screen-height: unset;
@@ -17,6 +20,13 @@
   --slideshow-grid-wrapper-height:calc(var(--screen-height) - (var(--side-padding) * 8));
   --col-count: 1;
   --row-count: 1;
+  --z-top:300;
+  --z-mid:100;
+  --z-low:50;
+  --z-back:-1;
+  --text-dark: color-mix( in srgb, var(--brand-color) 30%, black 70%);
+  --text-color: color-mix( in srgb, var(--brand-color) 50%, black 50%);
+  --text-color-reverse: color-mix(in srgb, var(--brand-color) 15%, white 85%);
   --text-size-80: clamp(0.75rem, 0.7rem + 0.3vw, 0.79rem);
   --text-size-90: clamp(0.9rem, 0.85rem + 0.4vw, 0.889rem);
   --text-size-100: clamp(1rem, 0.95rem + 0.5vw, 1rem);
@@ -75,7 +85,8 @@ body[screen-scroll=false] {
 
 .slideshow-grid-wrapper {
   border-radius: var(--border-radius-app);
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.77);
+  box-shadow: inset 2px 2px 2px 1px rgba(255, 255, 255, 0.1), inset -2px -3px 1px 1px rgba(0, 0, 0, 0.07);
   margin: auto;
   display: grid;
   grid-template-rows: max-content 1fr;
@@ -84,7 +95,7 @@ body[screen-scroll=false] {
   padding: calc(var(--side-padding) * 2);
   width: var(--slideshow-grid-wrapper-width);
   min-height: calc(100dvh - var(--side-padding) * 8);
-  align-items: start;
+  align-items: startf;
 }
 @media (width > 48rem) {
   .slideshow-grid-wrapper {
@@ -97,55 +108,53 @@ body[screen-scroll=false] {
 
 .header-grid {
   display: grid;
-  grid-template-rows: 80px 30px min-content;
-  grid-template-columns: auto 1fr 80px;
+  grid-template-rows: [logo-start qrcode-start] 80px [logo-end qrcode-end text-start] min-content [text-end breadcrumb-start] auto [breadcrumb-end];
+  grid-template-columns: [logo-start text-start breadcrumb-start] 80px [logo-end] 1fr [qrcode-start] 80px [qrcode-end breadcrumb-end text-end];
   column-gap: calc(3 * var(--side-padding));
   row-gap: 8px;
   height: 100%;
-  grid-template-areas: "header-logo header-logo header-qrcode" "header-text header-text header-text" "breadcrumb breadcrumb breadcrumb";
+  /* Shorthand: each child can now use grid-area */
+}
+.header-grid .header-logo {
+  grid-area: logo;
+}
+.header-grid .header-text {
+  grid-area: text;
+}
+.header-grid .header-qrcode {
+  grid-area: qrcode;
+}
+.header-grid .breadcrumb {
+  grid-area: breadcrumb;
 }
 @media (width > 48rem) {
   .header-grid {
-    grid-template-rows: auto min-content;
-    grid-template-columns: auto 1fr 1fr 150px;
-    grid-template-areas: "header-logo header-text header-text header-qrcode" "header-logo breadcrumb breadcrumb breadcrumb";
+    grid-template-rows: [logo-start text-start qrcode-start] 100px [logo-end qrcode-end] min-content [text-end breadcrumb-start] min-content [breadcrumb-end];
+    grid-template-columns: [logo-start breadcrumb-start] 100px [logo-end text-start] 1fr [qrcode-start text-end] 100px [qrcode-end breadcrumb-end];
+    /* grid-area continues to work with the same names */
   }
-}
-
-.header-logo {
-  grid-area: header-logo;
-}
-
-.header-logo img, .header-qrcode img {
-  height: 80px;
 }
 @media (width > 90rem) {
-  .header-logo img, .header-qrcode img {
-    height: 100px;
+  .header-grid {
+    grid-template-rows: [logo-start qrcode-start text-start] auto [logo-end breadcrumb-start text-end qrcode-end] min-content [breadcrumb-end];
+    grid-template-columns: [logo-start breadcrumb-start] 120px [logo-end text-start] 1fr [text-end qrcode-start] 120px [qrcode-end breadcrumb-end];
+    /* grid-area continues to work with the same names */
   }
+}
+
+.header-logo, .header-qrcode {
+  display: grid;
+  place-items: center;
+}
+.header-logo *, .header-qrcode * {
+  width: 100%;
 }
 
 .header-qrcode {
-  grid-area: header-qrcode;
-  align-items: start;
-  display: grid;
-  justify-items: end;
-  justify-content: end;
-  align-content: space-between;
-}
-
-.header-qrcode img {
-  aspect-ratio: 1;
-  width: auto;
-  place-self: end;
-}
-
-.breadcrumb {
-  grid-area: breadcrumb;
+  padding: 10px;
 }
 
 .header-text {
-  grid-area: header-text;
   color: var(--brand-color);
   display: grid;
   align-items: center;
@@ -160,19 +169,9 @@ body[screen-scroll=false] {
   }
 }
 
-.header a {
-  justify-content: center;
-  justify-self: start;
-  align-self: center;
-  display: block;
-  padding-bottom: 0.5rem;
-  margin-top: -0.5rem;
-  color: var(--brand-color);
-}
-
 .breadcrumb {
   display: flex;
-  gap: 0.35em;
+  gap: var(--breadcrumb-gap);
   flex-direction: row;
   list-style: none;
   font-size: var(--text-size-200);
@@ -186,13 +185,13 @@ body[screen-scroll=false] {
   background-color: color-mix(in srgb, var(--brand-color, black) 20%, white 80%);
   padding: 0.25em 0.5em;
   border-radius: 0.25em;
-  color: var(--brand-color);
+  color: var(--text-color);
   position: relative;
 }
 
-.breadcrumb li:focus-within {
+.breadcrumb li:focus-within, .breadcrumb li:hover {
   background-color: color-mix(in srgb, var(--brand-color, black) 60%, white 40%);
-  color: white;
+  color: var(--text-color-reverse);
 }
 
 .breadcrumb li a {
@@ -213,6 +212,10 @@ body[screen-scroll=false] {
   }
 }
 
+.breadcrumb li:last-child a .label {
+  display: inline;
+}
+
 .slideshow-grid {
   --_grid-gap: clamp(16px, 20px + 1vw, 48px);
   grid-area: 2/1/3/2;
@@ -220,6 +223,31 @@ body[screen-scroll=false] {
   grid-template-columns: repeat(var(--col-count), 1fr);
   grid-template-rows: repeat(var(--row-count), 1fr);
   gap: var(--_grid-gap);
+  position: relative;
+}
+
+.alpha-section {
+  display: grid;
+  grid-template-columns: [sectionLabel-start] 5rem [sectionLabel-end sectionList-start] 1fr [sectionlist-end];
+  grid-template-rows: [sectionLabel-start sectionList-start] min-content [sectionLabel-end sectionList-end];
+}
+.alpha-section .section-label {
+  grid-area: sectionLabel;
+  color: var(--text-color);
+  position: relative;
+}
+.alpha-section .section-label h2 {
+  position: sticky;
+  inset: 0 0 auto;
+  color: inherit;
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 0;
+}
+.alpha-section .section-list {
+  grid-area: sectionList;
+  display: grid;
+  gap: calc(var(--_grid-gap) / 2);
 }
 
 /* For 10 children */
@@ -237,10 +265,15 @@ body[screen-scroll=false] {
   --_grid-gap: 16px;
 }
 
+.grid-item-fullwidth {
+  grid-column: 1/-1;
+}
+
 .grid-item {
   container-type: inline-size;
   /* Defines the .card-container as a container for container queries */
   container-name: card;
+  z-index: var(--z-low);
 }
 
 .card {
@@ -293,6 +326,7 @@ body[screen-scroll=false] {
 
 .card .header img {
   width: 100%;
+  aspect-ratio: 4/3;
 }
 
 .card .section {
@@ -513,6 +547,88 @@ a.expanded-click-area-after:after {
   top: 0;
   right: 0;
   mix-blend-mode: difference;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .alphabet-list a {
+    transition: none;
+  }
+}
+/* container for inline-size queries */
+.alphabet-nav {
+  isolation: isolate;
+  container-type: inline-size;
+  container-name: alpha;
+  display: block;
+  background: var(--brand-color);
+  border-radius: var(--border-radius-1);
+  padding: calc(var(--base-unit) / 2);
+  z-index: var(--z-top);
+}
+
+.back-to-top {
+  border-top: solid 3px var(--brand-color);
+  position: sticky;
+  inset: 0;
+  bottom: auto;
+  z-index: var(--z-mid);
+  margin-top: -3.5rem;
+}
+.back-to-top span {
+  display: block;
+  float: right;
+  padding: calc(var(--base-unit) / 4);
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  margin-right: var(--side-padding);
+  background: var(--brand-color);
+  color: var(--text-color-reverse);
+  font-size: small;
+  box-shadow: 0px 2px 0 2px rgba(255, 255, 255, 0.44);
+}
+
+.alphabet-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* centers the last row */
+  gap: var(--breadcrumb-gap);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  /* default: 5 rows (= fifths) -> 6 columns */
+}
+
+/* Each cell gets an equal slice of the row based on --cols */
+.alphabet-list li {
+  flex: 0 0 calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols));
+}
+
+.alphabet-list li a {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+
+.alphabet-list {
+  --cols: 7;
+}
+
+/* ~thirds (=9 cols) */
+@container alpha (width > 262px) {
+  .alphabet-list {
+    --cols: 9;
+  }
+}
+/* two rows: 14 / 13 */
+@container alpha (width > 510px) {
+  .alphabet-list {
+    --cols: 14;
+  }
+}
+/* single line: 27 columns (# + A-Z) */
+@container alpha (width > 970px) {
+  .alphabet-list {
+    --cols: 27;
+  }
 }
 
 /*# sourceMappingURL=allgrid.css.map */
