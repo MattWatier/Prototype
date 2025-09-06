@@ -264,7 +264,7 @@ body[screen-scroll=false] {
 .alpha-section .section-list {
   grid-area: sectionList;
   display: grid;
-  gap: calc(var(--_grid-gap) / 2);
+  gap: var(--_slideshow-gap);
 }
 
 .grid-item-fullwidth {
@@ -313,7 +313,6 @@ body[screen-scroll=false] {
   align-self: center;
   justify-items: center;
   overflow: hidden;
-  border-radius: 6px 6px 0px 0px;
 }
 
 .card .header i {
@@ -343,11 +342,11 @@ body[screen-scroll=false] {
   margin: 0.5em 0;
 }
 
-.company.card {
+.card.company {
   grid-template-columns: [card-start art-start content-start flag-start] 1fr [favorite-start] calc(var(--base-unit) * 1.5) [favorite-end art-end conntent-end card-end flag-end];
-  grid-template-rows: [card-start favorite-start art-start] calc(var(--base-unit) * 1.5) [favorite-end] min-content [art-end content-start] 1fr [flags-start] calc(var(--base-unit) * 1.5) [flag-end content-end card-end];
+  grid-template-rows: [card-start favorite-start art-start] calc(var(--base-unit) * 1.5) [favorite-end] min-content [art-end content-start] 1fr [flag-start] calc(var(--base-unit) * 1.5) [flag-end content-end card-end];
 }
-.company.card .favorite {
+.card.company .favorite {
   grid-area: favorite;
   background-color: var(--brand-color);
   color: var(--text-color-reverse);
@@ -358,32 +357,32 @@ body[screen-scroll=false] {
   margin-right: -2px;
   z-index: var(--z-top);
 }
-.company.card .favorite button {
+.card.company .favorite button {
   color: inherit;
   outline: none;
   border: none;
   background-color: transparent;
 }
-.company.card .favorite button[value=add_favorite] {
+.card.company .favorite button[value=add_favorite] {
   color: white;
 }
-.company.card .favorite button[value=remove_favorite] {
+.card.company .favorite button[value=remove_favorite] {
   color: var(--brand-color);
   display: none;
 }
-.company.card .favorite.active {
+.card.company .favorite.active {
   background-color: white;
 }
-.company.card .favorite.active button[value=add_favorite] {
+.card.company .favorite.active button[value=add_favorite] {
   display: none;
 }
-.company.card .favorite.active button[value=remove_favorite] {
+.card.company .favorite.active button[value=remove_favorite] {
   display: block;
 }
-.company.card .favorite:hover {
+.card.company .favorite:hover {
   background-color: color-mix(in srgb, var(--card-border-color, var(--brand-color)) 50%, white 50%);
 }
-.company.card .flags {
+.card.company .flags {
   grid-area: flag;
   display: flex;
   flex-direction: row-reverse;
@@ -395,7 +394,7 @@ body[screen-scroll=false] {
   margin-right: 8px;
   z-index: var(--z-mid);
 }
-.company.card .flags .flag {
+.card.company .flags .flag {
   display: grid;
   place-items: center;
   background-color: var(--text-color-reverse);
@@ -404,12 +403,12 @@ body[screen-scroll=false] {
   padding: calc(var(--base-unit) / 4);
   box-shadow: 0 3px 3px var(--card-box-shadow-color);
 }
-.company.card .header {
+.card.company .header {
   background-color: var(--_art-background-color);
   grid-area: art;
   padding: calc(var(--base-unit) / 2);
 }
-.company.card .section {
+.card.company .section {
   grid-area: content;
 }
 
@@ -443,6 +442,19 @@ body[screen-scroll=false] {
   }
 }
 @container card (width > 350px) {
+  .card.company {
+    grid-template-columns: [card-start art-start flag-start] 33cqw [art-end content-start] 1fr [favorite-start] calc(var(--base-unit) * 1.5) [favorite-end content-end flag-end card-end];
+    grid-template-rows: [card-start favorite-start art-start content-start] calc(var(--base-unit) * 1.5) [favorite-end] auto [flag-start] calc(var(--base-unit) * 1.5) [flag-end art-end content-end card-end];
+  }
+  .card.company .header img {
+    max-height: 125px;
+  }
+  .card.company .section {
+    align-self: center;
+  }
+  .card.company .section p {
+    text-align: left;
+  }
   .card .section {
     --_font-size: var(--text-size-300);
   }
@@ -461,9 +473,6 @@ body[screen-scroll=false] {
     justify-content: start;
     align-content: center;
     /* Allow flexible height */
-  }
-  .card.company {
-    grid-template-rows: [card-start favorite-start art-start] calc(var(--base-unit) * 1.5) [favorite-end] auto [art-end content-start] 1fr [flags-start] calc(var(--base-unit) * 1.5) [flag-end content-end card-end];
   }
   .card .header {
     --_font-size: var(--text-size-200);
@@ -551,17 +560,20 @@ a.expanded-click-area-after:after {
     margin-inline-start: 32px;
   }
 }
-
 .content-area b {
   color: var(--brand-color);
+  display: block;
+  font-weight: 600;
+  margin-top: 0.5em;
 }
-
 .content-area ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-
+.content-area a {
+  word-break: break-all;
+}
 .content-area .CompanyName {
   font-size: var(--text-size-400);
   font-weight: 700;

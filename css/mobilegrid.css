@@ -387,23 +387,28 @@ a.expanded-click-area-after:after {
     padding-block-start: 24px;
     margin-block-start: 0px;
     border-block-start: 1px solid var(--brand-color);
-}
-
-.content-area b {
+    b {
     color: var(--brand-color);
+    display: block;
+    font-weight: 600;
+    margin-top: .5em;
 }
 
-.content-area ul {
+ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
-
-.content-area .CompanyName {
+a{word-break: ;}
+.CompanyName {
     font-size: var(--text-size-400);
     font-weight: 700;
     color: color-mix(in hsl shorter hue, var(--brand-color), black)
 }
+}
+
+
 
 .logo {
     grid-area: logo;

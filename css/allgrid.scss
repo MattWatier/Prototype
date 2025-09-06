@@ -96,9 +96,6 @@ $breakpoint-tv: 110rem;
   }
 }
 
-
-
-
 body {
   background-color: rgb(185, 185, 185);
   font-family: "Roboto Flex", system-ui;
@@ -335,7 +332,7 @@ body {
   & .section-list {
     grid-area: sectionList;
     display: grid;
-    gap: calc(var(--_grid-gap) / 2);
+    gap: var(--_slideshow-gap);
   }
 }
 
@@ -370,10 +367,9 @@ body {
   place-content: center;
 }
 
-.card.header{
-    background-color: var(--_art-background-color);
+.card.header {
+  background-color: var(--_art-background-color);
 }
-
 
 .card:focus-within {
   background-color: color-mix(
@@ -392,7 +388,6 @@ body {
   align-self: center;
   justify-items: center;
   overflow: hidden;
-  border-radius: 6px 6px 0px 0px;
 }
 
 .card .header i {
@@ -422,7 +417,7 @@ body {
   margin: 0.5em 0;
 }
 
-.company.card {
+.card.company {
   grid-template-columns:
     [card-start art-start content-start flag-start] 1fr [favorite-start] calc(
       var(--base-unit) * 1.5
@@ -430,7 +425,7 @@ body {
     [favorite-end art-end conntent-end card-end flag-end];
   grid-template-rows:
     [card-start favorite-start art-start] calc(var(--base-unit) * 1.5)
-    [favorite-end] min-content [art-end content-start] 1fr [flags-start] calc(
+    [favorite-end] min-content [art-end content-start] 1fr [flag-start] calc(
       var(--base-unit) * 1.5
     )
     [ flag-end content-end card-end];
@@ -444,30 +439,36 @@ body {
     margin-top: -2px;
     margin-right: -2px;
     z-index: var(--z-top);
-    
+
     button {
       color: inherit;
       outline: none;
-      border:none;
+      border: none;
       background-color: transparent;
-      &[value="add_favorite"]{
-        color:white;
+      &[value="add_favorite"] {
+        color: white;
       }
-      &[value="remove_favorite"]{
+      &[value="remove_favorite"] {
         color: var(--brand-color);
         display: none;
       }
     }
-    &.active{
-        background-color: white;
-        button[value="add_favorite"]{display: none;}
-        button[value="remove_favorite"]{display: block;}
+    &.active {
+      background-color: white;
+      button[value="add_favorite"] {
+        display: none;
+      }
+      button[value="remove_favorite"] {
+        display: block;
+      }
     }
-    &:hover{ background-color: color-mix(
-    in srgb,
-    var(--card-border-color, var(--brand-color)) 50%,
-    white 50%
-  );}
+    &:hover {
+      background-color: color-mix(
+        in srgb,
+        var(--card-border-color, var(--brand-color)) 50%,
+        white 50%
+      );
+    }
   }
   & .flags {
     grid-area: flag;
@@ -514,7 +515,6 @@ body {
 }
 
 @container card (width > 200px) {
-
   .card {
     --_grid-gap: 32px;
   }
@@ -537,6 +537,27 @@ body {
 }
 
 @container card (width > 350px) {
+  .card.company {
+    grid-template-columns: [card-start art-start flag-start] 33cqw [art-end content-start] 1fr [favorite-start]  calc(var(--base-unit) * 1.5) [favorite-end content-end flag-end card-end];
+    // [card-start art-start content-start flag-start] 1fr [favorite-start] calc(
+    // var(--base-unit) * 1.5
+    // )
+    // [favorite-end art-end conntent-end card-end flag-end];
+    grid-template-rows: [card-start favorite-start art-start content-start ]  calc(var(--base-unit) * 1.5) [favorite-end] auto [flag-start]  calc(var(--base-unit) * 1.5) [flag-end art-end content-end card-end];
+    // [card-start favorite-start art-start] calc(var(--base-unit) * 1.5)
+    // [favorite-end] min-content [art-end content-start] 1fr [flag-start] calc(
+    // var(--base-unit) * 1.5
+    // )
+    // [ flag-end content-end card-end];
+    .header img{max-height: 125px;}
+    .section{
+        align-self: center;
+    }
+    .section p{
+        text-align: left;
+    }
+  }
+
   .card .section {
     --_font-size: var(--text-size-300);
   }
@@ -558,15 +579,7 @@ body {
     /* Allow flexible height */
   }
 
-  .card.company {
-    // TODO this need to be fixed with line labels from .card.company
-    grid-template-rows:
-      [card-start favorite-start art-start] calc(var(--base-unit) * 1.5)
-      [favorite-end] auto [art-end content-start] 1fr [flags-start] calc(
-        var(--base-unit) * 1.5
-      )
-      [ flag-end content-end card-end];
-  }
+
 
   .card .header {
     --_font-size: var(--text-size-200);
@@ -659,22 +672,26 @@ a.expanded-click-area-after:after {
     padding-inline-start: 32px;
     margin-inline-start: 32px;
   }
-}
+  b {
+    color: var(--brand-color);
+    display: block;
+    font-weight: 600;
+    margin-top: 0.5em;
+  }
 
-.content-area b {
-  color: var(--brand-color);
-}
-
-.content-area ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.content-area .CompanyName {
-  font-size: var(--text-size-400);
-  font-weight: 700;
-  color: color-mix(in hsl shorter hue, var(--brand-color), black);
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    word-break: break-all;
+  }
+  .CompanyName {
+    font-size: var(--text-size-400);
+    font-weight: 700;
+    color: color-mix(in hsl shorter hue, var(--brand-color), black);
+  }
 }
 
 .logo {
