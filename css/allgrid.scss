@@ -377,7 +377,7 @@ body {
 
 .card:focus-within {
   background-color: color-mix(
-    in srgb,
+    in rgb,
     var(--card-border-color, black) 20%,
     white 80%
   );
@@ -424,30 +424,50 @@ body {
 
 .company.card {
   grid-template-columns:
-    [card-start art-start content-start flag-start] 1fr [bookmark-start] calc(
+    [card-start art-start content-start flag-start] 1fr [favorite-start] calc(
       var(--base-unit) * 1.5
     )
-    [bookmark-end art-end conntent-end card-end flag-end];
+    [favorite-end art-end conntent-end card-end flag-end];
   grid-template-rows:
-    [card-start bookmark-start art-start] calc(var(--base-unit) * 1.5)
-    [bookmark-end] min-content [art-end content-start] 1fr [flags-start] calc(
+    [card-start favorite-start art-start] calc(var(--base-unit) * 1.5)
+    [favorite-end] min-content [art-end content-start] 1fr [flags-start] calc(
       var(--base-unit) * 1.5
     )
     [ flag-end content-end card-end];
-  & .bookmarks {
-    grid-area: bookmark;
+  & .favorite {
+    grid-area: favorite;
     background-color: var(--brand-color);
     color: var(--text-color-reverse);
+    border: 1px solid var(--brand-color);
     display: grid;
     place-items: center;
     margin-top: -2px;
     margin-right: -2px;
     z-index: var(--z-top);
     
-    a {
+    button {
       color: inherit;
-     
+      outline: none;
+      border:none;
+      background-color: transparent;
+      &[value="add_favorite"]{
+        color:white;
+      }
+      &[value="remove_favorite"]{
+        color: var(--brand-color);
+        display: none;
+      }
     }
+    &.active{
+        background-color: white;
+        button[value="add_favorite"]{display: none;}
+        button[value="remove_favorite"]{display: block;}
+    }
+    &:hover{ background-color: color-mix(
+    in srgb,
+    var(--card-border-color, var(--brand-color)) 50%,
+    white 50%
+  );}
   }
   & .flags {
     grid-area: flag;
@@ -541,8 +561,8 @@ body {
   .card.company {
     // TODO this need to be fixed with line labels from .card.company
     grid-template-rows:
-      [card-start bookmark-start art-start] calc(var(--base-unit) * 1.5)
-      [bookmark-end] auto [art-end content-start] 1fr [flags-start] calc(
+      [card-start favorite-start art-start] calc(var(--base-unit) * 1.5)
+      [favorite-end] auto [art-end content-start] 1fr [flags-start] calc(
         var(--base-unit) * 1.5
       )
       [ flag-end content-end card-end];

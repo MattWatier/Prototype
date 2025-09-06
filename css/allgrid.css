@@ -301,7 +301,7 @@ body[screen-scroll=false] {
 }
 
 .card:focus-within {
-  background-color: color-mix(in srgb, var(--card-border-color, black) 20%, white 80%);
+  background-color: color-mix(in rgb, var(--card-border-color, black) 20%, white 80%);
 }
 
 .card .header {
@@ -344,21 +344,44 @@ body[screen-scroll=false] {
 }
 
 .company.card {
-  grid-template-columns: [card-start art-start content-start flag-start] 1fr [bookmark-start] calc(var(--base-unit) * 1.5) [bookmark-end art-end conntent-end card-end flag-end];
-  grid-template-rows: [card-start bookmark-start art-start] calc(var(--base-unit) * 1.5) [bookmark-end] min-content [art-end content-start] 1fr [flags-start] calc(var(--base-unit) * 1.5) [flag-end content-end card-end];
+  grid-template-columns: [card-start art-start content-start flag-start] 1fr [favorite-start] calc(var(--base-unit) * 1.5) [favorite-end art-end conntent-end card-end flag-end];
+  grid-template-rows: [card-start favorite-start art-start] calc(var(--base-unit) * 1.5) [favorite-end] min-content [art-end content-start] 1fr [flags-start] calc(var(--base-unit) * 1.5) [flag-end content-end card-end];
 }
-.company.card .bookmarks {
-  grid-area: bookmark;
+.company.card .favorite {
+  grid-area: favorite;
   background-color: var(--brand-color);
   color: var(--text-color-reverse);
+  border: 1px solid var(--brand-color);
   display: grid;
   place-items: center;
   margin-top: -2px;
   margin-right: -2px;
   z-index: var(--z-top);
 }
-.company.card .bookmarks a {
+.company.card .favorite button {
   color: inherit;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+.company.card .favorite button[value=add_favorite] {
+  color: white;
+}
+.company.card .favorite button[value=remove_favorite] {
+  color: var(--brand-color);
+  display: none;
+}
+.company.card .favorite.active {
+  background-color: white;
+}
+.company.card .favorite.active button[value=add_favorite] {
+  display: none;
+}
+.company.card .favorite.active button[value=remove_favorite] {
+  display: block;
+}
+.company.card .favorite:hover {
+  background-color: color-mix(in srgb, var(--card-border-color, var(--brand-color)) 50%, white 50%);
 }
 .company.card .flags {
   grid-area: flag;
@@ -440,7 +463,7 @@ body[screen-scroll=false] {
     /* Allow flexible height */
   }
   .card.company {
-    grid-template-rows: [card-start bookmark-start art-start] calc(var(--base-unit) * 1.5) [bookmark-end] auto [art-end content-start] 1fr [flags-start] calc(var(--base-unit) * 1.5) [flag-end content-end card-end];
+    grid-template-rows: [card-start favorite-start art-start] calc(var(--base-unit) * 1.5) [favorite-end] auto [art-end content-start] 1fr [flags-start] calc(var(--base-unit) * 1.5) [flag-end content-end card-end];
   }
   .card .header {
     --_font-size: var(--text-size-200);
