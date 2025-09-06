@@ -62,7 +62,7 @@ $breakpoint-tv: 110rem;
     var(--screen-height) - (var(--side-padding) * 8)
   );
   --col-count: 1;
-  --row-count: 1;
+  --row-count: null;
   --z-top: 300;
   --z-mid: 100;
   --z-low: 50;
