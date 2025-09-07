@@ -489,6 +489,7 @@ body {
       outline: 2px solid var(--brand-color);
       padding: calc(var(--base-unit) / 4);
       box-shadow: 0 3px 3px var(--card-box-shadow-color);
+      aspect-ratio: 1;
     }
   }
   .header {
