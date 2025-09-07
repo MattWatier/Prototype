@@ -310,6 +310,10 @@ body {
   row-gap: calc(var(--base-unit) / 3 + var(--_slideshow-gap));
   position: relative;
 }
+.slideshow-grid:not(:has(:nth-child(var(--col-count)))) {
+  /* styles when the 5th child is missing */
+  --row-count:2
+}
 
 .alpha-section {
   display: grid;
