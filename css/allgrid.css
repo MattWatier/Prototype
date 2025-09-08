@@ -218,6 +218,7 @@ body[screen-scroll=false] {
   margin: 0;
   padding: 0;
   color: inherit;
+  align-items: center;
 }
 .breadcrumb li a .label {
   display: none;
@@ -607,6 +608,13 @@ a.expanded-click-area-after:after {
 }
 .content-area > ul > li:nth-child(1) button {
   margin-left: 0.25em;
+  outline-color: var(--card-border-color);
+  background: white;
+  color: darkgray;
+}
+.content-area > ul > li:nth-child(1) button[value=remove_favorite] {
+  background: var(--brand-color);
+  color: white;
 }
 .content-area a {
   word-break: break-all;
