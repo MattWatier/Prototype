@@ -58,26 +58,41 @@
 @media (width > 35rem) {
   :root {
     --col-count: 3;
-    --row-count: 3;
   }
 }
 @media (width > 48rem) {
   :root {
     --col-count: 4;
-    --row-count: 3;
   }
 }
 @media (width > 90rem) {
   :root {
     --col-count: 5;
-    --row-count: 4;
   }
 }
 @media (width >= 110rem) {
   :root {
     --col-count: 6;
-    --row-count: 4;
   }
+}
+@media (height > 35rem) {
+  :root {
+    --row-count:2 ;
+  }
+}
+@media (height > 48rem) {
+  :root {
+    --row-count:3 ;
+  }
+}
+@media (height > 90rem) {
+  :root {
+    --row-count:4 ;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -242,8 +257,8 @@ body[screen-scroll=false] {
   grid-area: 2/1/3/2;
   display: grid;
   grid-template-columns: repeat(var(--col-count), 1fr);
-  grid-template-rows: auto;
   grid-template-rows: repeat(var(--row-count), 1fr);
+  grid-auto-rows: 1fr;
   column-gap: var(--_slideshow-gap);
   row-gap: calc(var(--base-unit) / 3 + var(--_slideshow-gap));
   position: relative;

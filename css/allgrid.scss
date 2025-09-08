@@ -27,6 +27,36 @@ $breakpoint-tv: 110rem;
     }
   }
 }
+$breakpoint-short: 25rem;   // 400px - short screens
+$breakpoint-shortmax: 35rem; // 560px
+$breakpoint-medium: 48rem;   // 768px
+$breakpoint-tall: 90rem;     // 1440px
+$breakpoint-xtall: 110rem;   // very tall displays
+
+@mixin mediaQueryHeight($breakpoint) {
+  @if $breakpoint == short {
+    @media (height > #{$breakpoint-short}) {
+      @content;
+    }
+  } @else if $breakpoint == shortmax {
+    @media (height > #{$breakpoint-shortmax}) {
+      @content;
+    }
+  } @else if $breakpoint == medium {
+    @media (height > #{$breakpoint-medium}) {
+      @content;
+    }
+  } @else if $breakpoint == tall {
+    @media (height > #{$breakpoint-tall}) {
+      @content;
+    }
+  } @else if $breakpoint == xtall {
+    @media (height >= #{$breakpoint-xtall}) {
+      @content;
+    }
+  }
+}
+
 @property --art-background-color {
   syntax: "<color>";
   inherits: false;
@@ -84,22 +114,33 @@ $breakpoint-tv: 110rem;
   }
   @include mediaQuery(phonemax) {
     --col-count: 3;
-     --row-count: 3;
+
   }
   @include mediaQuery(tablet) {
     --col-count: 4;
-     --row-count: 3;
+
   }
   @include mediaQuery(desktop) {
     --col-count: 5;
-     --row-count: 4;
+
   }
   @include mediaQuery(tv) {
     --col-count: 6;
-     --row-count: 4;
+
+  }
+  @include mediaQueryHeight(shortmax){
+    --row-count:2
+  }
+    @include mediaQueryHeight(medium){
+    --row-count:3
+  }
+    @include mediaQueryHeight(tall){
+    --row-count:4
   }
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: rgb(185, 185, 185);
   font-family: "Roboto Flex", system-ui;
@@ -310,8 +351,8 @@ body {
   grid-area: 2 / 1 / 3 / 2;
   display: grid;
   grid-template-columns: repeat(var(--col-count), 1fr);
-  grid-template-rows: auto;
   grid-template-rows: repeat(var(--row-count), 1fr);
+  grid-auto-rows: 1fr;
   column-gap: var(--_slideshow-gap);
   row-gap: calc(var(--base-unit) / 3 + var(--_slideshow-gap));
   position: relative;
