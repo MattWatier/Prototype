@@ -137,6 +137,9 @@ $breakpoint-xtall: 110rem;   // very tall displays
     @include mediaQueryHeight(tall){
     --row-count:4
   }
+      @include mediaQueryHeight(xtall){
+    --row-count:5
+  }
 }
 html {
   scroll-behavior: smooth;
