@@ -359,7 +359,7 @@ body {
   column-gap: var(--_slideshow-gap);
   row-gap: calc(var(--base-unit) / 3 + var(--_slideshow-gap));
   position: relative;
-    .slideshow-grid:has(.alphabet-nav) {
+    &:has(.alphabet-nav) {
         grid-auto-rows: min-content;
         --row-count: 1;
     }

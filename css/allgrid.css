@@ -268,7 +268,7 @@ body[screen-scroll=false] {
   row-gap: calc(var(--base-unit) / 3 + var(--_slideshow-gap));
   position: relative;
 }
-.slideshow-grid .slideshow-grid:has(.alphabet-nav) {
+.slideshow-grid:has(.alphabet-nav) {
   grid-auto-rows: min-content;
   --row-count: 1;
 }
