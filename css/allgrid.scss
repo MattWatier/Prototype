@@ -305,11 +305,13 @@ body {
   grid-area: 2 / 1 / 3 / 2;
   display: grid;
   grid-template-columns: repeat(var(--col-count), 1fr);
+  grid-template-rows: auto;
   grid-template-rows: repeat(var(--row-count), 1fr);
   column-gap: var(--_slideshow-gap);
   row-gap: calc(var(--base-unit) / 3 + var(--_slideshow-gap));
   position: relative;
 }
+
 
 .alpha-section {
   display: grid;
