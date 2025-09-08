@@ -359,9 +359,10 @@ body {
   column-gap: var(--_slideshow-gap);
   row-gap: calc(var(--base-unit) / 3 + var(--_slideshow-gap));
   position: relative;
-  &:has(.alpha-section){
-     grid-auto-rows: min-content;
-  }
+    .slideshow-grid:has(.alphabet-nav) {
+        grid-auto-rows: min-content;
+        --row-count: 1;
+    }
 }
 
 .alpha-section {
