@@ -378,9 +378,9 @@ body[screen-scroll=false] {
 }
 .card.company .favorite {
   grid-area: favorite;
-  background-color: var(--text-color-reverse);
-  color: #636363;
-  border: 2px solid var(--card-box-shadow-color);
+  background-color: var(--brand-color);
+  color: var(--text-color-reverse);
+  border: 1px solid var(--brand-color);
   display: grid;
   place-items: center;
   margin-top: -2px;
@@ -394,14 +394,14 @@ body[screen-scroll=false] {
   background-color: transparent;
 }
 .card.company .favorite button[value=add_favorite] {
+  color: white;
 }
 .card.company .favorite button[value=remove_favorite] {
-  
+  color: var(--brand-color);
   display: none;
 }
 .card.company .favorite.active {
-  background-color:  var(--brand-color);
-  color: white;
+  background-color: white;
 }
 .card.company .favorite.active button[value=add_favorite] {
   display: none;
@@ -637,8 +637,11 @@ a.expanded-click-area-after:after {
 .content-area > ul > li:nth-child(1) button {
   margin-left: 0.25em;
   outline-color: var(--card-border-color);
-  background: white;
-  color: darkgray;
+  background-color: var(--text-color-reverse);
+  color: #636363;
+}
+.content-area > ul > li:nth-child(1) button:hover {
+  background-color: color-mix(in srgb, var(--card-border-color, var(--brand-color)) 50%, white 50%);
 }
 .content-area > ul > li:nth-child(1) button[value=remove_favorite] {
   background: var(--brand-color);

@@ -781,8 +781,10 @@ a.expanded-click-area-after:after {
     button {
         margin-left: 0.25em;
         outline-color: var(--card-border-color);
-        background: white;
-        color: darkgray;
+        background-color: var(--text-color-reverse);
+        color: #636363;
+        &:hover{ 
+            background-color: color-mix(in srgb, var(--card-border-color, var(--brand-color)) 50%, white 50%);}
         &[value="remove_favorite"]{
                 background: var(--brand-color);
                 color: white;
