@@ -536,14 +536,39 @@ a.expanded-click-area-after:after {
     grid-template-areas: "company-logo content-area content-area " "company-logo  content-area content-area " "optional-logo .  modal-qr-code";
   }
 }
-
-.company-logo {
+.modal-grid .company-logo {
   grid-area: company-logo;
 }
-
-.company-logo img {
+.modal-grid .company-logo img {
   height: auto;
   max-width: 100%;
+}
+.modal-grid .logo {
+  grid-area: optional-logo;
+  place-items: center;
+  display: none;
+}
+@media (width > 48rem) {
+  .modal-grid .logo {
+    display: grid;
+  }
+}
+.modal-grid .optional-logo {
+  grid-area: optional-logo;
+  place-items: center;
+  display: grid;
+}
+.modal-grid .optional-logo img {
+  width: 100%;
+}
+.modal-grid .qr-code {
+  grid-area: modal-qr-code;
+  place-items: center;
+  display: grid;
+}
+.modal-grid .qr-code img {
+  width: 100%;
+  aspect-ratio: 1/1;
 }
 
 .content-area {
@@ -573,14 +598,14 @@ a.expanded-click-area-after:after {
   margin: 0;
   padding: 0;
 }
-.content-area li:nth-child(1) {
+.content-area > ul > li:nth-child(1) {
   float: right;
   text-align: center;
   display: inline-flex;
   vertical-align: middle;
   font-weight: 700;
 }
-.content-area li:nth-child(1) button {
+.content-area > ul > li:nth-child(1) button {
   margin-left: 0.25em;
 }
 .content-area a {
@@ -590,38 +615,6 @@ a.expanded-click-area-after:after {
   font-size: var(--text-size-400);
   font-weight: 700;
   color: color-mix(in hsl shorter hue, var(--brand-color), black);
-}
-
-.logo {
-  grid-area: logo;
-  place-items: center;
-  display: none;
-}
-@media (width > 48rem) {
-  .logo {
-    display: grid;
-  }
-}
-
-.optional-logo {
-  grid-area: optional-logo;
-  place-items: center;
-  display: grid;
-}
-
-.optional-logo img {
-  width: 100%;
-}
-
-.qr-code {
-  grid-area: modal-qr-code;
-  place-items: center;
-  display: grid;
-}
-
-.qr-code img {
-  width: 100%;
-  aspect-ratio: 1/1;
 }
 
 .specialVendor {

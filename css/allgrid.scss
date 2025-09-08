@@ -312,7 +312,6 @@ body {
   position: relative;
 }
 
-
 .alpha-section {
   display: grid;
   grid-template-columns: [sectionLabel-start] 5rem [sectionLabel-end sectionList-start] 1fr [sectionlist-end];
@@ -541,23 +540,29 @@ body {
 
 @container card (width > 350px) {
   .card.company {
-    grid-template-columns: [card-start art-start flag-start] 33cqw [art-end content-start] 1fr [favorite-start]  calc(var(--base-unit) * 1.5) [favorite-end content-end flag-end card-end];
+    grid-template-columns: [card-start art-start flag-start] 33cqw [art-end content-start] 1fr [favorite-start] calc(
+        var(--base-unit) * 1.5
+      ) [favorite-end content-end flag-end card-end];
     // [card-start art-start content-start flag-start] 1fr [favorite-start] calc(
     // var(--base-unit) * 1.5
     // )
     // [favorite-end art-end conntent-end card-end flag-end];
-    grid-template-rows: [card-start favorite-start art-start content-start ]  calc(var(--base-unit) * 1.5) [favorite-end] auto [flag-start]  calc(var(--base-unit) * 1.5) [flag-end art-end content-end card-end];
+    grid-template-rows: [card-start favorite-start art-start content-start ] calc(
+        var(--base-unit) * 1.5
+      ) [favorite-end] auto [flag-start] calc(var(--base-unit) * 1.5) [flag-end art-end content-end card-end];
     // [card-start favorite-start art-start] calc(var(--base-unit) * 1.5)
     // [favorite-end] min-content [art-end content-start] 1fr [flag-start] calc(
     // var(--base-unit) * 1.5
     // )
     // [ flag-end content-end card-end];
-    .header img{max-height: 125px;}
-    .section{
-        align-self: center;
+    .header img {
+      max-height: 125px;
     }
-    .section p{
-        text-align: left;
+    .section {
+      align-self: center;
+    }
+    .section p {
+      text-align: left;
     }
   }
 
@@ -581,8 +586,6 @@ body {
     align-content: center;
     /* Allow flexible height */
   }
-
-
 
   .card .header {
     --_font-size: var(--text-size-200);
@@ -651,9 +654,7 @@ a.expanded-click-area-after:after {
       "company-logo  content-area content-area "
       "optional-logo .  modal-qr-code";
   }
-}
-
-.company-logo {
+  .company-logo {
   grid-area: company-logo;
 }
 
@@ -661,6 +662,36 @@ a.expanded-click-area-after:after {
   height: auto;
   max-width: 100%;
 }
+.logo {
+    grid-area: optional-logo;
+    place-items: center;
+    display: none;
+    @include mediaQuery(tablet) {
+      display: grid;
+    }
+  }
+  .optional-logo {
+    grid-area: optional-logo;
+    place-items: center;
+    display: grid;
+  }
+  .optional-logo img {
+    width: 100%;
+  }
+
+  .qr-code {
+    grid-area: modal-qr-code;
+    place-items: center;
+    display: grid;
+  }
+
+  .qr-code img {
+    width: 100%;
+    aspect-ratio: 1/1;
+  }
+}
+
+
 
 .content-area {
   grid-area: content-area;
@@ -687,14 +718,16 @@ a.expanded-click-area-after:after {
     margin: 0;
     padding: 0;
   }
-    li:nth-child(1) {
+  &> ul > li:nth-child(1) {
     float: right;
     text-align: center;
     display: inline-flex;
     vertical-align: middle;
     font-weight: 700;
-     button{margin-left:.25em;}
+    button {
+      margin-left: 0.25em;
     }
+  }
   a {
     word-break: break-all;
   }
@@ -703,36 +736,8 @@ a.expanded-click-area-after:after {
     font-weight: 700;
     color: color-mix(in hsl shorter hue, var(--brand-color), black);
   }
-}
 
-.logo {
-  grid-area: logo;
-  place-items: center;
-  display: none;
-  @include mediaQuery(tablet) {
-    display: grid;
-  }
-}
-
-.optional-logo {
-  grid-area: optional-logo;
-  place-items: center;
-  display: grid;
-}
-
-.optional-logo img {
-  width: 100%;
-}
-
-.qr-code {
-  grid-area: modal-qr-code;
-  place-items: center;
-  display: grid;
-}
-
-.qr-code img {
-  width: 100%;
-  aspect-ratio: 1/1;
+  
 }
 
 .specialVendor {
