@@ -84,15 +84,19 @@ $breakpoint-tv: 110rem;
   }
   @include mediaQuery(phonemax) {
     --col-count: 3;
+     --row-count: 3;
   }
   @include mediaQuery(tablet) {
     --col-count: 4;
+     --row-count: 3;
   }
   @include mediaQuery(desktop) {
     --col-count: 5;
+     --row-count: 4;
   }
   @include mediaQuery(tv) {
     --col-count: 6;
+     --row-count: 4;
   }
 }
 

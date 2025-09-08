@@ -58,21 +58,25 @@
 @media (width > 35rem) {
   :root {
     --col-count: 3;
+    --row-count: 3;
   }
 }
 @media (width > 48rem) {
   :root {
     --col-count: 4;
+    --row-count: 3;
   }
 }
 @media (width > 90rem) {
   :root {
     --col-count: 5;
+    --row-count: 4;
   }
 }
 @media (width >= 110rem) {
   :root {
     --col-count: 6;
+    --row-count: 4;
   }
 }
 
