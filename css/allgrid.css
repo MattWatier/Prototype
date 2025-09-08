@@ -378,9 +378,9 @@ body[screen-scroll=false] {
 }
 .card.company .favorite {
   grid-area: favorite;
-  background-color: var(--brand-color);
-  color: var(--text-color-reverse);
-  border: 1px solid var(--brand-color);
+  background-color: var(--text-color-reverse);
+  color: #636363;
+  border: 2px solid var(--card-box-shadow-color);
   display: grid;
   place-items: center;
   margin-top: -2px;
@@ -394,14 +394,14 @@ body[screen-scroll=false] {
   background-color: transparent;
 }
 .card.company .favorite button[value=add_favorite] {
-  color: white;
 }
 .card.company .favorite button[value=remove_favorite] {
-  color: var(--brand-color);
+  
   display: none;
 }
 .card.company .favorite.active {
-  background-color: white;
+  background-color:  var(--brand-color);
+  color: white;
 }
 .card.company .favorite.active button[value=add_favorite] {
   display: none;
