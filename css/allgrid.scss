@@ -62,7 +62,7 @@ $breakpoint-tv: 110rem;
     var(--screen-height) - (var(--side-padding) * 8)
   );
   --col-count: 1;
-  --row-count: null;
+  --row-count: 2;
   --z-top: 300;
   --z-mid: 100;
   --z-low: 50;
@@ -306,7 +306,7 @@ body {
   display: grid;
   grid-template-columns: repeat(var(--col-count), 1fr);
   grid-template-rows: auto;
-  grid-template-rows: repeat(var(--row-count), 1fr);
+  grid-template-rows: repeat(var(--row-count), min-content);
   column-gap: var(--_slideshow-gap);
   row-gap: calc(var(--base-unit) / 3 + var(--_slideshow-gap));
   position: relative;
