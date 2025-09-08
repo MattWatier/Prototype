@@ -573,6 +573,16 @@ a.expanded-click-area-after:after {
   margin: 0;
   padding: 0;
 }
+.content-area li:nth-child(1) {
+  float: right;
+  text-align: center;
+  display: inline-flex;
+  vertical-align: middle;
+  font-weight: 700;
+}
+.content-area li:nth-child(1) button {
+  margin-left: 0.25em;
+}
 .content-area a {
   word-break: break-all;
 }

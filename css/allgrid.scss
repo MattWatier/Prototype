@@ -687,6 +687,14 @@ a.expanded-click-area-after:after {
     margin: 0;
     padding: 0;
   }
+    li:nth-child(1) {
+    float: right;
+    text-align: center;
+    display: inline-flex;
+    vertical-align: middle;
+    font-weight: 700;
+     button{margin-left:.25em;}
+    }
   a {
     word-break: break-all;
   }
