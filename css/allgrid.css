@@ -39,7 +39,9 @@
   --text-size-400: clamp(1.424rem, 1.2rem + 1.5vw, 2.827rem);
   --text-size-500: clamp(1.602rem, 1.4rem + 2vw, 3.998rem);
   --text-size-600: clamp(1.802rem, 1.6rem + 2.8vw, 5.653rem);
-  --text-size-700: clamp(2.027rem, 1.8rem + 3.5vw, 7.993rem); }
+  --text-size-700: clamp(2.027rem, 1.8rem + 3.5vw, 7.993rem);
+  --col-count-override: 5
+  --row-count-override 4; }
   @media (width > 25rem) {
     :root {
       --col-count: 2; } }
