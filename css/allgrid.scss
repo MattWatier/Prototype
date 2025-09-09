@@ -133,6 +133,10 @@ $breakpoint-xtall: 110rem; // very tall displays
 }
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 10px;
+  [screen-scroll="false"]{
+    scroll-padding-top: 75px;
+  }
 }
 body {
   background-color: rgb(185, 185, 185);
@@ -403,6 +407,7 @@ body {
     grid-area: sectionList;
     display: grid;
     gap: var(--_slideshow-gap);
+    [screen-scroll="false"] &{{grid-template-columns: repeat(var(--col-count), 1fr);}
   }
 }
 .alphabet-nav{
