@@ -601,6 +601,22 @@ body {
      2px  2px 2px rgba(0, 0, 0, 0.4);        /* shadow bottom-right */
   border-radius: 2px;
 }
+&.stone {
+  background: linear-gradient(
+    135deg,
+    #dcdcdc 0%,
+    #c0c0c0 40%,
+    #a9a9a9 70%,
+    #808080 100%
+  );
+  color: #2a2a2a; /* dark text for readability */
+  border: 1px solid #696969;
+  outline-color: currentColor;
+  box-shadow:
+    -2px -2px 2px rgba(255, 255, 255, 0.4), /* light bevel highlight */
+     2px  2px 2px rgba(0, 0, 0, 0.5);        /* shadow bottom-right */
+  border-radius: 2px;
+}
 
 }
 
