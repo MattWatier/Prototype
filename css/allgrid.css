@@ -257,9 +257,11 @@ body {
 
 [screen-scroll="false"] .alphabet-nav {
   position: sticky;
-  top: 0;
+  top:6px;
   left: 0;
-  right: 0; }
+  right: 0; 
+
+}
 
 [screen-scroll="false"] .alpha-section .section-label h2 {
   top: 3rem; }
