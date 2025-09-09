@@ -396,10 +396,10 @@ body {
   color: #1d2f27;
   /* dark green-gray for readability */
   outline: currentColor;
-  border: 1px solid #5d7f6d;
+  border: 1px solid #374e42;
   box-shadow: -2px -2px 2px rgba(255, 255, 255, 0.5), 2px 2px 3px rgba(0, 0, 0, 0.3);
   /* shadow bottom-right */
-  border-radius: 6px;
+  border-radius: 2px;
   background-size: 200% 200%; }
 
 @container card (width > 150px) {
