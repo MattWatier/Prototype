@@ -486,13 +486,16 @@ body {
   & .favorite {
     grid-area: favorite;
     background-color: white;
-    color: #636363;
+    
     outline: 2px solid var(--card-box-shadow-color);
     display: grid;
     place-items: center;
     margin-top: 0;
     margin-right: 0;
     z-index: var(--z-top);
+    &, &:visited{
+      color: #636363;
+    }
 
     button {
       color: inherit;
@@ -824,7 +827,9 @@ a.expanded-click-area-after:after {
         margin-left: 0.25em;
         outline-color: var(--card-border-color);
         background-color: var(--text-color-reverse);
-        color: #636363;
+        &, &:visited{
+          color: #636363;
+        }
         &:hover{ 
             background-color: color-mix(in srgb, var(--card-border-color, var(--brand-color)) 50%, white 50%);}
         &[value="remove_favorite"]{

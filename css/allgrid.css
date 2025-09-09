@@ -312,13 +312,14 @@ body {
   .card.company .favorite {
     grid-area: favorite;
     background-color: white;
-    color: #636363;
     outline: 2px solid var(--card-box-shadow-color);
     display: grid;
     place-items: center;
     margin-top: 0;
     margin-right: 0;
     z-index: var(--z-top); }
+    .card.company .favorite, .card.company .favorite:visited {
+      color: #636363; }
     .card.company .favorite button {
       color: inherit;
       outline: none;
@@ -538,8 +539,9 @@ a.expanded-click-area-after:after {
     .content-area > ul > li:nth-child(1) button {
       margin-left: 0.25em;
       outline-color: var(--card-border-color);
-      background-color: var(--text-color-reverse);
-      color: #636363; }
+      background-color: var(--text-color-reverse); }
+      .content-area > ul > li:nth-child(1) button, .content-area > ul > li:nth-child(1) button:visited {
+        color: #636363; }
       .content-area > ul > li:nth-child(1) button:hover {
         background-color: color-mix(in srgb, var(--card-border-color, var(--brand-color)) 50%, white 50%); }
       .content-area > ul > li:nth-child(1) button[value="remove_favorite"] {
