@@ -134,7 +134,7 @@ $breakpoint-xtall: 110rem; // very tall displays
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 10px;
-  [screen-scroll="false"]{
+ &:has( [screen-scroll="false"]){
     scroll-padding-top: 75px;
   }
 }
@@ -893,18 +893,21 @@ a.expanded-click-area-after:after {
   container-name: alpha;
   display: block;
   background: var(--brand-color);
-  border-radius: var(--border-radius-1);
+  border-radius:6px;
   padding: calc(var(--base-unit) / 2);
   z-index: var(--z-top);
 }
 .back-to-top {
   border-top: solid 3px var(--brand-color);
   position: sticky;
-  inset: 0;
-
+  inset: 6px;
+  
   bottom: auto;
   z-index: var(--z-mid);
   margin-top: -3.5rem;
+ [screen-scroll="false"] &{
+  top:75px;
+ }
   span {
     display: block;
     float: right;
