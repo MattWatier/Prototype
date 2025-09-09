@@ -11,11 +11,7 @@
   --card-border-width: 2px;
   --arrow-opacity: 0;
   --breadcrumb-gap: 4px;
-  --card-box-shadow-color: color-mix(
-    in srgb,
-    var(--brand-color) 70%,
-    black 30%
-  );
+  --card-box-shadow-color: color-mix(in srgb, var(--brand-color) 70%, black 30%);
   --card-box-shadow-width: 0.4em;
   --border-radius-app: clamp(6px, 4px + 2vw, 32px);
   --side-padding: clamp(8px, 6px + 0.5vw, 16px);
@@ -24,12 +20,8 @@
   --grid-gap: clamp(8px, 6px + 1vw, 16px);
   --screen-width: 100dvw;
   --screen-height: unset;
-  --slideshow-grid-wrapper-width: calc(
-    var(--screen-width) - (var(--side-padding) * 8)
-  );
-  --slideshow-grid-wrapper-height: calc(
-    var(--screen-height) - (var(--side-padding) * 8)
-  );
+  --slideshow-grid-wrapper-width: calc(var(--screen-width) - (var(--side-padding) * 8));
+  --slideshow-grid-wrapper-height: calc(var(--screen-height) - (var(--side-padding) * 8));
   --col-count: 1;
   --row-count: 2;
   --z-top: 300;
@@ -65,16 +57,16 @@
       --col-count: 6; } }
   @media (height > 35rem) {
     :root {
-      --row-count:2 ; } }
+      --row-count: 2; } }
   @media (height > 48rem) {
     :root {
-      --row-count:3 ; } }
+      --row-count: 3; } }
   @media (height > 90rem) {
     :root {
-      --row-count:4 ; } }
+      --row-count: 4; } }
   @media (height >= 110rem) {
     :root {
-      --row-count:5 ; } }
+      --row-count: 5; } }
 
 html {
   scroll-behavior: smooth; }
@@ -134,7 +126,7 @@ body {
     .header-grid .header-text small {
       display: block;
       color: var(--text-dark);
-      font-size: .5em;
+      font-size: 0.5em;
       line-height: 1.5; }
   .header-grid .header-qrcode {
     grid-area: qrcode; }
@@ -315,8 +307,8 @@ body {
   margin: 0.5em 0; }
 
 .card.company {
-  grid-template-columns: [card-start art-start content-start flag-start] 1fr [favorite-start] calc( var(--base-unit) * 2 ) [favorite-end art-end conntent-end card-end flag-end];
-  grid-template-rows: [card-start favorite-start art-start] calc(var(--base-unit) * 2) [favorite-end] min-content [art-end content-start] 1fr [flag-start] calc( var(--base-unit) * 1.5 ) [flag-end content-end card-end]; }
+  grid-template-columns: [card-start art-start content-start flag-start] 1fr [favorite-start] calc(var(--base-unit) * 2) [favorite-end art-end conntent-end card-end flag-end];
+  grid-template-rows: [card-start favorite-start art-start] calc(var(--base-unit) * 2) [favorite-end] min-content [art-end content-start] 1fr [flag-start] calc(var(--base-unit) * 1.5) [flag-end content-end card-end]; }
   .card.company .favorite {
     grid-area: favorite;
     background-color: white;
@@ -333,11 +325,13 @@ body {
       outline: none;
       border: none;
       background-color: transparent; }
+      .card.company .favorite button[value="add_favorite"] {
+        display: block; }
       .card.company .favorite button[value="remove_favorite"] {
         display: none; }
     .card.company .favorite.active {
-      background-color: var(--brand-color);
-      color: white; }
+      background-color: white;
+      color: var(--brand-color); }
       .card.company .favorite.active button[value="add_favorite"] {
         display: none; }
       .card.company .favorite.active button[value="remove_favorite"] {
@@ -425,8 +419,8 @@ body {
     --_font-size: var(--text-size-200); } }
 @container card (width > 350px) {
   .card.company {
-    grid-template-columns: [card-start art-start flag-start] 33cqw [art-end content-start] 1fr [favorite-start] calc( var(--base-unit) * 2 ) [favorite-end content-end flag-end card-end];
-    grid-template-rows: [card-start favorite-start art-start content-start] calc( var(--base-unit) * 2 ) [favorite-end] auto [flag-start] calc(var(--base-unit) * 1.5) [flag-end art-end content-end card-end]; }
+    grid-template-columns: [card-start art-start flag-start] 33cqw [art-end content-start] 1fr [favorite-start] calc(var(--base-unit) * 2) [favorite-end content-end flag-end card-end];
+    grid-template-rows: [card-start favorite-start art-start content-start] calc(var(--base-unit) * 2) [favorite-end] auto [flag-start] calc(var(--base-unit) * 1.5) [flag-end art-end content-end card-end]; }
     .card.company .header img {
       max-height: 125px; }
     .card.company .section {
@@ -563,8 +557,8 @@ a.expanded-click-area-after:after {
       .content-area > ul > li:nth-child(1) button:hover {
         background-color: color-mix(in srgb, var(--card-border-color, var(--brand-color)) 50%, white 50%); }
       .content-area > ul > li:nth-child(1) button[value="remove_favorite"] {
-        background: var(--brand-color);
-        color: white; }
+        background: white;
+        color: var(--brand-color); }
   .content-area a {
     word-break: break-all; }
   .content-area .CompanyName {
