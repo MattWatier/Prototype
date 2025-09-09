@@ -167,9 +167,9 @@ body {
 
 .slideshow-grid-wrapper {
   border-radius: var(--border-radius-app);
-  background-color: rgb(255 255 255 / 77%);
-  box-shadow: inset 2px 2px 2px 1px rgba(255 255 255 / 10%),
-    inset -2px -3px 1px 1px rgb(0 0 0 / 7%);
+  background-color: rgba(255, 255, 255, 0.77);
+  box-shadow: inset 2px 2px 2px 1px rgba(255, 255, 255, 0.101),
+    inset -2px -3px 1px 1px rgba(0, 0, 0, 0.078);
   margin: auto;
   display: grid;
   grid-template-rows: max-content 1fr;
@@ -634,7 +634,7 @@ body {
     grid-template-rows: none;
     /* Remove rows, switch to columns */
     grid-template-columns: 100px auto;
-    gap: clamp(0.5rem, 0.25rem + 0.2vw, 1rem);
+    gap: clamp(0.5rem, calc(0.25rem + 0.2vdw), 1rem);
     /* Left-right layout with header at 5em */
     grid-template-areas: "header section";
     justify-content: start;
@@ -847,7 +847,7 @@ a.expanded-click-area-after:after {
     background: var(--brand-color);
     color: var(--text-color-reverse);
     font-size: small;
-    box-shadow: 0px 2px 0 2px rgba(255 255 255 / 44%);
+    box-shadow: 0px 2px 0 2px rgba(255, 255, 255, 0.4);
   }
 }
 
