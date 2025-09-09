@@ -102,7 +102,7 @@ $breakpoint-xtall: 110rem; // very tall displays
   --text-size-600: clamp(1.802rem, 1.6rem + 2.8vw, 5.653rem);
   --text-size-700: clamp(2.027rem, 1.8rem + 3.5vw, 7.993rem);
   --col-count-override: 5
-  --row-count-override 4;
+  --row-count-override: 4;
   @include mediaQuery(phone) {
     --col-count: 2;
   }
