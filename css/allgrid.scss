@@ -391,6 +391,7 @@ body {
     position: relative;
     & h2 {
       position: sticky;
+      top:3rem;
       inset: 0 0 auto;
       color: inherit;
       text-align: center;
@@ -403,6 +404,19 @@ body {
     display: grid;
     gap: var(--_slideshow-gap);
   }
+}
+.alphabet-nav{
+  [screen-scroll="false"] &{
+    position: sticky;
+    top:0;  
+    left:0;
+    right:0;  
+  }
+}
+.alpha-section  .section-label h2{
+    [screen-scroll="false"] &{
+      top:3rem;
+    }
 }
 
 .grid-item-fullwidth {

@@ -244,6 +244,7 @@ body {
     position: relative; }
     .alpha-section .section-label h2 {
       position: sticky;
+      top: 3rem;
       inset: 0 0 auto;
       color: inherit;
       text-align: center;
@@ -253,6 +254,15 @@ body {
     grid-area: sectionList;
     display: grid;
     gap: var(--_slideshow-gap); }
+
+[screen-scroll="false"] .alphabet-nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0; }
+
+[screen-scroll="false"] .alpha-section .section-label h2 {
+  top: 3rem; }
 
 .grid-item-fullwidth {
   grid-column: 1/-1; }
