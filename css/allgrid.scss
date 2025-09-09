@@ -413,9 +413,7 @@ body {
 .alphabet-nav{
   [screen-scroll="false"] &{
     position: sticky;
-    top:0;  
-    left:0;
-    right:0;  
+    top:6px;  
   }
 }
 .alpha-section  .section-label h2{
@@ -896,6 +894,7 @@ a.expanded-click-area-after:after {
   border-radius:6px;
   padding: calc(var(--base-unit) / 2);
   z-index: var(--z-top);
+  margin: 0 -1rem;
 }
 .back-to-top {
   border-top: solid 3px var(--brand-color);
@@ -906,12 +905,14 @@ a.expanded-click-area-after:after {
   z-index: var(--z-mid);
   margin-top: -3.5rem;
  [screen-scroll="false"] &{
-  top:75px;
+    top: 46px;
+    margin: 0 1em;
+    font-weight: bold;
  }
   span {
     display: block;
     float: right;
-    padding: calc(var(--base-unit) / 4);
+    padding: calc(var(--base-unit) / 4) calc(var(--base-unit) / 2);
     border-radius: 0 0 var(--border-radius) var(--border-radius);
     margin-right: var(--side-padding);
     background: var(--brand-color);

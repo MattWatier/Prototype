@@ -262,9 +262,7 @@ body {
 
 [screen-scroll="false"] .alphabet-nav {
   position: sticky;
-  top: 0;
-  left: 0;
-  right: 0; }
+  top: 6px; }
 
 [screen-scroll="false"] .alpha-section .section-label h2 {
   top: 3rem; }
@@ -615,7 +613,8 @@ a.expanded-click-area-after:after {
   background: var(--brand-color);
   border-radius: 6px;
   padding: calc(var(--base-unit) / 2);
-  z-index: var(--z-top); }
+  z-index: var(--z-top);
+  margin: 0 -1rem; }
 
 .back-to-top {
   border-top: solid 3px var(--brand-color);
@@ -625,11 +624,13 @@ a.expanded-click-area-after:after {
   z-index: var(--z-mid);
   margin-top: -3.5rem; }
   [screen-scroll="false"] .back-to-top {
-    top: 75px; }
+    top: 46px;
+    margin: 0 1em;
+    font-weight: bold; }
   .back-to-top span {
     display: block;
     float: right;
-    padding: calc(var(--base-unit) / 4);
+    padding: calc(var(--base-unit) / 4) calc(var(--base-unit) / 2);
     border-radius: 0 0 var(--border-radius) var(--border-radius);
     margin-right: var(--side-padding);
     background: var(--brand-color);
