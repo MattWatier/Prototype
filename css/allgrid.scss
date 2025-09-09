@@ -225,9 +225,9 @@ body {
         font-size:.8em;
         background-color: var(--text-color-reverse);
         padding: .2em .6em;
-        :hover{
-        color: white;
-        background-color: var(--brand-color)
+        &:hover, &:focus-within{
+          background-color:  color-mix(in srgb, var(--brand-color, black) 60%, white 40%);
+          color: var(--text-color-reverse);
         }
       }
     }

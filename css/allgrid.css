@@ -135,9 +135,9 @@ body {
         font-size: .8em;
         background-color: var(--text-color-reverse);
         padding: .2em .6em; }
-        .header-grid .header-text small .logout :hover {
-          color: white;
-          background-color: var(--brand-color); }
+        .header-grid .header-text small .logout:hover, .header-grid .header-text small .logout:focus-within {
+          background-color: color-mix(in srgb, var(--brand-color, black) 60%, white 40%);
+          color: var(--text-color-reverse); }
   .header-grid .header-qrcode {
     grid-area: qrcode; }
   .header-grid .breadcrumb {
