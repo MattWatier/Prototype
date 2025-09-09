@@ -211,6 +211,9 @@ body {
   }
   .header-text {
     grid-area: text;
+    display:inline-block;
+    line-height: 1;
+    & small{display: block;}
   }
   .header-qrcode {
     grid-area: qrcode;

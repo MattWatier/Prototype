@@ -127,7 +127,11 @@ body {
   .header-grid .header-logo {
     grid-area: logo; }
   .header-grid .header-text {
-    grid-area: text; }
+    grid-area: text;
+    display: inline-block;
+    line-height: 1; }
+    .header-grid .header-text small {
+      display: block; }
   .header-grid .header-qrcode {
     grid-area: qrcode; }
   .header-grid .breadcrumb {
