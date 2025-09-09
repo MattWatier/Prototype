@@ -558,7 +558,7 @@ body {
   }
 }
 .card.company .flags .flag{
-.gold {
+&.gold {
   background: linear-gradient(145deg, #ffd700, #e6b800);
   background-image: linear-gradient(
     to bottom right,
@@ -577,7 +577,7 @@ body {
   border-radius: 2px;
 }
 
-.platinum {
+&.platinum {
   background: linear-gradient(145deg, #e5e4e2, #b8b8b8);
   background-image: linear-gradient(
     to bottom right,
