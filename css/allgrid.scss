@@ -407,7 +407,7 @@ body {
     grid-area: sectionList;
     display: grid;
     gap: var(--_slideshow-gap);
-    [screen-scroll="false"] &{{grid-template-columns: repeat(var(--col-count), 1fr);}
+    [screen-scroll="false"] &{grid-template-columns: repeat(var(--col-count), 1fr);}
   }
 }
 .alphabet-nav{
@@ -901,6 +901,7 @@ a.expanded-click-area-after:after {
   border-top: solid 3px var(--brand-color);
   position: sticky;
   inset: 0;
+
   bottom: auto;
   z-index: var(--z-mid);
   margin-top: -3.5rem;
