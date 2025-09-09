@@ -474,18 +474,18 @@ body {
 .card.company {
   grid-template-columns:
     [card-start art-start content-start flag-start] 1fr [favorite-start] calc(
-      var(--base-unit) * 1.5
+      var(--base-unit) * 2
     )
     [favorite-end art-end conntent-end card-end flag-end];
   grid-template-rows:
-    [card-start favorite-start art-start] calc(var(--base-unit) * 1.5)
+    [card-start favorite-start art-start] calc(var(--base-unit) * 2)
     [favorite-end] min-content [art-end content-start] 1fr [flag-start] calc(
       var(--base-unit) * 1.5
     )
     [ flag-end content-end card-end];
   & .favorite {
     grid-area: favorite;
-    background-color: var(--text-color-reverse);
+    background-color: white;
     color: #636363;
     outline: 2px solid var(--card-box-shadow-color);
     display: grid;
@@ -596,14 +596,14 @@ body {
 @container card (width > 350px) {
   .card.company {
     grid-template-columns: [card-start art-start flag-start] 33cqw [art-end content-start] 1fr [favorite-start] calc(
-        var(--base-unit) * 1.5
+        var(--base-unit) * 2
       ) [favorite-end content-end flag-end card-end];
     // [card-start art-start content-start flag-start] 1fr [favorite-start] calc(
     // var(--base-unit) * 1.5
     // )
     // [favorite-end art-end conntent-end card-end flag-end];
     grid-template-rows: [card-start favorite-start art-start content-start ] calc(
-        var(--base-unit) * 1.5
+        var(--base-unit) * 2
       ) [favorite-end] auto [flag-start] calc(var(--base-unit) * 1.5) [flag-end art-end content-end card-end];
     // [card-start favorite-start art-start] calc(var(--base-unit) * 1.5)
     // [favorite-end] min-content [art-end content-start] 1fr [flag-start] calc(
