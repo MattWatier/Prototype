@@ -906,7 +906,8 @@ a.expanded-click-area-after:after {
   margin-top: -3.5rem;
  [screen-scroll="false"] &{
     top: 46px;
-    margin: 0 1em;
+    margin-left: 1em;
+    margin-right: 1em;
     font-weight: bold;
  }
   span {
