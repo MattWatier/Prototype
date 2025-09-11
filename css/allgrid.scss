@@ -870,8 +870,14 @@ a.expanded-click-area-after:after {
     font-weight: 700;
     color: color-mix(in hsl shorter hue, var(--brand-color), black);
   }
-  [screen-scroll="false"] &{
-    .CompanyName{
+}
+body[lightbox]{
+background-color: white;
+ .content-area{
+  .qr-code{
+    grid-area: content-area;
+  }
+  .CompanyName{
       float: left;
     }
     & > ul{ 
@@ -885,22 +891,6 @@ a.expanded-click-area-after:after {
 
     }
   }
-  }
-}
-body[lightbox]{
-background-color: white;
- .content-area{
-  .qr-code{
-    grid-area: content-area;
-  }
-  .content-area .CompanyName {
-    float: left; }
-  .content-area > ul > li:nth-child(3) {
-    float: right; }
-  .content-area > ul > li:nth-child(3) b {
-      display: inline-block; }
-  .content-area > ul > li:nth-child(4) {
-    clear: both; }
 }
 
 }
