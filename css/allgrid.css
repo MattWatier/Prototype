@@ -6,7 +6,7 @@
   --base-unit: 16px;
   --grid-gap: 16px;
   --background-color: white;
-  --app-background-color:#efefef;
+  --app-background-color: #efefef;
   --brand-color: #1f7995;
   --card-border-color: #1f7995;
   --card-border-width: 2px;
@@ -135,12 +135,12 @@ body {
       font-size: 0.5em;
       line-height: 1.5; }
       .header-grid .header-text small .logout {
-        margin-left: .25em;
+        margin-left: 0.25em;
         font-weight: 300;
         color: black;
-        font-size: .8em;
+        font-size: 0.8em;
         background-color: var(--text-color-reverse);
-        padding: .2em .6em;
+        padding: 0.2em 0.6em;
         border-radius: 0.25em; }
         .header-grid .header-text small .logout:hover, .header-grid .header-text small .logout:focus-within {
           background-color: color-mix(in srgb, var(--brand-color, black) 60%, white 40%);
@@ -598,16 +598,42 @@ a.expanded-click-area-after:after {
 
 body[lightbox] {
   background-color: white; }
-  body[lightbox] .content-area .qr-code {
-    grid-area: content-area; }
-  body[lightbox] .content-area .CompanyName {
+  body[lightbox] .wrapper {
+    background-color: white;
+    width: 100%; }
+  body[lightbox] .modal-grid {
+    grid-template-areas: unset;
+    grid-template-columns: [company-logo-start optional-logo-start] 180px [company-logo-end optional-logo-end content-area-start] 1fr [modal-qr-code-start] 180px [content-area-end modal-qr-code-end];
+    grid-template-rows: [company-logo-start content-area-start] 135px [company-logo-end] 150px 1fr [optional-logo-start modal-qr-code-start] min-content [optional-logo-end modal-qr-code-end content-area-start]; }
+  body[lightbox] .optional-logo {
+    place-items: end center; }
+  body[lightbox] .qr-code {
+    grid-area: modal-qr-code;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white; }
+    body[lightbox] .qr-code::before, body[lightbox] .qr-code::after {
+      text-align: center;
+      font-size: smaller;
+      color: var(--brand-color);
+      font-weight: bold; }
+    body[lightbox] .qr-code::before {
+      content: "Scan for the"; }
+    body[lightbox] .qr-code::after {
+      content: "Map of the Show Floor"; }
+  body[lightbox] li {
+    max-width: 65rem; }
+  body[lightbox] .CompanyName {
     float: left; }
-  body[lightbox] .content-area > ul > li:nth-child(3) {
-    float: right; }
-    body[lightbox] .content-area > ul > li:nth-child(3) b {
-      display: inline-block; }
-  body[lightbox] .content-area > ul > li:nth-child(4) {
-    clear: both; }
+    body[lightbox] .CompanyName + li {
+      float: right; }
+      body[lightbox] .CompanyName + li b {
+        display: inline-block; }
+    body[lightbox] .CompanyName + li + li {
+      clear: both; }
+  body[lightbox] li {
+    max-width: 65rem; }
 
 .specialVendor {
   padding: 0.25em;

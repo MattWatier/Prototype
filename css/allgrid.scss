@@ -67,7 +67,7 @@ $breakpoint-xtall: 110rem; // very tall displays
   --base-unit: 16px;
   --grid-gap: 16px;
   --background-color: white;
-  --app-background-color:#efefef;
+  --app-background-color: #efefef;
   --brand-color: #1f7995;
   --card-border-color: #1f7995;
   --card-border-width: 2px;
@@ -135,7 +135,7 @@ $breakpoint-xtall: 110rem; // very tall displays
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 10px;
- &:has( [screen-scroll="false"]){
+  &:has([screen-scroll="false"]) {
     scroll-padding-top: 75px;
   }
 }
@@ -225,16 +225,17 @@ body {
       color: var(--text-dark);
       font-size: 0.5em;
       line-height: 1.5;
-      .logout{
-        margin-left: .25em;
-        font-weight:300;
-        color:black;
-        font-size:.8em;
+      .logout {
+        margin-left: 0.25em;
+        font-weight: 300;
+        color: black;
+        font-size: 0.8em;
         background-color: var(--text-color-reverse);
-        padding: .2em .6em;
+        padding: 0.2em 0.6em;
         border-radius: 0.25em;
-        &:hover, &:focus-within{
-          background-color:  color-mix(in srgb, var(--brand-color, black) 60%, white 40%);
+        &:hover,
+        &:focus-within {
+          background-color: color-mix(in srgb, var(--brand-color, black) 60%, white 40%);
           color: var(--text-color-reverse);
         }
       }
@@ -396,7 +397,7 @@ body {
     position: relative;
     & h2 {
       position: sticky;
-      top:3rem;
+      top: 3rem;
       inset: 0 0 auto;
       color: inherit;
       text-align: center;
@@ -408,19 +409,21 @@ body {
     grid-area: sectionList;
     display: grid;
     gap: var(--_slideshow-gap);
-    [screen-scroll="false"] &{grid-template-columns: repeat(var(--col-count), 1fr);}
-  }
-}
-.alphabet-nav{
-  [screen-scroll="false"] &{
-    position: sticky;
-    top:6px;  
-  }
-}
-.alpha-section  .section-label h2{
-    [screen-scroll="false"] &{
-      top:3rem;
+    [screen-scroll="false"] & {
+      grid-template-columns: repeat(var(--col-count), 1fr);
     }
+  }
+}
+.alphabet-nav {
+  [screen-scroll="false"] & {
+    position: sticky;
+    top: 6px;
+  }
+}
+.alpha-section .section-label h2 {
+  [screen-scroll="false"] & {
+    top: 3rem;
+  }
 }
 
 .grid-item-fullwidth {
@@ -753,9 +756,9 @@ a.expanded-click-area-after:after {
   display: block;
   z-index: var(--z-low);
 }
-.wrapper{
+.wrapper {
   background-color: var(--app-background-color);
-} 
+}
 .modal-grid {
   display: grid;
   grid-template-columns: 80px 80px 1fr 80px;
@@ -871,29 +874,56 @@ a.expanded-click-area-after:after {
     color: color-mix(in hsl shorter hue, var(--brand-color), black);
   }
 }
-body[lightbox]{
-background-color: white;
- .content-area{
-  .qr-code{
-    grid-area: content-area;
+body[lightbox] {
+  background-color: white;
+  .wrapper {
+    background-color: white;
+    width: 100%;
   }
-  .CompanyName{
-      float: left;
+  .modal-grid {
+    grid-template-areas: unset;
+    grid-template-columns: [company-logo-start optional-logo-start] 180px [company-logo-end optional-logo-end content-area-start] 1fr [modal-qr-code-start] 180px [content-area-end modal-qr-code-end];
+    grid-template-rows: [company-logo-start content-area-start] 135px [company-logo-end] 150px 1fr [optional-logo-start modal-qr-code-start] min-content [optional-logo-end modal-qr-code-end content-area-start];
+  }
+  .optional-logo{
+        place-items: end center;
+  }
+  .qr-code {
+    grid-area: modal-qr-code;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    &::before,
+    &::after {
+      text-align: center;
+      font-size: smaller;
+      color: var(--brand-color);
+      font-weight: bold;
     }
-    & > ul{ 
-      > li:nth-child(3){
-      float:right;
-      b{display: inline-block;}
-
+    &::before {
+      content: "Scan for the";
     }
-          > li:nth-child(4){
-  clear: both;
-
+    &::after {
+      content: "Map of the Show Floor";
     }
   }
+  li{max-width: 65rem;}
+  .CompanyName {
+    float: left;
+    & + li {
+      float: right;
+      b {
+        display: inline-block;
+      }
+    }
+    & +li + li {
+      clear: both;
+    }
+  }
+  li{max-width: 65rem;}
 }
 
-}
 .specialVendor {
   padding: 0.25em;
   font-size: var(--text-size-200);
@@ -916,7 +946,7 @@ background-color: white;
   container-name: alpha;
   display: block;
   background: var(--brand-color);
-  border-radius:6px;
+  border-radius: 6px;
   padding: calc(var(--base-unit) / 2);
   z-index: var(--z-top);
   margin: 0 -1rem;
@@ -925,16 +955,16 @@ background-color: white;
   border-top: solid 3px var(--brand-color);
   position: sticky;
   inset: 6px;
-  
+
   bottom: auto;
   z-index: var(--z-mid);
   margin-top: -3.5rem;
- [screen-scroll="false"] &{
+  [screen-scroll="false"] & {
     top: 46px;
     margin-left: 1em;
     margin-right: 1em;
     font-weight: bold;
- }
+  }
   span {
     display: block;
     float: right;
