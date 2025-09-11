@@ -67,6 +67,7 @@ $breakpoint-xtall: 110rem; // very tall displays
   --base-unit: 16px;
   --grid-gap: 16px;
   --background-color: white;
+  --app-background-color:#efefef;
   --brand-color: #1f7995;
   --card-border-color: #1f7995;
   --card-border-width: 2px;
@@ -752,7 +753,9 @@ a.expanded-click-area-after:after {
   display: block;
   z-index: var(--z-low);
 }
-
+.wrapper{
+  background-color: var(--app-background-color);
+} 
 .modal-grid {
   display: grid;
   grid-template-columns: 80px 80px 1fr 80px;
@@ -845,7 +848,7 @@ a.expanded-click-area-after:after {
     button {
       margin-left: 0.25em;
       outline-color: var(--card-border-color);
-      background-color: var(--text-color-reverse);
+      background-color: white;
       &,
       &:visited {
         color: #636363;
@@ -866,6 +869,22 @@ a.expanded-click-area-after:after {
     font-size: var(--text-size-400);
     font-weight: 700;
     color: color-mix(in hsl shorter hue, var(--brand-color), black);
+  }
+  [screen-scroll="false"] &{
+    .CompanyName{
+      float: left;
+    }
+    & > ul{ 
+      > li:nth-child(3){
+      float:right;
+      b{display: inline-block;}
+
+    }
+          > li:nth-child(4){
+  clear: both;
+
+    }
+  }
   }
 }
 
