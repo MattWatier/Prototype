@@ -913,8 +913,21 @@ body[lightbox] {
     float: left;
     & + li {
       float: right;
+      float: right;
+    background-color: var(--text-color-reverse);
+    border-radius: 3px;
+    display: flex
+;
+    vertical-align: middle;
+    padding: .25em 1em;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    gap: .25em;
       b {
         display: inline-block;
+        margin: 0;
+        padding: 0;
       }
     }
     & +li + li {

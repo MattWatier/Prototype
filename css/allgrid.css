@@ -627,9 +627,21 @@ body[lightbox] {
   body[lightbox] .CompanyName {
     float: left; }
     body[lightbox] .CompanyName + li {
-      float: right; }
+      float: right;
+      float: right;
+      background-color: var(--text-color-reverse);
+      border-radius: 3px;
+      display: flex;
+      vertical-align: middle;
+      padding: .25em 1em;
+      flex-direction: row;
+      justify-items: center;
+      align-items: center;
+      gap: .25em; }
       body[lightbox] .CompanyName + li b {
-        display: inline-block; }
+        display: inline-block;
+        margin: 0;
+        padding: 0; }
     body[lightbox] .CompanyName + li + li {
       clear: both; }
   body[lightbox] li {
