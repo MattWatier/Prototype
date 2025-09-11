@@ -887,7 +887,23 @@ a.expanded-click-area-after:after {
   }
   }
 }
+body[lightbox]{
+background-color: white;
+ .content-area{
+  .qr-code{
+    grid-area: content-area;
+  }
+  .content-area .CompanyName {
+    float: left; }
+  .content-area > ul > li:nth-child(3) {
+    float: right; }
+  .content-area > ul > li:nth-child(3) b {
+      display: inline-block; }
+  .content-area > ul > li:nth-child(4) {
+    clear: both; }
+}
 
+}
 .specialVendor {
   padding: 0.25em;
   font-size: var(--text-size-200);

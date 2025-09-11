@@ -591,14 +591,7 @@ a.expanded-click-area-after:after {
     font-size: var(--text-size-400);
     font-weight: 700;
     color: color-mix(in hsl shorter hue, var(--brand-color), black); }
-  [screen-scroll="false"] .content-area .CompanyName {
-    float: left; }
-  [screen-scroll="false"] .content-area > ul > li:nth-child(3) {
-    float: right; }
-    [screen-scroll="false"] .content-area > ul > li:nth-child(3) b {
-      display: inline-block; }
-  [screen-scroll="false"] .content-area > ul > li:nth-child(4) {
-    clear: both; }
+
 
 .specialVendor {
   padding: 0.25em;
