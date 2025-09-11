@@ -967,7 +967,7 @@ body[lightbox] {
 .back-to-top {
   border-top: solid 3px var(--brand-color);
   position: sticky;
-  inset: 6px;
+  inset:0 6px;
 
   bottom: auto;
   z-index: var(--z-mid);
@@ -1035,4 +1035,9 @@ body[lightbox] {
   .alphabet-list {
     --cols: 27;
   }
+}
+
+.slideshow-grid:has(.alphabet-nav):not(:has(:nth-child(10))){
+  align-items: self-end;
+  .alphabet-nav, a.back-to-top{display:none;}
 }
