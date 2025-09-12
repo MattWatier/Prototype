@@ -1037,7 +1037,7 @@ body[lightbox] {
   }
 }
 
-.slideshow-grid:has(.alphabet-nav):not(:has(:nth-child(10))){
+.slideshow-grid:has(.alphabet-nav):not(:has(:nth-child(6))){
   align-items: self-end;
   .alphabet-nav, a.back-to-top{display:none;}
 }

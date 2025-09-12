@@ -729,10 +729,9 @@ body[lightbox] {
 @container alpha (width > 970px) {
   .alphabet-list {
     --cols: 27; } }
-.slideshow-grid:has(.alphabet-nav):not(:has(:nth-child(10))) {
-      display: flex;
-    flex-direction: column; }
-  .slideshow-grid:has(.alphabet-nav):not(:has(:nth-child(10))) .alphabet-nav, .slideshow-grid:has(.alphabet-nav):not(:has(:nth-child(10))) a.back-to-top {
+.slideshow-grid:has(.alphabet-nav):not(:has(:nth-child(6))) {
+  align-items: self-end; }
+  .slideshow-grid:has(.alphabet-nav):not(:has(:nth-child(6))) .alphabet-nav, .slideshow-grid:has(.alphabet-nav):not(:has(:nth-child(6))) a.back-to-top {
     display: none; }
 
 /*# sourceMappingURL=allgrid.css.map */
